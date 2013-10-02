@@ -1,0 +1,34 @@
+/*
+Theme Name: NOUVEAU
+Author: Veraxus
+Contributors: Veraxus
+Donate link: http://www.nouveauframework.com/
+Author URI: http://nouveauframework.com/
+Tags: framework, php5.3
+Description: A rapid-development theme framework built specifically for WordPress and PHP 5.3+ (Developers Only)
+Version: 0.0.1
+Requires at least: 3.6
+Tested up to: 3.6
+Stable tag: 0.0.1
+License: GNU General Public License
+License URI: LICENSE
+*/
+
+
+/*
+===================================
+READ ME!!!
+===================================
+This is a required file for all WordPress themes, so you can't just delete it.
+
+USE OLD FASIONED CSS:
+If you don't want to use SASS (or don't know what SASS is) - then you can go ahead
+and just work in good, old-fashioned CSS within this very file.
+
+TO USE SASS/COMPASS:
+The _compass folder is a pre-configured Zurb Foundation 4 Compass project.
+
+Keep in mind that if you DO want to use SASS/Compass, you will still need to install 
+the gems for Compass *and* the Zurb Foundation framework (even if you want to use 
+a compiler like CodeKit). More info here: http://foundation.zurb.com/docs/gem-install.php
+*/

@@ -1,0 +1,180 @@
+/*
+ =======================================================================================================================
+ Styles to load exclusively in the WordPress Admin
+
+ This is already enqueued in your WordPress admin. Use this file to write SASS that compiles into CSS for your admin
+ section. This compiles to assets/css/admin.css and is individually enqueued by \NV\Hooks\Theme::enqueue_assets()
+ =======================================================================================================================
+*/
+
+//Default WordPress colors
+$wp-admin-border-gray: #DFDFDF;
+$wp-admin-link-blue: #21759B;
+
+// Nouveau admin Labels
+$label-blue-pastel: #B3DBFF;
+$label-green-pastel: #B0E7B6;
+$label-red-pastel: #FFADAD;
+
+// Nouveau BetterFormat colors
+$bformat-selected-bg: #f1f8ff;
+
+/*
+ LABELS
+ Styles the new gmail-style labels for the admin "post" list table
+*/
+@mixin admin-label {
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    background: $label-blue-pastel;
+    color: white;
+    font-weight: normal !important;
+}
+
+.post-state-format {
+    @include admin-label;
+}
+
+.post-state {
+    @include admin-label;
+    background: $label-green-pastel;
+}
+
+.status-draft .post-state {
+    background: $label-red-pastel;
+}
+
+/*
+ DEBUG BAR
+ The Debug Bar plugin does not automatically have the pointer icon applied, so we have to do it
+*/
+#wp-admin-bar-debug-bar {
+    cursor: pointer;
+}
+
+/*
+ BETTER FORMATS
+ Styles the new Better Formats UI for the post editor
+*/
+#bf-helpdata {
+    display: none;
+    //JS will reveal this, if available
+}
+
+#bf-info {
+
+    display: none;
+    //JS will reveal this, if available
+
+    .bf-intro {
+        padding: 7px 10px;
+        background: #f9f9f9;
+    }
+
+    .bf-opt {
+
+        display: block;
+        position: relative;
+        padding: 7px 0;
+        cursor: pointer;
+        border-bottom: 1px solid $wp-admin-border-gray !important;
+
+        & a {
+            text-decoration: none;
+            color: black;
+        }
+
+        &:last-child {
+            border-bottom: none !important;
+        }
+
+        &:hover,
+        &.selected {
+            &, a {
+                color: $wp-admin-link-blue !important;
+            }
+            background-color: $bformat-selected-bg;
+        }
+        &.selected {
+            background-image: image-url('admin/formats-selected.png');
+            background-repeat: no-repeat;
+            background-position: right top;
+            border-left: 2px solid $wp-admin-link-blue;
+        }
+
+        .bf-text {
+            padding-left: 57px;
+            padding-right: 30px;
+
+            .bf-title {
+                font-weight: bold;
+            }
+        }
+
+        .bf-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 57px;
+            height: 45px;
+            margin-top: 2px;
+            background: image-url('admin/formats-sprite.png');
+            background-position: 0 0;
+        }
+        &:hover .bf-icon,
+        &.selected .bf-icon {
+            background-position-x: 51px;
+        }
+        $sprite-width: -45px;
+        .bf-icon.bf-aside {
+            background-position-y: -45px;
+        }
+        .bf-icon.bf-audio {
+            background-position-y: 2*-45px;
+        }
+        .bf-icon.bf-chat {
+            background-position-y: 3*-45px;
+        }
+        .bf-icon.bf-gallery {
+            background-position-y: 4*-45px;
+        }
+        .bf-icon.bf-image {
+            background-position-y: 5*-45px;
+        }
+        .bf-icon.bf-link {
+            background-position-y: 6*-45px;
+        }
+        .bf-icon.bf-quote {
+            background-position-y: 7*-45px;
+        }
+        .bf-icon.bf-status {
+            background-position-y: 8*-45px;
+        }
+        .bf-icon.bf-video {
+            background-position-y: 9*-45px;
+        }
+
+        a.bf-help.thickbox {
+            display: none !important;
+            //Disabled until help popup implemented
+            text-decoration: none !important;
+            position: absolute !important;
+            top: 10px;
+            right: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            font-size: 10px;
+            text-align: center;
+            background: $wp-admin-border-gray !important;
+            color: white !important;
+
+            &:hover {
+                background: $wp-admin-link-blue !important;
+            }
+        }
+
+    }
+
+}

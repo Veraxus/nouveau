@@ -1,0 +1,120 @@
+/*
+ =======================================================================================================================
+ Styles to load exclusively in the WordPress Admin
+
+ This is already enqueued in your WordPress admin. Use this file to write SASS that compiles into CSS for your admin
+ section. This compiles to assets/css/admin.css and is individually enqueued by \NV\Hooks\Theme::enqueue_assets()
+ =======================================================================================================================
+*/
+/*
+ LABELS
+ Styles the new gmail-style labels for the admin "post" list table
+*/
+.post-state-format {
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  background: #b3dbff;
+  color: white;
+  font-weight: normal !important; }
+
+.post-state {
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  background: #b3dbff;
+  color: white;
+  font-weight: normal !important;
+  background: #b0e7b6; }
+
+.status-draft .post-state {
+  background: #ffadad; }
+
+/*
+ DEBUG BAR
+ The Debug Bar plugin does not automatically have the pointer icon applied, so we have to do it
+*/
+#wp-admin-bar-debug-bar {
+  cursor: pointer; }
+
+/*
+ BETTER FORMATS
+ Styles the new Better Formats UI for the post editor
+*/
+#bf-helpdata {
+  display: none; }
+
+#bf-info {
+  display: none; }
+  #bf-info .bf-intro {
+    padding: 7px 10px;
+    background: #f9f9f9; }
+  #bf-info .bf-opt {
+    display: block;
+    position: relative;
+    padding: 7px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #dfdfdf !important; }
+    #bf-info .bf-opt a {
+      text-decoration: none;
+      color: black; }
+    #bf-info .bf-opt:last-child {
+      border-bottom: none !important; }
+    #bf-info .bf-opt:hover, #bf-info .bf-opt.selected {
+      background-color: #f1f8ff; }
+      #bf-info .bf-opt:hover, #bf-info .bf-opt:hover a, #bf-info .bf-opt.selected, #bf-info .bf-opt.selected a {
+        color: #21759b !important; }
+    #bf-info .bf-opt.selected {
+      background-image: url('../images/admin/formats-selected.png');
+      background-repeat: no-repeat;
+      background-position: right top;
+      border-left: 2px solid #21759b; }
+    #bf-info .bf-opt .bf-text {
+      padding-left: 57px;
+      padding-right: 30px; }
+      #bf-info .bf-opt .bf-text .bf-title {
+        font-weight: bold; }
+    #bf-info .bf-opt .bf-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 57px;
+      height: 45px;
+      margin-top: 2px;
+      background: url('../images/admin/formats-sprite.png');
+      background-position: 0 0; }
+    #bf-info .bf-opt:hover .bf-icon, #bf-info .bf-opt.selected .bf-icon {
+      background-position-x: 51px; }
+    #bf-info .bf-opt .bf-icon.bf-aside {
+      background-position-y: -45px; }
+    #bf-info .bf-opt .bf-icon.bf-audio {
+      background-position-y: -90px; }
+    #bf-info .bf-opt .bf-icon.bf-chat {
+      background-position-y: -135px; }
+    #bf-info .bf-opt .bf-icon.bf-gallery {
+      background-position-y: -180px; }
+    #bf-info .bf-opt .bf-icon.bf-image {
+      background-position-y: -225px; }
+    #bf-info .bf-opt .bf-icon.bf-link {
+      background-position-y: -270px; }
+    #bf-info .bf-opt .bf-icon.bf-quote {
+      background-position-y: -315px; }
+    #bf-info .bf-opt .bf-icon.bf-status {
+      background-position-y: -360px; }
+    #bf-info .bf-opt .bf-icon.bf-video {
+      background-position-y: -405px; }
+    #bf-info .bf-opt a.bf-help.thickbox {
+      display: none !important;
+      text-decoration: none !important;
+      position: absolute !important;
+      top: 10px;
+      right: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      font-size: 10px;
+      text-align: center;
+      background: #dfdfdf !important;
+      color: white !important; }
+      #bf-info .bf-opt a.bf-help.thickbox:hover {
+        background: #21759b !important; }
