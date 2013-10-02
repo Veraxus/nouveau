@@ -1,24 +1,24 @@
-=== NOUVEAU ===
-Contributors: Veraxus
-Donate link: http://nouveauframework.org/
-Author URI: http://nouveauframework.org/
-Tags: framework, php5.3
-Version: 0.0.1
-Requires at least: 3.6
-Tested up to: 3.6
-Stable tag: 0.0.1
-License: GNU General Public License
-License URI: GNU-LICENSE.txt
+# NOUVEAU #
+**Contributors:** Veraxus  
+**Donate link:** http://nouveauframework.org/  
+**Author URI:** http://nouveauframework.org/  
+**Tags:** framework, php5.3  
+**Version:** 0.0.1  
+**Requires at least:** 3.6  
+**Tested up to:** 3.6  
+**Stable tag:** 0.0.1  
+**License:** GNU General Public License  
+**License URI:** GNU-LICENSE.txt  
 
 NOUVEAU is an open-source, rapid-development theme & plugin framework for WordPress, built on Zurb Foundation 4 and PHP 5.3. Work fast. Be awesome.
 
-== Description ==
+## Description ##
 
 **NOUVEAU is NOT a ready-made theme and should only be used by developers.**
 
 NOUVEAU is a rapid-development framework for WordPress. Unlike other "theme frameworks" NOUVEAU doesn't try to cram everything into a single, monolithic, Frankenstein's Monster theme - instead, the theme is dedicated solely to theme-related work, keeping things clean and easy. If you want even more features, we have plugins for that. Download plugins only for the features you really need, and customize them quickly and easily. Everything is standardized, simple, clean, and well commented - so you can work FAST.
 
-=Features=
+###Features###
 
 * **Built for WordPress**
 NOUVEAU isn’t a theme or a plugin, it’s a framework. Anything you need to quickly get started on a new theme or plugin is already there, letting you get right to the meat of your WordPress project.
@@ -27,7 +27,7 @@ NOUVEAU isn’t a theme or a plugin, it’s a framework. Anything you need to qu
 Everything is available a-la-carte. By keeping the theme and features separate, you can easily use or customize only what you need (as plugins), and none of what you don’t.
 
 * **PHP 5.3+**
-PHP 5.3 provides numerous benefits: namespaces, closures, anonymous functions... and NOUVEAU takes advantage of that. But if you need to maintain parity with WordPress, a PHP 5.2.4-compatible version (**not this one!**) is also available.
+**PHP 5.3 provides numerous benefits:** namespaces, closures, anonymous functions... and NOUVEAU takes advantage of that. But if you need to maintain parity with WordPress, a PHP 5.2.4-compatible version (**not this one!**) is also available.  
 
 * **Zurb Foundation 4**
 NOUVEAUs theme framework component is built on the latest version of Zurb Foundation, an open-source front-end framework that blows Bootstrap out of the water. Create responsive websites with incredible speed and flexibility.
@@ -40,7 +40,7 @@ No purchases, no memberships, no freemiums, no strings. NOUVEAU is free as in sp
 
 In addition to having very well documented code, you can find a complete **Getting Started** tutorial at [NouveauFramework.com](http://nouveauframework.org/documentation/getting-started/)
 
-== Installation Instructions == 
+## Installation Instructions ##
 
 NOUVEAU is NOT a ready-made theme and should only be used by developers. it is specifically built to facilitate rapid development and easy maintenance by developers. The code is clean, simple, and very well commented.
 
@@ -50,7 +50,7 @@ You can find any information you may need at [NouveauFramework.com](http://nouve
 
 Also remember that you can test your own NOUVEAU derivatives by using the WordPress [Theme Unit Test]( http://codex.wordpress.org/Theme_Unit_Test ).
 
-=== File Structure ===
+# File Structure #
 
 NOUVEAU has an file structure that encourages better organization of your theme. It includes the following folders...
 
@@ -65,23 +65,23 @@ General page templates (`index.php`, `archive.php`, `page.php`, `single.php`, et
 
 You find a complete (yet concise) overview of file and folder structure at [NouveauFramework.com](http://nouveauframework.org/documentation/getting-started/)
 
-=== Zurb Foundation Notes ===
+# Zurb Foundation Notes #
 
 Foundation has been tweaked slightly to work as part of a WordPress theme, however the tweaks needed to ensure this compatibility are rather minor. One important thing to note is that `config.rb` (i.e. the Compass configuration file) is located in the theme's root directory while the *uncompiled* Zurb Foundation files are located in the `_compass` directory. This allows you to set your compiler (e.g. Compass, CodeKit, etc) to watch the theme folder, and everything is just put in the right places for you automatically (again, `config.rb` is already set up for this).
 
 If you don't want to use SASS, then everything is already compiled for you. Just write your plain CSS in the main style.css file (in the theme root) as you would normally do.
 
-=== Companion Plugins ===
+# Companion Plugins #
 
 WordPress themes should never be all-encompassing monstrosities. As a result, all the cool features you want are available as neatly packaged "starter" plugins. They are "starter" because these plugins are meant to be quickly and easily modified by developers like you, to do anything you need. They are literally just a starting point for you own development needs. Use what you want, and none of what you don't.
 
 These plugins were created by developers, for developers. We hope they make your life as a developer much, much easier.
 
-=== Internationalization (I18n) ===
+# Internationalization (I18n) #
 
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
-== Changelog ==
+## Changelog ##
 
-= 0.0.1 =
+### 0.0.1 ###
 * First commit. Lots and lots of cleanup left before official release.
