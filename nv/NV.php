@@ -87,7 +87,6 @@ class NV {
         require_once( NV_UTILS . '/HtmlBase.php' ); // Allows dynamic building/encapsulation of HTML elements
         require_once( NV_UTILS . '/Html.php' ); // Extends HtmlGen to provide shortcuts for HTML elements
         require_once( NV_UTILS . '/WordPress.php' ); // Custom functions that extend basic WP functionality
-        require_once( NV_UTILS . '/FoundationMenuWalker.php' ); // Configuration for the theme customizer
         require_once( NV_UTILS . '/Theme.php' ); // Items that are used directly in theme templates
 
         /** HOOKS *********************************************************************/
