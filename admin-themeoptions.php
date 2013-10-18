@@ -17,6 +17,7 @@
  *
  * If you need to define default values for your theme options, you should do so from \NV\Hooks\Theme::features()
  *
+ * @deprecated This is being removed from NOUVEAU, but will live on as a plugin.
  * @see \NV\Hooks\Admin::menu()
  * @see \NV\Hooks\Admin::help()
  * @see \NV\Hooks\General::features()
@@ -24,18 +25,16 @@
 
 $message = false;
 
-if ( isset($_REQUEST['action']) && 'update'===$_REQUEST['action'] )
-{
-    if ( ! wp_verify_nonce($_REQUEST['_wpnonce'],'examplepage_nonce') || ! current_user_can('manage_options') )
-    {
-        wp_die(__('Cheatin&#8217; uh?'));
+if ( isset($_REQUEST['action']) && 'update' === $_REQUEST['action'] ) {
+    if ( !wp_verify_nonce( $_REQUEST['_wpnonce'], 'examplepage_nonce' ) || !current_user_can( 'manage_options' ) ) {
+        wp_die( __( 'Cheatin&#8217; uh?' ) );
     }
 
     //START SAVE
-    update_option('nouveau_example_checkbox',    isset($_REQUEST['nouveau_example_checkbox']) );
-    update_option('nouveau_example_radio',       isset($_REQUEST['nouveau_example_radio']) );
-    update_option('nouveau_example_text',        isset($_REQUEST['nouveau_example_text']) );
-    update_option('nouveau_example_select',      isset($_REQUEST['nouveau_example_select']) );
+    update_option( 'nouveau_example_checkbox', isset($_REQUEST['nouveau_example_checkbox']) );
+    update_option( 'nouveau_example_radio', isset($_REQUEST['nouveau_example_radio']) );
+    update_option( 'nouveau_example_text', isset($_REQUEST['nouveau_example_text']) );
+    update_option( 'nouveau_example_select', isset($_REQUEST['nouveau_example_select']) );
     //END SAVE
 
     $message = 'updated';
@@ -45,14 +44,13 @@ if ( isset($_REQUEST['action']) && 'update'===$_REQUEST['action'] )
 ?>
 <!-- see example.code.php for handler code and documentation -->
 <div class="wrap">
-    <div id="icon-options-general" class="icon32"><br></div><h2><?php _e('Example Admin Page', 'nvLangScope'); ?></h2>
+    <div id="icon-options-general" class="icon32"><br></div><h2><?php _e( 'Example Admin Page', 'nvLangScope' ) ?></h2>
 
     <!-- message controls -->
     <?php 
-    switch( $message )
-    {
+    switch( $message ) {
         case 'updated':
-            Nouveau\Messages::message('<b>' . __('Settings saved.','nvLangScope') . '</b>');
+            printf( '<div id="message" class="updated below-h2"><p>%s</p></div>' , __( 'Settings saved.','nvLangScope' ) );
         break;
     
         default:break;
@@ -60,26 +58,26 @@ if ( isset($_REQUEST['action']) && 'update'===$_REQUEST['action'] )
     ?>
     <!-- /message controls -->
 
-    <p><?php printf( __('This page can be customized by editing the files under <code>%s/</code> in your theme directory.','nvLangScope'), preg_replace( '|'.preg_quote(NV_PATH).'|', '', dirname(__FILE__) ) ); ?></p>
-    <p><?php _e('If you need to include a list table on this page, please refer to <a href="http://codex.wordpress.org/Class_Reference/WP_List_Table">this WordPress codex entry</a> and the <a href="http://wordpress.org/extend/plugins/custom-list-table-example/">Custom List Table Example plugin</a>.','nvLangScope') ?></p>
-    <p><?php _e('This whole page can be disabled from <code>\NV\Hooks\Admin::menus()</code>','nvLangScope'); ?></p>
+    <p><?php printf( __( 'This page can be customized by editing the files under <code>%s/</code> in your theme directory.', 'nvLangScope' ), preg_replace( '|'.preg_quote( NV_PATH ).'|', '', dirname( __FILE__ ) ) ); ?></p>
+    <p><?php _e( 'If you need to include a list table on this page, please refer to <a href="http://codex.wordpress.org/Class_Reference/WP_List_Table">this WordPress codex entry</a> and the <a href="http://wordpress.org/extend/plugins/custom-list-table-example/">Custom List Table Example plugin</a>.', 'nvLangScope' ) ?></p>
+    <p><?php _e( 'This whole page can be disabled from <code>\NV\Hooks\Admin::menus()</code>', 'nvLangScope' ) ?></p>
     
     <form action="options.php" method="post">
         
-        <?php wp_nonce_field('examplepage_nonce'); ?>
+        <?php wp_nonce_field( 'examplepage_nonce' ); ?>
         
         <table class="form-table">
             <tr valign="top">
                 <th scope="row">
-                    <label for="nouveau_example_checkbox"><?php _e('Example checkbox','nvLangScope') ?></label>
+                    <label for="nouveau_example_checkbox"><?php _e( 'Example checkbox', 'nvLangScope' ) ?></label>
                 </th>
                 <td>
-                    <input type="checkbox" name="nouveau_example_checkbox" id="nouveau_example_checkbox" <?php checked(get_option('nouveau_example_checkbox',false)) ?> /> <label for="nouveau_example_checkbox"><?php _e('This is an example checkbox (unchecked by default)','nvLangScope') ?></label>
+                    <input type="checkbox" name="nouveau_example_checkbox" id="nouveau_example_checkbox" <?php checked( get_option( 'nouveau_example_checkbox', false ) ) ?> /> <label for="nouveau_example_checkbox"><?php _e( 'This is an example checkbox (unchecked by default)', 'nvLangScope' ) ?></label>
                 </td>
             </tr>
             <tr valign="top">
                 <th scope="row">
-                    <label for="nouveau_example_radio[]"><?php _e('Example Radio','nvLangScope') ?></label>
+                    <label for="nouveau_example_radio[]"><?php _e( 'Example Radio', 'nvLangScope' ) ?></label>
                 </th>
                 <td>
                     <input type="radio" name="nouveau_example_radio[]" id="nouveau_example_radio_1" value="1" <?php checked(get_option('nouveau_example_radio',1),1) ?> /> <label for="nouveau_example_radio_1"><?php _e('Radio button with a value of','nvLangScope') ?> 1</label><br/>

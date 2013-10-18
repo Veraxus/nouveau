@@ -1,0 +1,4 @@
+## Parts Folder Overview ##
+This folder contains template fragments that are meant to be used as php includes or by using WordPress's built-in
+get_template_part() function. Template parts are placed here to keep the theme root free solely for "primary" templates
+(i.e. templates that are responsible for a specific page). Feel free to organize this however you see fit.

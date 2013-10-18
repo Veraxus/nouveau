@@ -1,62 +1,67 @@
 /*
  =======================================================================================================================
- Global Style Bootstrap
+ Global SASS Bootstrap File
 
  This is used to load all of the necessary framework styles. You should have already followed Zurb's directions for
- installing and/or updating Compass and Foundation ( see: http://foundation.zurb.com/docs/sass.html ). If you are using
- the default config.rb settings (found in your theme's root directory), this file will be compile into
- assets/css/app.css within your theme directory and is individually enqueued by \NV\Hooks\Theme::enqueue_assets()
+ installing and/or updating Compass and Foundation ( see: http://foundation.zurb.com/docs/sass.html ).
+
+ If you are using the default config.rb settings (found in your theme's root directory), this file will be compile into
+ assets/css/app.css within your theme directory and is enqueued by \NV\Hooks\Theme::enqueue_assets()
  =======================================================================================================================
 */
+
 // Global Foundation Settings
 @import "settings";
+
 
 // Comment out this import if you don't want to use normalize
 @import "normalize";
 
-// Comment out this import if you are customizing you imports below
-@import "foundation";
 
-// Import our custom Nouveau theme styles
-@import "wordpress";
-@import "theme";
+// By default, we only use a handful of Foundation's features to limit CSS bloat. If you want to use ALL of Foundation's
+// styles, comment out everthing below and then uncomment the @import "foundation"; rule further down.
 
-// Import specific parts of Foundation by commenting the import "foundation"
-// and uncommenting what you want below. You must uncomment the following if customizing
-
-// @import "foundation/components/global"; // *always required
-// @import "foundation/components/grid";
-// @import "foundation/components/visibility";
-// @import "foundation/components/block-grid";
-// @import "foundation/components/type";
-// @import "foundation/components/buttons";
-// @import "foundation/components/forms"; // *requires components/buttons
-// @import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
-// @import "foundation/components/button-groups"; // *requires components/buttons
-// @import "foundation/components/dropdown-buttons"; // *requires components/buttons
-// @import "foundation/components/split-buttons"; // *requires components/buttons
-// @import "foundation/components/flex-video";
-// @import "foundation/components/section";
+@import "foundation/components/global"; // *always required
+@import "foundation/components/grid";
+@import "foundation/components/visibility";
+@import "foundation/components/block-grid";
+@import "foundation/components/type";
+@import "foundation/components/buttons";
+@import "foundation/components/forms"; // *requires components/buttons
+@import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
+@import "foundation/components/button-groups"; // *requires components/buttons
+@import "foundation/components/dropdown-buttons"; // *requires components/buttons
+@import "foundation/components/split-buttons"; // *requires components/buttons
+@import "foundation/components/flex-video";
+@import "foundation/components/section";
 // @import "foundation/components/top-bar";  // *requires components/grid
 // @import "foundation/components/orbit";
 // @import "foundation/components/reveal";
 // @import "foundation/components/joyride";
 // @import "foundation/components/clearing";
 // @import "foundation/components/alert-boxes";
-// @import "foundation/components/breadcrumbs";
+@import "foundation/components/breadcrumbs";
 // @import "foundation/components/keystrokes";
 // @import "foundation/components/labels";
-// @import "foundation/components/inline-lists";
-// @import "foundation/components/pagination";
-// @import "foundation/components/panels";
-// @import "foundation/components/pricing-tables";
-// @import "foundation/components/progress-bars";
-// @import "foundation/components/side-nav";
-// @import "foundation/components/sub-nav";
-// @import "foundation/components/switch";
+@import "foundation/components/inline-lists";
+@import "foundation/components/pagination";
+@import "foundation/components/panels";
+@import "foundation/components/pricing-tables";
+@import "foundation/components/progress-bars";
+@import "foundation/components/side-nav";
+@import "foundation/components/sub-nav";
+@import "foundation/components/switch";
 // @import "foundation/components/magellan";
 // @import "foundation/components/tables";
 // @import "foundation/components/thumbs";
-// @import "foundation/components/tooltips";
+@import "foundation/components/tooltips";
 // @import "foundation/components/dropdown";
 
+
+// Use this import instead of the ones above if you want to use EVERYTHING in Foundation (warning: will cause CSS bloat)
+//@import "foundation";
+
+
+// Import our custom Nouveau theme styles
+@import "wordpress";
+@import "PRIMARY";

@@ -1,6 +1,6 @@
 <?php
 /**
- * This class initializes the Nouveau framework.
+ * This class initializes the NOUVEAU framework.
  *
  * A compatibility check is also performed
  */
@@ -14,19 +14,20 @@ class NV {
      */
     public static function init() {
 
-        //Load constants
+        // Load constants
         self::constants();
 
-        //Load requirements check
-        require_once( NV_CLASSES . '/NV_Requirements.php' );
+        // Load requirements check BEFORE LOADING ANYTHING ELSE
+        require_once( NV_UTILS . '/NV_Requirements.php' );
         $nvCheck = new NV_Requirements();
 
-        //Only continue if the requirements check passes
+        // Only continue if the requirements check passed
         if ( $nvCheck->is_compatible ) {
             self::bootstrap();
             self::hooks();
         }
 
+        // For developers, return compatibility check result (bool)
         return $nvCheck->is_compatible;
     }
 
@@ -36,11 +37,11 @@ class NV {
      */
     public static function constants() {
 
+        // Set the max width of content for benefit of WordPress's IMAGE EDITOR
         global $content_width;
-        if ( !isset( $content_width ) )
-        {
+        if ( !isset( $content_width ) ) {
             $content_width = 1000;
-        } // Sets the max width of content for the IMAGE EDITOR
+        }
 
         /** The current theme directory */
         define( 'THEME_DIR', get_template_directory() );
@@ -48,16 +49,16 @@ class NV {
         /** The current theme uri */
         define( 'THEME_URI', get_template_directory_uri() );
 
-        /** The directory for the Nouveau core library */
+        /** The directory for the NOUVEAU core library */
         define( 'NV_CORE', trailingslashit( THEME_DIR ) . basename( dirname( __FILE__ ) ) );
 
-        /** The directory for Nouveaus core classes */
-        define( 'NV_CLASSES', trailingslashit( NV_CORE ) . 'classes' );
+        /** The directory for NOUVEAU utility classes */
+        define( 'NV_UTILS', trailingslashit( NV_CORE ) . 'utilities' );
 
-        /** The directory for Nouveaus hooks directory */
+        /** The directory for NOUVEAU hooks directory */
         define( 'NV_HOOKS', trailingslashit( NV_CORE ) . 'hooks' );
 
-        /** The uri for theme assets */
+        /** The uri for theme assets (img, js, css, etc) */
         define( 'NV_ASSETS', trailingslashit( THEME_URI ) . 'assets' );
 
         /** The uri for theme images */
@@ -80,15 +81,14 @@ class NV {
      */
     public static function bootstrap() {
         /** GLOBAL SCOPE FUNCTIONS ****************************************************/
-        require_once( NV_CLASSES . '/_compatibility.php'); //
-        require_once( NV_CLASSES . '/_pluggable.php' ); // Overrides WordPress' global functions
+        require_once( NV_HOOKS . '/_pluggable.php' ); // Overrides WordPress' global functions
 
         /** HELPERS *******************************************************************/
-        require_once( NV_CLASSES . '/HtmlBase.php' ); // Allows dynamic building/encapsulation of HTML elements
-        require_once( NV_CLASSES . '/Html.php' ); // Extends HtmlGen to provide shortcuts for HTML elements
-        require_once( NV_CLASSES . '/WordPress.php' ); // Custom functions that extend basic WP functionality
-        require_once( NV_CLASSES . '/FoundationMenuWalker.php' ); // Configuration for the theme customizer
-        require_once( NV_CLASSES . '/Theme.php' ); // Items that are used directly in theme templates
+        require_once( NV_UTILS . '/HtmlBase.php' ); // Allows dynamic building/encapsulation of HTML elements
+        require_once( NV_UTILS . '/Html.php' ); // Extends HtmlGen to provide shortcuts for HTML elements
+        require_once( NV_UTILS . '/WordPress.php' ); // Custom functions that extend basic WP functionality
+        require_once( NV_UTILS . '/FoundationMenuWalker.php' ); // Configuration for the theme customizer
+        require_once( NV_UTILS . '/Theme.php' ); // Items that are used directly in theme templates
 
         /** HOOKS *********************************************************************/
         require_once( NV_HOOKS . '/Theme.php' ); // Global, basic theme setup
@@ -126,8 +126,8 @@ class NV {
         // Any customizations to the body_class() function
         add_filter( 'body_class',               array( '\NV\Hooks\Theme', 'body_class' ) );
 
-        // Change the 'sticky' class so WordPress doesn't conflict with Foundation
-        add_filter( 'post_class',               array( '\NV\Hooks\Theme', 'fix_sticky_class' ) );
+        // Change WordPress's .sticky class to prevent conflict with Foundation
+        //add_filter( 'post_class',               array( '\NV\Hooks\Theme', 'fix_sticky_class' ) );
 
 
         /** THEME CUSTOMIZATION *******************************************************/
@@ -140,15 +140,6 @@ class NV {
 
         // Load any javascript needed for live preview updates
         add_action( 'customize_preview_init',   array( '\NV\Hooks\ThemeCustomize', 'live_preview' ) );
-
-
-        /** GRAVITY FORMS CUSTOMIZATION ***********************************************/
-
-        // Modify the gravity forms builder array (if necessary)
-        // add_filter( 'gform_pre_render',      array( '\NV\Hooks\GravityForms','gform_pre_render' ));
-
-        // Do fancy regex stuff to customize field data
-        //add_filter('gform_field_content',     array('\NV\Hooks\GravityForms', 'gform_field_content'), 1, 4);
 
 
         /** INTEGRATE THEME WITH TINYMCE EDITOR **************************************/
