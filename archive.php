@@ -13,9 +13,9 @@
             <?php \NV\Theme::loop( 'parts/article' , 'parts/article-empty' ) ?>
             <?php \NV\Theme::archive_nav(array('id' => 'nav-bottom')) ?>
         </div>
-    </div>
-    <div id="sidebar" class="small-12 large-4 columns">
-        <?php dynamic_sidebar('sidebar-1') ?>
+        <div id="sidebar" class="small-12 large-4 columns">
+            <?php dynamic_sidebar('sidebar-1') ?>
+        </div>
     </div>
 <?php
 \NV\Theme::get_footer();

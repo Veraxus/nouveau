@@ -6,3 +6,9 @@
  theme directory under assets/css/app.css, which is already enqueued by \NV\Hooks\Theme::enqueue_assets()
  =======================================================================================================================
 */
+#frame {}
+#container{}
+    #content {}
+    #sidebar {}
+    #comments {}
+#footer {}

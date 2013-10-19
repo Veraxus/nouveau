@@ -10,7 +10,7 @@ jQuery(function( $ ) {
 
     // Initialize foundation with all plugins (but change the top bar)
     $(document).foundation('topbar', {
-        stickyClass: 'stick-to-top'
+        stickyClass: 'snap-to-top'
     });
 
     // Your code goes here

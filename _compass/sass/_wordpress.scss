@@ -10,7 +10,20 @@
  =======================================================================================================================
 */
 
-/* === ALIGNMENT === */
+/*
+=============================
+ COMMENTS CORRECTION
+=============================
+*/
+#comments {
+    clear: both;
+}
+
+/*
+=============================
+ ALIGNMENT
+=============================
+*/
 .aligncenter {
     clear: both;
     display: block;
@@ -20,16 +33,20 @@
 .alignleft {
     display: inline;
     float: left;
+    margin-right: 10px;
 }
 .alignright {
     display: inline;
     float: right;
+    margin-left: 10px;
 }
 
-/* === TOPBAR COMPATIBILITY === */
 /*
- This helps ensure that Foundation's special .sticky class will not interfere with the WP admin bar.
+=============================
+ FOUNDATION COMPATIBILITY
+=============================
 */
-.admin-bar .sticky.fixed {
+/* This helps ensure that Foundation's special .sticky class will not interfere with the WP admin bar. */
+.admin-bar .snap-to-top.fixed {
     top: 28px;
 }

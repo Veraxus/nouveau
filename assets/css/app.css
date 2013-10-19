@@ -3496,7 +3496,19 @@ ul.pagination {
  this file from being loaded.
  =======================================================================================================================
 */
-/* === ALIGNMENT === */
+/*
+=============================
+ COMMENTS CORRECTION
+=============================
+*/
+#comments {
+  clear: both; }
+
+/*
+=============================
+ ALIGNMENT
+=============================
+*/
 .aligncenter {
   clear: both;
   display: block;
@@ -3505,17 +3517,21 @@ ul.pagination {
 
 .alignleft {
   display: inline;
-  float: left; }
+  float: left;
+  margin-right: 10px; }
 
 .alignright {
   display: inline;
-  float: right; }
+  float: right;
+  margin-left: 10px; }
 
-/* === TOPBAR COMPATIBILITY === */
 /*
- This helps ensure that Foundation's special .sticky class will not interfere with the WP admin bar.
+=============================
+ FOUNDATION COMPATIBILITY
+=============================
 */
-.admin-bar .sticky.fixed {
+/* This helps ensure that Foundation's special .sticky class will not interfere with the WP admin bar. */
+.admin-bar .snap-to-top.fixed {
   top: 28px; }
 
 /*

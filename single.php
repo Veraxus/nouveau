@@ -11,6 +11,9 @@
     <div id="container" class="row">
         <div id="content" class="small-12 large-8 columns">
             <?php \NV\Theme::loop( 'parts/article', 'parts/article-empty' ) ?>
+            <div id="comments">
+                <?php comments_template( '/parts/comments/comments.php' ); ?>
+            </div>
         </div>
         <div id="sidebar" class="small-12 large-4 columns">
             <?php dynamic_sidebar( 'sidebar-1' ) ?>
