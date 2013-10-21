@@ -3,10 +3,10 @@
 **Donate link:** http://nouveauframework.org/  
 **Author URI:** http://nouveauframework.org/  
 **Tags:** framework, php5.3  
-**Version:** 0.0.1  
+**Version:** 0.0.2  
 **Requires at least:** 3.6  
-**Tested up to:** 3.6  
-**Stable tag:** 0.0.1  
+**Tested up to:** 3.8  
+**Stable tag:** 0.0.2  
 **License:** GNU General Public License  
 **License URI:** GNU-LICENSE.txt  
 
@@ -58,7 +58,7 @@ NOUVEAU has an file structure that encourages better organization of your theme.
 * assets - Contains non-php assets like javascript, css, images, and language files.
 * layout - Contains the theme's global header and footer files, leaving the theme root free for page templates.
 * nv - Contains all the NOUVEAU core classes.
-* overrides - Contains any "special" admin-selectable page templates.
+* overrides - Contains template files that are used solely as admin-selectable page templates.
 * parts - Contains any template chunks/fragments/parts that *do not* make up a page-level template. Articles and other such fragments go here.
 
 General page templates (`index.php`, `archive.php`, `page.php`, `single.php`, etc) as well as critical files like `functions.php` still go in the theme's root folder. This allows WordPress's core template system to continue working as-is. As a rule, you should keep your PAGE templates here, and organize any fragment/part templates under the parts directory. This keeps the root clean and helps encourage use of clean, organized, reusable template parts.
@@ -73,7 +73,7 @@ If you don't want to use SASS, then everything is already compiled for you. Just
 
 # Companion Plugins #
 
-WordPress themes should never be all-encompassing monstrosities. As a result, all the cool features you want are available as neatly packaged "starter" plugins. They are "starter" because these plugins are meant to be quickly and easily modified by developers like you, to do anything you need. They are literally just a starting point for you own development needs. Use what you want, and none of what you don't.
+WordPress themes (and theme frameworks) should never be all-encompassing monstrosities. As a result, all the cool features you want are available as neatly packaged "starter" plugins. They are "starter" because these plugins are meant to be quickly and easily modified by developers like you, to do anything you need. They are literally just a starting point for your own development needs. Use what you want, and none of what you don't.
 
 These plugins were created by developers, for developers. We hope they make your life as a developer much, much easier.
 
@@ -82,6 +82,11 @@ These plugins were created by developers, for developers. We hope they make your
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
 ## Changelog ##
+
+### 0.0.2 (2013-10-21) ###
+* Significant cleanup on code base. Lots of features moved into plugins.
+* Basic (very early) support for comments
+* Small fixes to SASS/CSS using newest WP unit tests
 
 ### 0.0.1 ###
 * First commit. Lots and lots of cleanup left before official release.

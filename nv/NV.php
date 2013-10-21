@@ -93,7 +93,6 @@ class NV {
         require_once( NV_HOOKS . '/Theme.php' ); // Global, basic theme setup
         require_once( NV_HOOKS . '/Editor.php' ); // Configuration for the theme customizer
         require_once( NV_HOOKS . '/ThemeCustomize.php' ); // Configuration for the theme customizer
-        //require_once( NV_HOOKS . '/Admin.php' ); // Configuration of admin-centric theme features
     }
 
 
@@ -112,12 +111,6 @@ class NV {
 
         // Register sidebars
         add_action( 'widgets_init',             array( '\NV\Hooks\Theme', 'sidebars' ) );
-
-        // Set up theme options/settings (CURRENTLY EMPTY)
-        add_action( 'admin_init',               array( '\NV\Hooks\Admin', 'settings_api' ) );
-
-        // Customize various help text
-        //add_action( 'admin_head',             array( '\NV\Hooks\Admin', 'help' ) );
 
         // Any customizations to the body_class() function
         add_filter( 'body_class',               array( '\NV\Hooks\Theme', 'body_class' ) );

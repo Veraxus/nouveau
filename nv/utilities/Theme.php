@@ -512,14 +512,17 @@ class Theme
 
 
     /**
-     * Outputs the name of the file for troubleshooting.
+     * Outputs the name of the file as an HTML comment for troubleshooting.
      *
      * @param string $file This function should always be passed the value of __FILE__
      */
     public static function output_file_marker( $file )
     {
+        // Strip out system path (keeping only site-root-relative path)
         $file = preg_replace( '|' . preg_quote( ABSPATH ) . '|', '', $file );
-        printf( __( '<!-- Template file: /%s -->', 'nvLangScope' ), $file );
+
+        // Output an HTML comment with the current template path
+        printf( "\n\n<!-- ".__( 'Template file: %s', 'nvLangScope' )." -->\n\n", '/'.$file );
     }
 
     /**

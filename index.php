@@ -10,11 +10,17 @@
 ?>
     <div id="container" class="row">
         <div id="content" class="small-12 large-8 columns">
+            <?php \NV\Theme::archive_nav(array('id' => 'nav-top')) ?>
+
             <?php \NV\Theme::loop( 'parts/article', 'parts/article-empty' ) ?>
+
+            <?php get_template_part('parts/archive-nav') ?>
         </div>
+
         <div id="sidebar" class="small-12 large-4 columns">
             <?php dynamic_sidebar( 'sidebar-1' ) ?>
         </div>
+
     </div>
 <?php
 \NV\Theme::get_footer();

@@ -3417,6 +3417,38 @@ ul.pagination {
 
     to {
       position: relative; } } }
+/* Tables */
+table {
+  background: white;
+  margin-bottom: 1.25em;
+  border: solid 1px #dddddd; }
+  table thead,
+  table tfoot {
+    background: whitesmoke;
+    font-weight: bold; }
+    table thead tr th,
+    table thead tr td,
+    table tfoot tr th,
+    table tfoot tr td {
+      padding: 0.5em 0.625em 0.625em;
+      font-size: 0.875em;
+      color: #222222;
+      text-align: left; }
+  table tr th,
+  table tr td {
+    padding: 0.5625em 0.625em;
+    font-size: 0.875em;
+    color: #222222; }
+  table tr.even, table tr.alt, table tr:nth-of-type(even) {
+    background: #f9f9f9; }
+  table thead tr th,
+  table tfoot tr th,
+  table tbody tr td,
+  table tr td,
+  table tfoot tr td {
+    display: table-cell;
+    line-height: 1.125em; }
+
 /* Tooltips */
 .has-tip {
   border-bottom: dotted 1px #cccccc;
@@ -3503,6 +3535,14 @@ ul.pagination {
 */
 #comments {
   clear: both; }
+
+/*
+=============================
+ IMAGES CORRECTION
+=============================
+*/
+.wp-caption {
+  max-width: 100%; }
 
 /*
 =============================
