@@ -4,14 +4,13 @@ namespace NV;
 /**
  * This class should encapsulate any basic features that need to be used directly in the theme files.
  *
- * @TODO: A lot of stuff in here is SLOPPPPPPYYYYY. Especially the menu generation/walker. Rewrite soon.
+ * @TODO: A lot of stuff in here is SLOPPPPPPYYYYY. Rewrite soon.
  */
 class Theme
 {
 
     /**
-     * Outputs paginated navigation for archive pages. Implements Foundation's
-     * pagination structure.
+     * Outputs paginated navigation for archive/blog pages. Implements Foundation's pagination structure.
      *
      * max_size must be greater than 11. 13 is default.
      *
@@ -21,7 +20,9 @@ class Theme
      * 'prev_txt'    - The text or html to output inside the "previous page" link (default: &laquo;)
      * 'next_txt'    - The text or html to output inside the "next page" link (default: &raquo;)
      * 'echo'        - Whether to echo the generated object
-     *A
+     *
+     * @TODO Is this the best we can do? Let's consider a rewrite.
+     *
      * @global \WP_Query $wp_query
      * @global int $paged
      *
@@ -40,8 +41,12 @@ class Theme
 
         $output   = '';
         $defaults = array(
-            'id'       => 'nav-generic', 'classes' => 'pagenav archive', 'page_limit' => 15, 'prev_txt' => '&laquo;',
-            'next_txt' => '&raquo;', 'echo' => true,
+            'id'        => 'nav-generic',
+            'classes'   => 'pagenav archive',
+            'page_limit' => 15,
+            'prev_txt'  => '&laquo;',
+            'next_txt'  => '&raquo;',
+            'echo'      => true,
         );
         $args     = wp_parse_args( $args, $defaults );
         extract( $args, EXTR_SKIP );
@@ -73,16 +78,18 @@ class Theme
             $output .= '<nav id="' . $id . '" class="' . $classes . '">';
             $output .= '<ul class="pagination">';
 
-            //if page 1, no previous
+
+            /************** LEFT ARROW ***************/
             if ( empty( $paged ) || $paged == 1 ) {
-                $output .= '<li class="unavailable">';
+                $output .= '<li class="arrow unavailable">';
             }
             else {
-                $output .= '<li>';
+                $output .= '<li class="arrow">';
             }
-
             $output .= '<a href="' . previous_posts( false ) . '" ' . apply_filters( 'previous_posts_link_attributes', '' ) . '>' . preg_replace( '/&([^#])(?![a-z]{1,8};)/i', '&#038;$1', $prev_txt ) . '</a>';
             $output .= '</li>';
+            /************** /LEFT ARROW ***************/
+
 
             if ( $wp_query->max_num_pages > $page_limit ) {
                 /************** NAV PAGE POSITION END ***************/
@@ -140,28 +147,31 @@ class Theme
                         $wp_query->max_num_pages //page number
                     );
                 }
-                /*				 * ************ /NAV PAGE POSITION MIDDLE ************* */
+                /** ************ /NAV PAGE POSITION MIDDLE ************* */
             }
             else {
-                /*				 * ************** SHORT PAGE LOOP ******************** */
+                /** ************** SHORT PAGE LOOP ******************** */
                 for ( $i = 1; $i <= $wp_query->max_num_pages; $i++ ) {
                     $output .= sprintf( '<li class="%s"><a href="%s">%s</a></li>', ( ( empty( $paged ) && 1 == $i ) || $paged == $i ) ? ' current ' : '', //active class
                         get_pagenum_link( $i ), //link
                         $i //page number
                     );
                 }
-                /*				 * ************** SHORT PAGE LOOP ******************** */
+                /** ************** SHORT PAGE LOOP ******************** */
             }
 
-            //if page last
+
+            /************** RIGHT ARROW ***************/
             if ( $paged == $wp_query->max_num_pages ) {
-                $output .= '<li class="unavailable">';
+                $output .= '<li class="arrow unavailable">';
             }
             else {
-                $output .= '<li>';
+                $output .= '<li class="arrow">';
             }
             $output .= '<a href="' . next_posts( $wp_query->max_num_pages, false ) . '" ' . apply_filters( 'next_posts_link_attributes', '' ) . '>' . preg_replace( '/&([^#])(?![a-z]{1,8};)/i', '&#038;$1', $next_txt ) . '</a>';
             $output .= '</li>';
+            /************** /RIGHT ARROW ***************/
+
 
             $output .= '</ul>';
             $output .= '</nav>';
@@ -199,10 +209,14 @@ class Theme
     public static function article_page_nav( $args = array() )
     {
         $defaults = array(
-            'before'      => '<dl class="page-link sub-nav">' . '<dt>' . __( 'Pages:', 'nvLangScope' ) . '</dt>',
-            'page_before' => '<dd%>', //% represents replacement character for current/active page
-            'page_after'  => '</dd>', 'link_before' => '', 'link_after' => '', 'after' => '</dl>', 'max_size' => 6,
-            'echo'        => true,
+            'before'        => '<dl class="page-link sub-nav">' . '<dt>' . __( 'Pages:', 'nvLangScope' ) . '</dt>',
+            'page_before'   => '<dd%>', //% represents replacement character for current/active page
+            'page_after'    => '</dd>',
+            'link_before'   => '',
+            'link_after'    => '',
+            'after'         => '</dl>',
+            'max_size'      => 6,
+            'echo'          => true,
         );
 
         $r = wp_parse_args( $args, $defaults );
@@ -378,11 +392,9 @@ class Theme
     /**
      * Load footer template.
      *
-     * Includes the footer template for a theme or if a name is specified then a
-     * specialised footer will be included.
+     * Includes the footer template for a theme or if a name is specified then a specialised footer will be included.
      *
-     * For the parameter, if the file is called "footer-special.php" then specify
-     * "special".
+     * For the parameter, if the file is called "footer-special.php" then specify "special".
      *
      * @uses locate_template()
      * @uses do_action() Calls 'get_footer' action.
@@ -401,30 +413,30 @@ class Theme
         if ( isset( $name ) ) {
             $templates[ ] = "{$path}footer-{$name}.php";
         }
-
-        $templates[ ] = "{$path}footer.php";
+        else {
+            $templates[ ] = "{$path}footer.php";
+        }
 
         // Backward compat code will be removed in a future release
         if ( '' == locate_template( $templates, true ) ) {
-            load_template( ABSPATH . WPINC . '/theme-compat/footer.php' );
+            trigger_error( "The specified footer ( {$templates[0]} ) was not found..." , E_USER_ERROR);
         }
     }
 
 
     /**
-     * Load header template.
+     * Load a header template.
      *
-     * Includes the header template for a theme or if a name is specified then a
-     * specialised header will be included.
+     * This allows you to load a header template from any specified path and/or file name. By default, this will look
+     * in the theme's /layout/ folder, unless otherwise specified.
      *
-     * For the parameter, if the file is called "header-special.php" then specify
-     * "special".
+     * For the parameter, if the file is called "header-special.php" then specify "special".
      *
      * @uses locate_template()
      * @uses do_action() Calls 'get_header' action.
      *
-     * @param string $name The name of the specialised header.
-     * @param sting $path The theme-relative path to the header file (with closing slash).
+     * @param mixed $name The name of the specialised header (note: will be prepended with "header-")
+     * @param string $path The theme-relative path to the header file.
      */
     public static function get_header( $name = null, $path = 'layout/' )
     {
@@ -437,21 +449,64 @@ class Theme
         if ( isset( $name ) ) {
             $templates[ ] = "{$path}header-{$name}.php";
         }
-
-        $templates[ ] = "{$path}header.php";
+        else {
+            $templates[ ] = "{$path}header.php";
+        }
 
         // Backward compat code will be removed in a future release
         if ( '' == locate_template( $templates, true ) ) {
-            load_template( ABSPATH . WPINC . '/theme-compat/header.php' );
+            trigger_error( "The specified header ( {$templates[0]} ) was not found..." , E_USER_ERROR);
         }
+    }
+
+
+    /**
+     * Shortcut to simplify a standard loop.
+     *
+     * @TODO Either extend this method or create a new version that can take a custom WP_Query query
+     *
+     * @param string $part The template part to load
+     * @param string $no_part The template part to load if there are no results
+     */
+    public static function loop( $part, $no_part='' )
+    {
+        // START the loop
+        if ( have_posts() )
+        {
+            while ( have_posts() )
+            {
+                the_post();
+                get_template_part( $part, get_post_format() );
+            }
+        }
+        else if ( ! empty($no_part) )
+        {
+            get_template_part( $no_part );
+        }
+        // END the loop
+    }
+
+
+    /**
+     * Outputs the name of the file as an HTML comment for easy-peesy troubleshooting.
+     *
+     * @param string $file This function should always be passed the value of __FILE__
+     */
+    public static function output_file_marker( $file )
+    {
+        // Strip out system path (keeping only site-root-relative path)
+        $file = preg_replace( '|' . preg_quote( ABSPATH ) . '|', '', $file );
+
+        // Output an HTML comment with the current template path
+        printf( "\n\n<!-- ".__( 'Template file: %s', 'nvLangScope' )." -->\n\n", '/'.$file );
     }
 
 
     /**
      * Generates a page <title>
      *
-     * @global type $page
-     * @global type $paged
+     * @global object $page
+     * @global int $paged
      */
     public static function page_title()
     {
@@ -476,77 +531,28 @@ class Theme
      */
     public static function posted_on()
     {
-        printf( __( '<span class="posted-on">Posted on <time datetime="%1$s" pubdate>%2$s</time> by <span class="author vcard"><a href="%3$s" title="%4$s" rel="author">%5$s</a></span></span>', 'nvLangScope' ), esc_attr( get_the_date( 'c' ) ), // 1. Full HTML5 datetime for datetime attr
-            esc_html( get_the_date() ), // 2. Visible date
-            esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), // 3. Author archive link
-            esc_attr( sprintf( __( 'View all posts by %s', 'nvLangScope' ), get_the_author() ) ), // 4. Author link title attr
-            get_the_author() // 5. Visible author name
+        // Full HTML5 datetime for datetime attr
+        $dt_html = esc_attr( get_the_date( 'c' ) );
+
+        // Visible date
+        $dt_text = esc_html( get_the_date() );
+
+        // Author archive LINK
+        $author_url = esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );
+
+        //Author title attribute
+        $author_tooltip = esc_attr( sprintf( __( 'View all posts by %s', 'nvLangScope' ), get_the_author() ) );
+
+        // Author name
+        $author_name = get_the_author();
+
+        // OUTPUT THE HTML
+        printf( '<span class="posted-on">'.__( 'Posted on %s by %s', 'nvLangScope' ).'</span>',
+            // Date and time...
+            "<time datetime='{$dt_html}' pubdate>{$dt_text}</time>",
+            // Author vcard and link...
+            "<span class='author vcard'><a href='{$author_url}' title='{$author_tooltip}' rel='author'>{$author_name}</a></span>"
         );
-    }
-
-
-    /**
-     * This renders a custom-defined menu in Foundation-compatible format. If no custom menu is defined,
-     * an alert box appears. Unlike the default functionality of wp_nav_menu(), this will NOT automatically generate
-     * menus (because automatically generated menus suck).
-     *
-     * @param string $menu_slug The name/id/slug of the menu to use.
-     * @param bool $mobile If true, this will be rendered as a mobile menu.
-     */
-    public static function topbar( $menu_slug, $mobile = false )
-    {
-        // Fallback... this will display if there is no menu defined
-        $fallback_cb = function ( $args ) {
-            printf( '<div class="alert-box secondary">%s</div>', sprintf( __( 'The "%s" menu has not been defined! You can <a href="%s">hard-code one</a>, or <a href="%s">create it in WordPress.</a>', 'nvLangScope' ), $args[ 'theme_location' ], 'http://foundation.zurb.com/docs/navigation.php#nav-bar', get_admin_url( '', 'nav-menus.php' ) ) );
-        };
-
-        // Let's generate the menu
-        wp_nav_menu( array(
-                          'theme_location'  => $menu_slug,
-                          'items_wrap'      => '<ul id="%1$s" class="nav-bar %2$s">%3$s</ul>',
-                          'walker'          => new \NV\FoundationMenuWalker,
-                          'container_class' => ( $mobile ) ? 'show-for-small' : 'hide-for-small',
-                          'fallback_cb'     => $fallback_cb,
-                     ) );
-    }
-
-
-    /**
-     * Outputs the name of the file as an HTML comment for troubleshooting.
-     *
-     * @param string $file This function should always be passed the value of __FILE__
-     */
-    public static function output_file_marker( $file )
-    {
-        // Strip out system path (keeping only site-root-relative path)
-        $file = preg_replace( '|' . preg_quote( ABSPATH ) . '|', '', $file );
-
-        // Output an HTML comment with the current template path
-        printf( "\n\n<!-- ".__( 'Template file: %s', 'nvLangScope' )." -->\n\n", '/'.$file );
-    }
-
-    /**
-     * Shortcut to simplify a standard loop.
-     *
-     * @param $part The template part to load
-     * @param $nopart The template part to load if there are no results
-     */
-    public static function loop( $part, $nopart='' )
-    {
-        // START the loop
-        if ( have_posts() )
-        {
-            while ( have_posts() )
-            {
-                the_post();
-                get_template_part( $part, get_post_format() );
-            }
-        }
-        else if ( ! empty($nopart) )
-        {
-            get_template_part( $nopart );
-        }
-        // END the loop
     }
 
 }

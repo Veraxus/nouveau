@@ -24,21 +24,13 @@ if ( have_comments() ) { ?>
     </p>
 
 
-    <div class="nav-comments">
-        <div class="alignleft"><?php previous_comments_link() ?></div>
-        <div class="alignright"><?php next_comments_link() ?></div>
-    </div>
-
+    <?php include('comments-nav.php'); ?>
 
     <ol class="commentlist">
         <?php wp_list_comments(); ?>
     </ol>
 
-
-    <div class="nav-comments">
-        <div class="alignleft"><?php previous_comments_link() ?></div>
-        <div class="alignright"><?php next_comments_link() ?></div>
-    </div>
+    <?php include('comments-nav.php'); ?>
 
 
 <?php
@@ -56,5 +48,5 @@ else
 
 
 if ( comments_open() ) {
-    require_once 'comments-form.php';
+    require('comments-respond.php');
 }
