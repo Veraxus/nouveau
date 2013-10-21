@@ -2,15 +2,6 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8326",
   "files" : {
-    "\/nv\/utilities\/Php.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/nv\/utilities\/Php.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/assets\/js\/foundation.full.min.js" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -21,6 +12,15 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/foundation.full.min.min.js",
       "fileType" : 64
+    },
+    "\/nv\/utilities\/Php.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/nv\/utilities\/Php.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/_compass\/sass\/_settings.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -72,6 +72,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
+    "\/assets\/js\/custom.modernizr.min.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/custom.modernizr.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/custom.modernizr.min.min.js",
+      "fileType" : 64
+    },
     "\/_compass\/sass\/app.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -83,17 +94,6 @@
       "outputAbbreviatedPath" : "\/assets\/css\/app.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/assets\/js\/custom.modernizr.min.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/custom.modernizr.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/custom.modernizr.min.min.js",
-      "fileType" : 64
     },
     "\/_compass\/javascripts\/nouveau\/theme-customizer.js" : {
       "ignoreWasSetByUser" : 0,
@@ -195,17 +195,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/foundation.topbar.min.js",
       "fileType" : 64
     },
-    "\/assets\/js\/foundation.alerts.min.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/foundation.alerts.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/foundation.alerts.min.min.js",
-      "fileType" : 64
-    },
     "\/assets\/js\/foundation.tooltips.min.js" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -215,6 +204,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/foundation.tooltips.min.min.js",
+      "fileType" : 64
+    },
+    "\/assets\/js\/foundation.alerts.min.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/foundation.alerts.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/foundation.alerts.min.min.js",
       "fileType" : 64
     },
     "\/assets\/js\/foundation.magellan.min.js" : {
@@ -239,18 +239,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/app.min.js",
       "fileType" : 64
     },
-    "\/_compass\/sass\/_normalize.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_compass\/sass\/_normalize.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/css\/_normalize.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/_compass\/javascripts\/foundation\/foundation.placeholder.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -274,6 +262,18 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/_compass\/sass\/_normalize.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_compass\/sass\/_normalize.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/assets\/css\/_normalize.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
     "\/admin-themeoptions.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -283,16 +283,14 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/_compass\/javascripts\/foundation\/foundation.section.js" : {
+    "\/assets\/css\/editor.css" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
-      "outputPathIsSetByUser" : 1,
-      "inputAbbreviatedPath" : "\/_compass\/javascripts\/foundation\/foundation.section.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/foundation.section.min.js",
-      "fileType" : 64
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/css\/editor.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/assets\/js\/foundation.dropdown.min.js" : {
       "ignoreWasSetByUser" : 1,
@@ -305,14 +303,16 @@
       "outputAbbreviatedPath" : "\/assets\/js\/foundation.dropdown.min.min.js",
       "fileType" : 64
     },
-    "\/assets\/css\/editor.css" : {
+    "\/_compass\/javascripts\/foundation\/foundation.section.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/css\/editor.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "outputPathIsSetByUser" : 1,
+      "inputAbbreviatedPath" : "\/_compass\/javascripts\/foundation\/foundation.section.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/foundation.section.min.js",
+      "fileType" : 64
     },
     "\/assets\/js\/foundation.min.js" : {
       "ignoreWasSetByUser" : 1,
@@ -325,17 +325,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/foundation.min.min.js",
       "fileType" : 64
     },
-    "\/assets\/js\/foundation.clearing.min.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/foundation.clearing.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/foundation.clearing.min.min.js",
-      "fileType" : 64
-    },
     "\/assets\/js\/jquery.min.js" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -345,6 +334,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/jquery.min.min.js",
+      "fileType" : 64
+    },
+    "\/assets\/js\/foundation.clearing.min.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/foundation.clearing.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/foundation.clearing.min.min.js",
       "fileType" : 64
     },
     "\/nv\/NV.php" : {
@@ -385,17 +385,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/screenshot.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/screenshot.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/screenshot.png",
-      "initialSize" : 12538,
-      "fileType" : 8192
-    },
     "\/assets\/js\/foundation.cookie.min.js" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -406,6 +395,17 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/foundation.cookie.min.min.js",
       "fileType" : 64
+    },
+    "\/screenshot.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/screenshot.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/screenshot.png",
+      "initialSize" : 12538,
+      "fileType" : 8192
     },
     "\/_compass\/javascripts\/vendor\/custom.modernizr.js" : {
       "ignoreWasSetByUser" : 0,
@@ -456,6 +456,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/assets\/js\/foundation.forms.min.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/foundation.forms.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/foundation.forms.min.min.js",
+      "fileType" : 64
+    },
     "\/nv\/utilities\/WordPress.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -474,17 +485,6 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/foundation.cookie.min.js",
-      "fileType" : 64
-    },
-    "\/assets\/js\/foundation.forms.min.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/foundation.forms.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/foundation.forms.min.min.js",
       "fileType" : 64
     },
     "\/_compass\/sass\/_wordpress.scss" : {
@@ -519,12 +519,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/nv\/hooks\/_pluggable.php" : {
+    "\/parts\/comments\/comments.php" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/nv\/hooks\/_pluggable.php",
+      "inputAbbreviatedPath" : "\/parts\/comments\/comments.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/index.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/index.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -539,24 +548,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/foundation.section.min.min.js",
       "fileType" : 64
     },
-    "\/index.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/nv\/hooks\/ThemeCustomize.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/nv\/hooks\/ThemeCustomize.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/_compass\/javascripts\/foundation\/foundation.interchange.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -568,12 +559,21 @@
       "outputAbbreviatedPath" : "\/assets\/js\/foundation.interchange.min.js",
       "fileType" : 64
     },
-    "\/parts\/comments\/comments.php" : {
+    "\/nv\/hooks\/ThemeCustomize.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/parts\/comments\/comments.php",
+      "inputAbbreviatedPath" : "\/nv\/hooks\/ThemeCustomize.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/nv\/hooks\/_pluggable.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/nv\/hooks\/_pluggable.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -637,23 +637,21 @@
       "outputAbbreviatedPath" : "\/assets\/js\/foundation.tooltips.min.js",
       "fileType" : 64
     },
-    "\/_compass\/javascripts\/vendor\/jquery.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 1,
-      "inputAbbreviatedPath" : "\/_compass\/javascripts\/vendor\/jquery.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/jquery.min.js",
-      "fileType" : 64
-    },
     "\/nv\/hooks\/Editor.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/nv\/hooks\/Editor.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/parts\/comments\/comments-nav.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/parts\/comments\/comments-nav.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -669,14 +667,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/parts\/comments\/comments-nav.php" : {
+    "\/_compass\/sass\/admin.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/parts\/comments\/comments-nav.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/_compass\/sass\/admin.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/assets\/css\/admin.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/nv\/utilities\/HtmlBase.php" : {
       "ignoreWasSetByUser" : 0,
@@ -684,6 +685,37 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/nv\/utilities\/HtmlBase.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/_compass\/javascripts\/vendor\/jquery.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 1,
+      "inputAbbreviatedPath" : "\/_compass\/javascripts\/vendor\/jquery.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/jquery.min.js",
+      "fileType" : 64
+    },
+    "\/_compass\/javascripts\/foundation\/foundation.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 1,
+      "inputAbbreviatedPath" : "\/_compass\/javascripts\/foundation\/foundation.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/foundation.min.js",
+      "fileType" : 64
+    },
+    "\/functions.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/functions.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -698,38 +730,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/zepto.min.js",
       "fileType" : 64
     },
-    "\/functions.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/functions.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/_compass\/javascripts\/foundation\/foundation.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 1,
-      "inputAbbreviatedPath" : "\/_compass\/javascripts\/foundation\/foundation.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/foundation.min.js",
-      "fileType" : 64
-    },
-    "\/_compass\/sass\/admin.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_compass\/sass\/admin.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/css\/admin.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/assets\/js\/admin.min.js" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -741,6 +741,15 @@
       "outputAbbreviatedPath" : "\/assets\/js\/admin.min.min.js",
       "fileType" : 64
     },
+    "\/nv\/utilities\/NV_Requirements.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/nv\/utilities\/NV_Requirements.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/assets\/js\/theme-customizer.min.js" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -751,15 +760,6 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/theme-customizer.min.min.js",
       "fileType" : 64
-    },
-    "\/nv\/utilities\/NV_Requirements.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/nv\/utilities\/NV_Requirements.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/_compass\/javascripts\/foundation\/foundation.alerts.js" : {
       "ignoreWasSetByUser" : 0,
@@ -816,15 +816,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/zepto.min.min.js",
       "fileType" : 64
     },
-    "\/parts\/comments\/comments-respond.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/parts\/comments\/comments-respond.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/_compass\/javascripts\/foundation\/foundation.joyride.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -835,6 +826,15 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/foundation.joyride.min.js",
       "fileType" : 64
+    },
+    "\/parts\/comments\/comments-respond.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/parts\/comments\/comments-respond.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/_compass\/javascripts\/foundation\/foundation.forms.js" : {
       "ignoreWasSetByUser" : 0,

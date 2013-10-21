@@ -25,6 +25,6 @@ If you are not using Compass/SASS, you can also delete:
 * _compass (the entire folder)
 * config.rb
 
-Additionally, if you are not using CodeKit (why not!?) you can delete:
+Additionally, if you are not using CodeKit (well, why not!?) you can also delete:
 
 * codekit-config.json
