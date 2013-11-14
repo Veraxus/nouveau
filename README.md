@@ -6,7 +6,7 @@
 **Version:** 0.0.2  
 **Requires at least:** 3.6  
 **Tested up to:** 3.8  
-**Stable tag:** 0.0.2  
+**Stable tag:** 0.0.3
 **License:** GNU General Public License  
 **License URI:** GNU-LICENSE.txt  
 
@@ -82,6 +82,9 @@ These plugins were created by developers, for developers. We hope they make your
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
 ## Changelog ##
+
+### 0.0.3 (2013-11-14) ###
+* Added \NV\Theme::custom_loop() function for simplifying the loops of custom queries.
 
 ### 0.0.2 (2013-10-21) ###
 * Significant cleanup on code base. Lots of features moved into plugins.

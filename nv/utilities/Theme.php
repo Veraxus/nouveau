@@ -30,8 +30,7 @@ class Theme
      *
      * @return string
      */
-    public static function archive_nav( $args = array() )
-    {
+    public static function archive_nav( $args = array() ) {
         global $wp_query, $paged;
 
         //If this isn't an archive, do nothing
@@ -206,8 +205,7 @@ class Theme
      *
      * @return string Formatted output in HTML.
      */
-    public static function article_page_nav( $args = array() )
-    {
+    public static function article_page_nav( $args = array() ) {
         $defaults = array(
             'before'        => '<dl class="page-link sub-nav">' . '<dt>' . __( 'Pages:', 'nvLangScope' ) . '</dt>',
             'page_before'   => '<dd%>', //% represents replacement character for current/active page
@@ -287,8 +285,7 @@ class Theme
      *
      * @return string
      */
-    public static function breadcrumbs( $args = array() )
-    {
+    public static function breadcrumbs( $args = array() ) {
         global $post, $wp_query;
 
         $defaults = array(
@@ -383,8 +380,7 @@ class Theme
      * @param array $args
      * @param int $depth
      */
-    public static function comments( $comment, $args = array(), $depth = 1 )
-    {
+    public static function comments( $comment, $args = array(), $depth = 1 ) {
         require NV_PATH . '/parts/comments-single.php';
     }
 
@@ -402,8 +398,7 @@ class Theme
      * @param string $name The name of the specialised footer.
      * @param string $path
      */
-    public static function get_footer( $name = null, $path = 'layout/' )
-    {
+    public static function get_footer( $name = null, $path = 'layout/' ) {
         do_action( 'get_footer', $name );
 
         //Ensure path has closing slash
@@ -438,8 +433,7 @@ class Theme
      * @param mixed $name The name of the specialised header (note: will be prepended with "header-")
      * @param string $path The theme-relative path to the header file.
      */
-    public static function get_header( $name = null, $path = 'layout/' )
-    {
+    public static function get_header( $name = null, $path = 'layout/' ) {
         do_action( 'get_header', $name );
 
         //Ensure path has closing slash
@@ -461,29 +455,66 @@ class Theme
 
 
     /**
-     * Shortcut to simplify a standard loop.
-     *
-     * @TODO Either extend this method or create a new version that can take a custom WP_Query query
+     * Shortcut to simplify a standard loop. You simply provide a template part path and the loop is handled for you.
      *
      * @param string $part The template part to load
      * @param string $no_part The template part to load if there are no results
      */
-    public static function loop( $part, $no_part='' )
-    {
+    public static function loop( $part, $no_part='' ) {
         // START the loop
-        if ( have_posts() )
-        {
-            while ( have_posts() )
-            {
+        if ( have_posts() ) {
+            while ( have_posts() ) {
                 the_post();
                 get_template_part( $part, get_post_format() );
             }
         }
-        else if ( ! empty($no_part) )
-        {
+        else if ( ! empty($no_part) ) {
             get_template_part( $no_part );
         }
         // END the loop
+    }
+
+
+    /**
+     * Shortcut to simplify a loop that uses a custom query. You can provide either a WP_Query object or an array of
+     * query arguments if you want the object created for you. The loop will then be performed and the appropriate
+     * specified template part will be loaded. You can also specify a custom name for the query object variable to
+     * prevent collisions.
+     *
+     * Not that template parts are loaded by include, NOT by get_template_part(). This is because get_template_part()
+     * blocks access to the custom query variable unless a global statement pulls it into the template.
+     *
+     * @param mixed $custom_query Required. Either a WP_Query object or an array of arguments to perform a new query.
+     * @param string $part Required. The theme-relative template part to load.
+     * @param string $no_part Optional. The theme-relative template part to load if there are no results.
+     * @param string $var_name Optional. The variable name (without $) you want to use for accessing the query within template parts. Default: 'query'.
+     * @return Returns false if nothing to show.
+     */
+    public static function custom_loop( $custom_query, $part, $no_part='', $var_name='query' ) {
+
+        // Set up the custom named query variable
+        if ( is_array($custom_query) || is_string($custom_query) ) {
+            $$var_name = new \WP_Query($custom_query);
+        }
+        else if ( is_a($custom_query,'\WP_Query') ) {
+            $$var_name = &$custom_query;
+        }
+        else {
+            return false;
+        }
+
+        // START the loop
+        if ( $$var_name->have_posts() ) {
+            while ( $$var_name->have_posts() ) {
+                $$var_name->the_post();
+                do_action( "get_template_part_{$part}", $part, null );
+                include trailingslashit(THEME_DIR).$part.'.php';
+            }
+        }
+        else if ( ! empty( $no_part ) ) {
+            do_action( "get_template_part_{$part}", $part, null );
+            include trailingslashit(THEME_DIR).$no_part.'.php';
+        }
     }
 
 
