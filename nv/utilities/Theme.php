@@ -515,6 +515,8 @@ class Theme
             do_action( "get_template_part_{$part}", $part, null );
             include trailingslashit(THEME_DIR).$no_part.'.php';
         }
+
+        wp_reset_query();
     }
 
 
