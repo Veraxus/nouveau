@@ -11,7 +11,7 @@
 **License:** GNU General Public License  
 **License URI:** GNU-LICENSE.txt  
 
-NOUVEAU is an open-source, rapid-development theme & plugin framework for WordPress, built on Zurb Foundation 4 and PHP 5.3. Work fast. Be awesome.
+NOUVEAU is an open-source, rapid-development theme & plugin framework for WordPress, built on Zurb Foundation 5 and PHP 5.3. Work fast. Be awesome.
 
 ## Description ##
 
@@ -30,7 +30,7 @@ Everything is available a-la-carte. By keeping the theme and features separate, 
 * **PHP 5.3+**
 **PHP 5.3 provides numerous benefits:** namespaces, closures, anonymous functions... and NOUVEAU takes advantage of that. But if you need to maintain parity with WordPress, a PHP 5.2.4-compatible version (**not this one!**) is also available.  
 
-* **Zurb Foundation 4**
+* **Zurb Foundation 5**
 NOUVEAUs theme framework component is built on the latest version of Zurb Foundation, an open-source front-end framework that blows Bootstrap out of the water. Create responsive websites with incredible speed and flexibility.
 
 * **Clean Code. No Assumptions**
