@@ -3,11 +3,11 @@
 **Donate link:** http://nouveauframework.org/  
 **Author URI:** http://nouveauframework.org/  
 **Tags:** framework, php5.3  
-**Version:** 0.0.4
-**Foundation:** 5.0.1
+**Version:** 0.0.4  
+**Foundation:** 5.0.1  
 **Requires at least:** 3.8  
 **Tested up to:** 3.9  
-**Stable tag:** 0.0.4
+**Stable tag:** 0.0.4  
 **License:** GNU General Public License  
 **License URI:** GNU-LICENSE.txt  
 
@@ -30,9 +30,9 @@ NOUVEAU isn’t a theme or a plugin, it’s a framework. Anything you need to qu
 Everything is available a-la-carte. By keeping the theme and features separate, you can easily use or customize only what you need (as plugins), and none of what you don’t.
 
 * **PHP 5.3+**
-**PHP 5.3 provides numerous benefits:** namespaces, closures, anonymous functions... and NOUVEAU takes advantage of that. But if you need to maintain parity with WordPress, a PHP 5.2.4-compatible version (**not this one!**) is also available.  
+**PHP 5.3 provides numerous benefits:** namespaces, closures, anonymous functions... and NOUVEAU takes advantage of that.  
 
-* **Zurb Foundation 5**
+* **Zurb Foundation**
 NOUVEAUs theme framework component is built on the latest version of Zurb Foundation, an open-source front-end framework that blows Bootstrap out of the water. Create responsive websites with incredible speed and flexibility.
 
 * **Clean Code. No Assumptions**
