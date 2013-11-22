@@ -1,0 +1,34 @@
+/*
+ =======================================================================================================================
+ Foundation Example Styles
+
+ Foundation includes this example SASS in app.scss by default, but it has been moved here to keep app.scss as clean and
+ simple as possible by default.
+ =======================================================================================================================
+*/
+header {
+    @include grid-row;
+
+    .logo  { @include grid-column($columns:3, $center:true); }
+    padding-bottom: em-calc(10px);
+
+}
+
+.main-content {
+    @include grid-row;
+
+    aside  {
+        @include grid-column($columns:6);
+        // @media #{$medium-up} {
+        //   @include grid-column($columns:3);
+        // }
+    }
+
+    article  {
+        @include grid-column($columns:6);
+        // @media #{$medium-up} {
+        //   @include grid-column($columns:8, $offset: 1);
+        // }
+    }
+
+}

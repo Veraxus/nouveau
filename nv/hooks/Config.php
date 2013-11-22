@@ -24,7 +24,7 @@ class Config {
             'width'         => 980,
             'flex-height'   => true,
             'flex-width'    => true,
-            'default-image' => 'http://placehold.it/980x200', //or try '%s/assets/images/headers/img.jpg',
+            'default-image' => 'http://placehold.it/980x200', //or use something like '%s/assets/images/headers/img.jpg',
             //'random-default'      => false,
             //'header-text'         => true,    //Bool. Allow header text?
             //'default-text-color'  => '',

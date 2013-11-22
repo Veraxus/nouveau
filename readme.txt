@@ -3,10 +3,11 @@ Contributors: Veraxus
 Donate link: http://nouveauframework.org/
 Author URI: http://nouveauframework.org/
 Tags: framework, php5.3
-Version: 0.0.2
-Requires at least: 3.6
-Tested up to: 3.8
-Stable tag: 0.0.3
+Version: 0.0.4
+Requires at least: 3.8
+Tested up to: 3.9
+Stable tag: 0.0.4
+Foundation Version: 5.0.1
 License: GNU General Public License
 License URI: GNU-LICENSE.txt
 
@@ -82,6 +83,13 @@ These plugins were created by developers, for developers. We hope they make your
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
 == Changelog ==
+
+= 0.0.4 (2013-11-22) =
+* Renamed \NV\Hooks\Theme class to NV\Hooks\Config (which is a more accurate name)
+* Updated Zurb Foundation to version 5, including...
+* Reconfigured Foundation's ".sticky" class to ".snappable" instead, so it wont interfere with WordPress
+* Setup Compass config.rb file for theme compatibility
+* Updated the Foundation example override template
 
 = 0.0.3 (2013-11-14) =
 * Added \NV\Theme::custom_loop() for simplifying the loops of custom queries.

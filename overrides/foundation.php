@@ -8,16 +8,9 @@
  * @subpackage Nouveau
  * @since Nouveau 1.0
  */
-?><!doctype html>
-<html class="no-js" lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation</title>
-    <link rel="stylesheet" href="stylesheets/app.css" />
-    <script src="bower_components/modernizr/modernizr.js"></script>
-</head>
-<body>
+\NV\Theme::get_header();
+\NV\Theme::output_file_marker( __FILE__ );
+?>
 <div class="row">
     <div class="large-12 columns">
         <h1>Welcome to Foundation</h1>
@@ -166,8 +159,10 @@
     </div>
 </div>
 
-<script src="bower_components/jquery/jquery.js"></script>
-<script src="bower_components/foundation/js/foundation.min.js"></script>
-<script src="js/app.js"></script>
+<!-- start wp_footer() hooks -->
+<?php wp_footer(); ?>
+<!-- end wp_footer() hooks -->
+
+</div><!-- end #frame -->
 </body>
 </html>
