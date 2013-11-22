@@ -17,7 +17,9 @@ NOUVEAU is an open-source, rapid-development theme & plugin framework for WordPr
 
 **NOUVEAU is NOT a ready-made theme and should only be used by developers.**
 
-NOUVEAU is a rapid-development framework for WordPress. Unlike other "theme frameworks" NOUVEAU doesn't try to cram everything into a single, monolithic, Frankenstein's Monster theme - instead, the theme is dedicated solely to theme-related work, keeping things clean and easy. If you want even more features, we have plugins for that. Download plugins only for the features you really need, and customize them quickly and easily. Everything is standardized, simple, clean, and well commented - so you can work FAST.
+NOUVEAU is a rapid-development framework for WordPress. Unlike other "theme frameworks" NOUVEAU doesn't try to cram everything into a single, monolithic, Frankenstein's Monster theme - instead, the theme is dedicated solely to theme-related work, keeping things clean and easy.
+
+If you want even more features, don't clutter your theme with them... there are plugins for that! Download plugins only for the features you really need, and customize them quickly and easily. Everything is standardized, simple, clean, and well commented - so you can work FAST.
 
 ###Features###
 
