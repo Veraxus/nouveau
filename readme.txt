@@ -43,11 +43,15 @@ In addition to having very well documented code, you can find a complete **Getti
 
 == Installation Instructions == 
 
-NOUVEAU is NOT a ready-made theme and should only be used by developers. it is specifically built to facilitate rapid development and easy maintenance by developers. The code is clean, simple, and very well commented.
+NOTE: NOUVEAU is NOT a ready-made theme and should only be used by developers. it is specifically built to facilitate rapid development and easy maintenance by developers. The code is clean, simple, and very well commented.
 
-To install, simply the copy the NOUVEAU theme folder to your `wp-content\themes` directory. Before activating, be sure you rename the folder and perform a global find-replace for NOUVEAU, Nouveau, nouveau (case sensitive), as well as the language scopes (nvLangScope).
+= Prerequisites for SASS developers =
+If you want to use the SASS workflow, ensure that you have all of Foundations prerequisites met first (see: [http://foundation.zurb.com/docs/sass.html]).
 
-You can find any information you may need at [NouveauFramework.com](http://nouveauframework.org/documentation/getting-started/)
+= General Installation =
+To install, simply the copy the NOUVEAU theme folder to your `wp-content\themes` directory. Before activating, be sure you rename the theme folder and perform a global find-replace for the strings (case sensitive) `NOUVEAU`, `Nouveau`, and `nouveau`, as well as the language scope (`nvLangScope`).
+
+You can find exhaustive documentation for NOUVEAU at [NouveauFramework.com](http://nouveauframework.org/documentation/getting-started/), and documentation Zurb Foundation at [Foundation.Zurb.com](http://foundation.zurb.com/docs/sass.html)
 
 Also remember that you can test your own NOUVEAU derivatives by using the WordPress [Theme Unit Test]( http://codex.wordpress.org/Theme_Unit_Test ).
 
