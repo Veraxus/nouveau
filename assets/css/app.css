@@ -6,7 +6,7 @@
  installing and/or updating Compass and Foundation ( see: http://foundation.zurb.com/docs/sass.html ).
 
  If you are using the default config.rb settings (found in your theme's root directory), this file will be compile into
- assets/css/app.css within your theme directory and is enqueued by \NV\Hooks\Theme::enqueue_assets()
+ assets/css/app.css within your theme directory and is enqueued by \NV\Hooks\Config::enqueue_assets()
  =======================================================================================================================
 */
 /*
@@ -22,7 +22,7 @@
  HTML5 Normalization
 
  Foundation uses this file to standardize display of various HTML5 elements across browsers and devices. It is compiled
- to assets\css\normalize.css and is individually enqueued by \NV\Hooks\Theme::enqueue_assets()
+ to assets\css\normalize.css and is individually enqueued by \NV\Hooks\Config::enqueue_assets()
  =======================================================================================================================
 */
 /* normalize.css v2.1.1 | MIT License | git.io/normalize */
@@ -3651,6 +3651,6 @@ table {
  Custom Styles
 
  This is where you should add your own SCSS. This file is automatically included by app.scss and will compile to your
- theme directory under assets/css/app.css, which is already enqueued by \NV\Hooks\Theme::enqueue_assets()
+ theme directory under assets/css/app.css, which is already enqueued by \NV\Hooks\Config::enqueue_assets()
  =======================================================================================================================
 */

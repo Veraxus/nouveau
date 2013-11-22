@@ -3,7 +3,7 @@
  HTML5 Normalization
 
  Foundation uses this file to standardize display of various HTML5 elements across browsers and devices. It is compiled
- to assets\css\normalize.css and is individually enqueued by \NV\Hooks\Theme::enqueue_assets()
+ to assets\css\normalize.css and is individually enqueued by \NV\Hooks\Config::enqueue_assets()
  =======================================================================================================================
 */
 

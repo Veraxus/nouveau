@@ -6,7 +6,7 @@
  installing and/or updating Compass and Foundation ( see: http://foundation.zurb.com/docs/sass.html ).
 
  If you are using the default config.rb settings (found in your theme's root directory), this file will be compile into
- assets/css/app.css within your theme directory and is enqueued by \NV\Hooks\Theme::enqueue_assets()
+ assets/css/app.css within your theme directory and is enqueued by \NV\Hooks\Config::enqueue_assets()
  =======================================================================================================================
 */
 

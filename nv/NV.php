@@ -90,7 +90,7 @@ class NV {
         require_once( NV_UTILS . '/Theme.php' ); // Items that are used directly in theme templates
 
         /** HOOKS *********************************************************************/
-        require_once( NV_HOOKS . '/Theme.php' ); // Global, basic theme setup
+        require_once( NV_HOOKS . '/Config.php' ); // Global, basic theme setup
         require_once( NV_HOOKS . '/Editor.php' ); // Configuration for the theme customizer
         require_once( NV_HOOKS . '/ThemeCustomize.php' ); // Configuration for the theme customizer
     }
@@ -101,22 +101,22 @@ class NV {
      */
     public static function hooks() {
         // Setup general theme options
-        add_action( 'after_setup_theme',        array( '\NV\Hooks\Theme', 'after_setup_theme' ) );
+        add_action( 'after_setup_theme',        array( '\NV\Hooks\Config', 'after_setup_theme' ) );
 
         // Load styles and scripts
-        add_action( 'wp_enqueue_scripts',       array( '\NV\Hooks\Theme', 'enqueue_assets' ) );
+        add_action( 'wp_enqueue_scripts',       array( '\NV\Hooks\Config', 'enqueue_assets' ) );
 
         // Load styles and scripts
-        add_action( 'admin_enqueue_scripts',    array( '\NV\Hooks\Theme', 'enqueue_admin_assets' ) );
+        add_action( 'admin_enqueue_scripts',    array( '\NV\Hooks\Config', 'enqueue_admin_assets' ) );
 
         // Register sidebars
-        add_action( 'widgets_init',             array( '\NV\Hooks\Theme', 'sidebars' ) );
+        add_action( 'widgets_init',             array( '\NV\Hooks\Config', 'sidebars' ) );
 
         // Any customizations to the body_class() function
-        add_filter( 'body_class',               array( '\NV\Hooks\Theme', 'body_class' ) );
+        add_filter( 'body_class',               array( '\NV\Hooks\Config', 'body_class' ) );
 
         // OPTIONAL: Change WordPress's .sticky class (instead of Foundations) to prevent class conflict
-        //add_filter( 'post_class',               array( '\NV\Hooks\Theme', 'fix_sticky_class' ) );
+        //add_filter( 'post_class',               array( '\NV\Hooks\Config', 'fix_sticky_class' ) );
 
 
         /** THEME CUSTOMIZATION *******************************************************/
