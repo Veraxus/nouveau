@@ -129,6 +129,16 @@ class WordPress
     }
 
     /**
+     * Outputs the permalink for the current or specified page. Identical to WordPress's built-in the_permalink() except
+     * this allows you to specify a specific post id.
+     *
+     * @param int $id
+     */
+    public static function the_permalink( $id = 0 ) {
+        echo esc_url( apply_filters( 'the_permalink', get_permalink($id) ) );
+    }
+
+    /**
      * Saves a single option for a single dashboard widget to the database.
      *
      * @param string $widget_id The name of the widget being updated

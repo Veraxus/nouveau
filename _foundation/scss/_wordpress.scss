@@ -55,7 +55,7 @@
  FOUNDATION COMPATIBILITY
 =============================
 */
-/* This helps ensure that Foundation's special .sticky class will not interfere with the WP admin bar. */
-.admin-bar .snap-to-top.fixed {
+/* This helps ensure that Foundation's special ".sticky" class will not interfere with the WP admin bar. */
+.admin-bar .snappable.fixed {
     top: 28px;
 }

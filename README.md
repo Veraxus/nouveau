@@ -3,11 +3,11 @@
 **Donate link:** http://nouveauframework.org/  
 **Author URI:** http://nouveauframework.org/  
 **Tags:** framework, php5.3  
-**Version:** 0.0.4  
+**Version:** 0.9.1
 **Foundation:** 5.0.1  
 **Requires at least:** 3.8  
 **Tested up to:** 3.9  
-**Stable tag:** 0.0.4  
+**Stable tag:** 0.9.1
 **License:** GNU General Public License  
 **License URI:** GNU-LICENSE.txt  
 
@@ -89,6 +89,13 @@ These plugins were created by developers, for developers. We hope they make your
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
 ## Changelog ##
+
+### 0.9.1 (2013-12-11) ###
+* New versioning (since the framework is pretty close to solid at this point)
+* Added a \NV\Theme::the_permalink() function, which allows the_permalink() style output by specifying post id
+* Fixed the SCSS/CSS for the '.snappable' class when the admin bar is visible
+* Henceforth, only the bare minimum Foundation Javascripts are loaded by default. Uncomment the specific features you want in \NV\Config::enqueue_assets()
+* Related: A preliminary version of NouveauFramework.com is now live (but still needs so, so much work)
 
 ### 0.0.4 (2013-11-22) ###
 * Renamed \NV\Hooks\Theme class to NV\Hooks\Config (which is a more accurate name)

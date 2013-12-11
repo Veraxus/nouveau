@@ -7827,8 +7827,8 @@ header .logo {
  FOUNDATION COMPATIBILITY
 =============================
 */
-/* This helps ensure that Foundation's special .sticky class will not interfere with the WP admin bar. */
+/* This helps ensure that Foundation's special ".sticky" class will not interfere with the WP admin bar. */
 /* line 59, ../../_foundation/scss/_wordpress.scss */
-.admin-bar .snap-to-top.fixed {
+.admin-bar .snappable.fixed {
   top: 28px;
 }
