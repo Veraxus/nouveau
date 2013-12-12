@@ -95,7 +95,7 @@ NOUVEAU comes with all text strings properly scoped for internationalization. To
 
 ### 0.9.1 (2013-12-11) ###
 * New versioning (since the framework is pretty close to solid at this point)
-* Added a \NV\Theme::the_permalink() function, which allows the_permalink() style output by specifying post id
+* Added a \NV\WordPress::the_permalink() function, which allows the_permalink() style output by specifying post id
 * Fixed the SCSS/CSS for the '.snappable' class when the admin bar is visible
 * Henceforth, only the bare minimum Foundation Javascripts are loaded by default. Uncomment the specific features you want in \NV\Config::enqueue_assets()
 * Related: A preliminary version of NouveauFramework.com is now live (but still needs so, so much work)
