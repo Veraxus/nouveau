@@ -7,7 +7,7 @@
 **Foundation:** 5.0.2  
 **Requires at least:** 3.8  
 **Tested up to:** 3.9  
-**Stable tag:** 0.9.2
+**Stable tag:** 0.9.2  
 **License:** GNU General Public License  
 **License URI:** GNU-LICENSE.txt  
 
