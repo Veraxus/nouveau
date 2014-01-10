@@ -24,13 +24,13 @@ if ( have_comments() ) { ?>
     </p>
 
 
-    <?php include('comments-nav.php'); ?>
+    <?php include 'comments-nav.php'; ?>
 
     <ol class="commentlist">
-        <?php wp_list_comments(); ?>
+        <?php wp_list_comments( array( 'walker' => new \NV\Custom\WalkerComments ) ); ?>
     </ol>
 
-    <?php include('comments-nav.php'); ?>
+    <?php include 'comments-nav.php'; ?>
 
 
 <?php

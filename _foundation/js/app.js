@@ -11,7 +11,7 @@
     // Foundation JavaScript
     // Documentation can be found at: http://foundation.zurb.com/docs
     $(document).foundation('topbar', {
-        sticky_class: 'snappable'
+        sticky_class: 'snap-to-top'
     });
 
     //Your code goes here

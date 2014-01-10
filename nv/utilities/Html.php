@@ -17,11 +17,11 @@ class Html extends HtmlBase
      *
      * @return string
      */
-    public static function a( $atts, $content = '', $echo = false )
+    public static function a( $href='#', $atts=array(), $content = '', $echo = false )
     {
         $atts   = parent::atts_default(
             array(
-                'href' => '#',
+                'href' => $href,
             ),
             $atts
         );

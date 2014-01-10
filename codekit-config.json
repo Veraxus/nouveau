@@ -180,17 +180,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/_foundation\/bower_components\/jquery\/jquery.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/jquery\/jquery.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/jquery.min.min.js",
-      "fileType" : 64
-    },
     "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-positionsticky.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -200,6 +189,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/css-positionsticky.min.js",
+      "fileType" : 64
+    },
+    "\/_foundation\/bower_components\/jquery\/jquery.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/jquery\/jquery.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/jquery.min.min.js",
       "fileType" : 64
     },
     "\/_foundation\/bower_components\/modernizr\/test\/index.html" : {
@@ -391,17 +391,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/css-vminunit.min.js",
       "fileType" : 64
     },
-    "\/_foundation\/bower_components\/modernizr\/feature-detects\/forms-inputnumber-l10n.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/feature-detects\/forms-inputnumber-l10n.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/forms-inputnumber-l10n.min.js",
-      "fileType" : 64
-    },
     "\/_foundation\/bower_components\/modernizr\/feature-detects\/vibration.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -411,6 +400,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/vibration.min.js",
+      "fileType" : 64
+    },
+    "\/_foundation\/bower_components\/modernizr\/feature-detects\/forms-inputnumber-l10n.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/feature-detects\/forms-inputnumber-l10n.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/forms-inputnumber-l10n.min.js",
       "fileType" : 64
     },
     "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/table.png" : {
@@ -832,6 +832,17 @@
       "outputAbbreviatedPath" : "\/assets\/js\/foundation.accordion.min.min.js",
       "fileType" : 64
     },
+    "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/alpha.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/alpha.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/alpha.png",
+      "initialSize" : 163,
+      "fileType" : 8192
+    },
     "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_keystrokes.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -843,17 +854,6 @@
       "outputAbbreviatedPath" : "\/assets\/css\/_keystrokes.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/alpha.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/alpha.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/alpha.png",
-      "initialSize" : 163,
-      "fileType" : 8192
     },
     "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_pricing-tables.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -944,17 +944,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/a-download.min.js",
       "fileType" : 64
     },
-    "\/_foundation\/bower_components\/modernizr\/feature-detects\/lists-reversed.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/feature-detects\/lists-reversed.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/lists-reversed.min.js",
-      "fileType" : 64
-    },
     "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_global.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -966,6 +955,17 @@
       "outputAbbreviatedPath" : "\/assets\/css\/_global.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/_foundation\/bower_components\/modernizr\/feature-detects\/lists-reversed.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/feature-detects\/lists-reversed.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/lists-reversed.min.js",
+      "fileType" : 64
     },
     "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_tabs.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -1116,47 +1116,14 @@
       "outputAbbreviatedPath" : "\/assets\/js\/unicode.min.js",
       "fileType" : 64
     },
-    "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.topbar.js" : {
+    "\/layout\/footer.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.topbar.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/foundation.topbar.min.js",
-      "fileType" : 64
-    },
-    "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/form_validation.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/form_validation.html",
+      "inputAbbreviatedPath" : "\/layout\/footer.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
-    },
-    "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.offcanvas.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.offcanvas.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/foundation.offcanvas.min.js",
-      "fileType" : 64
-    },
-    "\/_foundation\/bower_components\/modernizr\/feature-detects\/es5-strictmode.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/feature-detects\/es5-strictmode.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/es5-strictmode.min.js",
-      "fileType" : 64
     },
     "\/_foundation\/scss\/editor.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -1181,14 +1148,47 @@
       "outputAbbreviatedPath" : "\/assets\/js\/css-pointerevents.min.js",
       "fileType" : 64
     },
-    "\/layout\/footer.php" : {
+    "\/_foundation\/bower_components\/modernizr\/feature-detects\/es5-strictmode.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/layout\/footer.php",
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/feature-detects\/es5-strictmode.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/es5-strictmode.min.js",
+      "fileType" : 64
+    },
+    "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/form_validation.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/form_validation.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.offcanvas.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.offcanvas.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/foundation.offcanvas.min.js",
+      "fileType" : 64
+    },
+    "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.topbar.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.topbar.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/foundation.topbar.min.js",
+      "fileType" : 64
     },
     "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-hyphens.js" : {
       "ignoreWasSetByUser" : 0,
@@ -1252,15 +1252,15 @@
       "outputAbbreviatedPath" : "\/assets\/js\/forms-formattribute.min.js",
       "fileType" : 64
     },
-    "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/detect-global.js" : {
+    "\/_foundation\/bower_components\/modernizr\/modernizr.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/detect-global.js",
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/modernizr.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/detect-global.min.js",
+      "outputAbbreviatedPath" : "\/assets\/js\/modernizr.min.js",
       "fileType" : 64
     },
     "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-boxsizing.js" : {
@@ -1285,15 +1285,15 @@
       "outputAbbreviatedPath" : "\/assets\/js\/css-backgroundsizecover.min.js",
       "fileType" : 64
     },
-    "\/_foundation\/bower_components\/modernizr\/modernizr.js" : {
+    "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/detect-global.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/modernizr.js",
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/detect-global.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/modernizr.min.js",
+      "outputAbbreviatedPath" : "\/assets\/js\/detect-global.min.js",
       "fileType" : 64
     },
     "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-backgroundrepeat.js" : {
@@ -1568,6 +1568,17 @@
       "outputAbbreviatedPath" : "\/assets\/js\/css-userselect.min.js",
       "fileType" : 64
     },
+    "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/uaparser.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/uaparser.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/uaparser.min.js",
+      "fileType" : 64
+    },
     "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_button-groups.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1579,17 +1590,6 @@
       "outputAbbreviatedPath" : "\/assets\/css\/_button-groups.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/uaparser.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/uaparser.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/uaparser.min.js",
-      "fileType" : 64
     },
     "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/style.css" : {
       "ignoreWasSetByUser" : 0,
@@ -1633,16 +1633,14 @@
       "outputAbbreviatedPath" : "\/assets\/js\/webgl-extensions.min.js",
       "fileType" : 64
     },
-    "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/before-after.png" : {
+    "\/parts\/comments\/comments-nav.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/before-after.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/before-after.png",
-      "initialSize" : 452,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/parts\/comments\/comments-nav.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/_foundation\/bower_components\/modernizr\/feature-detects\/forms-fileinput.js" : {
       "ignoreWasSetByUser" : 0,
@@ -1700,15 +1698,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/css-displayrunin.min.js",
       "fileType" : 64
     },
-    "\/parts\/comments\/comments-nav.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/parts\/comments\/comments-nav.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/_foundation\/bower_components\/modernizr\/feature-detects\/ie8compat.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1719,6 +1708,17 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/ie8compat.min.js",
       "fileType" : 64
+    },
+    "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/before-after.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/before-after.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/before-after.png",
+      "initialSize" : 452,
+      "fileType" : 8192
     },
     "\/assets\/js\/foundation.abide.min.js" : {
       "ignoreWasSetByUser" : 0,
@@ -1852,16 +1852,14 @@
       "initialSize" : 12538,
       "fileType" : 8192
     },
-    "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/windsong_font.png" : {
+    "\/functions.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/windsong_font.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/windsong_font.png",
-      "initialSize" : 1339,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/functions.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/_foundation\/bower_components\/modernizr\/test\/js\/unit.js" : {
       "ignoreWasSetByUser" : 0,
@@ -1874,14 +1872,16 @@
       "outputAbbreviatedPath" : "\/assets\/js\/unit.min.js",
       "fileType" : 64
     },
-    "\/functions.php" : {
+    "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/windsong_font.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/functions.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/windsong_font.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/windsong_font.png",
+      "initialSize" : 1339,
+      "fileType" : 8192
     },
     "\/_foundation\/bower_components\/modernizr\/test\/js\/basic.html" : {
       "ignoreWasSetByUser" : 0,
@@ -1936,15 +1936,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/notification.min.js",
       "fileType" : 64
     },
-    "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/mathml.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/mathml.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/_foundation\/bower_components\/modernizr\/feature-detects\/custom-protocol-handler.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1955,6 +1946,15 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/custom-protocol-handler.min.js",
       "fileType" : 64
+    },
+    "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/mathml.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/mathml.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_accordion.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -2047,17 +2047,16 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/_foundation\/scss\/admin.scss" : {
+    "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/ruby.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/scss\/admin.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/css\/admin.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/ruby.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/ruby.png",
+      "initialSize" : 1339,
+      "fileType" : 8192
     },
     "\/_foundation\/bower_components\/foundation\/scss\/normalize.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -2071,16 +2070,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/ruby.png" : {
+    "\/_foundation\/scss\/admin.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/ruby.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/ruby.png",
-      "initialSize" : 1339,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/_foundation\/scss\/admin.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/assets\/css\/admin.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/_foundation\/bower_components\/modernizr\/feature-detects\/contenteditable.js" : {
       "ignoreWasSetByUser" : 0,
@@ -2250,18 +2250,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/foundation.reveal.min.js",
       "fileType" : 64
     },
-    "\/_foundation\/bower_components\/foundation\/scss\/foundation\/_functions.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/foundation\/scss\/foundation\/_functions.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/css\/_functions.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_dropdown-buttons.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -2271,6 +2259,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/assets\/css\/_dropdown-buttons.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/_foundation\/bower_components\/foundation\/scss\/foundation\/_functions.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/foundation\/scss\/foundation\/_functions.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/assets\/css\/_functions.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -2330,17 +2330,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/canvas-todataurl-type.min.js",
       "fileType" : 64
     },
-    "\/_foundation\/bower_components\/modernizr\/feature-detects\/battery-api.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/feature-detects\/battery-api.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/battery-api.min.js",
-      "fileType" : 64
-    },
     "\/_foundation\/bower_components\/modernizr\/feature-detects\/img-webp.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2350,6 +2339,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/img-webp.min.js",
+      "fileType" : 64
+    },
+    "\/_foundation\/bower_components\/modernizr\/feature-detects\/battery-api.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/feature-detects\/battery-api.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/battery-api.min.js",
       "fileType" : 64
     },
     "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_alert-boxes.scss" : {
@@ -2375,15 +2375,15 @@
       "outputAbbreviatedPath" : "\/assets\/js\/fastclick.min.js",
       "fileType" : 64
     },
-    "\/_foundation\/bower_components\/modernizr\/feature-detects\/event-deviceorientation-motion.js" : {
+    "\/assets\/js\/foundation.min.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/feature-detects\/event-deviceorientation-motion.js",
+      "inputAbbreviatedPath" : "\/assets\/js\/foundation.min.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/event-deviceorientation-motion.min.js",
+      "outputAbbreviatedPath" : "\/assets\/js\/foundation.min.min.js",
       "fileType" : 64
     },
     "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-lastchild.js" : {
@@ -2397,15 +2397,15 @@
       "outputAbbreviatedPath" : "\/assets\/js\/css-lastchild.min.js",
       "fileType" : 64
     },
-    "\/assets\/js\/foundation.min.js" : {
+    "\/_foundation\/bower_components\/modernizr\/feature-detects\/event-deviceorientation-motion.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/foundation.min.js",
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/feature-detects\/event-deviceorientation-motion.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/foundation.min.min.js",
+      "outputAbbreviatedPath" : "\/assets\/js\/event-deviceorientation-motion.min.js",
       "fileType" : 64
     },
     "\/_foundation\/bower_components\/modernizr\/feature-detects\/forms-placeholder.js" : {
@@ -2486,17 +2486,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/script-defer.min.js",
       "fileType" : 64
     },
-    "\/assets\/js\/admin.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/admin.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/admin.min.min.js",
-      "fileType" : 64
-    },
     "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-scrollbars.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2506,6 +2495,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/css-scrollbars.min.js",
+      "fileType" : 64
+    },
+    "\/assets\/js\/admin.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/admin.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/admin.min.min.js",
       "fileType" : 64
     },
     "\/assets\/js\/modernizr.min.js" : {
@@ -2539,17 +2539,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/red30x30.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/red30x30.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/red30x30.png",
-      "initialSize" : 93,
-      "fileType" : 8192
-    },
     "\/_foundation\/bower_components\/modernizr\/feature-detects\/contentsecuritypolicy.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2560,6 +2549,15 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/contentsecuritypolicy.min.js",
       "fileType" : 64
+    },
+    "\/nv\/utilities\/Php.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/nv\/utilities\/Php.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/jsonselect.js" : {
       "ignoreWasSetByUser" : 0,
@@ -2572,14 +2570,16 @@
       "outputAbbreviatedPath" : "\/assets\/js\/jsonselect.min.js",
       "fileType" : 64
     },
-    "\/nv\/utilities\/Php.php" : {
+    "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/red30x30.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/nv\/utilities\/Php.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/red30x30.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/red30x30.png",
+      "initialSize" : 93,
+      "fileType" : 8192
     },
     "\/_foundation\/bower_components\/jquery\/jquery.js" : {
       "ignoreWasSetByUser" : 0,
@@ -2636,6 +2636,17 @@
       "outputAbbreviatedPath" : "\/assets\/js\/elem-ruby.min.js",
       "fileType" : 64
     },
+    "\/_foundation\/js\/app.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_foundation\/js\/app.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/app.min.js",
+      "fileType" : 64
+    },
     "\/_foundation\/bower_components\/modernizr\/grunt.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2647,16 +2658,14 @@
       "outputAbbreviatedPath" : "\/assets\/js\/grunt.min.js",
       "fileType" : 64
     },
-    "\/_foundation\/js\/app.js" : {
+    "\/nv\/custom\/WalkerComments.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/js\/app.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/app.min.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/nv\/custom\/WalkerComments.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_magellan.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -2775,17 +2784,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/css-resize.min.js",
       "fileType" : 64
     },
-    "\/assets\/js\/foundation.topbar.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/foundation.topbar.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/foundation.topbar.min.min.js",
-      "fileType" : 64
-    },
     "\/_foundation\/bower_components\/modernizr\/feature-detects\/audio-audiodata-api.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2795,6 +2793,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/audio-audiodata-api.min.js",
+      "fileType" : 64
+    },
+    "\/assets\/js\/foundation.topbar.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/foundation.topbar.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/foundation.topbar.min.min.js",
       "fileType" : 64
     },
     "\/_foundation\/bower_components\/foundation\/js\/vendor\/placeholder.js" : {
@@ -2987,17 +2996,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/_foundation\/bower_components\/modernizr\/feature-detects\/iframe-sandbox.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/feature-detects\/iframe-sandbox.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/iframe-sandbox.min.js",
-      "fileType" : 64
-    },
     "\/_foundation\/bower_components\/modernizr\/feature-detects\/web-intents.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -3007,6 +3005,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/web-intents.min.js",
+      "fileType" : 64
+    },
+    "\/_foundation\/bower_components\/modernizr\/feature-detects\/iframe-sandbox.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_foundation\/bower_components\/modernizr\/feature-detects\/iframe-sandbox.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/iframe-sandbox.min.js",
       "fileType" : 64
     },
     "\/_foundation\/bower_components\/modernizr\/feature-detects\/img-apng.js" : {

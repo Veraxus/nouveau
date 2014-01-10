@@ -58,6 +58,9 @@ class NV {
         /** The directory for NOUVEAU hooks directory */
         define( 'NV_HOOKS', trailingslashit( NV_CORE ) . 'hooks' );
 
+        /** The directory for NOUVEAU hooks directory */
+        define( 'NV_CUSTOM', trailingslashit( NV_CORE ) . 'custom' );
+
         /** The uri for theme assets (img, js, css, etc) */
         define( 'NV_ASSETS', trailingslashit( THEME_URI ) . 'assets' );
 
@@ -93,6 +96,10 @@ class NV {
         require_once( NV_HOOKS . '/Config.php' ); // Global, basic theme setup
         require_once( NV_HOOKS . '/Editor.php' ); // Configuration for the theme customizer
         require_once( NV_HOOKS . '/ThemeCustomize.php' ); // Configuration for the theme customizer
+
+        /** CUSTOM *********************************************************************/
+        require_once( NV_CUSTOM . '/WalkerComments.php' ); // Custom classes
+
     }
 
 

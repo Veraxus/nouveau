@@ -7725,10 +7725,20 @@ th.hide-for-touch {
 */
 /*
 =============================
- COMMENTS CORRECTION
+ DOCUMENT MARGIN FIX
 =============================
 */
 /* line 18, ../../_foundation/scss/_wordpress.scss */
+#frame {
+  overflow: hidden;
+}
+
+/*
+=============================
+ COMMENTS CORRECTION
+=============================
+*/
+/* line 27, ../../_foundation/scss/_wordpress.scss */
 #comments {
   clear: both;
 }
@@ -7738,7 +7748,7 @@ th.hide-for-touch {
  IMAGES CORRECTION
 =============================
 */
-/* line 27, ../../_foundation/scss/_wordpress.scss */
+/* line 36, ../../_foundation/scss/_wordpress.scss */
 .wp-caption {
   max-width: 100%;
 }
@@ -7748,7 +7758,7 @@ th.hide-for-touch {
  ALIGNMENT
 =============================
 */
-/* line 36, ../../_foundation/scss/_wordpress.scss */
+/* line 45, ../../_foundation/scss/_wordpress.scss */
 .aligncenter {
   clear: both;
   display: block;
@@ -7756,14 +7766,14 @@ th.hide-for-touch {
   margin-right: auto;
 }
 
-/* line 42, ../../_foundation/scss/_wordpress.scss */
+/* line 51, ../../_foundation/scss/_wordpress.scss */
 .alignleft {
   display: inline;
   float: left;
   margin-right: 10px;
 }
 
-/* line 47, ../../_foundation/scss/_wordpress.scss */
+/* line 56, ../../_foundation/scss/_wordpress.scss */
 .alignright {
   display: inline;
   float: right;
@@ -7776,7 +7786,7 @@ th.hide-for-touch {
 =============================
 */
 /* This helps ensure that Foundation's special ".sticky" class will not interfere with the WP admin bar. */
-/* line 59, ../../_foundation/scss/_wordpress.scss */
+/* line 68, ../../_foundation/scss/_wordpress.scss */
 .admin-bar .snappable.fixed {
   top: 28px;
 }
