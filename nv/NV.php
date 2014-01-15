@@ -76,6 +76,9 @@ class NV {
         /** The directory for theme languages */
         define( 'NV_LANGS', trailingslashit( NV_ASSETS ) . 'languages' );
 
+        /** The directory for the parts folder */
+        define( 'NV_PARTS', trailingslashit( THEME_DIR ) . 'parts' );
+
     }
 
 

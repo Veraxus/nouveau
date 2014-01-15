@@ -3,11 +3,11 @@ Contributors: Veraxus
 Donate link: http://nouveauframework.org/
 Author URI: http://nouveauframework.org/
 Tags: framework, php5.3
-Version: 0.9.3
+Version: 0.9.4
 Foundation: 5.0.2
 Requires at least: 3.8
 Tested up to: 3.9
-Stable tag: 0.9.3
+Stable tag: 0.9.4
 License: GNU General Public License
 License URI: GNU-LICENSE.txt
 
@@ -89,6 +89,9 @@ These plugins were created by developers, for developers. We hope they make your
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
 == Changelog ==
+
+= 0.9.4 (2014-01-15) =
+* Additional improvements to comment system
 
 = 0.9.3 (2014-01-09) =
 * Started implementing new comment handling system

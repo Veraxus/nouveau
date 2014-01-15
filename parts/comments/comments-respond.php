@@ -1,3 +1,10 @@
+<?php
+/**
+ * Template Part: Comment Response Form Container
+ *
+ * This template part is used by comments.php to display the container for the comment response form.
+ */
+?>
 <div id="respond">
 
     <h3><?php comment_form_title( __( 'Leave a Reply', 'nvLangScope' ), __( 'Leave a Reply to %s', 'nvLangScope' ) ); ?></h3>

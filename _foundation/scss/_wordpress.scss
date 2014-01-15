@@ -51,12 +51,29 @@
 .alignleft {
     display: inline;
     float: left;
-    margin-right: 10px;
+    margin-right: 1em;
 }
 .alignright {
     display: inline;
     float: right;
-    margin-left: 10px;
+    margin-left: 1em;
+}
+
+/*
+=============================
+ COMMENTS
+=============================
+*/
+.nav-comments,
+.comment-list {
+    clear: both;
+}
+.comment-list {
+    margin-left: 0;
+    padding-top: 1em;
+    &, li {
+        list-style: none;
+    }
 }
 
 /*
@@ -65,6 +82,6 @@
 =============================
 */
 /* This helps ensure that Foundation's special ".sticky" class will not interfere with the WP admin bar. */
-.admin-bar .snappable.fixed {
+.admin-bar .snap-to-top.fixed {
     top: 28px;
 }

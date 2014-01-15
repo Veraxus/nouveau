@@ -1,3 +1,10 @@
+<?php
+/**
+ * Template Part: Comment Response Form
+ *
+ * This template part is used by comments-respond.php and it renders the response form.
+ */
+?>
 <form action="<?php echo get_option( 'siteurl' ); ?>/wp-comments-post.php" method="post" id="commentform">
 
     <?php if( is_user_logged_in() ) { ?>

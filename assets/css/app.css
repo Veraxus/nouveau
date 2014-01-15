@@ -7770,14 +7770,35 @@ th.hide-for-touch {
 .alignleft {
   display: inline;
   float: left;
-  margin-right: 10px;
+  margin-right: 1em;
 }
 
 /* line 56, ../../_foundation/scss/_wordpress.scss */
 .alignright {
   display: inline;
   float: right;
-  margin-left: 10px;
+  margin-left: 1em;
+}
+
+/*
+=============================
+ COMMENTS
+=============================
+*/
+/* line 68, ../../_foundation/scss/_wordpress.scss */
+.nav-comments,
+.comment-list {
+  clear: both;
+}
+
+/* line 71, ../../_foundation/scss/_wordpress.scss */
+.comment-list {
+  margin-left: 0;
+  padding-top: 1em;
+}
+/* line 74, ../../_foundation/scss/_wordpress.scss */
+.comment-list, .comment-list li {
+  list-style: none;
 }
 
 /*
@@ -7786,7 +7807,7 @@ th.hide-for-touch {
 =============================
 */
 /* This helps ensure that Foundation's special ".sticky" class will not interfere with the WP admin bar. */
-/* line 68, ../../_foundation/scss/_wordpress.scss */
-.admin-bar .snappable.fixed {
+/* line 85, ../../_foundation/scss/_wordpress.scss */
+.admin-bar .snap-to-top.fixed {
   top: 28px;
 }
