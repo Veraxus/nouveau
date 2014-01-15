@@ -1,6 +1,0 @@
-## NOUVEAU Folder Overview ##
-This folder contains the NOUVEAU core, including the NV() class and the NV namespace.
-
-The hooks folder contains classes that contain only methods that are attached to hooks.
-
-The utilities folder contains classes that are meant to help general development (and are rarely used in NV core).
