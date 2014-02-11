@@ -21,7 +21,7 @@
     <div class="large-12 columns">
         <div class="panel">
             <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-            <p>To get going, this file (overrides/foundation.php) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
+            <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
             <p>Once you've exhausted the fun in this document, you should check out:</p>
             <div class="row">
                 <div class="large-4 medium-4 columns">
