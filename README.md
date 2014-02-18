@@ -7,7 +7,7 @@
 **Foundation:** 5.1.1
 **Requires at least:** 3.8  
 **Tested up to:** 3.9
-**Stable tag:** 0.9.5
+**Stable tag:** 0.9.6
 **License:** GNU General Public License  
 **License URI:** GNU-LICENSE.txt  
 
@@ -89,6 +89,9 @@ These plugins were created by developers, for developers. We hope they make your
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
 ## Changelog ##
+
+## 0.9.6 (2013-02-17) ##
+* Additional Foundation tweaks
 
 ### 0.9.5 (2014-02-11) ###
 * Updated Foundation to 5.1.1 (Compass version)
