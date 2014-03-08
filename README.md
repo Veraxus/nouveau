@@ -3,11 +3,11 @@
 **Donate link:** http://nouveauframework.org/  
 **Author URI:** http://nouveauframework.org/  
 **Tags:** framework, php5.3  
-**Version:** 0.9.5
-**Foundation:** 5.1.1
+**Version:** 0.9.7  
+**Foundation:** 5.2.0  
 **Requires at least:** 3.8  
-**Tested up to:** 3.9
-**Stable tag:** 0.9.6
+**Tested up to:** 3.9  
+**Stable tag:** 0.9.7  
 **License:** GNU General Public License  
 **License URI:** GNU-LICENSE.txt  
 
@@ -90,7 +90,10 @@ NOUVEAU comes with all text strings properly scoped for internationalization. To
 
 ## Changelog ##
 
-## 0.9.6 (2013-02-17) ##
+## 0.9.7 (2014-03-06) ##
+* Updated Foundation to 5.2
+
+## 0.9.6 (2014-02-17) ##
 * Additional Foundation tweaks
 
 ### 0.9.5 (2014-02-11) ###
