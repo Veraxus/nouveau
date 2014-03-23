@@ -21,15 +21,6 @@
 
 /*
 =============================
- COMMENTS CORRECTION
-=============================
-*/
-#comments {
-    clear: both;
-}
-
-/*
-=============================
  IMAGES CORRECTION
 =============================
 */
@@ -57,23 +48,6 @@
     display: inline;
     float: right;
     margin-left: 1em;
-}
-
-/*
-=============================
- COMMENTS
-=============================
-*/
-.nav-comments,
-.comment-list {
-    clear: both;
-}
-.comment-list {
-    margin-left: 0;
-    padding-top: 1em;
-    &, li {
-        list-style: none;
-    }
 }
 
 /*

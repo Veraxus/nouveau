@@ -3,11 +3,11 @@
 **Donate link:** http://nouveauframework.org/  
 **Author URI:** http://nouveauframework.org/  
 **Tags:** framework, php5.3  
-**Version:** 0.9.7  
-**Foundation:** 5.2.0  
+**Version:** 0.9.8  
+**Foundation:** 5.2.1  
 **Requires at least:** 3.8  
 **Tested up to:** 3.9  
-**Stable tag:** 0.9.7  
+**Stable tag:** 0.9.8  
 **License:** GNU General Public License  
 **License URI:** GNU-LICENSE.txt  
 
@@ -17,9 +17,9 @@ NOUVEAU is an open-source, rapid-development theme & plugin framework for WordPr
 
 **NOUVEAU is NOT a ready-made theme and should only be used by developers.**
 
-NOUVEAU is a rapid-development framework for WordPress. Unlike other "theme frameworks" NOUVEAU doesn't try to cram everything into a single, monolithic, Frankenstein's Monster theme - instead, the theme is dedicated solely to theme-related work, keeping things clean and easy.
+NOUVEAU is a rapid-development framework for WordPress. Unlike other "theme frameworks" NOUVEAU doesn't try to cram everything into a single, monolithic, Frankenstein's monster theme - instead, the theme is dedicated to presentation work, keeping things clean and easy.
 
-If you want even more features, don't clutter your theme with them... there are plugins for that! Download plugins only for the features you really need, and customize them quickly and easily. Everything is standardized, simple, clean, and well commented - so you can work FAST.
+If you want even more features, don't clutter your theme with them... there are plugins for that! Download NOUVEAU's starter plugins for any features you really need, and customize them quickly and easily. Everything is standardized, simple, clean, and well commented - so you can work FAST.
 
 ###Features###
 
@@ -89,6 +89,10 @@ These plugins were created by developers, for developers. We hope they make your
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
 ## Changelog ##
+
+## 0.9.8 (2014-03-16) ##
+* Updated Foundation to 5.2.1
+* Additional improvements to comment system
 
 ## 0.9.7 (2014-03-06) ##
 * Updated Foundation to 5.2

@@ -1,0 +1,16 @@
+.comments-nav {
+    // Comment pagination control
+}
+.comments-list {
+    section.replies {
+        padding-left: 2rem;
+    }
+    article.comment {
+        padding: 1rem 0;
+    }
+    article.parent.depth-1,
+    & > section.replies {
+        border-left: 0.25rem solid silver;
+        padding-left: 0.5rem;
+    }
+}

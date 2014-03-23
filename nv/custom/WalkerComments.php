@@ -10,6 +10,12 @@ namespace NV\Custom;
 class WalkerComments extends \Walker {
 
     /**
+     * What element tag to use for level separators?
+     * @var string
+     */
+    var $lvl_elem = 'section';
+    
+    /**
      * Specifies the tree type we are handling.
      * @var string
      */
@@ -39,7 +45,7 @@ class WalkerComments extends \Walker {
         $GLOBALS['comment_depth'] = $depth + 1;
 
         // We want to output an OPENING <ol> tag
-        echo '<ol class="children">' . "\n";
+        printf( '<%s class="replies">' . "\n", $this->lvl_elem );
     }
 
 
@@ -56,7 +62,7 @@ class WalkerComments extends \Walker {
         $GLOBALS['comment_depth'] = $depth + 1;
 
         // We want to output a CLOSING </ol> tag
-        echo '</ol>' . "\n";
+        printf( '</%s>' . "\n", $this->lvl_elem );
     }
 
 
@@ -129,17 +135,15 @@ class WalkerComments extends \Walker {
             require NV_PARTS . '/comments/pingback.php';
         }
         else {
-            require NV_PARTS . '/comments/comments-single.php';
+            require NV_PARTS . '/comments/comment.php';
         }
     }
 
 
     /**
-     * Ends the element output, if needed.
+     * Allows plugins and such to output content after the end element.
      *
      * @see Walker::end_el()
-     *
-     * @since 2.7.0
      *
      * @param string $output  Passed by reference. Used to append additional content.
      * @param object $comment The comment object. Default current comment.
@@ -154,11 +158,6 @@ class WalkerComments extends \Walker {
             return;
         }
 
-        // Output the closing list tag
-        printf(
-            "</li><!-- #comment-%s -->\n",
-            $comment->comment_ID
-        );
     }
 
 }

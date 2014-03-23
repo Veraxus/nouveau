@@ -1,8 +1,9 @@
 <?php
 /**
- * Template Part: Comment Response Form Container
+ * RESPOND BOX
  *
- * This template part is used by comments.php to display the container for the comment response form.
+ * This displays the comment response controls. The response form itself is included separately to keep both this file
+ * and the response form as clean and simple as possible.
  */
 ?>
 <div id="respond">
@@ -24,7 +25,7 @@
 
     }
     else {
-        require('comments-respond-form.php');
+        include( NV_PARTS . '/comments/response-form.php');
     }
     ?>
 </div>

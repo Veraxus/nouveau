@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Part: Comment Response Form
+ * RESPONSE FORM
  *
- * This template part is used by comments-respond.php and it renders the response form.
+ * This displays the comment response form. This should not be loaded directly, but included by respond.php
  */
 ?>
 <form action="<?php echo get_option( 'siteurl' ); ?>/wp-comments-post.php" method="post" id="commentform">
@@ -18,7 +18,7 @@
                 echo "aria-required='true'";
             } ?> />
             <label for="author">
-                <small><?php _e( 'Name' ); ?> <?php if( $req ) {
+                <small><?php _e( 'Name', 'nvLangScope' ); ?> <?php if( $req ) {
                         _e( '(required)' );
                     } ?></small>
             </label></p>
@@ -29,24 +29,24 @@
                 echo "aria-required='true'";
             } ?> />
             <label for="email">
-                <small><?php _e( 'Mail (will not be published)' ); ?> <?php if( $req ) {
-                        _e( '(required)' );
+                <small><?php _e( 'Mail (will not be published)', 'nvLangScope' ); ?> <?php if( $req ) {
+                        _e( '(required)', 'nvLangScope' );
                     } ?></small>
             </label></p>
 
         <p><input type="text" name="url" id="url" value="<?php echo esc_attr( $comment_author_url ); ?>"
                   size="22" tabindex="3"/>
             <label for="url">
-                <small><?php _e( 'Website' ); ?></small>
+                <small><?php _e( 'Website', 'nvLangScope' ); ?></small>
             </label></p>
 
     <?php } ?>
 
     <p><textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea></p>
 
-    <p><small><?php printf(__('You can use these tags: <code>%s</code>'), allowed_tags()); ?></small></p>
+    <p><small><?php printf(__( 'You can use these tags: <code>%s</code>', 'nvLangScope' ), allowed_tags()); ?></small></p>
 
-    <p><input name="submit" type="submit" id="submit" tabindex="5" class="button" value="<?php esc_attr_e( 'Submit Comment' ); ?>"/>
+    <p><input name="submit" type="submit" id="submit" tabindex="5" class="button" value="<?php esc_attr_e( 'Submit Comment', 'nvLangScope' ); ?>"/>
         <?php comment_id_fields(); ?>
     </p>
 
