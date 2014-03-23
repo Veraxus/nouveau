@@ -90,7 +90,7 @@ NOUVEAU comes with all text strings properly scoped for internationalization. To
 
 ## Changelog ##
 
-## 0.9.8 (2014-03-16) ##
+## 0.9.8 (2014-03-23) ##
 * Updated Foundation to 5.2.1
 * Additional improvements to comment system
 
