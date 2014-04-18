@@ -2,8 +2,8 @@
  =======================================================================================================================
  Custom Styles
 
- This is where you should add your own SCSS. This file will compile to your  theme directory under assets/css/app.css,
- which is already configured in Compass and enqueued by \NV\Hooks\Config::enqueue_assets()
+ This is where you should add your own SCSS or includes. This file will compile to your theme directory under 
+ assets/css/app.css, which is already configured by Compass and enqueued by \NV\Hooks\Config::enqueue_assets()
  =======================================================================================================================
 */
 @import "settings";
@@ -48,9 +48,3 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
-
-#container{}
-    #content {}
-    #sidebar {}
-    #comments {}
-#footer {}

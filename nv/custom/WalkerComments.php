@@ -135,7 +135,7 @@ class WalkerComments extends \Walker {
             require NV_PARTS . '/comments/pingback.php';
         }
         else {
-            require NV_PARTS . '/comments/comment.php';
+            require NV_PARTS . '/comments/single.php';
         }
     }
 

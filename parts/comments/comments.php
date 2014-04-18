@@ -15,7 +15,7 @@ if ( post_password_required() ) {
 
 if ( have_comments() ) { ?>
 
-    <h3><?php _e('Comments', 'nvLangScope') ?></h3>
+    <h3><?php _e('Comments', 'nvLangScope' ) ?></h3>
     <p>
     <?php
     printf(
@@ -32,7 +32,7 @@ if ( have_comments() ) { ?>
     </p>
 
 
-    <?php include( NV_PARTS . '/comments/pagination.php'); ?>
+    <?php include( NV_PARTS . '/comments/pagination.php' ); ?>
 
     <section class="comments-list">
         <?php wp_list_comments(array(
@@ -40,7 +40,7 @@ if ( have_comments() ) { ?>
         )); ?>
     </section>
 
-    <?php include( NV_PARTS . '/comments/pagination.php'); ?>
+    <?php include( NV_PARTS . '/comments/pagination.php' ); ?>
 
 
 <?php
@@ -58,5 +58,5 @@ else
 
 
 if ( comments_open() ) {
-    include( NV_PARTS . '/comments/respond.php');
+    include( NV_PARTS . '/comments/respond.php' );
 }
