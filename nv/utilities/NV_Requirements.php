@@ -53,7 +53,7 @@ class NV_Requirements {
      *
      * @return boolean True if users version is >= required version
      */
-    public function phpVersionCheck($req_php='5.3.0',$req_wp='3.5.0')
+    public function phpVersionCheck($req_php='5.3.0',$req_wp='3.9.0')
     {
         global $wp_version;
 

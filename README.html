@@ -1,0 +1,210 @@
+<h1>NOUVEAU</h1>
+
+<p><strong>Contributors:</strong> Veraxus<br/>
+<strong>Donate link:</strong> http://nouveauframework.org/<br/>
+<strong>Author URI:</strong> http://nouveauframework.org/<br/>
+<strong>Tags:</strong> framework, php5.3<br/>
+<strong>Version:</strong> 0.9.10<br/>
+<strong>Foundation:</strong> 5.2.3<br/>
+<strong>Requires at least:</strong> 3.9<br/>
+<strong>Tested up to:</strong> 3.9<br/>
+<strong>Stable tag:</strong> 0.9.10<br/>
+<strong>License:</strong> GNU General Public License<br/>
+<strong>License URI:</strong> GNU-LICENSE.txt</p>
+
+<p>NOUVEAU is an open-source, rapid-development theme &amp; plugin framework for WordPress, built on Zurb Foundation 5 and PHP 5.3. Work fast. Be awesome.</p>
+
+<h2>Description</h2>
+
+<p><strong>NOUVEAU is NOT a ready-made theme and should only be used by developers.</strong></p>
+
+<p>NOUVEAU is a rapid-development framework for WordPress. Unlike other &ldquo;theme frameworks&rdquo; NOUVEAU doesn&rsquo;t try to cram everything into a single, monolithic, Frankenstein&rsquo;s monster theme - instead, the theme is dedicated to presentation work, keeping things clean and easy.</p>
+
+<p>If you want even more features, don&rsquo;t clutter your theme with them&hellip; there are plugins for that! Download NOUVEAU&rsquo;s starter plugins for any features you really need, and customize them quickly and easily. Everything is standardized, simple, clean, and well commented - so you can work FAST.</p>
+
+<h3>Features</h3>
+
+<ul>
+<li><p><strong>Built for WordPress</strong>
+NOUVEAU isn’t a theme or a plugin, it’s a framework. Anything you need to quickly get started on a new theme or plugin is already there, letting you get right to the meat of your WordPress project.</p></li>
+<li><p><strong>Modular</strong>
+Everything is available a-la-carte. By keeping the theme and features separate, you can easily use or customize only what you need (as plugins), and none of what you don’t.</p></li>
+<li><p><strong>PHP 5.3+</strong>
+<strong>PHP 5.3 provides numerous benefits:</strong> namespaces, closures, anonymous functions&hellip; and NOUVEAU takes advantage of that.</p></li>
+<li><p><strong>Zurb Foundation</strong>
+NOUVEAUs theme framework component is built on the latest version of Zurb Foundation, an open-source front-end framework that blows Bootstrap out of the water. Create responsive websites with incredible speed and flexibility.</p></li>
+<li><p><strong>Clean Code. No Assumptions</strong>
+No child themes, no file soup, no styles, no assumptions. Just clean, tidy, well-documented code and clean, tidy file structures.</p></li>
+<li><p><strong>Free. Open Source. Always. Forever.</strong>
+No purchases, no memberships, no freemiums, no strings. NOUVEAU is free as in speech, and it’s going to stay that way. Forever.</p></li>
+</ul>
+
+
+<p>In addition to having very well documented code, you can find a complete <strong>Getting Started</strong> tutorial at <a href="http://nouveauframework.org/documentation/getting-started/">NouveauFramework.com</a></p>
+
+<h2>Installation Instructions</h2>
+
+<p><strong>NOTE:</strong> NOUVEAU is NOT a ready-made theme and should only be used by developers. it is specifically built to facilitate rapid development and easy maintenance by developers. The code is clean, simple, and very well commented.</p>
+
+<h3>Prerequisites for SASS developers</h3>
+
+<p><strong>If you want to use the SASS workflow, ensure that you have all of Foundations prerequisites met first (see:</strong> [http://foundation.zurb.com/docs/sass.html]).</p>
+
+<h3>General Installation</h3>
+
+<p>To install, simply the copy the NOUVEAU theme folder to your <code>wp-content\themes</code> directory. Before activating, be sure you rename the theme folder and perform a global find-replace for the strings (case sensitive) <code>NOUVEAU</code>, <code>Nouveau</code>, and <code>nouveau</code>, as well as the language scope (<code>nvLangScope</code>).</p>
+
+<p>You can find exhaustive documentation for NOUVEAU at <a href="http://nouveauframework.org/documentation/getting-started/">NouveauFramework.com</a>, and documentation Zurb Foundation at <a href="http://foundation.zurb.com/docs/sass.html">Foundation.Zurb.com</a></p>
+
+<p>Also remember that you can test your own NOUVEAU derivatives by using the WordPress <a href="http://codex.wordpress.org/Theme_Unit_Test">Theme Unit Test</a>.</p>
+
+<h1>File Structure</h1>
+
+<p>NOUVEAU has an file structure that encourages better organization of your theme. It includes the following folders&hellip;</p>
+
+<ul>
+<li>_foundation - Contains all the original Zurb Foundation files. Uncompiled SASS, JavaScript, etc.</li>
+<li>assets - Contains non-php assets like javascript, css, images, and language files.</li>
+<li>layout - Contains the theme&rsquo;s global header and footer files, leaving the theme root free for page templates.</li>
+<li>nv - Contains all the NOUVEAU core classes.</li>
+<li>overrides - Contains template files that are used solely as admin-selectable page templates.</li>
+<li>parts - Contains any template chunks/fragments/parts that <em>do not</em> make up a page-level template. Articles and other such fragments go here.</li>
+</ul>
+
+
+<p>General page templates (<code>index.php</code>, <code>archive.php</code>, <code>page.php</code>, <code>single.php</code>, etc) as well as critical files like <code>functions.php</code> still go in the theme&rsquo;s root folder. This allows WordPress&rsquo;s core template system to continue working as-is. As a rule, you should keep your PAGE templates here, and organize any fragment/part templates under the parts directory. This keeps the root clean and helps encourage use of clean, organized, reusable template parts.</p>
+
+<p>You find a complete (yet concise) overview of file and folder structure at <a href="http://nouveauframework.org/documentation/getting-started/">NouveauFramework.com</a></p>
+
+<h1>Zurb Foundation Notes</h1>
+
+<p>Foundation has been tweaked slightly to work as part of a WordPress theme, however the tweaks needed to ensure this compatibility are rather minor. One important thing to note is that <code>config.rb</code> (i.e. the Compass configuration file) is located in the theme&rsquo;s root directory while the <em>uncompiled</em> Zurb Foundation files are located in the <code>_foundation</code> directory. This allows you to set your compiler (e.g. Compass, CodeKit, etc) to watch the theme folder, and everything is just put in the right places for you automatically (again, <code>config.rb</code> is already set up for this).</p>
+
+<p>If you don&rsquo;t want to use SASS, then everything is already compiled for you. Just write your plain CSS in the main style.css file (in the theme root) as you would normally do.</p>
+
+<h1>Companion Plugins</h1>
+
+<p>WordPress themes (and theme frameworks) should never be all-encompassing monstrosities. As a result, all the cool features you want are available as neatly packaged &ldquo;starter&rdquo; plugins. They are &ldquo;starter&rdquo; because these plugins are meant to be quickly and easily modified by developers like you, to do anything you need. They are literally just a starting point for your own development needs. Use what you want, and none of what you don&rsquo;t.</p>
+
+<p>These plugins were created by developers, for developers. We hope they make your life as a developer much, much easier.</p>
+
+<h1>Internationalization (I18n)</h1>
+
+<p>NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string <code>nvLangScope</code> and you&rsquo;ll be up and running in no time.</p>
+
+<h2>Changelog</h2>
+
+<h2>0.9.10 (2014-06-08)</h2>
+
+<ul>
+<li>Updated Foundation to 5.2.3</li>
+<li>Cleaned up JS files (now uses pre-minified bower files when appropriate)</li>
+<li>Now uses Foundation version of jQuery by default (instead of WordPress&rsquo;s safe-mode version)</li>
+<li>New constant: NV_BOWER (for Foundation&rsquo;s &ldquo;bower_components&rdquo; folder)</li>
+</ul>
+
+
+<h2>0.9.9 (2014-04-18)</h2>
+
+<ul>
+<li>Updated Foundation to 5.2.2</li>
+<li>Renamed the single-comment template file to /parts/comments/single.php</li>
+</ul>
+
+
+<h2>0.9.8 (2014-03-23)</h2>
+
+<ul>
+<li>Updated Foundation to 5.2.1</li>
+<li>Additional improvements to comment system</li>
+</ul>
+
+
+<h2>0.9.7 (2014-03-06)</h2>
+
+<ul>
+<li>Updated Foundation to 5.2</li>
+</ul>
+
+
+<h2>0.9.6 (2014-02-17)</h2>
+
+<ul>
+<li>Additional Foundation tweaks</li>
+</ul>
+
+
+<h3>0.9.5 (2014-02-11)</h3>
+
+<ul>
+<li>Updated Foundation to 5.1.1 (Compass version)</li>
+<li>NOTE: Currently looking into doing a libsass version of Foundation 5 as well. Should be simple. <em>knock on wood</em></li>
+</ul>
+
+
+<h3>0.9.4 (2014-01-15)</h3>
+
+<ul>
+<li>Additional improvements to built-in comment system - still more left to do</li>
+</ul>
+
+
+<h3>0.9.3 (2014-01-09)</h3>
+
+<ul>
+<li>Started implementing new comment handling system</li>
+<li>Various other minor updates</li>
+</ul>
+
+
+<h3>0.9.2 (2013-12-11)</h3>
+
+<ul>
+<li>Updated Foundation to 5.0.2</li>
+</ul>
+
+
+<h3>0.9.1 (2013-12-11)</h3>
+
+<ul>
+<li>New versioning (since the framework is pretty close to solid at this point)</li>
+<li>Added a \NV\WordPress::the_permalink() function, which allows the_permalink() style output by specifying post id</li>
+<li>Fixed the SCSS/CSS for the &lsquo;.snappable&rsquo; class when the admin bar is visible</li>
+<li>Henceforth, only the bare minimum Foundation Javascripts are loaded by default. Uncomment the specific features you want in \NV\Config::enqueue_assets()</li>
+<li>Related: A preliminary version of NouveauFramework.com is now live (but still needs so, so much work)</li>
+</ul>
+
+
+<h3>0.0.4 (2013-11-22)</h3>
+
+<ul>
+<li>Renamed \NV\Hooks\Theme class to NV\Hooks\Config (which is a more accurate name)</li>
+<li>Updated Zurb Foundation to version 5, including&hellip;</li>
+<li>Reconfigured Foundation&rsquo;s &ldquo;.sticky&rdquo; class to &ldquo;.snappable&rdquo; instead, so it wont interfere with WordPress</li>
+<li>Setup Compass config.rb file for theme compatibility</li>
+<li>Updated the Foundation example override template</li>
+</ul>
+
+
+<h3>0.0.3 (2013-11-14)</h3>
+
+<ul>
+<li>Added \NV\Theme::custom_loop() for simplifying the loops of custom queries.</li>
+</ul>
+
+
+<h3>0.0.2 (2013-10-21)</h3>
+
+<ul>
+<li>Significant cleanup on code base. Lots of features moved into plugins.</li>
+<li>Rudimentary (very early) support for comments. A lot left to do on this.</li>
+<li>Small fixes to SASS/CSS using newest WP unit tests.</li>
+</ul>
+
+
+<h3>0.0.1</h3>
+
+<ul>
+<li>First commit. Lots and lots of cleanup left before official release.</li>
+</ul>
+

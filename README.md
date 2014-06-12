@@ -3,11 +3,11 @@
 **Donate link:** http://nouveauframework.org/  
 **Author URI:** http://nouveauframework.org/  
 **Tags:** framework, php5.3  
-**Version:** 0.9.9  
-**Foundation:** 5.2.2  
+**Version:** 0.9.10  
+**Foundation:** 5.2.3  
 **Requires at least:** 3.9  
 **Tested up to:** 3.9  
-**Stable tag:** 0.9.9  
+**Stable tag:** 0.9.10  
 **License:** GNU General Public License  
 **License URI:** GNU-LICENSE.txt  
 
@@ -89,6 +89,12 @@ These plugins were created by developers, for developers. We hope they make your
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
 ## Changelog ##
+
+## 0.9.10 (2014-06-08) ##
+* Updated Foundation to 5.2.3
+* Cleaned up JS files (now uses pre-minified bower files when appropriate)
+* Now uses Foundation version of jQuery by default (instead of WordPress's safe-mode version)
+* New constant: NV_BOWER (for Foundation's "bower_components" folder)
 
 ## 0.9.9 (2014-04-18) ##
 * Updated Foundation to 5.2.2

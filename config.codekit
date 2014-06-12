@@ -1,14 +1,15 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "16877",
+"creatorBuild": "17018",
 "files": {
 	"\/_foundation\/bower_components\/fastclick\/lib\/fastclick.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/fastclick\/lib\/fastclick.js",
-		"outputAbbreviatedPath": "\/_foundation\/bower_components\/fastclick\/lib\/min\/fastclick-ck.js",
-		"outputPathIsSetByUser": 0,
+		"outputAbbreviatedPath": "\/assets\/js\/fastclick.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
@@ -21,6 +22,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/fastclick\/README.md",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/fastclick\/README.html",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_foundation\/bower_components\/foundation\/css\/foundation.css": {
@@ -29,14 +31,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/css\/foundation.css",
 		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsSetByUser": 0
-		},
-	"\/_foundation\/bower_components\/foundation\/css\/foundation.min.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/css\/foundation.min.css",
-		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_foundation\/bower_components\/foundation\/css\/normalize.css": {
@@ -45,6 +40,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/css\/normalize.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_foundation\/bower_components\/foundation\/js\/foundation.js": {
@@ -53,6 +49,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/min\/foundation-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -63,6 +60,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation.min.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/min\/foundation.min-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -73,6 +71,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.abide.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/min\/foundation.abide-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -83,6 +82,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.accordion.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/min\/foundation.accordion-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -93,6 +93,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.alert.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/min\/foundation.alert-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -103,6 +104,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.clearing.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/min\/foundation.clearing-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -113,6 +115,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.dropdown.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/min\/foundation.dropdown-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -123,6 +126,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.equalizer.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/min\/foundation.equalizer-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -133,6 +137,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.interchange.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/min\/foundation.interchange-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -143,6 +148,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.joyride.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/min\/foundation.joyride-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -153,6 +159,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/min\/foundation-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -163,6 +170,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.magellan.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/min\/foundation.magellan-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -173,6 +181,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.offcanvas.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/min\/foundation.offcanvas-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -183,6 +192,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.orbit.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/min\/foundation.orbit-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -193,6 +203,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.reveal.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/min\/foundation.reveal-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -203,6 +214,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.slider.js",
 		"outputAbbreviatedPath": "\/assets\/js\/foundation.slider-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -213,6 +225,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.tab.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/min\/foundation.tab-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -223,6 +236,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.tooltip.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/min\/foundation.tooltip-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -233,6 +247,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/foundation.topbar.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/foundation\/min\/foundation.topbar-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -243,6 +258,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/vendor\/fastclick.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/vendor\/min\/fastclick-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -253,6 +269,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/vendor\/jquery.cookie.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/vendor\/min\/jquery.cookie-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -263,6 +280,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/vendor\/jquery.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/vendor\/min\/jquery-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -273,6 +291,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/vendor\/modernizr.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/vendor\/min\/modernizr-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -283,6 +302,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/vendor\/placeholder.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/js\/vendor\/min\/placeholder-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -296,6 +316,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/foundation.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -311,6 +332,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/_functions.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_functions.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -326,6 +348,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/_settings.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_settings.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -341,6 +364,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_accordion.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_accordion.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -356,6 +380,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_alert-boxes.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_alert-boxes.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -371,6 +396,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_block-grid.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_block-grid.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -386,6 +412,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_breadcrumbs.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_breadcrumbs.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -401,6 +428,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_button-groups.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_button-groups.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -416,6 +444,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_buttons.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_buttons.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -431,6 +460,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_clearing.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_clearing.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -446,6 +476,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_dropdown-buttons.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_dropdown-buttons.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -461,6 +492,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_dropdown.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_dropdown.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -476,6 +508,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_flex-video.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_flex-video.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -491,6 +524,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_forms.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_forms.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -506,6 +540,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_global.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_global.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -521,6 +556,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_grid.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_grid.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -536,6 +572,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_inline-lists.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_inline-lists.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -551,6 +588,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_joyride.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_joyride.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -566,6 +604,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_keystrokes.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_keystrokes.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -581,6 +620,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_labels.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_labels.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -596,6 +636,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_magellan.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_magellan.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -611,6 +652,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_offcanvas.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_offcanvas.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -626,6 +668,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_orbit.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_orbit.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -641,6 +684,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_pagination.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_pagination.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -656,6 +700,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_panels.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_panels.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -671,6 +716,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_pricing-tables.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_pricing-tables.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -686,6 +732,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_progress-bars.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_progress-bars.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -701,6 +748,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_range-slider.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_range-slider.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -716,6 +764,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_reveal-new.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_reveal-new.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -731,6 +780,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_reveal.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_reveal.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -746,6 +796,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_side-nav.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_side-nav.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -761,6 +812,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_split-buttons.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_split-buttons.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -776,6 +828,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_sub-nav.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_sub-nav.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -791,6 +844,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_switch.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_switch.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -806,6 +860,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_tables.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_tables.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -821,6 +876,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_tabs.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_tabs.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -836,6 +892,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_thumbs.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_thumbs.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -851,6 +908,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_tooltips.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_tooltips.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -866,6 +924,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_top-bar.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_top-bar.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -881,6 +940,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_type.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_type.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -896,21 +956,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_visibility.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_visibility.css",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_xy-center.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/foundation\/components\/_xy-center.scss",
-		"outputAbbreviatedPath": "\/assets\/css\/_xy-center.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -926,6 +972,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/foundation\/scss\/normalize.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/normalize.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -938,6 +985,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery-placeholder\/demo.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_foundation\/bower_components\/jquery-placeholder\/jquery.placeholder.js": {
@@ -945,18 +993,9 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery-placeholder\/jquery.placeholder.js",
-		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery-placeholder\/min\/jquery.placeholder-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/_foundation\/bower_components\/jquery-placeholder\/jquery.placeholder.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery-placeholder\/jquery.placeholder.min.js",
-		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery-placeholder\/min\/jquery.placeholder.min-ck.js",
-		"outputPathIsSetByUser": 0,
+		"outputAbbreviatedPath": "\/assets\/js\/jquery.placeholder.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
@@ -969,15 +1008,37 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery-placeholder\/README.md",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery-placeholder\/README.html",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/_foundation\/bower_components\/jquery-placeholder\/tests\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery-placeholder\/tests\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_foundation\/bower_components\/jquery-placeholder\/tests\/tests.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery-placeholder\/tests\/tests.js",
+		"outputAbbreviatedPath": "\/assets\/js\/tests-ck.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/_foundation\/bower_components\/jquery.cookie\/jquery.cookie.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery.cookie\/jquery.cookie.js",
-		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery.cookie\/min\/jquery.cookie-ck.js",
-		"outputPathIsSetByUser": 0,
+		"outputAbbreviatedPath": "\/assets\/js\/jquery.cookie.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
@@ -987,6 +1048,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/dist\/jquery.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/dist\/min\/jquery-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -997,6 +1059,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/dist\/jquery.min.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/dist\/min\/jquery.min-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1007,6 +1070,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/ajax.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/ajax-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1017,6 +1081,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/ajax\/jsonp.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/ajax\/min\/jsonp-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1027,6 +1092,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/ajax\/load.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/ajax\/min\/load-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1037,6 +1103,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/ajax\/parseJSON.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/ajax\/min\/parseJSON-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1047,6 +1114,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/ajax\/parseXML.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/ajax\/min\/parseXML-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1057,6 +1125,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/ajax\/script.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/ajax\/min\/script-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1067,6 +1136,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/ajax\/var\/nonce.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/ajax\/var\/min\/nonce-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1077,6 +1147,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/ajax\/var\/rquery.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/ajax\/var\/min\/rquery-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1087,6 +1158,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/ajax\/xhr.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/ajax\/min\/xhr-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1097,6 +1169,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/attributes.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/attributes-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1107,6 +1180,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/attributes\/attr.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/attributes\/min\/attr-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1117,6 +1191,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/attributes\/classes.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/attributes\/min\/classes-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1127,6 +1202,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/attributes\/prop.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/attributes\/min\/prop-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1137,6 +1213,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/attributes\/support.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/attributes\/min\/support-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1147,6 +1224,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/attributes\/val.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/attributes\/min\/val-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1157,6 +1235,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/callbacks.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/callbacks-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1167,6 +1246,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/core.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/core-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1177,6 +1257,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/core\/access.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/core\/min\/access-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1187,6 +1268,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/core\/init.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/core\/min\/init-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1197,6 +1279,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/core\/parseHTML.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/core\/min\/parseHTML-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1207,6 +1290,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/core\/ready.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/core\/min\/ready-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1217,6 +1301,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/core\/var\/rsingleTag.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/core\/var\/min\/rsingleTag-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1227,6 +1312,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/css-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1237,6 +1323,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/addGetHookIf.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/min\/addGetHookIf-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1247,6 +1334,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/curCSS.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/min\/curCSS-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1257,6 +1345,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/defaultDisplay.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/min\/defaultDisplay-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1267,6 +1356,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/hiddenVisibleSelectors.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/min\/hiddenVisibleSelectors-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1277,6 +1367,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/support.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/min\/support-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1287,6 +1378,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/swap.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/min\/swap-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1297,6 +1389,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/var\/cssExpand.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/var\/min\/cssExpand-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1307,6 +1400,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/var\/getStyles.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/var\/min\/getStyles-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1317,6 +1411,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/var\/isHidden.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/var\/min\/isHidden-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1327,6 +1422,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/var\/rmargin.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/var\/min\/rmargin-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1337,6 +1433,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/var\/rnumnonpx.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/css\/var\/min\/rnumnonpx-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1347,6 +1444,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/data.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/data-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1357,6 +1455,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/data\/accepts.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/data\/min\/accepts-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1367,6 +1466,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/data\/Data.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/data\/min\/Data-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1377,6 +1477,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/data\/var\/data_priv.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/data\/var\/min\/data_priv-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1387,6 +1488,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/data\/var\/data_user.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/data\/var\/min\/data_user-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1397,6 +1499,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/deferred.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/deferred-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1407,6 +1510,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/deprecated.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/deprecated-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1417,6 +1521,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/dimensions.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/dimensions-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1427,6 +1532,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/effects.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/effects-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1437,6 +1543,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/effects\/animatedSelector.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/effects\/min\/animatedSelector-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1447,6 +1554,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/effects\/Tween.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/effects\/min\/Tween-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1457,6 +1565,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/event.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/event-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1467,6 +1576,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/event\/alias.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/event\/min\/alias-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1477,6 +1587,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/event\/support.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/event\/min\/support-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1487,6 +1598,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/exports\/amd.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/exports\/min\/amd-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1497,6 +1609,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/exports\/global.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/exports\/min\/global-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1507,6 +1620,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/intro.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/intro-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1517,6 +1631,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/jquery.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/jquery-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1527,6 +1642,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/manipulation.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/manipulation-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1537,6 +1653,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/manipulation\/_evalUrl.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/manipulation\/min\/_evalUrl-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1547,6 +1664,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/manipulation\/support.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/manipulation\/min\/support-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1557,6 +1675,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/manipulation\/var\/rcheckableType.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/manipulation\/var\/min\/rcheckableType-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1567,6 +1686,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/offset.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/offset-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1577,6 +1697,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/outro.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/outro-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1587,6 +1708,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/queue.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/queue-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1597,6 +1719,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/queue\/delay.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/queue\/min\/delay-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1607,6 +1730,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/selector-native.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/selector-native-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1617,6 +1741,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/selector-sizzle.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/selector-sizzle-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1627,6 +1752,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/selector.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/selector-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1637,6 +1763,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/serialize.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/serialize-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1647,6 +1774,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/sizzle\/dist\/sizzle.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/sizzle\/dist\/min\/sizzle-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1657,6 +1785,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/sizzle\/dist\/sizzle.min.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/sizzle\/dist\/min\/sizzle.min-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1667,6 +1796,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/traversing.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/traversing-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1677,6 +1807,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/traversing\/findFilter.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/traversing\/min\/findFilter-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1687,6 +1818,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/traversing\/var\/rneedsContext.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/traversing\/var\/min\/rneedsContext-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1697,6 +1829,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/arr.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/min\/arr-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1707,6 +1840,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/class2type.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/min\/class2type-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1717,6 +1851,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/concat.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/min\/concat-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1727,6 +1862,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/hasOwn.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/min\/hasOwn-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1737,6 +1873,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/indexOf.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/min\/indexOf-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1747,6 +1884,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/pnum.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/min\/pnum-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1757,6 +1895,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/push.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/min\/push-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1767,6 +1906,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/rnotwhite.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/min\/rnotwhite-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1777,6 +1917,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/slice.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/min\/slice-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1787,6 +1928,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/strundefined.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/min\/strundefined-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1797,6 +1939,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/support.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/min\/support-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1807,16 +1950,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/toString.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/min\/toString-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/_foundation\/bower_components\/jquery\/src\/var\/trim.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/trim.js",
-		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/var\/min\/trim-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1827,6 +1961,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/wrap.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/jquery\/src\/min\/wrap-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1837,6 +1972,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/a-download.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/a-download-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1847,6 +1983,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/audio-audiodata-api.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/audio-audiodata-api-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1857,6 +1994,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/audio-webaudio-api.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/audio-webaudio-api-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1867,6 +2005,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/battery-api.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/battery-api-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1877,6 +2016,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/battery-level.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/battery-level-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1887,6 +2027,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/blob-constructor.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/blob-constructor-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1897,6 +2038,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/canvas-todataurl-type.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/canvas-todataurl-type-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1907,6 +2049,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/contenteditable.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/contenteditable-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1917,6 +2060,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/contentsecuritypolicy.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/contentsecuritypolicy-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1927,6 +2071,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/contextmenu.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/contextmenu-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1937,6 +2082,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/cookies.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/cookies-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1947,6 +2093,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/cors.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/cors-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1957,6 +2104,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-backgroundposition-shorthand.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-backgroundposition-shorthand-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1967,6 +2115,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-backgroundposition-xy.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-backgroundposition-xy-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1977,6 +2126,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-backgroundrepeat.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-backgroundrepeat-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1987,6 +2137,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-backgroundsizecover.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-backgroundsizecover-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -1997,6 +2148,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-boxsizing.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-boxsizing-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2007,6 +2159,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-calc.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-calc-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2017,6 +2170,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-cubicbezierrange.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-cubicbezierrange-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2027,6 +2181,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-displayrunin.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-displayrunin-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2037,6 +2192,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-displaytable.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-displaytable-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2047,6 +2203,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-filters.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-filters-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2057,6 +2214,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-hyphens.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-hyphens-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2067,6 +2225,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-lastchild.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-lastchild-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2077,6 +2236,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-mask.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-mask-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2087,6 +2247,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-mediaqueries.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-mediaqueries-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2097,6 +2258,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-objectfit.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-objectfit-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2107,6 +2269,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-overflow-scrolling.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-overflow-scrolling-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2117,6 +2280,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-pointerevents.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-pointerevents-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2127,6 +2291,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-positionsticky.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-positionsticky-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2137,6 +2302,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-regions.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-regions-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2147,6 +2313,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-remunit.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-remunit-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2157,6 +2324,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-resize.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-resize-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2167,6 +2335,18 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-scrollbars.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-scrollbars-ck.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/_foundation\/bower_components\/modernizr\/feature-detects\/css-shapes.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-shapes.js",
+		"outputAbbreviatedPath": "\/assets\/js\/css-shapes-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2177,6 +2357,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-subpixelfont.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-subpixelfont-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2187,6 +2368,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-supports.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-supports-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2197,6 +2379,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-userselect.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-userselect-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2207,6 +2390,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-vhunit.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-vhunit-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2217,6 +2401,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-vmaxunit.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-vmaxunit-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2227,6 +2412,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-vminunit.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-vminunit-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2237,6 +2423,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/css-vwunit.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/css-vwunit-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2247,6 +2434,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/custom-protocol-handler.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/custom-protocol-handler-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2257,6 +2445,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/dart.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/dart-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2267,6 +2456,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/dataview-api.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/dataview-api-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2277,6 +2467,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/dom-classlist.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/dom-classlist-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2287,6 +2478,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/dom-createElement-attrs.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/dom-createElement-attrs-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2297,6 +2489,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/dom-dataset.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/dom-dataset-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2307,6 +2500,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/dom-microdata.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/dom-microdata-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2317,6 +2511,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/elem-datalist.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/elem-datalist-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2327,6 +2522,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/elem-details.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/elem-details-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2337,6 +2533,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/elem-output.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/elem-output-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2347,6 +2544,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/elem-progress-meter.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/elem-progress-meter-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2357,6 +2555,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/elem-ruby.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/elem-ruby-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2367,6 +2566,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/elem-time.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/elem-time-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2377,6 +2577,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/elem-track.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/elem-track-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2387,6 +2588,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/emoji.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/emoji-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2397,6 +2599,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/es5-strictmode.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/es5-strictmode-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2407,6 +2610,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/event-deviceorientation-motion.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/event-deviceorientation-motion-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2417,6 +2621,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/exif-orientation.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/exif-orientation-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2427,6 +2632,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/file-api.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/file-api-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2437,6 +2643,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/file-filesystem.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/file-filesystem-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2447,6 +2654,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/forms-fileinput.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/forms-fileinput-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2457,6 +2665,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/forms-formattribute.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/forms-formattribute-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2467,6 +2676,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/forms-inputnumber-l10n.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/forms-inputnumber-l10n-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2477,6 +2687,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/forms-placeholder.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/forms-placeholder-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2487,6 +2698,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/forms-speechinput.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/forms-speechinput-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2497,6 +2709,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/forms-validation.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/forms-validation-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2507,6 +2720,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/fullscreen-api.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/fullscreen-api-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2517,6 +2731,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/gamepad.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/gamepad-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2527,6 +2742,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/getusermedia.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/getusermedia-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2537,6 +2753,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/ie8compat.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/ie8compat-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2547,6 +2764,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/iframe-sandbox.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/iframe-sandbox-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2557,6 +2775,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/iframe-seamless.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/iframe-seamless-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2567,6 +2786,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/iframe-srcdoc.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/iframe-srcdoc-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2577,6 +2797,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/img-apng.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/img-apng-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2587,6 +2808,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/img-webp.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/img-webp-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2597,6 +2819,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/json.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/json-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2607,6 +2830,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/lists-reversed.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/lists-reversed-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2617,6 +2841,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/mathml.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/mathml-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2627,6 +2852,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/network-connection.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/network-connection-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2637,6 +2863,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/network-eventsource.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/network-eventsource-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2647,6 +2874,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/network-xhr2.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/network-xhr2-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2657,6 +2885,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/notification.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/notification-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2667,6 +2896,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/performance.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/performance-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2677,6 +2907,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/pointerlock-api.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/pointerlock-api-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2687,6 +2918,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/quota-management-api.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/quota-management-api-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2697,6 +2929,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/requestanimationframe.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/requestanimationframe-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2707,6 +2940,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/script-async.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/script-async-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2717,6 +2951,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/script-defer.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/script-defer-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2727,6 +2962,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/style-scoped.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/style-scoped-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2737,6 +2973,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/svg-filters.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/svg-filters-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2747,6 +2984,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/unicode.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/unicode-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2757,6 +2995,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/url-data-uri.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/url-data-uri-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2767,6 +3006,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/userdata.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/userdata-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2777,6 +3017,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/vibration.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/vibration-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2787,6 +3028,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/web-intents.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/web-intents-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2797,6 +3039,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/webgl-extensions.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/webgl-extensions-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2807,6 +3050,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/websockets-binary.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/websockets-binary-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2817,6 +3061,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/window-framed.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/window-framed-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2827,6 +3072,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/workers-blobworkers.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/workers-blobworkers-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2837,6 +3083,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/workers-dataworkers.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/workers-dataworkers-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2847,6 +3094,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/workers-sharedworkers.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/feature-detects\/min\/workers-sharedworkers-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2857,6 +3105,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/grunt.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/min\/grunt-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2868,6 +3117,7 @@
 		"initialSize": 14823,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/media\/Modernizr 2 Logo.png",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/media\/Modernizr 2 Logo.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -2876,8 +3126,9 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/modernizr.js",
-		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/min\/modernizr-ck.js",
-		"outputPathIsSetByUser": 0,
+		"outputAbbreviatedPath": "\/assets\/js\/modernizr.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
@@ -2890,6 +3141,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/readme.md",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/readme.html",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_foundation\/bower_components\/modernizr\/test\/basic.html": {
@@ -2898,6 +3150,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/basic.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_foundation\/bower_components\/modernizr\/test\/caniuse.html": {
@@ -2906,6 +3159,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/alpha.png": {
@@ -2915,6 +3169,7 @@
 		"initialSize": 163,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/alpha.png",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/alpha.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -2925,6 +3180,7 @@
 		"initialSize": 195,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/apng_test.png",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/apng_test.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -2935,6 +3191,7 @@
 		"initialSize": 452,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/before-after.png",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/before-after.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -2944,6 +3201,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/form_validation.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/ga.js": {
@@ -2952,6 +3210,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/ga.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/min\/ga-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2963,6 +3222,7 @@
 		"initialSize": 72,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/green5x5.png",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/green5x5.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -2972,6 +3232,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/hashchange.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/jquery.min.js": {
@@ -2980,6 +3241,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/jquery.min.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/min\/jquery.min-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -2990,6 +3252,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/mathml.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/mathml_ref.png": {
@@ -2999,6 +3262,7 @@
 		"initialSize": 3140,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/mathml_ref.png",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/mathml_ref.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -3008,6 +3272,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/modernizr-1.7.min.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/min\/modernizr-1.7.min-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -3019,6 +3284,7 @@
 		"initialSize": 214,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/png_alpha_result.png",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/png_alpha_result.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -3028,6 +3294,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/pushstate.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/red30x30.png": {
@@ -3037,6 +3304,7 @@
 		"initialSize": 93,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/red30x30.png",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/red30x30.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -3047,6 +3315,7 @@
 		"initialSize": 1339,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/ruby.png",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/ruby.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -3057,6 +3326,7 @@
 		"initialSize": 1291,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/stroked-text.png",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/stroked-text.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -3066,6 +3336,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/style.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/svg-html-blur.png": {
@@ -3075,6 +3346,7 @@
 		"initialSize": 1232,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/svg-html-blur.png",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/svg-html-blur.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -3085,6 +3357,7 @@
 		"initialSize": 3742,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/svg_blur.png",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/svg_blur.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -3095,6 +3368,7 @@
 		"initialSize": 2519,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/table.png",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/table.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -3105,6 +3379,7 @@
 		"initialSize": 796,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/text-shadow1.png",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/text-shadow1.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -3115,6 +3390,7 @@
 		"initialSize": 1680,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/text-shadow2.png",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/text-shadow2.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -3125,6 +3401,7 @@
 		"initialSize": 1339,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/windsong_font.png",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/windsong_font.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -3134,6 +3411,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/caniuse_files\/xhtml.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_foundation\/bower_components\/modernizr\/test\/index.html": {
@@ -3142,6 +3420,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_foundation\/bower_components\/modernizr\/test\/js\/basic.html": {
@@ -3150,6 +3429,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/basic.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_foundation\/bower_components\/modernizr\/test\/js\/dumpdata.js": {
@@ -3158,6 +3438,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/dumpdata.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/min\/dumpdata-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -3168,6 +3449,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/detect-global.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/min\/detect-global-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -3178,6 +3460,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/jquery-1.7b2.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/min\/jquery-1.7b2-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -3188,6 +3471,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/jsonselect.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/min\/jsonselect-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -3198,6 +3482,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/polyfills.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/min\/polyfills-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -3208,6 +3493,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/uaparser.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/lib\/min\/uaparser-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -3218,6 +3504,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/setup.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/min\/setup-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -3228,6 +3515,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/unit-caniuse.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/min\/unit-caniuse-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -3238,6 +3526,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/unit.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/js\/min\/unit-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -3248,6 +3537,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/qunit\/qunit.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_foundation\/bower_components\/modernizr\/test\/qunit\/qunit.js": {
@@ -3256,6 +3546,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/qunit\/qunit.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/qunit\/min\/qunit-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -3266,6 +3557,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/qunit\/run-qunit.js",
 		"outputAbbreviatedPath": "\/_foundation\/bower_components\/modernizr\/test\/qunit\/min\/run-qunit-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -3276,6 +3568,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_foundation\/js\/admin.js": {
@@ -3283,8 +3576,9 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/js\/admin.js",
-		"outputAbbreviatedPath": "\/_foundation\/js\/min\/admin-ck.js",
-		"outputPathIsSetByUser": 0,
+		"outputAbbreviatedPath": "\/assets\/js\/admin.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
@@ -3294,6 +3588,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/js\/app.js",
 		"outputAbbreviatedPath": "\/assets\/js\/app.min.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -3303,8 +3598,9 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/js\/theme-customizer.js",
-		"outputAbbreviatedPath": "\/_foundation\/js\/min\/theme-customizer-ck.js",
-		"outputPathIsSetByUser": 0,
+		"outputAbbreviatedPath": "\/assets\/js\/theme-customizer.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
@@ -3317,17 +3613,67 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/README.md",
 		"outputAbbreviatedPath": "\/_foundation\/README.html",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_foundation\/scss\/_comments.scss": {
+	"\/_foundation\/scss\/_custom.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 5,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_foundation\/scss\/_comments.scss",
-		"outputAbbreviatedPath": "\/assets\/css\/_comments.css",
+		"inputAbbreviatedPath": "\/_foundation\/scss\/_custom.scss",
+		"outputAbbreviatedPath": "\/assets\/css\/_custom.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/_foundation\/scss\/_nv_comments.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_foundation\/scss\/_nv_comments.scss",
+		"outputAbbreviatedPath": "\/assets\/css\/_nv_comments.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/_foundation\/scss\/_nv_mixins.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_foundation\/scss\/_nv_mixins.scss",
+		"outputAbbreviatedPath": "\/assets\/css\/_nv_mixins.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/_foundation\/scss\/_nv_wordpress.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_foundation\/scss\/_nv_wordpress.scss",
+		"outputAbbreviatedPath": "\/assets\/css\/_nv_wordpress.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -3343,21 +3689,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/scss\/_settings.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_settings.css",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/_foundation\/scss\/_wordpress.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_foundation\/scss\/_wordpress.scss",
-		"outputAbbreviatedPath": "\/assets\/css\/_wordpress.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -3373,6 +3705,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/scss\/admin.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/admin.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -3388,6 +3721,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/scss\/app.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/app.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -3403,6 +3737,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_foundation\/scss\/editor.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/editor.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -3415,6 +3750,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/archive.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/assets\/css\/admin.css": {
@@ -3423,6 +3759,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/css\/admin.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/assets\/css\/app.css": {
@@ -3431,6 +3768,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/css\/app.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/assets\/css\/editor.css": {
@@ -3439,14 +3777,16 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/css\/editor.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/assets\/js\/admin.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/js\/admin.min.js",
 		"outputAbbreviatedPath": "\/assets\/js\/min\/admin.min-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -3457,236 +3797,62 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/js\/app.min.js",
 		"outputAbbreviatedPath": "\/assets\/js\/min\/app.min-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/js\/fastclick.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/js\/fastclick.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/fastclick.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/foundation.abide.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/foundation.abide.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/foundation.abide.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/foundation.accordion.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/foundation.accordion.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/foundation.accordion.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/foundation.alert.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/foundation.alert.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/foundation.alert.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/foundation.clearing.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/foundation.clearing.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/foundation.clearing.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/foundation.dropdown.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/foundation.dropdown.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/foundation.dropdown.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/foundation.interchange.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/foundation.interchange.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/foundation.interchange.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/foundation.joyride.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/foundation.joyride.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/foundation.joyride.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/foundation.magellan.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/foundation.magellan.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/foundation.magellan.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/foundation.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/foundation.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/foundation.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/foundation.offcanvas.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/foundation.offcanvas.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/foundation.offcanvas.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/foundation.orbit.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/foundation.orbit.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/foundation.orbit.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/foundation.reveal.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/foundation.reveal.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/foundation.reveal.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/foundation.tab.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/foundation.tab.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/foundation.tab.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/foundation.tooltip.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/foundation.tooltip.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/foundation.tooltip.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/foundation.topbar.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/foundation.topbar.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/foundation.topbar.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/jquery-migrate.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/jquery-migrate.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/jquery-migrate.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/jquery.autocomplete.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/jquery.autocomplete.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/jquery.autocomplete.min-ck.js",
+		"outputAbbreviatedPath": "\/assets\/js\/fastclick.min-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/js\/jquery.cookie.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/js\/jquery.cookie.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/jquery.cookie.min-ck.js",
+		"outputAbbreviatedPath": "\/assets\/js\/jquery.cookie.min-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/assets\/js\/jquery.min.js": {
+	"\/assets\/js\/jquery.placeholder.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/jquery.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/jquery.min-ck.js",
+		"inputAbbreviatedPath": "\/assets\/js\/jquery.placeholder.min.js",
+		"outputAbbreviatedPath": "\/assets\/js\/jquery.placeholder.min-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/js\/modernizr.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/js\/modernizr.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/modernizr.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/placeholder.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/placeholder.min.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/placeholder.min-ck.js",
+		"outputAbbreviatedPath": "\/assets\/js\/modernizr.min-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/js\/theme-customizer.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/js\/theme-customizer.min.js",
 		"outputAbbreviatedPath": "\/assets\/js\/min\/theme-customizer.min-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -3697,6 +3863,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/config.rb",
 		"outputAbbreviatedPath": "\/config.rb",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/functions.php": {
@@ -3705,6 +3872,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/functions.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/index.php": {
@@ -3713,6 +3881,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/index.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/layout\/footer.php": {
@@ -3721,6 +3890,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/layout\/footer.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/layout\/header.php": {
@@ -3729,6 +3899,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/layout\/header.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/nv\/custom\/WalkerComments.php": {
@@ -3737,6 +3908,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/nv\/custom\/WalkerComments.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/nv\/hooks\/_pluggable.php": {
@@ -3745,6 +3917,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/nv\/hooks\/_pluggable.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/nv\/hooks\/Config.php": {
@@ -3753,6 +3926,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/nv\/hooks\/Config.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/nv\/hooks\/Editor.php": {
@@ -3761,6 +3935,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/nv\/hooks\/Editor.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/nv\/hooks\/ThemeCustomize.php": {
@@ -3769,6 +3944,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/nv\/hooks\/ThemeCustomize.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/nv\/NV.php": {
@@ -3777,6 +3953,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/nv\/NV.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/nv\/utilities\/Html.php": {
@@ -3785,6 +3962,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/nv\/utilities\/Html.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/nv\/utilities\/HtmlBase.php": {
@@ -3793,6 +3971,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/nv\/utilities\/HtmlBase.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/nv\/utilities\/NV_Requirements.php": {
@@ -3801,6 +3980,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/nv\/utilities\/NV_Requirements.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/nv\/utilities\/Php.php": {
@@ -3809,6 +3989,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/nv\/utilities\/Php.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/nv\/utilities\/Theme.php": {
@@ -3817,6 +3998,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/nv\/utilities\/Theme.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/nv\/utilities\/WordPress.php": {
@@ -3825,6 +4007,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/nv\/utilities\/WordPress.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/overrides\/foundation.php": {
@@ -3833,6 +4016,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/overrides\/foundation.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/parts\/archive-nav.php": {
@@ -3841,6 +4025,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/parts\/archive-nav.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/parts\/article-with-comments.php": {
@@ -3849,6 +4034,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/parts\/article-with-comments.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/parts\/article.php": {
@@ -3857,14 +4043,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/parts\/article.php",
 		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsSetByUser": 0
-		},
-	"\/parts\/comments\/comment.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/parts\/comments\/comment.php",
-		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/parts\/comments\/comments.php": {
@@ -3873,6 +4052,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/parts\/comments\/comments.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/parts\/comments\/pagination.php": {
@@ -3881,6 +4061,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/parts\/comments\/pagination.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/parts\/comments\/pingback.php": {
@@ -3889,6 +4070,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/parts\/comments\/pingback.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/parts\/comments\/respond.php": {
@@ -3897,6 +4079,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/parts\/comments\/respond.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/parts\/comments\/response-form.php": {
@@ -3905,17 +4088,28 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/parts\/comments\/response-form.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/readme.md": {
+	"\/parts\/comments\/single.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/parts\/comments\/single.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/README.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
 		"expandTabs": 1,
 		"fileType": 4096,
-		"ignore": 1,
-		"ignoreWasSetByUser": 1,
-		"inputAbbreviatedPath": "\/readme.md",
-		"outputAbbreviatedPath": "\/readme.html",
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/README.md",
+		"outputAbbreviatedPath": "\/README.html",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/screenshot.png": {
@@ -3925,6 +4119,7 @@
 		"initialSize": 12538,
 		"inputAbbreviatedPath": "\/screenshot.png",
 		"outputAbbreviatedPath": "\/screenshot.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -3934,6 +4129,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/single.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/style.css": {
@@ -3942,6 +4138,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/style.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		}
 	},
@@ -3952,8 +4149,8 @@
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
-	"displayValue": "nouveau",
-	"displayValueWasSetByUser": 0,
+	"displayValue": "NOUVEAU",
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "brackets_blue"
 	},
 "projectSettings": {
@@ -4013,12 +4210,16 @@
 			"active": 0,
 			"flagValue": 3
 			},
-		"no-unnecessary_fat_arrows": {
+		"no_backticks": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"no_backticks": {
+		"no_debugger": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"no_empty_functions": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"no_empty_param_list": {
@@ -4030,6 +4231,10 @@
 			"flagValue": -1
 			},
 		"no_implicit_parens": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_interpolation_in_single_quotes": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -4054,6 +4259,14 @@
 			"flagValue": -1
 			},
 		"no_trailing_whitespace": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"no_unnecessary_double_quotes": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"no_unnecessary_fat_arrows": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -4175,10 +4388,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"gcl": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"globalstrict": {
 			"active": 0,
 			"flagValue": -1
@@ -4291,10 +4500,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"onevar": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"phantom": {
 			"active": 0,
 			"flagValue": -1
@@ -4331,10 +4536,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"smarttabs": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"strict": {
 			"active": 0,
 			"flagValue": -1
@@ -4347,10 +4548,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"trailing": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"typed": {
 			"active": 0,
 			"flagValue": -1
@@ -4361,10 +4558,6 @@
 			},
 		"unused": {
 			"active": 1,
-			"flagValue": -1
-			},
-		"white": {
-			"active": 0,
 			"flagValue": -1
 			},
 		"withstmt": {

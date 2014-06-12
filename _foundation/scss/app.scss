@@ -1,15 +1,17 @@
 /*
  =======================================================================================================================
- Custom Styles
+ Foundation App Boostrap
 
- This is where you should add your own SCSS or includes. This file will compile to your theme directory under 
- assets/css/app.css, which is already configured by Compass and enqueued by \NV\Hooks\Config::enqueue_assets()
+ This file loads all the SCSS components for Foundation & NOUVEAU. You should place your own styles into one or more
+ separate .scss files and import your own styles at the bottom of this file.
  =======================================================================================================================
 */
+
+// Foundation settings: _settings.scss
 @import "settings";
+
+// Load all Foundation core components: ../bower_components/foundation
 @import "foundation";
-@import "wordpress";
-@import "comments";
 
 // Or selectively include components
 // @import
@@ -48,3 +50,11 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+
+// Load NOUVEAU compatibility styles
+@import "nv_wordpress";    
+@import "nv_comments";
+
+// PLACE YOUR OWN STYLES HERE...
+@import "custom";

@@ -1,0 +1,25 @@
+/*
+ =======================================================================================================================
+ Basic Comment System Styles
+
+ This file provides some basic comment system styles. Customize it as you will. Comment templates can be found in the 
+ parts/comments/ folder of your theme.
+ =======================================================================================================================
+*/
+
+.comments-nav {
+    // Comment pagination control
+}
+.comments-list {
+    section.replies {
+        padding-left: 2rem;
+    }
+    article.comment {
+        padding: 1rem 0;
+    }
+    article.parent.depth-1,
+    & > section.replies {
+        border-left: 0.25rem solid silver;
+        padding-left: 0.5rem;
+    }
+}

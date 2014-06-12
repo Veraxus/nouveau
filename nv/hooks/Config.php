@@ -18,8 +18,8 @@ class Config {
     public static function after_setup_theme() {
         load_theme_textdomain( 'nvLangScope', trailingslashit(THEME_DIR).'assets/languages' );
 
-        add_theme_support('automatic-feed-links');
-        add_theme_support('custom-header', array(
+        add_theme_support( 'automatic-feed-links');
+        add_theme_support( 'custom-header', array(
             'height'        => 200,
             'width'         => 980,
             'flex-height'   => true,
@@ -33,15 +33,15 @@ class Config {
             //'admin-head-callback' => '',
             //'admin-preview-callback => '',
         ));
-        add_theme_support('custom-background', array(
+        add_theme_support( 'custom-background', array(
             //'default-image'             => '',
             'default-color'               => '#fff',
             //'wp-head-callback'          => '_custom_background_cb',
             //'admin-head-callback'       => '',
             //'admin-preview-callback'    => '',
         ));
-        add_theme_support('post-thumbnails');
-        add_theme_support('post-formats', array(
+        add_theme_support( 'post-thumbnails' );
+        add_theme_support( 'post-formats', array(
             'aside',
             'audio',
             'chat',
@@ -53,34 +53,43 @@ class Config {
             'video',
         ));
 
-        register_nav_menu('primary', __('Primary Menu', 'nvLangScope'));
-        register_nav_menu('footer', __('Footer Menu', 'nvLangScope'));
+        /*
+         * Uncomment this if you want to add WooCommerce support to your theme. You should also add a "woocommerce" 
+         * folder to your theme root if you want to use custom templates.
+         */
+        //add_theme_support( 'woocommerce' );
+
+        register_nav_menu( 'primary', __('Primary Menu', 'nvLangScope' ));
+        register_nav_menu( 'footer', __('Footer Menu', 'nvLangScope' ));
 
         /*
          * Set up any default values needed for theme options. If a default value
          * is needed, it can be provided as a second parameter. This will NOT
          * overwrite any existing options with these names.
          */
-        add_option('register_notify', true); //Setting for registration notifications to admins
-        add_option('password_notify', true); //Setting for password reset notifications to admins
-        //add_option('nouveau_example_checkbox');
-        //add_option('nouveau_example_radio');
-        //add_option('nouveau_example_text', 'This is example default text.');
-        //add_option('nouveau_example_select');
+        add_option( 'register_notify', true ); //Setting for registration notifications to admins
+        add_option( 'password_notify', true ); //Setting for password reset notifications to admins
+        //add_option( 'nouveau_example_checkbox' );
+        //add_option( 'nouveau_example_radio' );
+        //add_option( 'nouveau_example_text', 'This is example default text.' );
+        //add_option( 'nouveau_example_select' );
 
     }
 
 
     /**
-     * Enqueues styles and scripts
+     * Enqueues styles and scripts. 
+     * 
+     * This is current set up for the majority of use-cases, and you can uncomment additional lines if you want to 
      *
      * Used by action hook: 'wp_enqueue_scripts'
      */
     public static function enqueue_assets() {
 
         /******************
-         * STYLES
+         * STYLES / CSS
          ******************/
+        
         // Base stylesheet (compiled SASS)
         wp_enqueue_style( 'app', NV_CSS.'/app.css' );
 
@@ -89,34 +98,62 @@ class Config {
 
 
         /******************
-         * SCRIPTS
+         * SCRIPTS / JS
          ******************/
-        // Load Modernizr in the head
-        wp_enqueue_script( 'modernizr', NV_JS.'/modernizr.min.js' );
+        
+        // Load Modernizr in the head...
+        wp_enqueue_script( 'modernizr', NV_ZF_JS.'/vendor/modernizr.js' );
 
-        // Get rid of WordPress's jQuery and use our own...
-        //wp_dequeue_script( 'jquery' );
-        //wp_enqueue_script( 'jquery', NV_JS.'/jquery.min.js', false, true);
+        // Remove WordPress's jQuery and use our own...
+        wp_dequeue_script( 'jquery' );
+        wp_enqueue_script( 'jquery', NV_ZF_JS.'/vendor/jquery.js', false, true);
+        
+        // Load fastclick (optional)...
+        wp_enqueue_script( 'fastclick',  NV_ZF_JS.'/vendor/fastclick.js' );
 
-        // Load Foundation and plugins...
-        wp_enqueue_script( 'foundation', NV_JS.'/foundation.min.js', array( 'jquery' ), false, true );
-        //wp_enqueue_script( 'zf-abide', NV_JS.'/foundation.abide.min.js', array( 'jquery', 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-accordion', NV_JS.'/foundation.accordion.min.js', array( 'jquery', 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-alert', NV_JS.'/foundation.alert.min.js', array( 'jquery', 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-clearing', NV_JS.'/foundation.clearing.min.js', array( 'jquery', 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-dropdown', NV_JS.'/foundation.dropdown.min.js', array( 'jquery', 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-interchange', NV_JS.'/foundation.interchange.min.js', array( 'jquery', 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-joyride', NV_JS.'/foundation.joyride.min.js', array( 'jquery', 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-magellan', NV_JS.'/foundation.magellan.min.js', array( 'jquery', 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-offcanvas', NV_JS.'/foundation.offcanvas.min.js', array( 'jquery', 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-orbit', NV_JS.'/foundation.orbit.min.js', array( 'jquery', 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-reveal', NV_JS.'/foundation.reveal.min.js', array( 'jquery', 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-tab', NV_JS.'/foundation.tab.min.js', array( 'jquery', 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-tooltip', NV_JS.'/foundation.tooltip.min.js', array( 'jquery', 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-topbar', NV_JS.'/foundation.topbar.min.js', array( 'jquery', 'foundation' ), false, true );
+        // Load jQuery.cookie (optional)...
+        //wp_enqueue_script( 'jq-cookie', NV_ZF_JS.'/vendor/jquery.cookie.js' );
+        
+        // Load jQuery.placeholder (optional)...
+        //wp_enqueue_script( 'jq-placeholder', NV_ZF_JS.'/vendor/placeholder.js' );
+        
+        // Load the complete version of Foundation (with all plugins)...
+        wp_enqueue_script( 
+            'foundation',                                   // uid
+            NV_ZF_JS.'/vendor/foundation.min.js',           // url
+            array( 'jquery' ),                              // dependencies (by uid)
+            false,                                          // version id (optional)
+            true                                            // load in footer?
+        );
+        
+        // Load any Foundation stuff individually? (optional)
+        //wp_enqueue_script( 'foundation', NV_ZF_JS.'/foundation/foundation.js', array( 'jquery' ), false, true );
+        //wp_enqueue_script( 'zf-abide', NV_ZF_JS.'/foundation/foundation.abide.js', array( 'foundation' ), false, true );
+        //wp_enqueue_script( 'zf-accordion', NV_ZF_JS.'/foundation/foundation.accordion.js', array( 'foundation' ), false, true );
+        //wp_enqueue_script( 'zf-alert', NV_ZF_JS.'/foundation/foundation.alert.js', array( 'foundation' ), false, true );
+        //wp_enqueue_script( 'zf-clearing', NV_ZF_JS.'/foundation/foundation.clearing.js', array( 'foundation' ), false, true );
+        //wp_enqueue_script( 'zf-dropdown', NV_ZF_JS.'/foundation/foundation.dropdown.js', array( 'foundation' ), false, true );
+        //wp_enqueue_script( 'zf-equalizer', NV_ZF_JS.'/foundation/foundation.equalizer.js', array( 'foundation' ), false, true );
+        //wp_enqueue_script( 'zf-interchange', NV_ZF_JS.'/foundation/foundation.equalizer.js', array( 'foundation' ), false, true );
+        //wp_enqueue_script( 'zf-joyride', NV_ZF_JS.'/foundation/foundation.joyride.js', array( 'foundation' ), false, true );
+        //wp_enqueue_script( 'zf-magellan', NV_ZF_JS.'/foundation/foundation.magellan.js', array( 'foundation' ), false, true );
+        //wp_enqueue_script( 'zf-offcanvas', NV_ZF_JS.'/foundation/foundation.offcanvas.js', array( 'foundation' ), false, true );
+        //wp_enqueue_script( 'zf-orbit', NV_ZF_JS.'/foundation/foundation.orbit.js', array( 'foundation' ), false, true );
+        //wp_enqueue_script( 'zf-reveal', NV_ZF_JS.'/foundation/foundation.reveal.js', array( 'foundation' ), false, true );
+        //wp_enqueue_script( 'zf-slider', NV_ZF_JS.'/foundation/foundation.slider.js', array( 'foundation' ), false, true );
+        //wp_enqueue_script( 'zf-tab', NV_ZF_JS.'/foundation/foundation.tab.js', array( 'foundation' ), false, true );
+        //wp_enqueue_script( 'zf-tooltip', NV_ZF_JS.'/foundation/foundation.tooltip.js', array( 'foundation' ), false, true );
+        //wp_enqueue_script( 'zf-topbar', NV_ZF_JS.'/foundation/foundation.topbar.js', array( 'foundation' ), false, true );
 
-        // Load any custom javascript...
-        wp_enqueue_script( 'app', NV_JS.'/app.min.js', array( 'jquery', 'foundation' ), false, true );
+        // Load any custom javascript (remember to update dependencies if you changed the above)...
+        wp_enqueue_script( 
+            'theme-app',                                    // uid
+            NV_JS.'/app.min.js',                            // url
+            array( 'jquery', 'foundation', 'modernizr' ),   // dependencies (by uid)
+            false,                                          // version id (optional)
+            true                                            // load in footer?
+        );
+
     }
 
 

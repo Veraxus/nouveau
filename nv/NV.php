@@ -22,13 +22,13 @@ class NV {
         $nvCheck = new NV_Requirements();
 
         // Only continue if the requirements check passed
-        if ( $nvCheck->is_compatible ) {
-            self::bootstrap();
-            self::hooks();
+        if ( ! $nvCheck->is_compatible ) {
+            return false;
         }
 
-        // For developers, return compatibility check result (bool)
-        return $nvCheck->is_compatible;
+        // Finish loading
+        self::bootstrap();
+        self::hooks();
     }
 
 
@@ -72,13 +72,18 @@ class NV {
 
         /** The uri for theme javascripts */
         define( 'NV_JS', trailingslashit( NV_ASSETS ) . 'js' );
-
+        
         /** The directory for theme languages */
         define( 'NV_LANGS', trailingslashit( NV_ASSETS ) . 'languages' );
 
         /** The directory for the parts folder */
         define( 'NV_PARTS', trailingslashit( THEME_DIR ) . 'parts' );
 
+        /** The uri for Bower sources */
+        define( 'NV_BOWER', trailingslashit( THEME_URI ) . '_foundation/bower_components' );
+
+        /** The uri for Foundation sources */
+        define( 'NV_ZF_JS', trailingslashit( NV_BOWER ) . 'foundation/js' );
     }
 
 

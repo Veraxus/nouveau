@@ -5,7 +5,7 @@
  This is included automatically by app.scss and editor.css and is used to add support for basic WordPress components.
  Generally, you shouldn't need to modify this file.
 
- Instead, create your own styles in _PRIMARY.scss and, if needed, remove the "wordpress" import from app.scss to prevent
+ Instead, create your own styles in _custom.scss and, if needed, remove the "wordpress" import from app.scss to prevent
  this file from being loaded.
  =======================================================================================================================
 */

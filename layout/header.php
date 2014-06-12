@@ -6,7 +6,7 @@
     <title><?php \NV\Theme::page_title(); ?></title>
   
     <!--wp_head-->
-    <?php wp_head(); //Enqueue your own stuff in functions.php or \NV\Hooks\General::enqueue_assets() ?>
+    <?php wp_head(); //Enqueue your own stuff in functions.php or \NV\Hooks\Config::enqueue_assets() ?>
     <!--/wp_head-->
 
     <!--[if lt IE 9]>
@@ -21,7 +21,7 @@
     </script>
     <![endif]-->
 
-    <!-- Typekit embed code goes here -->
+    <!-- Font embed code goes here -->
 
 </head>
 <body <?php body_class() ?>>
