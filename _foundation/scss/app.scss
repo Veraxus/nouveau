@@ -10,7 +10,10 @@
 // Foundation settings: _settings.scss
 @import "settings";
 
-// Load all Foundation core components: ../bower_components/foundation
+// Optional: Use Normalize?
+//@import "normalize";
+
+// Load all Foundation components: ../bower_components/foundation
 @import "foundation";
 
 // Or selectively include components

@@ -3,11 +3,11 @@ Contributors: Veraxus
 Donate link: http://nouveauframework.org/
 Author URI: http://nouveauframework.org/
 Tags: framework, php5.3
-Version: 0.9.10
-Foundation: 5.2.3
+Version: 0.9.11
+Foundation version: 5.3
 Requires at least: 3.9
-Tested up to: 3.9
-Stable tag: 0.9.10
+Tested up to: 4.0
+Stable tag: 0.9.11
 License: GNU General Public License
 License URI: GNU-LICENSE.txt
 
@@ -45,15 +45,17 @@ In addition to having very well documented code, you can find a complete **Getti
 
 == Installation Instructions == 
 
-NOTE: NOUVEAU is NOT a ready-made theme and should only be used by developers. it is specifically built to facilitate rapid development and easy maintenance by developers. The code is clean, simple, and very well commented.
+NOTE: NOUVEAU is NOT a ready-made theme and should only be used by developers. it is specifically built to facilitate rapid development and easy maintenance. The code is clean, simple, and very well commented and documented.
 
 = Prerequisites for SASS developers =
-If you want to use the SASS workflow, ensure that you have all of Foundations prerequisites met first (see: [http://foundation.zurb.com/docs/sass.html]).
+If you want to use the SASS workflow, ensure that you have all of Foundations prerequisites (including Compass) met first.
+
+For full prerequisites, see: [http://foundation.zurb.com/docs/sass.html]).  
 
 = General Installation =
 To install, simply the copy the NOUVEAU theme folder to your `wp-content\themes` directory. Before activating, be sure you rename the theme folder and perform a global find-replace for the strings (case sensitive) `NOUVEAU`, `Nouveau`, and `nouveau`, as well as the language scope (`nvLangScope`).
 
-You can find exhaustive documentation for NOUVEAU at [NouveauFramework.com](http://nouveauframework.org/documentation/getting-started/), and documentation Zurb Foundation at [Foundation.Zurb.com](http://foundation.zurb.com/docs/sass.html)
+You can find exhaustive documentation for NOUVEAU at [NouveauFramework.com](http://nouveauframework.org/documentation/getting-started/), and documentation for Zurb Foundation at [Foundation.Zurb.com](http://foundation.zurb.com/docs/sass.html)
 
 Also remember that you can test your own NOUVEAU derivatives by using the WordPress [Theme Unit Test]( http://codex.wordpress.org/Theme_Unit_Test ).
 
@@ -89,6 +91,10 @@ These plugins were created by developers, for developers. We hope they make your
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
 == Changelog ==
+
+= 0.9.11 (2014-06-29) =
+* Updated Foundation to 5.3
+* Foundation's jQuery (2.1.1) is now automatically used instead of WordPress's built-in 1.x version
 
 = 0.9.10 (2014-06-08) =
 * Updated Foundation to 5.2.3

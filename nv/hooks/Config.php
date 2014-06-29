@@ -102,14 +102,14 @@ class Config {
          ******************/
         
         // Load Modernizr in the head...
-        wp_enqueue_script( 'modernizr', NV_ZF_JS.'/vendor/modernizr.js' );
+        wp_enqueue_script( 'modernizr', NV_ZF_JS.'/vendor/modernizr.js', array(), '2.8.2' );
 
         // Remove WordPress's jQuery and use our own...
-        wp_dequeue_script( 'jquery' );
-        wp_enqueue_script( 'jquery', NV_ZF_JS.'/vendor/jquery.js', false, true);
+        wp_deregister_script( 'jquery' );
+        wp_enqueue_script( 'jquery', NV_ZF_JS.'/vendor/jquery.js', array(), '2.1.1' );
         
         // Load fastclick (optional)...
-        wp_enqueue_script( 'fastclick',  NV_ZF_JS.'/vendor/fastclick.js' );
+        wp_enqueue_script( 'fastclick',  NV_ZF_JS.'/vendor/fastclick.js', array(), '1.0.2' );
 
         // Load jQuery.cookie (optional)...
         //wp_enqueue_script( 'jq-cookie', NV_ZF_JS.'/vendor/jquery.cookie.js' );
@@ -120,13 +120,13 @@ class Config {
         // Load the complete version of Foundation (with all plugins)...
         wp_enqueue_script( 
             'foundation',                                   // uid
-            NV_ZF_JS.'/vendor/foundation.min.js',           // url
+            NV_ZF_JS.'/foundation.min.js',                  // url
             array( 'jquery' ),                              // dependencies (by uid)
-            false,                                          // version id (optional)
+            '5.3.0',                                        // version id (optional)
             true                                            // load in footer?
         );
         
-        // Load any Foundation stuff individually? (optional)
+        // Load any Foundation stuff individually (optional)...
         //wp_enqueue_script( 'foundation', NV_ZF_JS.'/foundation/foundation.js', array( 'jquery' ), false, true );
         //wp_enqueue_script( 'zf-abide', NV_ZF_JS.'/foundation/foundation.abide.js', array( 'foundation' ), false, true );
         //wp_enqueue_script( 'zf-accordion', NV_ZF_JS.'/foundation/foundation.accordion.js', array( 'foundation' ), false, true );

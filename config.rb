@@ -21,6 +21,7 @@ http_images_path = "../images/"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
+output_style = :nested
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
