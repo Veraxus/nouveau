@@ -180,7 +180,7 @@ class Config {
      * Used by action hook: 'post_class'
      */
     public static function fix_sticky_class($classes) {
-        $classes = array_diff($classes, array("sticky"));
+        $classes = array_diff( $classes, array( "sticky" ) );
         if ( is_sticky() ) {
             $classes[] = 'sticky-post';
         }
@@ -200,8 +200,8 @@ class Config {
 
         $locale = get_locale();
 
-        $locale_file = sprintf('%s/assets/languages/%s.php', untrailingslashit(THEME_DIR), $locale);
-        if ( is_readable($locale_file) ) {
+        $locale_file = sprintf( '%s/assets/languages/%s.php', untrailingslashit(THEME_DIR), $locale);
+        if ( is_readable( $locale_file ) ) {
             require_once $locale_file;
         }
     }

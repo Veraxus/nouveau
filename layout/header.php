@@ -9,18 +9,6 @@
     <?php wp_head(); //Enqueue your own stuff in functions.php or \NV\Hooks\Config::enqueue_assets() ?>
     <!--/wp_head-->
 
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
-    <script>
-        jQuery(function(){
-            CFInstall.check({
-                mode: "overlay",
-                node: "prompt"
-            });
-        });
-    </script>
-    <![endif]-->
-
     <!-- Font embed code goes here -->
 
 </head>
