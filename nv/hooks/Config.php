@@ -163,11 +163,11 @@ class Config {
      * Used by action hook: 'admin_enqueue_scripts'
      */
     public static function enqueue_admin_assets() {
-        //Base admin styles
+        // Base admin styles
         wp_enqueue_style( 'nv-admin', NV_CSS.'/admin.css' );
 
-        //Base admin scripts
-        wp_enqueue_script( 'nv-admin', NV_CSS.'/admin.min.js', array('jquery'), false, false );
+        // Base admin scripts
+        wp_enqueue_script( 'nv-admin', NV_JS.'/admin.min.js', array('jquery'), false, false );
     }
 
 

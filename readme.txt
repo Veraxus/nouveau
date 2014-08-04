@@ -3,11 +3,11 @@ Contributors: Veraxus
 Donate link: http://nouveauframework.org/
 Author URI: http://nouveauframework.org/
 Tags: framework, php5.3
-Version: 0.9.12
-Foundation version: 5.3.1
+Version: 0.9.13
+Foundation version: 5.3.3
 Requires at least: 3.9
 Tested up to: 4.0
-Stable tag: 0.9.12
+Stable tag: 0.9.13
 License: GNU General Public License
 License URI: GNU-LICENSE.txt
 
@@ -91,6 +91,10 @@ These plugins were created by developers, for developers. We hope they make your
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
 == Changelog ==
+
+= 0.9.13 (2014-08-03) =
+* Updated Foundation to 5.3.3
+* Fixed incorrect admin JS constant in \NV\Config::enqueue_admin_assets()
 
 = 0.9.12 (2014-07-23) =
 * Updated Foundation to 5.3.1
