@@ -1,8 +1,12 @@
 /*
  =======================================================================================================================
- Styles to load exclusively in the WordPress Admin
+ Custom Styles - Medium & up
 
- This is already enqueued in your WordPress admin. If you are using SASS, this compiles from /_foundation/scss/admin.scss 
- and is individually enqueued by \NV\Hooks\Config::enqueue_assets()
+ You can place your own custom theme styles here or you can create one or more of your own scss files. Just be sure to
+ @import them from app.scss!
  =======================================================================================================================
 */
+
+@media #{$medium-up} {
+    // your styles here
+}

@@ -3,11 +3,11 @@
 **Donate link:** http://nouveauframework.org/  
 **Author URI:** http://nouveauframework.org/  
 **Tags:** framework, php5.3  
-**Version:** 0.9.15  
-**Foundation version:** 5.4.3  
+**Version:** 0.9.16  
+**Foundation version:** 5.4.5  
 **Requires at least:** 3.9  
 **Tested up to:** 4.0  
-**Stable tag:** 0.9.15  
+**Stable tag:** 0.9.16  
 **License:** GNU General Public License  
 **License URI:** GNU-LICENSE.txt  
 
@@ -48,7 +48,7 @@ In addition to having very well documented code, you can find a complete **Getti
 **NOTE:** NOUVEAU is NOT a ready-made theme and should only be used by developers. it is specifically built to facilitate rapid development and easy maintenance. The code is clean, simple, and very well commented and documented.  
 
 ### Prerequisites for SASS developers ###
-**If you want to use the SASS workflow, ensure that you have all of Foundations prerequisites (including Compass) met first.** 
+**If you want to use the SASS workflow, ensure that you have all of Foundations prerequisites met first.** Note that NOUVEAU uses the non-Compass version of Foundation, and is therefore compatible with compilers like libsass.
 
 For full prerequisites, see: [http://foundation.zurb.com/docs/sass.html]).  
 
@@ -76,7 +76,7 @@ You find a complete (yet concise) overview of file and folder structure at [Nouv
 
 # Zurb Foundation Notes #
 
-Foundation has been tweaked slightly to work as part of a WordPress theme, however the tweaks needed to ensure this compatibility are rather minor. One important thing to note is that `config.rb` (i.e. the Compass configuration file) is located in the theme's root directory while the *uncompiled* Zurb Foundation files are located in the `_foundation` directory. This allows you to set your compiler (e.g. Compass, CodeKit, etc) to watch the theme folder, and everything is just put in the right places for you automatically (again, `config.rb` is already set up for this).
+Foundation has been tweaked slightly to work as part of a WordPress theme, however the tweaks needed to ensure this compatibility are rather minor. One important thing to note is that *uncompiled* Zurb Foundation files are located in the `_foundation` directory. This allows you to set your compiler (e.g. Ruby-Sass, libsass, CodeKit, etc) to watch the theme folder while keeping Foundation's code separate for cleanliness and easy updating. Just remember to make sure your SASS and Javascript compile to the appriate folder under the theme's /assets folder!
 
 If you don't want to use SASS, then everything is already compiled for you. Just write your plain CSS in the main style.css file (in the theme root) as you would normally do.
 
@@ -91,6 +91,12 @@ These plugins were created by developers, for developers. We hope they make your
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
 ## Changelog ##
+
+## 0.9.16 (2014-10-06) ##
+* Updated Foundation to 5.4.5
+* Removed Compass support
+* NOUVEAU now uses the compiler-agnostic version of Foundation, which means compiling with libsass is now an option
+* For more info on why Compass was removed, see <http://www.nouveauframework.com/foundation-5-4-5-sass-compatibility-alert/>
 
 ## 0.9.15 (2014-08-30) ##
 * Updated Foundation to 5.4.3

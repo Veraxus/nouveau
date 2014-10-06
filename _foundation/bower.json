@@ -1,7 +1,5 @@
 {
-  "name": "foundation-compass-app",
-  "version": "0.0.1",
-  "private": "true",
+  "name": "foundation-libsass-template",
   "dependencies": {
     "foundation": "zurb/bower-foundation"
   }

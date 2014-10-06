@@ -1,8 +1,11 @@
 /*
  =======================================================================================================================
- Styles to load exclusively in the WordPress Admin
-
- This is already enqueued in your WordPress admin. If you are using SASS, this compiles from /_foundation/scss/admin.scss 
- and is individually enqueued by \NV\Hooks\Config::enqueue_assets()
+ Custom NOUVEAU Mixins
+ 
+ These are optional. Uncomment @import "mixins"; in app.scss to use them.
  =======================================================================================================================
 */
+
+@function image-url( $url ) {
+    @return url('../images/#{$url}');
+}
