@@ -122,7 +122,7 @@ class Config {
             'foundation',                                   // uid
             NV_ZF_JS.'/foundation.min.js',                  // url
             array( 'jquery' ),                              // dependencies (by uid)
-            '5.4.3',                                        // version id (optional)
+            '5.4.6',                                        // version id (optional)
             true                                            // load in footer?
         );
         
