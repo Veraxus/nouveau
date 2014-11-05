@@ -3,11 +3,11 @@ Contributors: Veraxus
 Donate link: http://nouveauframework.org/
 Author URI: http://nouveauframework.org/
 Tags: framework, php5.3
-Version: 0.9.17
-Foundation version: 5.4.6
+Version: 0.9.18
+Foundation version: 5.4.7
 Requires at least: 3.9
 Tested up to: 4.1
-Stable tag: 0.9.17
+Stable tag: 0.9.18
 License: GNU General Public License
 License URI: GNU-LICENSE.txt
 
@@ -92,6 +92,8 @@ NOUVEAU comes with all text strings properly scoped for internationalization. To
 
 == Changelog ==
 
+= 0.9.18 (2014-11-5) =
+* Updated Foundation to 5.4.7 (further improved libsass support)
 
 = 0.9.17 (2014-10-20) =
 * Updated Foundation to 5.4.6 (improved libsass support)
