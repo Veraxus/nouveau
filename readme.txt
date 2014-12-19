@@ -3,11 +3,11 @@ Contributors: Veraxus
 Donate link: http://nouveauframework.org/
 Author URI: http://nouveauframework.org/
 Tags: framework, php5.3
-Version: 0.9.18
-Foundation version: 5.4.7
-Requires at least: 3.9
+Version: 0.9.19
+Foundation version: 5.5
+Requires at least: 4.1
 Tested up to: 4.1
-Stable tag: 0.9.18
+Stable tag: 0.9.19
 License: GNU General Public License
 License URI: GNU-LICENSE.txt
 
@@ -91,6 +91,12 @@ These plugins were created by developers, for developers. We hope they make your
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
 == Changelog ==
+
+
+= 0.9.19 (2014-12-19)
+* Updated Foundation to 5.5
+* Changed file structure: merged _foundation folder with theme root to improve compatibility with compilers, watchers, and other tools
+* Foundation's humans.txt and robots.txt are no longer included in the NOUVEAU Theme Framework
 
 = 0.9.18 (2014-11-5) =
 * Updated Foundation to 5.4.7 (further improved libsass support)

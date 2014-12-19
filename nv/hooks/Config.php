@@ -18,7 +18,14 @@ class Config {
     public static function after_setup_theme() {
         load_theme_textdomain( 'nvLangScope', trailingslashit(THEME_DIR).'assets/languages' );
 
-        add_theme_support( 'automatic-feed-links');
+        /*
+         * Uncomment to allow WordPress to automatically generate a title tag for your pages using the wp_head() hook.
+         * This has been available since WordPress 4.1.
+         */
+        //add_theme_support( 'title-tag' );
+        
+        add_theme_support( 'automatic-feed-links'); // Automatically generate RSS feed urls
+        
         add_theme_support( 'custom-header', array(
             'height'        => 200,
             'width'         => 980,
@@ -33,6 +40,7 @@ class Config {
             //'admin-head-callback' => '',
             //'admin-preview-callback => '',
         ));
+        
         add_theme_support( 'custom-background', array(
             //'default-image'             => '',
             'default-color'               => '#fff',
@@ -40,7 +48,9 @@ class Config {
             //'admin-head-callback'       => '',
             //'admin-preview-callback'    => '',
         ));
+        
         add_theme_support( 'post-thumbnails' );
+        
         add_theme_support( 'post-formats', array(
             'aside',
             'audio',
