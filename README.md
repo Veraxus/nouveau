@@ -3,11 +3,11 @@
 **Donate link:** http://nouveauframework.org/  
 **Author URI:** http://nouveauframework.org/  
 **Tags:** framework, php5.3  
-**Version:** 0.9.19  
-**Foundation version:** 5.5  
+**Version:** 0.9.20  
+**Foundation version:** 5.5.1  
 **Requires at least:** 4.1  
 **Tested up to:** 4.1  
-**Stable tag:** 0.9.19  
+**Stable tag:** 0.9.20  
 **License:** GNU General Public License  
 **License URI:** GNU-LICENSE.txt  
 
