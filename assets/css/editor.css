@@ -2,8 +2,8 @@
  =======================================================================================================================
  TinyMCE Styles
 
- If you are using SASS, this compiles from /_foundation/scss/editor.scss and is loaded into your WordPress admins TinyMCE
- editor. You will generally want to use these styles in combination with customizations to \NV\Hooks\Editor.php,
+ Styles in this file are compiled to assets/css/editor.css and are automatically loaded into your WordPress admin's
+ TinyMCE editor. You will generally want to use these styles in combination with customizations to \NV\Hooks\Editor.php,
  which allows you to easily add new style presets to the TinyMCE editor.
  =======================================================================================================================
 */

@@ -1,0 +1,1 @@
+Modernizr.addTest("contextmenu","contextMenu"in document.documentElement&&"HTMLMenuItemElement"in window);

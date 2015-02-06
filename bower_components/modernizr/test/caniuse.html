@@ -6,8 +6,8 @@
 <!-- pull in latest modernizr -->
 <script src="../modernizr.js"></script>
 
-<script src="caniuse_files/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="caniuse_files/style.css">
+<script src="./caniuse_files/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./caniuse_files/style.css">
 
 <script>
 
@@ -250,7 +250,7 @@ box-shadow: inset lime 0px 0px 150px;
  
 <div style="font:25px/25px Times New Roman, Times; color:white;-webkit-text-shadow:25px 0 3px lime;-moz-text-shadow:25px 0 3px lime;-ms-text-shadow:25px 0 3px lime;-o-text-shadow:25px 0 3px lime;text-shadow:25px 0 3px lime;position:relative; left:-25px;">A</div>
 
-</div></div><div class="vis_ref"><img src="caniuse_files/text-shadow1.png"></div><div class="info">font-size: 25px;
+</div></div><div class="vis_ref"><img src="./caniuse_files/text-shadow1.png"></div><div class="info">font-size: 25px;
 color: white;
 text-shadow: 25px 0 3px lime; position: relative;
 left: -25px;</div></div>
@@ -258,7 +258,7 @@ left: -25px;</div></div>
 <div class="test_wrap"><h3>Visual</h3><div id="css-textshadow2" class="visual"></div><div class="vis_test"><div style="width:40px;height:30px;overflow:hidden" id="css-textshadow2">
  <div style="font:25px/25px Times New Roman, Times; color:white; -webkit-text-shadow:25px 0 3px #0F0, 35px 0 3px #0C0, 45px 0 3px #090;-moz-text-shadow:25px 0 3px #0F0, 35px 0 3px #0C0, 45px 0 3px #090;-ms-text-shadow:25px 0 3px #0F0, 35px 0 3px #0C0, 45px 0 3px #090;-o-text-shadow:25px 0 3px #0F0, 35px 0 3px #0C0, 45px 0 3px #090;text-shadow:25px 0 3px #0F0, 35px 0 3px #0C0, 45px 0 3px #090; position:relative; left:-35px;">A</div>
 </div>
-</div><div class="vis_ref"><img src="caniuse_files/text-shadow2.png"></div><div class="info">Multiple shadow test</div></div>
+</div><div class="vis_ref"><img src="./caniuse_files/text-shadow2.png"></div><div class="info">Multiple shadow test</div></div>
 
 </td></tr>
 <tr><th><h3>CSS3 Transitions</h3><span class="links">[<a href="http://caniuse.com/css-transitions">Table</a>] [<a href="http://tests.caniuse.com/?feat=css-transitions&prefix=all">Single feat</a>]</span></th><td class="current pass">&nbsp;<span>-pre-</span></td><td>
@@ -426,7 +426,7 @@ setResult('getelementsbyclassname0', typeof document.getElementsByClassName === 
 <tr><th><h3>Hashchange event</h3><span class="links">[<a href="http://caniuse.com/hashchange">Table</a>] [<a href="http://tests.caniuse.com/?feat=hashchange&prefix=all">Single feat</a>]</span></th><td class="current pass">&nbsp;</td><td>
 <div class="test_wrap"><h3>Auto (m)</h3><div id="hashchange0" class="auto pass"></div><script>setResult('hashchange0', Modernizr.hashchange);</script><div class="info">Modernizr test for: "hashchange"</div></div>
 
-<div class="test_wrap"><h3>Visual-square</h3><div id="hashchange1" class="visual-square"></div><div class="square"><iframe style="width:30px;height:30px;border:0" src="caniuse_files/hashchange.html"></iframe></div><div class="info">iframe with addEventListener('hashchange', function() {
+<div class="test_wrap"><h3>Visual-square</h3><div id="hashchange1" class="visual-square"></div><div class="square"><iframe style="width:30px;height:30px;border:0" src="./caniuse_files/hashchange.html"></iframe></div><div class="info">iframe with addEventListener('hashchange', function() {
 	document.body.style.background = 'lime';
 }, false);
 </div></div>
@@ -435,7 +435,7 @@ setResult('getelementsbyclassname0', typeof document.getElementsByClassName === 
 <tr><th><h3>Session history management</h3><span class="links">[<a href="http://caniuse.com/history">Table</a>] [<a href="http://tests.caniuse.com/?feat=history&prefix=all">Single feat</a>]</span></th><td class="current pass">&nbsp;</td><td>
 <div class="test_wrap"><h3>Auto (m)</h3><div id="history0" class="auto pass"></div><script>setResult('history0', Modernizr.history);</script><div class="info">Modernizr test for: "history"</div></div>
 
-<div class="test_wrap"><h3>Auto</h3><div id="history1" class="auto"></div><iframe src="caniuse_files/pushstate.html#history1"  style="display:none"></iframe><div class="info">Test if history.pushState was successful</div></div>
+<div class="test_wrap"><h3>Auto</h3><div id="history1" class="auto"></div><iframe src="./caniuse_files/pushstate.html#history1"  style="display:none"></iframe><div class="info">Test if history.pushState was successful</div></div>
 
 </td></tr>
 <tr><th><h3>IndexedDB</h3><span class="links">[<a href="http://caniuse.com/indexeddb">Table</a>] [<a href="http://tests.caniuse.com/?feat=indexeddb&prefix=all">Single feat</a>]</span></th><td class="current pass">&nbsp;</td><td>
@@ -592,7 +592,7 @@ setResult('queryselector0', !!document.querySelectorAll && !!document.querySelec
 <tr><th><h3>SVG effects for HTML</h3><span class="links">[<a href="http://caniuse.com/svg-html">Table</a>] [<a href="http://tests.caniuse.com/?feat=svg-html&prefix=all">Single feat</a>]</span></th><td class="current partial">&nbsp;</td><td>
 
 <div class="test_wrap"><h3>Visual</h3><div id="svg-html1" class="visual"></div><div class="vis_test"> <object type="image/svg+xml" width="60" height="30" data="http://tests.caniuse.com/blur-html.svg"> SVG fail
- </object></div><div class="vis_ref"><img src="caniuse_files/svg-html-blur.png"></div><p class="condition">Text must appear blurry</p><div class="info">SVG with feGaussianBlur filter on foreignObject</div></div>
+ </object></div><div class="vis_ref"><img src="./caniuse_files/svg-html-blur.png"></div><p class="condition">Text must appear blurry</p><div class="info">SVG with feGaussianBlur filter on foreignObject</div></div>
 
 </td></tr>
 <tr><th><h3>Inline SVG in HTML5</h3><span class="links">[<a href="http://caniuse.com/svg-html5">Table</a>] [<a href="http://tests.caniuse.com/?feat=svg-html5&prefix=all">Single feat</a>]</span></th><td class="current pass">&nbsp;</td><td>
@@ -732,7 +732,7 @@ setResult('xhr20', (progEv && fdata));
 
 </td></tr>
 <tr><th><h3>XHTML served as application/xhtml+xml</h3><span class="links">[<a href="http://caniuse.com/xhtml">Table</a>] [<a href="http://tests.caniuse.com/?feat=xhtml&prefix=all">Single feat</a>]</span></th><td class="current pass">&nbsp;</td><td>
-<div class="test_wrap"><h3>Auto</h3><div id="xhtml0" class="auto pass"></div><iframe src="caniuse_files/xhtml.html" width="15" height="15" style="display:none"></iframe></div>
+<div class="test_wrap"><h3>Auto</h3><div id="xhtml0" class="auto pass"></div><iframe src="./caniuse_files/xhtml.html" width="15" height="15" style="display:none"></iframe></div>
 
 </td></tr>
 <tr><th><h3>CSS Generated content</h3><span class="links">[<a href="http://caniuse.com/css-gencontent">Table</a>] [<a href="http://tests.caniuse.com/?feat=css-gencontent&prefix=all">Single feat</a>]</span></th><td class="current pass">&nbsp;</td><td>
@@ -744,7 +744,7 @@ setResult('xhr20', (progEv && fdata));
  content: 'Z';
 }
 </style>
-<span id="gencontent">-</span></div><div class="vis_ref"><img src="caniuse_files/before-after.png"></div><div class="info">Element with CSS: 
+<span id="gencontent">-</span></div><div class="vis_ref"><img src="./caniuse_files/before-after.png"></div><div class="info">Element with CSS: 
 #gencontent:before {
  content: 'A';
 }
@@ -770,7 +770,7 @@ setResult('xhr20', (progEv && fdata));
 		<div class="table-td">bottomright</div>
 	</div>
 </div>
-</div></div><div class="vis_ref"><img src="caniuse_files/table.png"></div><p class="condition">Should be 2x2 table</p></div>
+</div></div><div class="vis_ref"><img src="./caniuse_files/table.png"></div><p class="condition">Should be 2x2 table</p></div>
 
 </td></tr>
 <tr><th><h3>HTML5 form features</h3><span class="links">[<a href="http://caniuse.com/forms">Table</a>] [<a href="http://tests.caniuse.com/?feat=forms&prefix=all">Single feat</a>]</span></th><td class="current partial">&nbsp;</td><td>
@@ -778,25 +778,25 @@ setResult('xhr20', (progEv && fdata));
 
 </td></tr>
 <tr><th><h3>MathML</h3><span class="links">[<a href="http://caniuse.com/mathml">Table</a>] [<a href="http://tests.caniuse.com/?feat=mathml&prefix=all">Single feat</a>]</span></th><td class="current unknown">&nbsp;</td><td>
-<div class="test_wrap"><h3>Visual</h3><div id="mathml0" class="visual"></div><div class="vis_test"><iframe src="caniuse_files/mathml.html" width="210" height="110" style="border:0;"></iframe></div><div class="vis_ref"><img src="caniuse_files/mathml_ref.png"></div></div>
+<div class="test_wrap"><h3>Visual</h3><div id="mathml0" class="visual"></div><div class="vis_test"><iframe src="./caniuse_files/mathml.html" width="210" height="110" style="border:0;"></iframe></div><div class="vis_ref"><img src="./caniuse_files/mathml_ref.png"></div></div>
 
 </td></tr>
 <tr><th><h3>PNG alpha transparency</h3><span class="links">[<a href="http://caniuse.com/png-alpha">Table</a>] [<a href="http://tests.caniuse.com/?feat=png-alpha&prefix=all">Single feat</a>]</span></th><td class="current pass">&nbsp;</td><td>
-<div class="test_wrap"><h3>Visual</h3><div id="png-alpha0" class="visual"></div><div class="vis_test"><img src="caniuse_files/alpha.png" style="background-color:lime"></div><div class="vis_ref"><img src="caniuse_files/png_alpha_result.png"></div></div>
+<div class="test_wrap"><h3>Visual</h3><div id="png-alpha0" class="visual"></div><div class="vis_test"><img src="./caniuse_files/alpha.png" style="background-color:lime"></div><div class="vis_ref"><img src="./caniuse_files/png_alpha_result.png"></div></div>
 
 </td></tr>
 <tr><th><h3>Ruby annotation</h3><span class="links">[<a href="http://caniuse.com/ruby">Table</a>] [<a href="http://tests.caniuse.com/?feat=ruby&prefix=all">Single feat</a>]</span></th><td class="current partial">&nbsp;</td><td>
 <div class="test_wrap"><h3>Visual</h3><div id="ruby0" class="visual"></div><div class="vis_test">
 <div style="display:inline-block;vertical-align:middle">
 <ruby>(bottom1)<rt>(top1)</rt>(bottom2)<rt>(top2)</rt></ruby>
-</div></div><div class="vis_ref"><img src="caniuse_files/ruby.png"></div><p class="condition">Elements should be stacked on top of each other</p></div>
+</div></div><div class="vis_ref"><img src="./caniuse_files/ruby.png"></div><p class="condition">Elements should be stacked on top of each other</p></div>
 
 </td></tr>
 <tr><th><h3>SVG filters</h3><span class="links">[<a href="http://caniuse.com/svg-filters">Table</a>] [<a href="http://tests.caniuse.com/?feat=svg-filters&prefix=all">Single feat</a>]</span></th><td class="current pass">&nbsp;</td><td>
 <div class="test_wrap"><h3>Visual</h3><div id="svg-filters0" class="visual"></div><div class="vis_test"><object data="http://tests.caniuse.com/blur.svg" type="image/svg+xml" height="70" width="70">
 	object SVG not supported
 </object>
-</div><div class="vis_ref"><img src="caniuse_files/svg_blur.png"></div></div>
+</div><div class="vis_ref"><img src="./caniuse_files/svg_blur.png"></div></div>
 
 <div class="test_wrap"><h3>Visual-square</h3><div id="svg-filters1" class="visual-square"></div><div class="square"><object type="image/svg+xml" width="30" height="30" data="http://tests.caniuse.com/fecolormatrix.svg" style="overflow:visible"> SVG fail
 </object></div><p class="condition">Must be green (not lime)</p><div class="info">SVG with &lt;feColorMatrix type="hueRotate" values="120"/&gt;</div></div>
@@ -1062,7 +1062,7 @@ object-fit: contain;
 </style>
 
 <div id="object-fit0test">
-	<img src="caniuse_files/red30x30.png" width="90" height="30">
+	<img src="./caniuse_files/red30x30.png" width="90" height="30">
 </div></div><div class="info">object-fit: contain</div></div>
 
 <div class="test_wrap"><h3>Visual-square</h3><div id="object-fit2" class="visual-square"></div><div class="square"><style>
@@ -1084,7 +1084,7 @@ object-position: 30px 30px;
 </style>
 
 <div id="object-fit2test">
-	<img src="caniuse_files/red30x30.png" width="30" height="30">
+	<img src="./caniuse_files/red30x30.png" width="30" height="30">
 </div>
 </div><div class="info">object-position: 30px 30px;</div></div>
 
@@ -1102,7 +1102,7 @@ object-position: 30px 30px;
 
 </td></tr>
 <tr><th><h3>SVG in HTML img element</h3><span class="links">[<a href="http://caniuse.com/svg-img">Table</a>] [<a href="http://tests.caniuse.com/?feat=svg-img&prefix=all">Single feat</a>]</span></th><td class="current pass">&nbsp;</td><td>
-<div class="test_wrap"><h3>Visual-square</h3><div id="svg-img0" class="visual-square"></div><div class="square"><img src="caniuse_files/svg-img.svg" width="30" height="30"></div></div>
+<div class="test_wrap"><h3>Visual-square</h3><div id="svg-img0" class="visual-square"></div><div class="square"><img src="./caniuse_files/svg-img.svg" width="30" height="30"></div></div>
 
 </td></tr>
 <tr><th><h3>contenteditable attribute (basic support)</h3><span class="links">[<a href="http://caniuse.com/contenteditable">Table</a>] [<a href="http://tests.caniuse.com/?feat=contenteditable&prefix=all">Single feat</a>]</span></th><td class="current pass">&nbsp;</td><td>
@@ -1156,7 +1156,7 @@ if (g){
 }
 </style>
 <p id="windsong_svg">Windsong font</p>
-</div><div class="vis_ref"><img src="caniuse_files/windsong_font.png"></div></div>
+</div><div class="vis_ref"><img src="./caniuse_files/windsong_font.png"></div></div>
 
 </td></tr>
 <tr><th><h3>TTF/OTF - TrueType and OpenType font support</h3><span class="links">[<a href="http://caniuse.com/ttf">Table</a>] [<a href="http://tests.caniuse.com/?feat=ttf&prefix=all">Single feat</a>]</span></th><td class="current pass">&nbsp;</td><td>
@@ -1172,7 +1172,7 @@ if (g){
 }
 </style>
 <p id="windsong_otf">Windsong font</p>
-</div><div class="vis_ref"><img src="caniuse_files/windsong_font.png"></div><div class="info">OTF font test</div></div>
+</div><div class="vis_ref"><img src="./caniuse_files/windsong_font.png"></div><div class="info">OTF font test</div></div>
 
 <div class="test_wrap"><h3>Visual</h3><div id="ttf1" class="visual"></div><div class="vis_test"><style>
 @font-face {
@@ -1186,7 +1186,7 @@ if (g){
 }
 </style>
 <p id="windsong_ttf">Windsong font</p>
-</div><div class="vis_ref"><img src="caniuse_files/windsong_font.png"></div><div class="info">TTF font test</div></div>
+</div><div class="vis_ref"><img src="./caniuse_files/windsong_font.png"></div><div class="info">TTF font test</div></div>
 
 </td></tr>
 <tr><th><h3>WOFF - Web Open Font Format</h3><span class="links">[<a href="http://caniuse.com/woff">Table</a>] [<a href="http://tests.caniuse.com/?feat=woff&prefix=all">Single feat</a>]</span></th><td class="current pass">&nbsp;</td><td>
@@ -1202,7 +1202,7 @@ if (g){
 }
 </style>
 <p id="windsong_woff">Windsong font</p>
-</div><div class="vis_ref"><img src="caniuse_files/windsong_font.png"></div></div>
+</div><div class="vis_ref"><img src="./caniuse_files/windsong_font.png"></div></div>
 
 </td></tr>
 <tr><th><h3>Progress &amp; Meter</h3><span class="links">[<a href="http://caniuse.com/progressmeter">Table</a>] [<a href="http://tests.caniuse.com/?feat=progressmeter&prefix=all">Single feat</a>]</span></th><td class="current pass">&nbsp;</td><td>
@@ -1222,7 +1222,7 @@ if (g){
 
 </td></tr>
 <tr><th><h3>Form validation</h3><span class="links">[<a href="http://caniuse.com/form-validation">Table</a>] [<a href="http://tests.caniuse.com/?feat=form-validation&prefix=all">Single feat</a>]</span></th><td class="current pass">&nbsp;</td><td>
-<div class="test_wrap"><h3>Interact</h3><div id="form-validation0" class="interact"></div><iframe src="caniuse_files/form_validation.html" width="300" height="80"></iframe><p class="condition">Form should show warning and NOT submit</p></div>
+<div class="test_wrap"><h3>Interact</h3><div id="form-validation0" class="interact"></div><iframe src="./caniuse_files/form_validation.html" width="300" height="80"></iframe><p class="condition">Form should show warning and NOT submit</p></div>
 
 </td></tr>
 <tr><th><h3>MPEG-4/H.264 video format</h3><span class="links">[<a href="http://caniuse.com/mpeg4">Table</a>] [<a href="http://tests.caniuse.com/?feat=mpeg4&prefix=all">Single feat</a>]</span></th><td class="current fail">&nbsp;</td><td>
@@ -1300,7 +1300,7 @@ setResult('webm0', !!(v.canPlayType && v.canPlayType('video/webm; codecs="vp8, v
 
 </script><div class="info">Test for second frame using Canvas element </div></div>
 
-<div class="test_wrap"><h3>Visual</h3><div id="apng1" class="visual"></div><div class="vis_test"><img src="caniuse_files/apng_test.png" width="16" height="16"></div><p class="condition">Must animate</p></div>
+<div class="test_wrap"><h3>Visual</h3><div id="apng1" class="visual"></div><div class="vis_test"><img src="./caniuse_files/apng_test.png" width="16" height="16"></div><p class="condition">Must animate</p></div>
 
 </td></tr>
 <tr><th><h3>CSS Canvas Drawings [unoff]</h3><span class="links">[<a href="http://caniuse.com/css-canvas">Table</a>] [<a href="http://tests.caniuse.com/?feat=css-canvas&prefix=all">Single feat</a>]</span></th><td class="current pass">&nbsp;<span>-pre-</span></td><td>
@@ -1367,7 +1367,7 @@ mask-image: url(caniuse_files/alpha.png);
 </style>
 <div id="masktestbg"></div><div id="masktest"></div>
 
-</div><div class="vis_ref"><img src="caniuse_files/png_alpha_result.png"></div><div class="info">mask-image: url(caniuse_files/alpha.png);</div></div>
+</div><div class="vis_ref"><img src="./caniuse_files/png_alpha_result.png"></div><div class="info">mask-image: url(caniuse_files/alpha.png);</div></div>
 
 </td></tr>
 <tr><th><h3>CSS3 Text-overflow [unoff]</h3><span class="links">[<a href="http://caniuse.com/text-overflow">Table</a>] [<a href="http://tests.caniuse.com/?feat=text-overflow&prefix=all">Single feat</a>]</span></th><td class="current pass">&nbsp;</td><td>
@@ -1410,7 +1410,7 @@ font-family: Times New Roman, Times, serif;
 
 <div id="textstroke">
 green stroked text
-</div></div><div class="vis_ref"><img src="caniuse_files/stroked-text.png"></div><div class="info">text-stroke: 2px lime;</div></div>
+</div></div><div class="vis_ref"><img src="./caniuse_files/stroked-text.png"></div><div class="info">text-stroke: 2px lime;</div></div>
 
 </td></tr>
 <tr><th><h3>EOT - Embedded OpenType fonts [unoff]</h3><span class="links">[<a href="http://caniuse.com/eot">Table</a>] [<a href="http://tests.caniuse.com/?feat=eot&prefix=all">Single feat</a>]</span></th><td class="current fail">&nbsp;</td><td>
@@ -1426,7 +1426,7 @@ green stroked text
 }
 </style>
 <p id="windsong_eot">Windsong font</p>
-</div><div class="vis_ref"><img src="caniuse_files/windsong_font.png"></div></div>
+</div><div class="vis_ref"><img src="./caniuse_files/windsong_font.png"></div></div>
 
 </td></tr>
 <tr><th><h3>XHTML+SMIL animation [unoff]</h3><span class="links">[<a href="http://caniuse.com/xhtmlsmil">Table</a>] [<a href="http://tests.caniuse.com/?feat=xhtmlsmil&prefix=all">Single feat</a>]</span></th><td class="current fail">&nbsp;</td><td>
@@ -1440,7 +1440,7 @@ green stroked text
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 }());
-</script><script src="caniuse_files/ga.js" type="text/javascript"></script>
+</script><script src="./caniuse_files/ga.js" type="text/javascript"></script>
 <script>
 (function() {
 try {

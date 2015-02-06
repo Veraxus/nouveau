@@ -1,0 +1,1 @@
+Modernizr.addTest("csscalc",function(){var e="width:",t="calc(10px);",c=document.createElement("div");return c.style.cssText=e+Modernizr._prefixes.join(t+e),!!c.style.length});

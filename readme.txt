@@ -3,11 +3,11 @@ Contributors: Veraxus
 Donate link: http://nouveauframework.org/
 Author URI: http://nouveauframework.org/
 Tags: framework, php5.3
-Version: 0.9.19
-Foundation version: 5.5
+Version: 0.9.20
+Foundation version: 5.5.1
 Requires at least: 4.1
-Tested up to: 4.1
-Stable tag: 0.9.19
+Tested up to: 4.2
+Stable tag: 0.9.20
 License: GNU General Public License
 License URI: GNU-LICENSE.txt
 
@@ -92,8 +92,10 @@ NOUVEAU comes with all text strings properly scoped for internationalization. To
 
 == Changelog ==
 
+= 0.9.20 (2015-01-05) =
+* Updated Foundation to 5.5.1
 
-= 0.9.19 (2014-12-19)
+= 0.9.19 (2014-12-19) =
 * Updated Foundation to 5.5
 * Changed file structure: merged _foundation folder with theme root to improve compatibility with compilers, watchers, and other tools
 * Foundation's humans.txt and robots.txt are no longer included in the NOUVEAU Theme Framework

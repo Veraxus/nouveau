@@ -92,6 +92,9 @@ NOUVEAU comes with all text strings properly scoped for internationalization. To
 
 ## Changelog ##
 
+## 0.9.20 (2015-01-05) ##
+* Updated Foundation to 5.5.1
+
 ## 0.9.19 (2014-12-19) ##
 * Updated Foundation to 5.5
 * Changed file structure: merged _foundation folder with theme root to improve compatibility with compilers, watchers, and other tools
