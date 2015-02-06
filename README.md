@@ -6,7 +6,7 @@
 **Version:** 0.9.20  
 **Foundation version:** 5.5.1  
 **Requires at least:** 4.1  
-**Tested up to:** 4.1  
+**Tested up to:** 4.2  
 **Stable tag:** 0.9.20  
 **License:** GNU General Public License  
 **License URI:** GNU-LICENSE.txt  
