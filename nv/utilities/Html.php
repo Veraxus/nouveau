@@ -7,7 +7,7 @@ namespace NV;
  *
  * @since Nouveau 1.0
  */
-class Html extends HtmlBase
+class Html extends HtmlGen
 {
 
     /**

@@ -6,7 +6,7 @@ namespace NV;
  *
  * @since Nouveau 1.0
  */
-class HtmlBase
+class HtmlGen
 {
 
     /**

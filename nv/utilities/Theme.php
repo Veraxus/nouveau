@@ -27,6 +27,8 @@ class Theme
      * @global int $paged
      *
      * @param array $args
+     * 
+     * @deprecated Will be replaced or removed in next version. Use custom method instead.
      *
      * @return string
      */
@@ -202,6 +204,8 @@ class Theme
      * @see wp_link_pages()
      *
      * @param string|array $args Optional. Overwrite the defaults.
+     *
+     * @deprecated Will be replaced or removed in next version. Use custom method instead.
      *
      * @return string Formatted output in HTML.
      */
