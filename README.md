@@ -3,11 +3,11 @@
 **Donate link:** http://nouveauframework.org/  
 **Author URI:** http://nouveauframework.org/  
 **Tags:** framework, php5.3  
-**Version:** 0.9.20  
-**Foundation version:** 5.5.1  
+**Version:** 0.9.21  
+**Foundation version:** 5.5.2  
 **Requires at least:** 4.1  
 **Tested up to:** 4.2  
-**Stable tag:** 0.9.20  
+**Stable tag:** 0.9.21  
 **License:** GNU General Public License  
 **License URI:** GNU-LICENSE.txt  
 
@@ -91,6 +91,9 @@ These plugins were created by developers, for developers. We hope they make your
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
 ## Changelog ##
+
+## 0.9.21 (2015-04-01) ##
+* Updated Foundation to 5.5.2
 
 ## 0.9.20 (2015-01-05) ##
 * Updated Foundation to 5.5.1
