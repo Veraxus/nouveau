@@ -47,6 +47,7 @@ class Editor {
      */
     public static function buttons($buttons)
     {
+        array_unshift($buttons, 'removeformat');
         array_unshift($buttons, 'styleselect');
 
         return $buttons;
@@ -126,24 +127,53 @@ class Editor {
          * 'attributes' : array. Associative array of HTML attributes => values to add.
          * 'exact'      : bool. Set to true to force creation of new elements (true disables the 'merge similar styles' feature).
          * 'wrapper'    : bool. Set to true to treat new element as a container for other block-level elements
-         *
-         * One more note. TinyMCE will not create blocks out of non-blocks. If a 'block' format is used, it will only be
+         * 
+         * NOTICE: TinyMCE will not create blocks out of non-blocks. If a 'block' format is used, it will only be
          * applied when a block/chunk/paragraph is selected.
+         * 
+         * ========================
+         * 
+         * FOUNDATION NOTES ON TINYMCE QUIRKS
+         * 
+         * Some common default styles for Foundation are included. This is NOT exhaustive as it would make the Formats drop-down
+         * very long. Feel free to customize this to your needs. When creating columns, you should select a "Small Column" option
+         * FIRST, then you can apply a "Medium Column" to that afterward. This keeps things flexible, but you may need to train
+         * your users on this as it's non-obvious.
+         *
+         * Note that TinyMCE is not smart enough to remove/replace old classes… so if you need to change from one column format to
+         * another (say, "Medium 4" to "Medium 6" columns), you must unselect the old format from the TinyMCE Formats dropdown first
+         * to get rid of the old class. If you don't, both classes will be applied (ick).
+         * 
+         * Author note: I may include some custom Javascript to make Foundation more tightly and naturally integrated with TinyMCE,
+         * but no promises.
+         * 
+         * ========================
          *
          * @link http://www.tinymce.com/wiki.php/Configuration:formats
          * @var array
          */
         $styles = array(
+	        
+	        /*
+	        //Example: An inline style format
             array(
                 'title'     => __('Text: Cross out','nvLangScope'),
                 'inline'    => 'span',
                 'classes'   => 'strike-through',
             ),
+	        */
+	        
+	        /*
+	        //Example: An element-smart selector (target only images)
             array(
                 'title'     => __('Image: 50% Width','nvLangScope'),
                 'selector'  => 'img',
                 'classes'   => 'half-width',
             ),
+	        */
+	        
+	        /*
+	        //Example: A div that wraps around any current selection
             array(
                 'title'     => __('Warning Box','nvLangScope'),
                 'block'     => 'div',
@@ -151,6 +181,10 @@ class Editor {
                 'exact'     => true,
                 'wrapper'   => true,
             ),
+	        */
+	        
+	        /*
+	        //Example: A span with inline styles
             array(
                 'title'     => __('Red Uppercase Text','nvLangScope'),
                 'inline'    => 'span',
@@ -159,7 +193,52 @@ class Editor {
                     'fontWeight'    => 'bold',
                     'textTransform' => 'uppercase',
                 ),
-            )
+            ),
+	        */
+	        
+	        array(
+		        'title'     => __('Section','nvLangScope'),
+		        'block'     => 'section',
+		        'wrapper'   => true,
+		        'exact'     => true,
+	        ),
+	        array(
+		        'title'     => __('Foundation Row','nvLangScope'),
+		        'block'     => 'div',
+		        'classes'   => 'row',
+		        'wrapper'   => true,
+		        'exact'     => true,
+	        ),
+	        array(
+		        'title'     => __('Column (Small 12)','nvLangScope'),
+		        'block'     => 'div',
+		        'classes'   => 'small-12 columns',
+		        'wrapper'   => true,
+		        'exact'     => true,
+	        ),
+	        array(
+		        'title'     => __('Column (Small 6)','nvLangScope'),
+		        'block'     => 'div',
+		        'classes'   => 'small-6 columns',
+		        'wrapper'   => true,
+		        'exact'     => true,
+	        ),
+	        array(
+		        'title'     => __('Medium 2 (Edit Column)','nvLangScope'),
+		        'selector'  => '.columns',
+		        'classes'   => 'medium-2',
+	        ),
+	        array(
+		        'title'     => __('Medium 4 (Edit Column)','nvLangScope'),
+		        'selector'  => '.columns',
+		        'classes'   => 'medium-4',
+	        ),
+	        array(
+		        'title'     => __('Medium 6 (Edit Column)','nvLangScope'),
+		        'selector'  => '.columns',
+		        'classes'   => 'medium-6',
+	        ),
+	        
         );
 
         //Encode our array as JSON, which automagically makes it TinyMCE compatible

@@ -7,3 +7,62 @@
  which allows you to easily add new style presets to the TinyMCE editor.
  =======================================================================================================================
 */
+
+@import "settings";
+@import "mixins";
+@import "../../bower_components/foundation/scss/foundation";
+
+// =======================================================================================================================
+// This makes Foundation play nice with the WordPress TinyMCE editor 
+// =======================================================================================================================
+body, html {
+    height: auto !important;
+}
+html {
+    padding: 9px 10px !important;
+}
+
+// =======================================================================================================================
+// Add visual queues for custom format blocks
+// =======================================================================================================================
+%caption {
+    border: 1px dashed silver;
+    position: relative;
+    padding: 1.25rem 0.5rem 0.5rem 0.5rem;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        font-size: 0.75rem;
+        top: -0.55rem;
+        left: 1rem;
+        padding: 0 0.5rem;
+        background: white;
+        font-family: monospace;
+    }
+}
+.row {
+    @extend %caption;
+    &:before {
+        content: 'row';
+    }
+}
+.columns {
+    @extend %caption;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    &:before {
+        content: 'column';
+    }
+}
+section {
+    @extend %caption;
+    border-color: #afc6ff;
+    margin-bottom: 1rem;
+    &:before {
+        content: 'section';
+    }
+}
+
+// =======================================================================================================================
+// Your styles below…
+// =======================================================================================================================
