@@ -90,9 +90,9 @@ These plugins were created by developers, for developers. We hope they make your
 
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
-## Changelog ##
+# Changelog #
 
-= 0.9.22 (2015-05-20) =
+## 0.9.22 (2015-05-20) ##
 * Improved Foundation integration with WordPress's TinyMCE editor
 
 ## 0.9.21 (2015-04-01) ##
