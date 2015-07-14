@@ -6,7 +6,7 @@ Tags: framework, php5.3
 Version: 0.9.22
 Foundation version: 5.5.2
 Requires at least: 4.1
-Tested up to: 4.2
+Tested up to: 4.3
 Stable tag: 0.9.22
 License: GNU General Public License
 License URI: GNU-LICENSE.txt
@@ -63,12 +63,12 @@ Also remember that you can test your own NOUVEAU derivatives by using the WordPr
 
 NOUVEAU has an file structure that encourages better organization of your theme. It includes the following folders...
 
-* _foundation - Contains all the original Zurb Foundation files. Uncompiled SASS, JavaScript, etc.
 * assets - Contains non-php assets like javascript, css, images, and language files.
+* bower_components - Foundation's basic dependencies - sass & javascript libraries, etc.
 * layout - Contains the theme's global header and footer files, leaving the theme root free for page templates.
-* nv - Contains all the NOUVEAU core classes.
+* nv - Contains the NOUVEAU core classes: hooks, helpers, etc.
 * overrides - Contains template files that are used solely as admin-selectable page templates.
-* parts - Contains any template chunks/fragments/parts that *do not* make up a page-level template. Articles and other such fragments go here.
+* parts - Contains any template chunks/fragments/parts that *do not* make up a page-level template. Articles, comments, etc.
 
 General page templates (`index.php`, `archive.php`, `page.php`, `single.php`, etc) as well as critical files like `functions.php` still go in the theme's root folder. This allows WordPress's core template system to continue working as-is. As a rule, you should keep your PAGE templates here, and organize any fragment/part templates under the parts directory. This keeps the root clean and helps encourage use of clean, organized, reusable template parts.
 
