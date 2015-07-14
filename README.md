@@ -63,12 +63,12 @@ Also remember that you can test your own NOUVEAU derivatives by using the WordPr
 
 NOUVEAU has an file structure that encourages better organization of your theme. It includes the following folders...
 
-* assets - Contains non-php assets like javascript, css, images, and language files.
-* bower_components - Foundation's basic dependencies - sass & javascript libraries, etc.
-* layout - Contains the theme's global header and footer files, leaving the theme root free for page templates.
-* nv - Contains the NOUVEAU core classes: hooks, helpers, etc.
-* overrides - Contains template files that are used solely as admin-selectable page templates.
-* parts - Contains any template chunks/fragments/parts that *do not* make up a page-level template. Articles, comments, etc.
+* **assets** - Contains non-php assets like javascript, css, images, and language files.
+* **bower_components** - Foundation's basic dependencies - sass & javascript libraries, etc.
+* **layout** - Contains the theme's global header and footer files, leaving the theme root free for page templates.
+* **nv** - Contains the NOUVEAU core classes: hooks, helpers, etc.
+* **overrides** - Contains template files that are used solely as admin-selectable page templates.
+* **parts** - Contains any template chunks/fragments/parts that *do not* make up a page-level template. Articles, comments, etc.
 
 General page templates (`index.php`, `archive.php`, `page.php`, `single.php`, etc) as well as critical files like `functions.php` still go in the theme's root folder. This allows WordPress's core template system to continue working as-is. As a rule, you should keep your PAGE templates here, and organize any fragment/part templates under the parts directory. This keeps the root clean and helps encourage use of clean, organized, reusable template parts.
 
