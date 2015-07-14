@@ -55,7 +55,7 @@ For full prerequisites, see: [http://foundation.zurb.com/docs/sass.html]).
 = General Installation =
 To install, simply the copy the NOUVEAU theme folder to your `wp-content\themes` directory. Before activating, be sure you rename the theme folder and perform a global find-replace for the strings (case sensitive) `NOUVEAU`, `Nouveau`, and `nouveau`, as well as the language scope (`nvLangScope`).
 
-You can find exhaustive documentation for NOUVEAU at [NouveauFramework.com](http://nouveauframework.org/documentation/getting-started/), and documentation for Zurb Foundation at [Foundation.Zurb.com](http://foundation.zurb.com/docs/sass.html)
+You can find exhaustive documentation for NOUVEAU at [NOUVEAUFramework.com](http://nouveauframework.org/documentation/getting-started/), and documentation for Zurb Foundation at [Foundation.Zurb.com](http://foundation.zurb.com/docs/sass.html)
 
 Also remember that you can test your own NOUVEAU derivatives by using the WordPress [Theme Unit Test]( http://codex.wordpress.org/Theme_Unit_Test ).
 
@@ -63,22 +63,22 @@ Also remember that you can test your own NOUVEAU derivatives by using the WordPr
 
 NOUVEAU has an file structure that encourages better organization of your theme. It includes the following folders...
 
-* assets - Contains non-php assets like javascript, css, images, and language files.
-* bower_components - Foundation's basic dependencies - sass & javascript libraries, etc.
-* layout - Contains the theme's global header and footer files, leaving the theme root free for page templates.
-* nv - Contains the NOUVEAU core classes: hooks, helpers, etc.
-* overrides - Contains template files that are used solely as admin-selectable page templates.
-* parts - Contains any template chunks/fragments/parts that *do not* make up a page-level template. Articles, comments, etc.
+* **assets** - Contains non-php assets like javascript, css, images, and language files.
+* **bower_components** - Foundation's basic dependencies - sass & javascript libraries, etc.
+* **layout** - Contains the theme's global header and footer files, leaving the theme root free for page templates.
+* **nv** - Contains the NOUVEAU core classes: hooks, helpers, etc.
+* **overrides** - Contains template files that are used solely as admin-selectable page templates.
+* **parts** - Contains any template chunks/fragments/parts that *do not* make up a page-level template. Articles, comments, etc.
 
 General page templates (`index.php`, `archive.php`, `page.php`, `single.php`, etc) as well as critical files like `functions.php` still go in the theme's root folder. This allows WordPress's core template system to continue working as-is. As a rule, you should keep your PAGE templates here, and organize any fragment/part templates under the parts directory. This keeps the root clean and helps encourage use of clean, organized, reusable template parts.
 
-You find a complete (yet concise) overview of file and folder structure at [NouveauFramework.com](http://nouveauframework.org/documentation/getting-started/)
+You find a complete (yet concise) overview of file and folder structure at [NOUVEAUFramework.com](http://nouveauframework.org/documentation/getting-started/)
 
 === Zurb Foundation Notes ===
 
-Foundation has been tweaked slightly to work as part of a WordPress theme, however the tweaks needed to ensure this compatibility are rather minor. One important thing to note is that *uncompiled* Zurb Foundation files are located in the `_foundation` directory. This allows you to set your compiler (e.g. Ruby-Sass, libsass, CodeKit, etc) to watch the theme folder while keeping Foundation's code separate for cleanliness and easy updating. Just remember to make sure your SASS and Javascript compile to the appriate folder under the theme's /assets folder!
+Foundation has been tweaked slightly to work as part of a WordPress theme, however the tweaks needed to ensure this compatibility are rather minor and covered in detail on [NOUVEAUFramework.com](http://nouveauframework.com)
 
-If you don't want to use SASS, then everything is already compiled for you. Just write your plain CSS in the main style.css file (in the theme root) as you would normally do.
+If you don't want to use SASS, then everything is already compiled for you. Just write your plain CSS in the main `style.css` file (in the theme root) as you would normally do.
 
 === Companion Plugins ===
 
