@@ -6,186 +6,7 @@ namespace NV;
  *
  * @TODO: A lot of stuff in here is SLOPPPPPPYYYYY. Rewrite soon.
  */
-class Theme
-{
-
-    /**
-     * Outputs paginated navigation for archive/blog pages. Implements Foundation's pagination structure.
-     *
-     * max_size must be greater than 11. 13 is default.
-     *
-     * 'id'          - The id attribute of the pagination element (default: 'nav-generic')
-     * 'classes'     - Any classes that need to be added to the nav element.
-     * 'page_limit'  - The number of navigation items/pages to show (including next & prev)
-     * 'prev_txt'    - The text or html to output inside the "previous page" link (default: &laquo;)
-     * 'next_txt'    - The text or html to output inside the "next page" link (default: &raquo;)
-     * 'echo'        - Whether to echo the generated object
-     *
-     * @TODO Is this the best we can do? Let's consider a rewrite.
-     *
-     * @global \WP_Query $wp_query
-     * @global int $paged
-     *
-     * @param array $args
-     * 
-     * @deprecated Will be replaced or removed in next version. Use custom method instead.
-     *
-     * @return string
-     */
-    public static function archive_nav( $args = array() ) {
-        global $wp_query, $paged;
-
-        //If this isn't an archive, do nothing
-        if ( !is_archive() && !is_home() ) {
-            return;
-        }
-
-        $output   = '';
-        $defaults = array(
-            'id'        => 'nav-generic',
-            'classes'   => 'pagenav archive',
-            'page_limit' => 15,
-            'prev_txt'  => '&laquo;',
-            'next_txt'  => '&raquo;',
-            'echo'      => true,
-        );
-        $args     = wp_parse_args( $args, $defaults );
-        extract( $args, EXTR_SKIP );
-
-        /** @var $id string */
-        /** @var $classes string */
-        /** @var $page_limit string */
-        /** @var $prev_txt string */
-        /** @var $next_txt string */
-        /** @var $echo string */
-
-        //Ensure $max_size is always 11 or greater
-        if ( 9 > $page_limit ) {
-            $page_limit = 9;
-        }
-
-        //Determine half-point
-        $page_half = round( $page_limit / 2, 0, PHP_ROUND_HALF_UP );
-
-        //If there aren't multiple pages, no need to do anything
-        if ( $wp_query->max_num_pages > 1 ) {
-
-            //Clean up additional classes
-            if ( is_array( $classes ) ) {
-                $classes = implode( ' ', $classes );
-            }
-            $classes = esc_attr( $classes );
-
-            $output .= '<nav id="' . $id . '" class="' . $classes . '">';
-            $output .= '<ul class="pagination">';
-
-
-            /************** LEFT ARROW ***************/
-            if ( empty( $paged ) || $paged == 1 ) {
-                $output .= '<li class="arrow unavailable">';
-            }
-            else {
-                $output .= '<li class="arrow">';
-            }
-            $output .= '<a href="' . previous_posts( false ) . '" ' . apply_filters( 'previous_posts_link_attributes', '' ) . '>' . preg_replace( '/&([^#])(?![a-z]{1,8};)/i', '&#038;$1', $prev_txt ) . '</a>';
-            $output .= '</li>';
-            /************** /LEFT ARROW ***************/
-
-
-            if ( $wp_query->max_num_pages > $page_limit ) {
-                /************** NAV PAGE POSITION END ***************/
-                if ( $paged >= ( $wp_query->max_num_pages - $page_half ) ) {
-
-                    $output .= sprintf( '<li class=""><a href="%s">1</a></li>', get_pagenum_link( 1 ) //link
-                    );
-
-                    $output .= '<li class="unavailable"><a href="">&hellip;</a></li>';
-
-                    for ( $i = $wp_query->max_num_pages - ( $page_limit - 2 ); $i <= $wp_query->max_num_pages; $i++ ) {
-
-                        $output .= sprintf( '<li class="%s"><a href="%s">%s</a></li>', ( ( empty( $paged ) && 1 == $i ) || $paged == $i ) ? ' current ' : '', //active class
-                            get_pagenum_link( $i ), //link
-                            $i //page number
-                        );
-                    } //endfor;
-                }
-                /************** NAV PAGE POSITION START ***************/
-                else if ( $paged < $page_half ) {
-                    for ( $i = 1; $i <= $wp_query->max_num_pages; $i++ ) {
-
-                        if ( $i >= $page_limit - 2 ) {
-                            $output .= '<li class="unavailable"><a href="">&hellip;</a></li>';
-                            $output .= sprintf( '<li class=""><a href="%s">%s</a></li>', get_pagenum_link( $wp_query->max_num_pages ), //link
-                                $wp_query->max_num_pages //page number
-                            );
-                            break;
-                        }
-                        else {
-                            $output .= sprintf( '<li class="%s"><a href="%s">%s</a></li>', ( ( empty( $paged ) && 1 == $i ) || $paged == $i ) ? ' current ' : '', //active class
-                                get_pagenum_link( $i ), //link
-                                $i //page number
-                            );
-                        }
-                    } //for
-                }
-                /************** NAV PAGE POSITION MIDDLE ************* */
-                else {
-                    $loopstart = $paged - round( ( ( $page_limit - 6 ) / 2 ), 0, PHP_ROUND_HALF_DOWN );
-                    $loopend   = $paged + round( ( ( $page_limit - 6 ) / 2 ), 0, PHP_ROUND_HALF_DOWN );
-                    $loopstart = ( $page_limit & 1 ) ? $loopstart : ++$loopstart; //Correct left pages if $page_limit is even
-
-                    $output .= sprintf( '<li class=""><a href="%s">1</a></li>', get_pagenum_link( 1 ) );
-                    $output .= '<li class="unavailable"><a href="">&hellip;</a></li>';
-                    for ( $i = $loopstart; $i <= $loopend; $i++ ) {
-
-                        $output .= sprintf( '<li class="%s"><a href="%s">%s</a></li>', ( ( empty( $paged ) && 1 == $i ) || $paged == $i ) ? ' current ' : '', //active class
-                            get_pagenum_link( $i ), //link
-                            $i //page number
-                        );
-                    } //for
-                    $output .= '<li class="unavailable"><a href="">&hellip;</a></li>';
-                    $output .= sprintf( '<li class=""><a href="%s">%s</a></li>', get_pagenum_link( $wp_query->max_num_pages ), //link
-                        $wp_query->max_num_pages //page number
-                    );
-                }
-                /** ************ /NAV PAGE POSITION MIDDLE ************* */
-            }
-            else {
-                /** ************** SHORT PAGE LOOP ******************** */
-                for ( $i = 1; $i <= $wp_query->max_num_pages; $i++ ) {
-                    $output .= sprintf( '<li class="%s"><a href="%s">%s</a></li>', ( ( empty( $paged ) && 1 == $i ) || $paged == $i ) ? ' current ' : '', //active class
-                        get_pagenum_link( $i ), //link
-                        $i //page number
-                    );
-                }
-                /** ************** SHORT PAGE LOOP ******************** */
-            }
-
-
-            /************** RIGHT ARROW ***************/
-            if ( $paged == $wp_query->max_num_pages ) {
-                $output .= '<li class="arrow unavailable">';
-            }
-            else {
-                $output .= '<li class="arrow">';
-            }
-            $output .= '<a href="' . next_posts( $wp_query->max_num_pages, false ) . '" ' . apply_filters( 'next_posts_link_attributes', '' ) . '>' . preg_replace( '/&([^#])(?![a-z]{1,8};)/i', '&#038;$1', $next_txt ) . '</a>';
-            $output .= '</li>';
-            /************** /RIGHT ARROW ***************/
-
-
-            $output .= '</ul>';
-            $output .= '</nav>';
-        }
-
-        //Output to page...
-        if ( $echo ) {
-            echo $output;
-        }
-
-        return $output;
-    }
-
+class Theme {
 
     /**
      * Can be used instead of wp_link_pages() for showing article-specific pagination. For paginated posts ( posts which
@@ -293,10 +114,13 @@ class Theme
         global $post, $wp_query;
 
         $defaults = array(
-            'use_prefix'  => true, 'blog_title' => __( 'Blog', 'nvLangScope' ), 'before' => '<ul class="breadcrumbs">',
-            'after'       => '</ul>', 'crumb_before' => '<li%>',
+            'use_prefix'  => true, 
+            'blog_title' => __( 'Blog', 'nvLangScope' ), 'before' => '<ul class="breadcrumbs">',
+            'after'       => '</ul>', 
+            'crumb_before' => '<li%>',
             //% represents replacement character for current/active page
-            'crumb_after' => '</li>', 'echo' => true,
+            'crumb_after' => '</li>', 
+            'echo' => true,
         );
 
         $r = wp_parse_args( $args, $defaults );
@@ -485,7 +309,7 @@ class Theme
      * specified template part will be loaded. You can also specify a custom name for the query object variable to
      * prevent collisions.
      *
-     * Not that template parts are loaded by include, NOT by get_template_part(). This is because get_template_part()
+     * Note that template parts are loaded by include, NOT by get_template_part(). This is because get_template_part()
      * blocks access to the custom query variable unless a global statement pulls it into the template.
      *
      * @param mixed $custom_query Required. Either a WP_Query object or an array of arguments to perform a new query.
