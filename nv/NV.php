@@ -80,7 +80,7 @@ class NV {
         define( 'NV_PARTS', trailingslashit( THEME_DIR ) . 'parts' );
 
         /** The uri for Bower sources */
-        define( 'NV_BOWER', trailingslashit( THEME_URI ) . '/bower_components' );
+        define( 'NV_BOWER', trailingslashit( THEME_URI ) . 'bower_components' );
 
         /** The uri for Foundation sources */
         define( 'NV_ZF_JS', trailingslashit( NV_BOWER ) . 'foundation/js' );
