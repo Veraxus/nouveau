@@ -10,7 +10,7 @@
 ?>
     <div id="container" class="row">
         <div id="content" class="small-12 large-8 columns">
-            <?php \NV\Theme::archive_nav(array('id' => 'nav-top')) ?>
+            <?php \NV\Theme::article_page_nav(array('id' => 'nav-top')) ?>
 
             <?php \NV\Theme::loop( 'parts/article', 'parts/article-empty' ) ?>
 
