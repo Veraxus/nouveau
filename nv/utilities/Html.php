@@ -7,7 +7,7 @@ namespace NV;
  *
  * @since Nouveau 1.0
  */
-class Html extends HtmlGen
+class Html extends MarkupGen
 {
 
     /**
@@ -43,6 +43,38 @@ class Html extends HtmlGen
     public static function div( $atts = array(), $content = '', $echo = false )
     {
         $return = parent::gen( 'div', $atts, $content );
+        if ( $echo ) {
+            echo $return;
+        }
+        return $return;
+    }
+
+    /**
+     * @param string $content
+     * @param array $atts
+     * @param bool|false $echo
+     *
+     * @return string
+     */
+    public static function ul( $content = '', $atts = array(), $echo = false )
+    {
+        $return = parent::gen( 'ul', $atts, $content );
+        if ( $echo ) {
+            echo $return;
+        }
+        return $return;
+    }
+
+    /**
+     * @param string $content
+     * @param array $atts
+     * @param bool|false $echo
+     *
+     * @return string
+     */
+    public static function li( $content = '', $atts = array(), $echo = false )
+    {
+        $return = parent::gen( 'li', $atts, $content );
         if ( $echo ) {
             echo $return;
         }

@@ -95,7 +95,7 @@ class NV {
         require_once( NV_HOOKS . '/_pluggable.php' ); // Overrides WordPress' global functions
 
         /** HELPERS *******************************************************************/
-        require_once( NV_UTILS . '/HtmlGen.php' ); // Allows dynamic building/encapsulation of HTML elements
+        require_once( NV_UTILS . '/MarkupGen.php' ); // Allows dynamic building/encapsulation of HTML elements
         require_once( NV_UTILS . '/Html.php' ); // Extends HtmlGen to provide shortcuts for HTML elements
         require_once( NV_UTILS . '/WordPress.php' ); // Custom functions that extend basic WP functionality
         require_once( NV_UTILS . '/Theme.php' ); // Items that are used directly in theme templates

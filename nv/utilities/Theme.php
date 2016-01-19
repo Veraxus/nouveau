@@ -9,6 +9,12 @@ namespace NV;
 class Theme {
 
     /**
+     * @deprecated
+     * @param array $args
+     */
+    public static function archive_nav( $args = array() ){}
+
+    /**
      * Can be used instead of wp_link_pages() for showing article-specific pagination. For paginated posts ( posts which
      * use <!--nextpage--> ), this method implements Foundation's pagination structure instead of WordPress's.
      *
