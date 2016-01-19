@@ -1,16 +1,14 @@
-/*
- =======================================================================================================================
- TinyMCE Styles
-
- Styles in this file are compiled to assets/css/editor.css and are automatically loaded into your WordPress admin's
- TinyMCE editor. You will generally want to use these styles in combination with customizations to \NV\Hooks\Editor.php,
- which allows you to easily add new style presets to the TinyMCE editor.
- =======================================================================================================================
-*/
+// =======================================================================================================================
+// TinyMCE Styles
+//
+// Styles in this file are compiled to assets/css/editor.css and are automatically loaded into your WordPress admin's
+// TinyMCE editor. You will generally want to use these styles in combination with customizations to \NV\Hooks\Editor.php,
+// which allows you to easily add new style presets to the TinyMCE editor.
+// =======================================================================================================================
 
 @import "settings";
-@import "mixins";
-@import "../../bower_components/foundation/scss/foundation";
+@import "foundation";
+@import "nv-mixins";
 
 // =======================================================================================================================
 // This makes Foundation play nice with the WordPress TinyMCE editor 

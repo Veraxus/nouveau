@@ -18,7 +18,7 @@ class NV {
         self::constants();
 
         // Load requirements check BEFORE LOADING ANYTHING ELSE
-        require_once( NV_UTILS . '/NV_Requirements.php' );
+        require_once( NV_UTILS . 'NV_Requirements.php' );
         $nvCheck = new NV_Requirements();
 
         // Only continue if the requirements check passed
@@ -44,46 +44,43 @@ class NV {
         }
 
         /** The current theme directory */
-        define( 'THEME_DIR', get_template_directory() );
+        define( 'THEME_DIR', trailingslashit( get_template_directory() ) );
 
         /** The current theme uri */
-        define( 'THEME_URI', get_template_directory_uri() );
+        define( 'THEME_URI', trailingslashit( get_template_directory_uri() ) );
 
         /** The directory for the NOUVEAU core library */
-        define( 'NV_CORE', trailingslashit( THEME_DIR ) . basename( dirname( __FILE__ ) ) );
+        define( 'NV_CORE', trailingslashit( THEME_DIR . basename( dirname( __FILE__ ) ) ) );
 
         /** The directory for NOUVEAU utility classes */
-        define( 'NV_UTILS', trailingslashit( NV_CORE ) . 'utilities' );
+        define( 'NV_UTILS', NV_CORE . 'utilities/' );
 
         /** The directory for NOUVEAU hooks directory */
-        define( 'NV_HOOKS', trailingslashit( NV_CORE ) . 'hooks' );
+        define( 'NV_HOOKS', NV_CORE . 'hooks/' );
 
         /** The directory for NOUVEAU hooks directory */
-        define( 'NV_CUSTOM', trailingslashit( NV_CORE ) . 'custom' );
+        define( 'NV_CUSTOM', NV_CORE . 'custom/' );
 
         /** The uri for theme assets (img, js, css, etc) */
-        define( 'NV_ASSETS', trailingslashit( THEME_URI ) . 'assets' );
+        define( 'NV_ASSETS', THEME_URI . 'assets/' );
 
         /** The uri for theme images */
-        define( 'NV_IMG', trailingslashit( NV_ASSETS ) . 'images' );
+        define( 'NV_IMG', NV_ASSETS . 'images/' );
 
         /** The uri for theme stylesheets */
-        define( 'NV_CSS', trailingslashit( NV_ASSETS ) . 'css' );
+        define( 'NV_CSS', NV_ASSETS . 'css/' );
 
         /** The uri for theme javascripts */
-        define( 'NV_JS', trailingslashit( NV_ASSETS ) . 'js' );
+        define( 'NV_JS', NV_ASSETS . 'js/' );
         
         /** The directory for theme languages */
-        define( 'NV_LANGS', trailingslashit( NV_ASSETS ) . 'languages' );
+        define( 'NV_LANGS', NV_ASSETS . 'languages/' );
 
         /** The directory for the parts folder */
-        define( 'NV_PARTS', trailingslashit( THEME_DIR ) . 'parts' );
+        define( 'NV_PARTS', THEME_DIR . 'parts/' );
 
         /** The uri for Bower sources */
-        define( 'NV_BOWER', trailingslashit( THEME_URI ) . 'bower_components' );
-
-        /** The uri for Foundation sources */
-        define( 'NV_ZF_JS', trailingslashit( NV_BOWER ) . 'foundation/js' );
+        define( 'NV_BOWER', THEME_URI . 'bower_components/' );
     }
 
 
@@ -91,22 +88,20 @@ class NV {
      * Loads required files
      */
     public static function bootstrap() {
-        /** GLOBAL SCOPE FUNCTIONS ****************************************************/
-        require_once( NV_HOOKS . '/_pluggable.php' ); // Overrides WordPress' global functions
 
         /** HELPERS *******************************************************************/
-        require_once( NV_UTILS . '/MarkupGen.php' ); // Allows dynamic building/encapsulation of HTML elements
-        require_once( NV_UTILS . '/Html.php' ); // Extends HtmlGen to provide shortcuts for HTML elements
-        require_once( NV_UTILS . '/WordPress.php' ); // Custom functions that extend basic WP functionality
-        require_once( NV_UTILS . '/Theme.php' ); // Items that are used directly in theme templates
+        require_once( NV_UTILS . 'MarkupGen.php' ); // Allows dynamic building/encapsulation of HTML elements
+        require_once( NV_UTILS . 'Html.php' ); // Extends HtmlGen to provide shortcuts for HTML elements
+        require_once( NV_UTILS . 'WordPress.php' ); // Custom functions that extend basic WP functionality
+        require_once( NV_UTILS . 'Theme.php' ); // Items that are used directly in theme templates
 
         /** HOOKS *********************************************************************/
-        require_once( NV_HOOKS . '/Config.php' ); // Global, basic theme setup
-        require_once( NV_HOOKS . '/Editor.php' ); // Configuration for the theme customizer
-        require_once( NV_HOOKS . '/ThemeCustomize.php' ); // Configuration for the theme customizer
+        require_once( NV_HOOKS . 'Config.php' ); // Global, basic theme setup
+        require_once( NV_HOOKS . 'Editor.php' ); // Configuration for the theme customizer
+        require_once( NV_HOOKS . 'ThemeCustomize.php' ); // Configuration for the theme customizer
 
         /** CUSTOM *********************************************************************/
-        require_once( NV_CUSTOM . '/WalkerComments.php' ); // Custom classes
+        require_once( NV_CUSTOM . 'WalkerComments.php' ); // Custom classes
 
     }
 
@@ -129,9 +124,6 @@ class NV {
 
         // Any customizations to the body_class() function
         add_filter( 'body_class',               array( '\NV\Hooks\Config', 'body_class' ) );
-
-        // OPTIONAL: Change WordPress's .sticky class (instead of Foundations) to prevent class conflict
-        //add_filter( 'post_class',               array( '\NV\Hooks\Config', 'fix_sticky_class' ) );
 
 
         /** THEME CUSTOMIZATION *******************************************************/

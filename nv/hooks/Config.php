@@ -27,11 +27,11 @@ class Config {
         add_theme_support( 'automatic-feed-links'); // Automatically generate RSS feed urls
         
         add_theme_support( 'custom-header', array(
-            'height'        => 200,
-            'width'         => 980,
+            'width'         => 1200,
+            'height'        => 250,
             'flex-height'   => true,
             'flex-width'    => true,
-            'default-image' => 'http://placehold.it/980x200', //or use something like '%s/assets/images/headers/img.jpg',
+            'default-image' => 'http://placehold.it/1200x250', //or use something like '%s/assets/images/headers/img.jpg',
             //'random-default'      => false,
             //'header-text'         => true,    //Bool. Allow header text?
             //'default-text-color'  => '',
@@ -95,7 +95,7 @@ class Config {
      * Used by action hook: 'wp_enqueue_scripts'
      */
     public static function enqueue_assets() {
-
+        
         /******************
          * STYLES / CSS
          ******************/
@@ -111,58 +111,21 @@ class Config {
          * SCRIPTS / JS
          ******************/
         
-        // Load Modernizr in the head...
-        wp_enqueue_script( 'modernizr', NV_ZF_JS.'/vendor/modernizr.js', array(), '2.8.2' );
-
+        // Toggle .min on js suffixes if debug
+        $js_min = ( WP_DEBUG ) ? '' : '.min';
+        
         // Remove WordPress's jQuery and use our own...
         wp_deregister_script( 'jquery' );
-        wp_enqueue_script( 'jquery', NV_ZF_JS.'/vendor/jquery.js', array(), '2.1.1' );
+        wp_enqueue_script( 'jquery', NV_BOWER.'/jquery/dist/jquery'.$js_min.'.js', array(), '2.1.1', true );
         
-        // Load fastclick (optional)...
-        wp_enqueue_script( 'fastclick',  NV_ZF_JS.'/vendor/fastclick.js', array(), '1.0.2' );
-
-        // Load jQuery.cookie (optional)...
-        //wp_enqueue_script( 'jq-cookie', NV_ZF_JS.'/vendor/jquery.cookie.js' );
-        
-        // Load jQuery.placeholder (optional)...
-        //wp_enqueue_script( 'jq-placeholder', NV_ZF_JS.'/vendor/placeholder.js' );
+        // Foundation what-input dependency
+        wp_enqueue_script( 'what-input', NV_BOWER.'/what-input/what-input'.$js_min.'.js', array(), '1.1.4', true );
         
         // Load the complete version of Foundation (with all plugins)...
-        wp_enqueue_script( 
-            'foundation',                                   // uid
-            NV_ZF_JS.'/foundation.min.js',                  // url
-            array( 'jquery' ),                              // dependencies (by uid)
-            '5.4.6',                                        // version id (optional)
-            true                                            // load in footer?
-        );
-        
-        // Load any Foundation stuff individually (optional)...
-        //wp_enqueue_script( 'foundation', NV_ZF_JS.'/foundation/foundation.js', array( 'jquery' ), false, true );
-        //wp_enqueue_script( 'zf-abide', NV_ZF_JS.'/foundation/foundation.abide.js', array( 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-accordion', NV_ZF_JS.'/foundation/foundation.accordion.js', array( 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-alert', NV_ZF_JS.'/foundation/foundation.alert.js', array( 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-clearing', NV_ZF_JS.'/foundation/foundation.clearing.js', array( 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-dropdown', NV_ZF_JS.'/foundation/foundation.dropdown.js', array( 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-equalizer', NV_ZF_JS.'/foundation/foundation.equalizer.js', array( 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-interchange', NV_ZF_JS.'/foundation/foundation.equalizer.js', array( 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-joyride', NV_ZF_JS.'/foundation/foundation.joyride.js', array( 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-magellan', NV_ZF_JS.'/foundation/foundation.magellan.js', array( 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-offcanvas', NV_ZF_JS.'/foundation/foundation.offcanvas.js', array( 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-orbit', NV_ZF_JS.'/foundation/foundation.orbit.js', array( 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-reveal', NV_ZF_JS.'/foundation/foundation.reveal.js', array( 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-slider', NV_ZF_JS.'/foundation/foundation.slider.js', array( 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-tab', NV_ZF_JS.'/foundation/foundation.tab.js', array( 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-tooltip', NV_ZF_JS.'/foundation/foundation.tooltip.js', array( 'foundation' ), false, true );
-        //wp_enqueue_script( 'zf-topbar', NV_ZF_JS.'/foundation/foundation.topbar.js', array( 'foundation' ), false, true );
+        wp_enqueue_script( 'foundation', NV_BOWER.'/foundation-sites/dist/foundation'.$js_min.'.js', array( 'jquery', 'what-input' ), '6.1.1', true );
 
         // Load any custom javascript (remember to update dependencies if you changed the above)...
-        wp_enqueue_script( 
-            'theme-app',                                    // uid
-            NV_JS.'/app.min.js',                            // url
-            array( 'jquery', 'foundation', 'modernizr' ),   // dependencies (by uid)
-            false,                                          // version id (optional)
-            true                                            // load in footer?
-        );
+        wp_enqueue_script( 'nv-theme', NV_JS.'/app'.$js_min.'.js', array( 'foundation' ), false, true );
 
     }
 
@@ -173,28 +136,15 @@ class Config {
      * Used by action hook: 'admin_enqueue_scripts'
      */
     public static function enqueue_admin_assets() {
+
+        // Toggle .min on js suffixes if debug
+        $js_min = ( WP_DEBUG ) ? '' : '.min';
+
         // Base admin styles
         wp_enqueue_style( 'nv-admin', NV_CSS.'/admin.css' );
 
         // Base admin scripts
-        wp_enqueue_script( 'nv-admin', NV_JS.'/admin.min.js', array('jquery'), false, false );
-    }
-
-
-    /**
-     * This ensures that the 'sticky' class doesn't appear in any WordPress posts as that class has a very specific
-     * function within Foundation (elements with that class will "stick" to the top of the window when you scroll
-     * down). To get the best of both worlds, this function dynamically replaces WordPress's built-in 'sticky' class
-     * with 'sticky-post' instead.
-     *
-     * Used by action hook: 'post_class'
-     */
-    public static function fix_sticky_class($classes) {
-        $classes = array_diff( $classes, array( "sticky" ) );
-        if ( is_sticky() ) {
-            $classes[] = 'sticky-post';
-        }
-        return $classes;
+        wp_enqueue_script( 'nv-admin', NV_JS.'/admin'.$js_min.'.js', array('jquery'), false, false );
     }
 
 

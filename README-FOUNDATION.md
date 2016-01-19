@@ -1,29 +1,48 @@
-# Foundation libsass template
+# Foundation for Sites Template
 
-This is a template to start your own project that uses Grunt and libsass!
+**Please open all issues with this template on the main [Foundation for Sites](https://github.com/zurb/foundation-sites/issues) repo.**
 
-## Requirements
+This is the basic starter project for [Foundation for Sites 6](http://foundation.zurb.com/sites). It includes a Sass compiler and a starter HTML file for you.
 
-You'll need to have the following items installed before continuing.
+## Installation
 
-  * [Node.js](http://nodejs.org): Use the installer provided on the NodeJS website.
-  * [Grunt](http://gruntjs.com/): Run `[sudo] npm install -g grunt-cli`
-  * [Bower](http://bower.io): Run `[sudo] npm install -g bower`
+To use this template, your computer needs:
 
-## Quickstart
+- [NodeJS](https://nodejs.org/en/) (0.10 or greater)
+- [Git](https://git-scm.com/)
+
+This template can be installed with the Foundation CLI, or downloaded and set up manually.
+
+### Using the CLI
+
+Install the Foundation CLI with this command:
 
 ```bash
-git clone git@github.com:zurb/foundation-libsass-template.git
-npm install && bower install
+npm install foundation-cli --global
 ```
 
-While you're working on your project, run:
+Use this command to set up a blank Foundation for Sites project with this template:
 
-`grunt`
+```bash
+foundation new --framework sites --template basic
+```
 
-And you're set!
+The CLI will prompt you to give your project a name. The template will be downloaded into a folder with this name.
 
-## Directory Structure
+### Manual Setup
 
-  * `assets/scss/_settings.scss`: Foundation configuration settings go in here
-  * `assets/scss/app.scss`: Application styles go here
+To manually set up the template, first download it with Git:
+
+```bash
+git clone https://github.com/zurb/foundation-sites-template projectname
+```
+
+Then open the folder in your command line, and install the needed dependencies:
+
+```bash
+cd projectname
+npm install
+bower install
+```
+
+Finally, run `npm start` to run the Sass compiler. It will re-run every time you save a Sass file.

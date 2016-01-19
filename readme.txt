@@ -3,15 +3,15 @@ Contributors: Veraxus
 Donate link: http://nouveauframework.org/
 Author URI: http://nouveauframework.org/
 Tags: framework, php5.3
-Version: 0.9.22
-Foundation version: 5.5.2
-Requires at least: 4.1
-Tested up to: 4.3
-Stable tag: 0.9.22
+Version: 0.10.00
+Foundation version: 6.1.1
+Requires at least: 4.4
+Tested up to: 4.5
+Stable tag: 0.10.00
 License: GNU General Public License
 License URI: GNU-LICENSE.txt
 
-NOUVEAU is an open-source, rapid-development theme & plugin framework for WordPress, built on Zurb Foundation 5 and PHP 5.3. Work fast. Be awesome.
+NOUVEAU is an open-source, rapid-development theme & plugin framework for WordPress, built on Zurb Foundation 6 and PHP 5.3. Work fast. Be awesome.
 
 == Description ==
 
@@ -91,6 +91,10 @@ These plugins were created by developers, for developers. We hope they make your
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
 == Changelog ==
+
+= 0.10.0 (2016-01-XX) =
+* Updated NOUVEAU to use Foundation 6
+* Tweaked some class names
 
 = 0.9.22 (2015-05-20) =
 * Improved Foundation integration with WordPress's TinyMCE editor

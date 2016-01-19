@@ -1,65 +1,58 @@
-/*
- =======================================================================================================================
- Foundation App Boostrap
+// =======================================================================================================================
+// Foundation App Boostrap
+//
+// This file loads all the SCSS components for Foundation & NOUVEAU. You should place your own styles into one or more
+// separate .scss files and import your own styles at the bottom of this file.
+// =======================================================================================================================
 
- This file loads all the SCSS components for Foundation & NOUVEAU. You should place your own styles into one or more
- separate .scss files and import your own styles at the bottom of this file.
- =======================================================================================================================
-*/
+@charset 'utf-8';
 
-// Foundation settings: _settings.scss
-@import "settings";
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
 
-// Optional: Use NOUVEAU mixins, including image-url() fix
-@import "mixins";
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-menu;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
 
-// Optional: Uncomment to use...
-//@import "../../bower_components/foundation/scss/normalize";
+@include motion-ui-transitions;
+@include motion-ui-animations;
 
-// Load all Foundation components...
-@import "../../bower_components/foundation/scss/foundation";
 
-// Or selectively include components
-// @import
-//   "../../bower_components/foundation/scss/foundation/components/accordion",
-//   "../../bower_components/foundation/scss/foundation/components/alert-boxes",
-//   "../../bower_components/foundation/scss/foundation/components/block-grid",
-//   "../../bower_components/foundation/scss/foundation/components/breadcrumbs",
-//   "../../bower_components/foundation/scss/foundation/components/button-groups",
-//   "../../bower_components/foundation/scss/foundation/components/buttons",
-//   "../../bower_components/foundation/scss/foundation/components/clearing",
-//   "../../bower_components/foundation/scss/foundation/components/dropdown",
-//   "../../bower_components/foundation/scss/foundation/components/dropdown-buttons",
-//   "../../bower_components/foundation/scss/foundation/components/flex-video",
-//   "../../bower_components/foundation/scss/foundation/components/forms",
-//   "../../bower_components/foundation/scss/foundation/components/grid",
-//   "../../bower_components/foundation/scss/foundation/components/inline-lists",
-//   "../../bower_components/foundation/scss/foundation/components/joyride",
-//   "../../bower_components/foundation/scss/foundation/components/keystrokes",
-//   "../../bower_components/foundation/scss/foundation/components/labels",
-//   "../../bower_components/foundation/scss/foundation/components/magellan",
-//   "../../bower_components/foundation/scss/foundation/components/orbit",
-//   "../../bower_components/foundation/scss/foundation/components/pagination",
-//   "../../bower_components/foundation/scss/foundation/components/panels",
-//   "../../bower_components/foundation/scss/foundation/components/pricing-tables",
-//   "../../bower_components/foundation/scss/foundation/components/progress-bars",
-//   "../../bower_components/foundation/scss/foundation/components/reveal",
-//   "../../bower_components/foundation/scss/foundation/components/side-nav",
-//   "../../bower_components/foundation/scss/foundation/components/split-buttons",
-//   "../../bower_components/foundation/scss/foundation/components/sub-nav",
-//   "../../bower_components/foundation/scss/foundation/components/switches",
-//   "../../bower_components/foundation/scss/foundation/components/tables",
-//   "../../bower_components/foundation/scss/foundation/components/tabs",
-//   "../../bower_components/foundation/scss/foundation/components/thumbs",
-//   "../../bower_components/foundation/scss/foundation/components/tooltips",
-//   "../../bower_components/foundation/scss/foundation/components/top-bar",
-//   "../../bower_components/foundation/scss/foundation/components/type",
-//   "../../bower_components/foundation/scss/foundation/components/offcanvas",
-//   "../../bower_components/foundation/scss/foundation/components/visibility";
-
+// NOUVEAU mixins, including image-url() fix
+@import "nv-mixins";
 
 // Load NOUVEAU compatibility styles
-@import "wordpress";    
-
-// PLACE YOUR OWN STYLES HERE...
-//@import 'your-styles';
+@import "nv-wordpress";

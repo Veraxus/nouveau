@@ -1,11 +1,12 @@
-/**
- * THEME CUSTOMIZER JAVASCRIPT CONTROLS
- *
- * This file adds LIVE updates to the Theme Customizer live preview. To leverage this, set your custom settings to
- * 'postMessage' and then add your handling here. Your javascript should grab settings from customizer controls, and
- * then make any necessary changes to the page using jQuery. This compiles to assets/js/theme-customizer.min.js in your
- * theme directory.
- */
+// =====================================================================================================================
+// THEME CUSTOMIZER JAVASCRIPT CONTROLS
+//
+// This file adds LIVE updates to the Theme Customizer live preview. To leverage this, set your custom settings to
+// 'postMessage' and then add your handling here. Your javascript should grab settings from customizer controls, and
+// then make any necessary changes to the page using jQuery. This compiles to assets/js/theme-customizer.min.js in your
+// theme directory.
+// =====================================================================================================================
+
 ( function( $ ) {
 
     // Update the site title in real time...
