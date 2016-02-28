@@ -8,8 +8,8 @@
  * @subpackage Nouveau
  * @since Nouveau 1.0
  */
-\NV\Theme::get_header();
-\NV\Theme::output_file_marker( __FILE__ );
+\Nv\Utilities\Theme::get_header();
+\Nv\Utilities\Theme::output_file_marker( __FILE__ );
 ?>
 <div class="row">
     <div class="large-12 columns">

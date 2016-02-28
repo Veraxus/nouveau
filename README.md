@@ -3,13 +3,13 @@
 **Donate link:** http://nouveauframework.org/  
 **Author URI:** http://nouveauframework.org/  
 **Tags:** framework, php5.3  
-**Version:** 0.10.00  
-**Foundation version:** 6.1.1  
+**Version:** 0.11.00  
+**Foundation version:** 6.2  
 **Requires at least:** 4.4  
 **Tested up to:** 4.5  
-**Stable tag:** 0.10.00  
-**License:** GNU General Public License  
-**License URI:** GNU-LICENSE.txt  
+**Stable tag:** 0.11.00  
+**Text Domain:** nvLangScope  
+**License:** MIT & GPL2+  
 
 NOUVEAU is an open-source, rapid-development theme & plugin framework for WordPress, built on Zurb Foundation 6 and PHP 5.3. Work fast. Be awesome.
 
@@ -21,7 +21,7 @@ NOUVEAU is a rapid-development framework for WordPress. Unlike other "theme fram
 
 If you want even more features, don't clutter your theme with them... there are plugins for that! Download NOUVEAU's starter plugins for any features you really need, and customize them quickly and easily. Everything is standardized, simple, clean, and well commented - so you can work FAST.
 
-###Features###
+## Features ##
 
 * **Built for WordPress**
 NOUVEAU isn’t a theme or a plugin, it’s a framework. Anything you need to quickly get started on a new theme or plugin is already there, letting you get right to the meat of your WordPress project.
@@ -92,7 +92,16 @@ NOUVEAU comes with all text strings properly scoped for internationalization. To
 
 # Changelog #
 
-## 0.10.0 (2016-01-XX) ##
+## 0.11.0 (2016-02-27) ##
+* Updated NOUVEAU to use Foundation for Sites 6.2!
+* NOUVEAU now uses PSR-4 class autoloading. No more manual requires!
+* The main NV class is now accessed through a singleton: `NV::i()`
+* Global constants were removed and replaced with properties. E.g. `NV::i()->paths-theme` or `NV::i()->getPath('theme')`
+* Applied WordPress coding standards to core NOUVEAU library.
+* Created placeholder unit test scaffolding.
+* Note: Some Foundation-oriented theme functions like `Theme::archive_nav()` still need to be re-implemented.
+
+## 0.10.0 (2016-01-22) ##
 * Updated NOUVEAU to use Foundation 6
 * Tweaked some class names
 

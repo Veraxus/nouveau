@@ -1,170 +1,219 @@
 <?php
+namespace NV\Theme;
+
 /**
- * This class initializes the NOUVEAU framework.
- *
- * A compatibility check is also performed
+ * This class initializes the NOUVEAU framework via singleton. To fetch the instance, use Nv::get();
  */
 class NV {
 
-    /**
-     * Initialize the NV class. This will also automatically perform the requirements check before attempting to load
-     * any functionality (since Nouveau makes liberal use of closures).
-     *
-     * @return bool Returns compatibility check result. True for compatible, false if not.
-     */
-    public static function init() {
+	/** @var self Stores the singleton instance */
+	private static $instance;
 
-        // Load constants
-        self::constants();
+	/** @var object An object containing important theme directory paths */
+	public $path;
+	
+	/** @var object An object containing important theme urls */
+	public $url;
+	
+	/** @var int The max width to pass to WordPress' content editor */
+	public $content_width = 1200;
+	
+	/**
+	 * Initialize the NV class.
+	 */
+	protected function __construct() {
+		$this->setProperties();
+		$this->autoloader();
+		$this->hooks();
+	}
 
-        // Load requirements check BEFORE LOADING ANYTHING ELSE
-        require_once( NV_UTILS . 'NV_Requirements.php' );
-        $nvCheck = new NV_Requirements();
+	/**
+	 * Initializes default hooks
+	 */
+	protected function hooks() {
+		
+		// Setup general theme options
+		add_action( 'after_setup_theme', array( '\NV\Theme\Hooks\Config', 'after_setup_theme' ) );
 
-        // Only continue if the requirements check passed
-        if ( ! $nvCheck->is_compatible ) {
-            return false;
-        }
+		// Load styles and scripts
+		add_action( 'wp_enqueue_scripts', array( '\NV\Theme\Hooks\Config', 'enqueue_assets' ) );
 
-        // Finish loading
-        self::bootstrap();
-        self::hooks();
-    }
+		// Load styles and scripts
+		add_action( 'admin_enqueue_scripts', array( '\NV\Theme\Hooks\Config', 'enqueue_admin_assets' ) );
 
+		// Register sidebars
+		add_action( 'widgets_init', array( '\NV\Theme\Hooks\Config', 'sidebars' ) );
 
-    /**
-     * Defines constants any globals needed for the theme
-     */
-    public static function constants() {
+		// Any customizations to the body_class() function
+		add_filter( 'body_class', array( '\NV\Theme\Hooks\Config', 'body_class' ) );
 
-        // Set the max width of content for benefit of WordPress's IMAGE EDITOR
-        global $content_width;
-        if ( !isset( $content_width ) ) {
-            $content_width = 1000;
-        }
-
-        /** The current theme directory */
-        define( 'THEME_DIR', trailingslashit( get_template_directory() ) );
-
-        /** The current theme uri */
-        define( 'THEME_URI', trailingslashit( get_template_directory_uri() ) );
-
-        /** The directory for the NOUVEAU core library */
-        define( 'NV_CORE', trailingslashit( THEME_DIR . basename( dirname( __FILE__ ) ) ) );
-
-        /** The directory for NOUVEAU utility classes */
-        define( 'NV_UTILS', NV_CORE . 'utilities/' );
-
-        /** The directory for NOUVEAU hooks directory */
-        define( 'NV_HOOKS', NV_CORE . 'hooks/' );
-
-        /** The directory for NOUVEAU hooks directory */
-        define( 'NV_CUSTOM', NV_CORE . 'custom/' );
-
-        /** The uri for theme assets (img, js, css, etc) */
-        define( 'NV_ASSETS', THEME_URI . 'assets/' );
-
-        /** The uri for theme images */
-        define( 'NV_IMG', NV_ASSETS . 'images/' );
-
-        /** The uri for theme stylesheets */
-        define( 'NV_CSS', NV_ASSETS . 'css/' );
-
-        /** The uri for theme javascripts */
-        define( 'NV_JS', NV_ASSETS . 'js/' );
-        
-        /** The directory for theme languages */
-        define( 'NV_LANGS', NV_ASSETS . 'languages/' );
-
-        /** The directory for the parts folder */
-        define( 'NV_PARTS', THEME_DIR . 'parts/' );
-
-        /** The uri for Bower sources */
-        define( 'NV_BOWER', THEME_URI . 'bower_components/' );
-    }
+		// Change WordPress' .sticky css class to .stickied to prevent conflict with Foundation
+		add_filter( 'post_class', array( '\NV\Theme\Hooks\Config', 'sticky_post_class' ) );
 
 
-    /**
-     * Loads required files
-     */
-    public static function bootstrap() {
+		/** THEME CUSTOMIZATION *******************************************************/
 
-        /** HELPERS *******************************************************************/
-        require_once( NV_UTILS . 'MarkupGen.php' ); // Allows dynamic building/encapsulation of HTML elements
-        require_once( NV_UTILS . 'Html.php' ); // Extends HtmlGen to provide shortcuts for HTML elements
-        require_once( NV_UTILS . 'WordPress.php' ); // Custom functions that extend basic WP functionality
-        require_once( NV_UTILS . 'Theme.php' ); // Items that are used directly in theme templates
+		// Setup the theme customizer options
+		add_action( 'customize_register', array( '\NV\Theme\Hooks\ThemeCustomize', 'register' ) );
 
-        /** HOOKS *********************************************************************/
-        require_once( NV_HOOKS . 'Config.php' ); // Global, basic theme setup
-        require_once( NV_HOOKS . 'Editor.php' ); // Configuration for the theme customizer
-        require_once( NV_HOOKS . 'ThemeCustomize.php' ); // Configuration for the theme customizer
+		// Load the customized style data on the frontend
+		add_action( 'wp_head', array( '\NV\Theme\Hooks\ThemeCustomize', 'header_output' ) );
 
-        /** CUSTOM *********************************************************************/
-        require_once( NV_CUSTOM . 'WalkerComments.php' ); // Custom classes
-
-    }
+		// Load any javascript needed for live preview updates
+		add_action( 'customize_preview_init', array( '\NV\Theme\Hooks\ThemeCustomize', 'live_preview' ) );
 
 
-    /**
-     * Initializes default hooks
-     */
-    public static function hooks() {
-        // Setup general theme options
-        add_action( 'after_setup_theme',        array( '\NV\Hooks\Config', 'after_setup_theme' ) );
+		/** INTEGRATE THEME WITH TINYMCE EDITOR **************************************/
 
-        // Load styles and scripts
-        add_action( 'wp_enqueue_scripts',       array( '\NV\Hooks\Config', 'enqueue_assets' ) );
+		// Adds custom stylesheet to the editor window so styling preview is accurate ( can also use add_editor_style() )
+		add_filter( 'mce_css', array( '\NV\Theme\Hooks\Editor', 'style' ) );
 
-        // Load styles and scripts
-        add_action( 'admin_enqueue_scripts',    array( '\NV\Hooks\Config', 'enqueue_admin_assets' ) );
+		// Add a new "Styles" dropdown to the TinyMCE editor toolbar
+		add_filter( 'mce_buttons_2', array( '\NV\Theme\Hooks\Editor', 'buttons' ) );
 
-        // Register sidebars
-        add_action( 'widgets_init',             array( '\NV\Hooks\Config', 'sidebars' ) );
+		// Populate our new "Styles" dropdown with options/content
+		add_filter( 'tiny_mce_before_init', array( '\NV\Theme\Hooks\Editor', 'settings_advanced' ) );
+	}
 
-        // Any customizations to the body_class() function
-        add_filter( 'body_class',               array( '\NV\Hooks\Config', 'body_class' ) );
+	/**
+	 * Defines constants any globals needed for the theme
+	 */
+	protected function setProperties() {
 
+		$this->path         = new \stdClass;
+		$this->path->theme  = trailingslashit( get_template_directory() );
+		$this->path->lib    = trailingslashit( dirname( __FILE__ ) );
+		$this->path->bower  = $this->path->theme . 'bower_components/';
+		$this->path->custom = $this->path->lib . 'Custom/';
+		$this->path->hooks  = $this->path->lib . 'Hooks/';
+		$this->path->utils  = $this->path->lib . 'Utilities/';
+		$this->path->parts  = $this->path->theme . 'parts/';
+		$this->path->assets = $this->path->theme . 'assets/';
+		$this->path->img    = $this->path->assets . 'img/';
+		$this->path->langs  = $this->path->assets . 'languages/';
 
-        /** THEME CUSTOMIZATION *******************************************************/
+		$this->url          = new \stdClass;
+		$this->url->theme   = trailingslashit( get_template_directory_uri() );
+		$this->url->bower   = $this->url->theme . 'bower_components/';
+		$this->url->assets  = $this->url->theme . 'assets/';
+		$this->url->img     = $this->url->assets . 'images/';
+		$this->url->css     = $this->url->assets . 'css/';
+		$this->url->js      = $this->url->assets . 'js/';
 
-        // Setup the theme customizer options
-        add_action( 'customize_register',       array( '\NV\Hooks\ThemeCustomize', 'register' ) );
+		if ( ! isset( $GLOBALS['content_width'] ) ) {
+			$GLOBALS['content_width'] = $this->content_width;
+		}
+	}
 
-        // Load the customized style data on the frontend
-        add_action( 'wp_head',                  array( '\NV\Hooks\ThemeCustomize', 'header_output' ) );
+	/**
+	 * Gets a theme system path from the path property object.
+	 *
+	 * @param string $prop   Which sub-property to fetch. Defaults to 'theme'.
+	 * @param string $append Optional. Any string data, such as a file, to append to the returned path.
+	 *
+	 * @return string The requested theme system path
+	 * @throws \Exception if property is not found
+	 */
+	public function getPath( $prop = 'theme', $append = '' ) {
+		return $this->getProp( 'path', $prop ) . $append;
+	}
 
-        // Load any javascript needed for live preview updates
-        add_action( 'customize_preview_init',   array( '\NV\Hooks\ThemeCustomize', 'live_preview' ) );
+	/**
+	 * Gets a theme URL from the url property object.
+	 *
+	 * @param string $prop   Which sub-property to fetch. Defaults to 'theme'.
+	 * @param string $append Optional. Any string data, such as a file, to append to the returned url.
+	 *
+	 * @return string The requested theme URL
+	 * @throws \Exception if property is not found
+	 */
+	public function getUrl( $prop = 'theme', $append = '' ) {
+		return $this->getProp( 'url', $prop ) . $append;
+	}
 
+	/**
+	 * Returns a class property.
+	 *
+	 * @param string      $prop    The property value to retrieve
+	 * @param string|bool $subProp The sub-property value to retrieve
+	 *
+	 * @return mixed
+	 * @throws \Exception if property is not found
+	 */
+	public function getProp( $prop, $subProp = false ) {
 
-        /** INTEGRATE THEME WITH TINYMCE EDITOR **************************************/
+		if ( ! isset( $this->$prop ) ) {
+			throw new \Exception( "getProp() could not find \$this->{$prop} in " . __CLASS__ );
+		}
 
-        // Adds custom stylesheet to the editor window so styling preview is accurate ( can also use add_editor_style() )
-        add_filter( 'mce_css',                  array( '\NV\Hooks\Editor', 'style' ) );
+		if ( $subProp && isset( $this->$prop->$subProp ) ) {
+			return $this->$prop->$subProp;
+		}
 
-        // Add a new "Styles" dropdown to the TinyMCE editor toolbar
-        add_filter( 'mce_buttons_2',            array( '\NV\Hooks\Editor', 'buttons' ) );
+		throw new \Exception( "getProp() could not find \$this->{$prop}->{$subProp} in " . __CLASS__ );
+	}
 
-        // Populate our new "Styles" dropdown with options/content
-        add_filter( 'tiny_mce_before_init',     array( '\NV\Hooks\Editor', 'settings_advanced' ) );
-    }
+	/**
+	 * Returns the plugin's root namespace path, or prepends the plugin namespace(s) to the provided classname string.
+	 * 
+	 * @param string $class The fully qualified class name
+	 *
+	 * @return string
+	 */
+	public function getNs( $class = '' ) {
+		return '\\' . __NAMESPACE__ . '\\' . $class;
+	}
 
+	/**
+	 * Registers a PSR-4 compliant class autoloader.
+	 */
+	protected function autoloader() {
 
-    /**
-     * Loads alternate languages, if available.
-     *
-     * @see self::setup()
-     * @since Nouveau 1.0
-     */
-    public static function languages() {
-        load_theme_textdomain( 'nvLangScope', NV_LANGS ); //get_template_directory()
-        $locale      = get_locale();
-        $locale_file = sprintf( '%s/%s.php', NV_LANGS, $locale ); //get_template_directory()
+		spl_autoload_register(
+			function ( $class ) {
+				// project-specific namespace prefix
+				$prefix = __NAMESPACE__ . '\\';
 
-        if ( is_readable( $locale_file ) ) {
-            require_once $locale_file;
-        }
-    }
+				// base directory for the namespace prefix
+				$base_dir = $this->path->lib;
+
+				// does the class use the namespace prefix?
+				$len = strlen( $prefix );
+				if ( strncmp( $prefix, $class, $len ) !== 0 ) {
+					// no, move to the next registered autoloader
+					return;
+				}
+
+				// get the relative class name
+				$relative_class = substr( $class, $len );
+
+				// replace the namespace prefix with the base directory, replace namespace
+				// separators with directory separators in the relative class name, append
+				// with .php
+				$file = $base_dir . str_replace( '\\', '/', $relative_class ) . '.php';
+
+				// if the file exists, require it
+				if ( file_exists( $file ) ) {
+					require $file;
+				}
+			}
+		);
+
+	}
+
+	/**
+	 * Singleton for accessing the Nv instance.
+	 *
+	 * @return self
+	 */
+	public static function i() {
+		if ( self::$instance === null ) {
+			self::$instance = new self;
+		}
+
+		return self::$instance;
+	}
 
 }
+
+NV::i();
