@@ -1,4 +1,6 @@
 <?php
+/** The \NV\Theme\Hooks\Editor class */
+
 namespace NV\Theme\Hooks;
 
 use NV\Theme\NV;
@@ -17,6 +19,10 @@ class Editor {
 	 * Add stylesheet to the editor window so that previews are accurate.
 	 *
 	 * @used-by add_action( 'mce_css', $func )
+	 *
+	 * @param $url
+	 *
+	 * @return string
 	 */
 	public static function style( $url ) {
 		//If there's already a URL, add a comma to delimit new style
@@ -38,7 +44,10 @@ class Editor {
 	 * Used by hook: 'mce_buttons_2'
 	 *
 	 * @see   add_action('mce_buttons_2',$func)
-	 * @since Nouveau 1.0
+	 * 
+	 * @param $buttons
+	 *
+	 * @return mixed
 	 */
 	public static function buttons( $buttons ) {
 		array_unshift( $buttons, 'removeformat' );

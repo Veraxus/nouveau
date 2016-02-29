@@ -92,13 +92,19 @@ NOUVEAU comes with all text strings properly scoped for internationalization. To
 
 # Changelog #
 
+## 0.11.1 (2016-02-28) ##
+* Adjusted method names for a consistent coding standard: classes are CamelCase with no underscores, methods are lowercase with underscores encouraged.
+* Tweaks & improvements to MarkupGenerator
+* Added some unit tests for MarkupGenerator
+* Added phpdocs for the core NOUVEAU library; located in the theme's `_docs` folder.
+
 ## 0.11.0 (2016-02-27) ##
 * Updated NOUVEAU to use Foundation for Sites 6.2!
 * NOUVEAU now uses PSR-4 class autoloading. No more manual requires!
 * The main NV class is now accessed through a singleton: `NV::i()`
-* Global constants were removed and replaced with properties. E.g. `NV::i()->paths-theme` or `NV::i()->getPath('theme')`
+* Global constants were removed and replaced with properties. E.g. `NV::i()->paths-theme` or `NV::i()->get_path('theme')`
 * Applied WordPress coding standards to core NOUVEAU library.
-* Created placeholder unit test scaffolding.
+* Created placeholder unit test scaffolding (more to come).
 * Note: Some Foundation-oriented theme functions like `Theme::archive_nav()` still need to be re-implemented.
 
 ## 0.10.0 (2016-01-22) ##

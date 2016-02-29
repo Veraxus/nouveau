@@ -1,4 +1,6 @@
 <?php
+/** The \NV\Theme\Custom\WalkerComments class */
+
 namespace NV\Theme\Custom;
 
 use NV\Theme\NV;

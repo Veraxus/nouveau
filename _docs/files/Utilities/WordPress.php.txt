@@ -1,4 +1,6 @@
 <?php
+/** The \NV\Theme\Utilities\WordPress class */
+
 namespace NV\Theme\Utilities;
 
 /**

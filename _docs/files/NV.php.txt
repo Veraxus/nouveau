@@ -1,4 +1,6 @@
 <?php
+/** The \NV\Theme\Hooks\NV class */
+
 namespace NV\Theme;
 
 /**
@@ -25,6 +27,15 @@ class NV {
 		$this->set_properties();
 		$this->autoload();
 		$this->hooks();
+
+		$arr2 = array(
+			'tag'     => 'img',
+			'content' => null,
+			'atts'    => array( 'src' => 'img.png', 'alt' => 'Description' ),
+			'solo'    => true,
+		);
+		
+		$el = Utilities\MarkupGenerator::gen_array( $arr2 );
 	}
 
 	/**

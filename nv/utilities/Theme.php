@@ -1,14 +1,20 @@
 <?php
+/** The \NV\Theme\Utilities\Theme class */
+
 namespace NV\Theme\Utilities;
 
 use NV\Theme\NV;
 
 /**
- * This class should encapsulate any basic features that need to be used directly in the theme files.
+ * Basic features to be used in theme template files.
  */
 class Theme {
 
 	/**
+	 * Not yet implemented.
+	 * 
+	 * Will display Foundation-native pagination for archives.
+	 * 
 	 * @param array $args
 	 */
 	public static function archive_nav( $args = array() ) {
@@ -16,10 +22,14 @@ class Theme {
 	}
 
 	/**
-	 * @return string Formatted output in HTML.
+	 * Not yet implemented.
+	 * 
+	 * Will display Foundation-native pagination for a paginated post/article.
+	 *
+	 * @param array $args
 	 */
 	public static function article_page_nav( $args = array() ) {
-		wp_link_pages( $args );
+		echo wp_link_pages( $args );
 	}
 
 

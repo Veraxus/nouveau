@@ -1,4 +1,6 @@
 <?php
+/** The \NV\Theme\Utilities\Php class */
+
 namespace NV\Theme\Utilities;
 
 /**

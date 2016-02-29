@@ -1,12 +1,16 @@
 <?php
+/** The \NV\Theme\Utilities\HtmlGen class */
+
 namespace NV\Theme\Utilities;
 
 /**
- * Includes shortcuts to speed up the easy generation of dynamic HTML using the HtmlGen helper class.
+ * Shortcuts to speed up the easy generation of dynamic HTML, extending the MarkupGenerator utility class.
  */
 class HtmlGen extends MarkupGenerator {
 
 	/**
+	 * Generates an <a> element
+	 * 
 	 * @param string $href The link
 	 * @param array  $atts An associative array of attributes (such as href)
 	 * @param string $content Content to put between the opening and closing tags
@@ -15,7 +19,7 @@ class HtmlGen extends MarkupGenerator {
 	 * @return string
 	 */
 	public static function a( $href = '#', $atts = array(), $content = '', $echo = false ) {
-		$atts = parent::defaultAtts(
+		$atts = parent::default_atts(
 			array(
 				'href' => $href,
 			),
@@ -31,6 +35,8 @@ class HtmlGen extends MarkupGenerator {
 	}
 
 	/**
+	 * Generates a <div> element
+	 * 
 	 * @param array  $atts
 	 * @param string $content
 	 * @param bool   $echo
@@ -47,6 +53,8 @@ class HtmlGen extends MarkupGenerator {
 	}
 
 	/**
+	 * Generates a <ul> element
+	 * 
 	 * @param string     $content
 	 * @param array      $atts
 	 * @param bool|false $echo
@@ -63,6 +71,8 @@ class HtmlGen extends MarkupGenerator {
 	}
 
 	/**
+	 * Generates an <li> element
+	 * 
 	 * @param string     $content
 	 * @param array      $atts
 	 * @param bool|false $echo
@@ -79,6 +89,8 @@ class HtmlGen extends MarkupGenerator {
 	}
 
 	/**
+	 * Generates an <img> element
+	 * 
 	 * @param string $src
 	 * @param array  $atts
 	 * @param bool   $echo
@@ -86,7 +98,7 @@ class HtmlGen extends MarkupGenerator {
 	 * @return string
 	 */
 	public static function img( $src = '', $atts = array(), $echo = false ) {
-		$atts = parent::defaultAtts(
+		$atts = parent::default_atts(
 			array(
 				'src' => ( ! empty( $src ) ) ? $src : '',
 				'alt' => '',
@@ -103,6 +115,8 @@ class HtmlGen extends MarkupGenerator {
 	}
 
 	/**
+	 * Generates an <input> element
+	 * 
 	 * @param string $name
 	 * @param array  $atts
 	 * @param bool   $echo
@@ -110,10 +124,10 @@ class HtmlGen extends MarkupGenerator {
 	 * @return string
 	 */
 	public static function input( $name = '', $atts = array(), $echo = false ) {
-		$atts = parent::defaultAtts(
+		$atts = parent::default_atts(
 			array(
-				'id'   => ( ! empty( $name ) ) ? $name : parent::randomId(),
-				'name' => ( ! empty( $name ) ) ? $name : parent::randomId(),
+				'id'   => ( ! empty( $name ) ) ? $name : parent::random_id(),
+				'name' => ( ! empty( $name ) ) ? $name : parent::random_id(),
 				'type' => 'text',
 			),
 			$atts
@@ -128,28 +142,32 @@ class HtmlGen extends MarkupGenerator {
 	}
 
 	/**
+	 * Generates an <input> element of type "text"
+	 * 
 	 * @param string $name
 	 * @param array  $atts
 	 * @param bool   $echo
 	 *
 	 * @return string
 	 */
-	public static function inputText( $name = '', $atts = array(), $echo = false ) {
+	public static function input_text( $name = '', $atts = array(), $echo = false ) {
 		return self::input( $name, $atts, $echo );
 	}
 
 	/**
+	 * Generates an <input> element of type "checkbox"
+	 *
 	 * @param string $name
 	 * @param array  $atts
 	 * @param bool   $echo
 	 *
 	 * @return string
 	 */
-	public static function inputCheckbox( $name = '', $atts = array(), $echo = false ) {
-		$atts = parent::defaultAtts(
+	public static function input_checkbox( $name = '', $atts = array(), $echo = false ) {
+		$atts = parent::default_atts(
 			array(
-				'id'   => ( ! empty( $name ) ) ? $name : parent::randomId(),
-				'name' => ( ! empty( $name ) ) ? $name : parent::randomId(),
+				'id'   => ( ! empty( $name ) ) ? $name : parent::random_id(),
+				'name' => ( ! empty( $name ) ) ? $name : parent::random_id(),
 				'type' => 'checkbox',
 			),
 			$atts
@@ -164,17 +182,19 @@ class HtmlGen extends MarkupGenerator {
 	}
 
 	/**
+	 * Generates an <input> element of type "radio"
+	 *
 	 * @param string $name
 	 * @param array  $atts
 	 * @param bool   $echo
 	 *
 	 * @return string
 	 */
-	public static function inputRadio( $name = '', $atts = array(), $echo = false ) {
-		$atts = parent::defaultAtts(
+	public static function input_radio( $name = '', $atts = array(), $echo = false ) {
+		$atts = parent::default_atts(
 			array(
-				'id'   => ( ! empty( $name ) ) ? $name : parent::randomId(),
-				'name' => ( ! empty( $name ) ) ? $name : parent::randomId(),
+				'id'   => ( ! empty( $name ) ) ? $name : parent::random_id(),
+				'name' => ( ! empty( $name ) ) ? $name : parent::random_id(),
 				'type' => 'radio',
 			),
 			$atts
@@ -189,6 +209,8 @@ class HtmlGen extends MarkupGenerator {
 	}
 
 	/**
+	 * Generates a <label> element
+	 * 
 	 * @param string $for
 	 * @param array  $atts
 	 * @param bool   $echo
@@ -196,7 +218,7 @@ class HtmlGen extends MarkupGenerator {
 	 * @return string
 	 */
 	public static function label( $for = '', $atts = array(), $echo = false ) {
-		$atts = parent::defaultAtts(
+		$atts = parent::default_atts(
 			array(
 				'for' => ( ! empty( $for ) ) ? $for : '',
 			),

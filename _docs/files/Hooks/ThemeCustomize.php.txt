@@ -1,4 +1,6 @@
 <?php
+/** The \NV\Theme\Hooks\ThemeCustomize class */
+
 namespace NV\Theme\Hooks;
 
 use NV\Theme\NV;

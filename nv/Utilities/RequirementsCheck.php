@@ -1,4 +1,6 @@
 <?php
+/** The \NV\Theme\Utilities\RequirementsCheck class */
+
 namespace NV\Theme\Utilities;
 
 /**
@@ -17,9 +19,12 @@ class RequirementsCheck {
 
 	/** @var string The validation message to display if check fails. */
 	public $errors;
-	
+
 	/**
-	 * Sets up the class
+	 * RequirementsCheck constructor.
+	 *
+	 * @param string $required_php Provide version as string to set required php version
+	 * @param string $required_wp Provide version as string to set required WordPress version
 	 */
 	function __construct( $required_php = null, $required_wp = null ) {
 		
