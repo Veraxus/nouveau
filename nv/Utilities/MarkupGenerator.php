@@ -37,7 +37,7 @@ class MarkupGenerator {
 	 *
 	 * @return array Returns an array where the defaults are overwritten with the new values
 	 */
-	protected static function atts_default( $defaults = array(), $atts = array() ) {
+	protected static function defaultAtts( $defaults = array(), $atts = array() ) {
 		return $atts = array_merge( $defaults, $atts );
 	}
 

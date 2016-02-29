@@ -15,7 +15,7 @@ class HtmlGen extends MarkupGenerator {
 	 * @return string
 	 */
 	public static function a( $href = '#', $atts = array(), $content = '', $echo = false ) {
-		$atts = parent::atts_default(
+		$atts = parent::defaultAtts(
 			array(
 				'href' => $href,
 			),
@@ -86,7 +86,7 @@ class HtmlGen extends MarkupGenerator {
 	 * @return string
 	 */
 	public static function img( $src = '', $atts = array(), $echo = false ) {
-		$atts = parent::atts_default(
+		$atts = parent::defaultAtts(
 			array(
 				'src' => ( ! empty( $src ) ) ? $src : '',
 				'alt' => '',
@@ -110,7 +110,7 @@ class HtmlGen extends MarkupGenerator {
 	 * @return string
 	 */
 	public static function input( $name = '', $atts = array(), $echo = false ) {
-		$atts = parent::atts_default(
+		$atts = parent::defaultAtts(
 			array(
 				'id'   => ( ! empty( $name ) ) ? $name : parent::randomId(),
 				'name' => ( ! empty( $name ) ) ? $name : parent::randomId(),
@@ -146,7 +146,7 @@ class HtmlGen extends MarkupGenerator {
 	 * @return string
 	 */
 	public static function inputCheckbox( $name = '', $atts = array(), $echo = false ) {
-		$atts = parent::atts_default(
+		$atts = parent::defaultAtts(
 			array(
 				'id'   => ( ! empty( $name ) ) ? $name : parent::randomId(),
 				'name' => ( ! empty( $name ) ) ? $name : parent::randomId(),
@@ -171,7 +171,7 @@ class HtmlGen extends MarkupGenerator {
 	 * @return string
 	 */
 	public static function inputRadio( $name = '', $atts = array(), $echo = false ) {
-		$atts = parent::atts_default(
+		$atts = parent::defaultAtts(
 			array(
 				'id'   => ( ! empty( $name ) ) ? $name : parent::randomId(),
 				'name' => ( ! empty( $name ) ) ? $name : parent::randomId(),
@@ -196,7 +196,7 @@ class HtmlGen extends MarkupGenerator {
 	 * @return string
 	 */
 	public static function label( $for = '', $atts = array(), $echo = false ) {
-		$atts = parent::atts_default(
+		$atts = parent::defaultAtts(
 			array(
 				'for' => ( ! empty( $for ) ) ? $for : '',
 			),

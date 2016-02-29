@@ -25,7 +25,7 @@ class Editor {
 		}
 
 		//Add our new style
-		$url .= NV::i()->getUrl( 'css', 'editor.css' );
+		$url .= NV::i()->get_url( 'css', 'editor.css' );
 
 		return $url;
 	}

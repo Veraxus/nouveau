@@ -120,7 +120,7 @@ class ThemeCustomize {
 
 		wp_enqueue_script(
 			'nouveau-themecustomizer', //Give the script an ID
-			NV::i()->getUrl( 'js', 'theme-customizer' . $min . '.js' ), //Define its JS file
+			NV::i()->get_url( 'js', 'theme-customizer' . $min . '.js' ), //Define its JS file
 			array( 'jquery', 'customize-preview' ), //Define dependencies
 			null, //Define a version (optional)
 			true //Specify whether to put in footer (leave this true)

@@ -22,8 +22,8 @@ class NV {
 	 * Initialize the NV class.
 	 */
 	protected function __construct() {
-		$this->setProperties();
-		$this->autoloader();
+		$this->set_properties();
+		$this->autoload();
 		$this->hooks();
 	}
 
@@ -78,7 +78,7 @@ class NV {
 	/**
 	 * Defines constants any globals needed for the theme
 	 */
-	protected function setProperties() {
+	protected function set_properties() {
 
 		$this->path         = new \stdClass;
 		$this->path->theme  = trailingslashit( get_template_directory() );
@@ -114,8 +114,8 @@ class NV {
 	 * @return string The requested theme system path
 	 * @throws \Exception if property is not found
 	 */
-	public function getPath( $prop = 'theme', $append = '' ) {
-		return $this->getProp( 'path', $prop ) . $append;
+	public function get_path( $prop = 'theme', $append = '' ) {
+		return $this->get_prop( 'path', $prop ) . $append;
 	}
 
 	/**
@@ -127,8 +127,8 @@ class NV {
 	 * @return string The requested theme URL
 	 * @throws \Exception if property is not found
 	 */
-	public function getUrl( $prop = 'theme', $append = '' ) {
-		return $this->getProp( 'url', $prop ) . $append;
+	public function get_url( $prop = 'theme', $append = '' ) {
+		return $this->get_prop( 'url', $prop ) . $append;
 	}
 
 	/**
@@ -140,17 +140,17 @@ class NV {
 	 * @return mixed
 	 * @throws \Exception if property is not found
 	 */
-	public function getProp( $prop, $subProp = false ) {
+	public function get_prop( $prop, $subProp = false ) {
 
 		if ( ! isset( $this->$prop ) ) {
-			throw new \Exception( "getProp() could not find \$this->{$prop} in " . __CLASS__ );
+			throw new \Exception( "get_prop() could not find \$this->{$prop} in " . __CLASS__ );
 		}
 
 		if ( $subProp && isset( $this->$prop->$subProp ) ) {
 			return $this->$prop->$subProp;
 		}
 
-		throw new \Exception( "getProp() could not find \$this->{$prop}->{$subProp} in " . __CLASS__ );
+		throw new \Exception( "get_prop() could not find \$this->{$prop}->{$subProp} in " . __CLASS__ );
 	}
 
 	/**
@@ -160,14 +160,14 @@ class NV {
 	 *
 	 * @return string
 	 */
-	public function getNs( $class = '' ) {
+	public function get_ns( $class = '' ) {
 		return '\\' . __NAMESPACE__ . '\\' . $class;
 	}
 
 	/**
 	 * Registers a PSR-4 compliant class autoloader.
 	 */
-	protected function autoloader() {
+	protected function autoload() {
 
 		spl_autoload_register(
 			function ( $class ) {

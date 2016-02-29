@@ -125,7 +125,7 @@ class Theme {
 	 * @param int   $depth
 	 */
 	public static function comments( $comment, $args = array(), $depth = 1 ) {
-		require NV::i()->getPath( 'parts', 'comments/comments.php' );
+		require NV::i()->get_path( 'parts', 'comments/comments.php' );
 	}
 
 
@@ -248,12 +248,12 @@ class Theme {
 			while ( $$var_name->have_posts() ) {
 				$$var_name->the_post();
 				do_action( "get_template_part_{$part}", $part, null );
-				$file = NV::i()->getPath() . $part . '.php';
+				$file = NV::i()->get_path() . $part . '.php';
 				include $file;
 			}
 		} else if ( ! empty( $no_part ) ) {
 			do_action( "get_template_part_{$part}", $part, null );
-			$file = NV::i()->getPath() . $no_part . '.php';
+			$file = NV::i()->get_path() . $no_part . '.php';
 			include $file;
 		}
 

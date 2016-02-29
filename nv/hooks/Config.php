@@ -19,7 +19,7 @@ class Config {
 	public static function after_setup_theme() {
 		
 		// Load available language pack
-		load_theme_textdomain( 'nvLangScope', NV::i()->getPath( 'langs' ) );
+		load_theme_textdomain( 'nvLangScope', NV::i()->get_path( 'langs' ) );
 
 		// Let WordPress generate the <title> tag for you
 		//add_theme_support( 'title-tag' );
@@ -46,7 +46,7 @@ class Config {
 				'height'                 => 250,
 				'flex-height'            => true,
 				'flex-width'             => true,
-				'default-image'          => NV::i()->getUrl( 'img', 'header.gif' ),
+				'default-image'          => NV::i()->get_url( 'img', 'header.gif' ),
 				'random-default'         => false,
 				'header-text'            => true,
 				'default-text-color'     => '',
@@ -121,7 +121,7 @@ class Config {
 		 ******************/
 
 		// Base stylesheet (compiled Foundation SASS)
-		wp_enqueue_style( 'app', NV::i()->getUrl( 'css', 'app.css' ) );
+		wp_enqueue_style( 'app', NV::i()->get_url( 'css', 'app.css' ) );
 
 		// WordPress's required styles.css
 		wp_enqueue_style( 'styles', get_bloginfo( 'stylesheet_url' ), array( 'app' ) );
@@ -135,16 +135,16 @@ class Config {
 
 		// Remove WordPress's jQuery and use our own
 		wp_deregister_script( 'jquery' );
-		wp_enqueue_script( 'jquery', NV::i()->getUrl( 'bower', 'jquery/dist/jquery' . $js_min . '.js' ), array(), false, true );
+		wp_enqueue_script( 'jquery', NV::i()->get_url( 'bower', 'jquery/dist/jquery' . $js_min . '.js' ), array(), false, true );
 
 		// Foundation what-input dependency
-		wp_enqueue_script( 'what-input', NV::i()->getUrl( 'bower', 'what-input/what-input' . $js_min . '.js' ), array(), false, true );
+		wp_enqueue_script( 'what-input', NV::i()->get_url( 'bower', 'what-input/what-input' . $js_min . '.js' ), array(), false, true );
 
 		// Load the complete version of Foundation
-		wp_enqueue_script( 'foundation', NV::i()->getUrl( 'bower', 'foundation-sites/dist/foundation' . $js_min . '.js' ), array( 'jquery', 'what-input' ), false, true );
+		wp_enqueue_script( 'foundation', NV::i()->get_url( 'bower', 'foundation-sites/dist/foundation' . $js_min . '.js' ), array( 'jquery', 'what-input' ), false, true );
 
 		// Load any custom javascript (remember to update dependencies if you changed the above)...
-		wp_enqueue_script( 'nv-theme', NV::i()->getUrl( 'js', 'app' . $js_min . '.js' ), array( 'foundation' ), false, true );
+		wp_enqueue_script( 'nv-theme', NV::i()->get_url( 'js', 'app' . $js_min . '.js' ), array( 'foundation' ), false, true );
 
 	}
 
@@ -160,10 +160,10 @@ class Config {
 		$js_min = ( WP_DEBUG ) ? '' : '.min';
 
 		// Base admin styles
-		wp_enqueue_style( 'nv-admin', NV::i()->getUrl( 'css', 'admin.css' ) );
+		wp_enqueue_style( 'nv-admin', NV::i()->get_url( 'css', 'admin.css' ) );
 
 		// Base admin scripts
-		wp_enqueue_script( 'nv-admin', NV::i()->getUrl( 'js', 'admin' . $js_min . '.js' ), array( 'jquery' ), false, false );
+		wp_enqueue_script( 'nv-admin', NV::i()->get_url( 'js', 'admin' . $js_min . '.js' ), array( 'jquery' ), false, false );
 	}
 
 
