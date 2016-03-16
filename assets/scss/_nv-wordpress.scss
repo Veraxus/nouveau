@@ -19,11 +19,24 @@
 
 /*
 =============================
- IMAGES CORRECTION
+ IMAGES
 =============================
 */
 .wp-caption {
     max-width: 100%;
+}
+.gallery {
+    @include clearfix;
+    @include grid-layout( 3, ".gallery-item" );
+    .gallery-item {
+        margin: 0;
+        & > * {
+            padding: .5rem;
+        }
+        .gallery-icon {
+            text-align: center;
+        }
+    }
 }
 
 /*
@@ -44,7 +57,7 @@
 }
 .alignright {
     display: inline;
-    float: right;
+    float: right; 
     margin-left: 1em;
 }
 

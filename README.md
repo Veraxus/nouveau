@@ -92,6 +92,9 @@ NOUVEAU comes with all text strings properly scoped for internationalization. To
 
 # Changelog #
 
+## 0.11.2 (2016-03-15) ##
+* Fixed a default callback
+
 ## 0.11.1 (2016-02-28) ##
 * Adjusted method names for a consistent coding standard: classes are CamelCase with no underscores, methods are lowercase with underscores encouraged.
 * Tweaks & improvements to MarkupGenerator

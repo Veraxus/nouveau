@@ -24,7 +24,7 @@ class Config {
 		load_theme_textdomain( 'nvLangScope', NV::i()->get_path( 'langs' ) );
 
 		// Let WordPress generate the <title> tag for you
-		//add_theme_support( 'title-tag' );
+		add_theme_support( 'title-tag' );
 
 		// Let WordPress automatically generate RSS feed urls
 		add_theme_support( 'automatic-feed-links' );
@@ -63,11 +63,14 @@ class Config {
 		add_theme_support(
 			'custom-background', 
 			array(
-				'default-image'             => '',
-				'default-color'             => '#fff',
-				'wp-head-callback'          => null,
-				'admin-head-callback'       => null,
-				'admin-preview-callback'    => null,
+				'default-image'          => '',
+				'default-repeat'         => 'repeat',
+				'default-position-x'     => 'left',
+				'default-attachment'     => 'scroll',
+				'default-color'          => '',
+				'wp-head-callback'       => '_custom_background_cb',
+				'admin-head-callback'    => '',
+				'admin-preview-callback' => '',
 			)
 		);
 
