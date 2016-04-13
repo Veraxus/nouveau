@@ -121,7 +121,7 @@ class NV {
 	}
 
 	/**
-	 * Gets a theme URL from the url property object.
+	 * Gets a theme URL from the 'url' property object.
 	 *
 	 * @param string $prop   Which sub-property to fetch. Defaults to 'theme'.
 	 * @param string $append Optional. Any string data, such as a file, to append to the returned url.

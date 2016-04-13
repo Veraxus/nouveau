@@ -5038,101 +5038,101 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/nv\/custom\/WalkerComments.php": {
+	"\/NV\/Custom\/WalkerComments.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/nv\/custom\/WalkerComments.php",
+		"inputAbbreviatedPath": "\/NV\/Custom\/WalkerComments.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/nv\/hooks\/Config.php": {
+	"\/NV\/Hooks\/Config.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/nv\/hooks\/Config.php",
+		"inputAbbreviatedPath": "\/NV\/Hooks\/Config.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/nv\/hooks\/Editor.php": {
+	"\/NV\/Hooks\/Editor.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/nv\/hooks\/Editor.php",
+		"inputAbbreviatedPath": "\/NV\/Hooks\/Editor.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/nv\/hooks\/ThemeCustomize.php": {
+	"\/NV\/Hooks\/ThemeCustomize.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/nv\/hooks\/ThemeCustomize.php",
+		"inputAbbreviatedPath": "\/NV\/Hooks\/ThemeCustomize.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/nv\/NV.php": {
+	"\/NV\/NV.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/nv\/NV.php",
+		"inputAbbreviatedPath": "\/NV\/NV.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/nv\/Utilities\/HtmlGen.php": {
+	"\/NV\/Utilities\/HtmlGen.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/nv\/Utilities\/HtmlGen.php",
+		"inputAbbreviatedPath": "\/NV\/Utilities\/HtmlGen.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/nv\/Utilities\/MarkupGenerator.php": {
+	"\/NV\/Utilities\/MarkupGenerator.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/nv\/Utilities\/MarkupGenerator.php",
+		"inputAbbreviatedPath": "\/NV\/Utilities\/MarkupGenerator.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/nv\/Utilities\/Php.php": {
+	"\/NV\/Utilities\/Php.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/nv\/Utilities\/Php.php",
+		"inputAbbreviatedPath": "\/NV\/Utilities\/Php.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/nv\/Utilities\/RequirementsCheck.php": {
+	"\/NV\/Utilities\/RequirementsCheck.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/nv\/Utilities\/RequirementsCheck.php",
+		"inputAbbreviatedPath": "\/NV\/Utilities\/RequirementsCheck.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/nv\/Utilities\/Theme.php": {
+	"\/NV\/Utilities\/Theme.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/nv\/Utilities\/Theme.php",
+		"inputAbbreviatedPath": "\/NV\/Utilities\/Theme.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/nv\/Utilities\/WordPress.php": {
+	"\/NV\/Utilities\/WordPress.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/nv\/Utilities\/WordPress.php",
+		"inputAbbreviatedPath": "\/NV\/Utilities\/WordPress.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
