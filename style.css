@@ -6,13 +6,13 @@ Donate link: http://nouveauframework.com/
 Author URI: http://nouveauframework.com/  
 Tags: framework, php5.3  
 Description: A rapid-development theme framework built specifically for WordPress and PHP 5.3+ (Developers Only)  
-Version: 0.11.0  
+Version: 0.11.3  
 Foundation version: 6.2  
-Requires at least: 4.3  
-Tested up to: 4.5  
+Requires at least: 4.4  
+Tested up to: 4.6  
 Stable tag: 0.11.00  
 License: GNU MIT & GPL2+  
-License URI: LICENSE  
+License URI: LICENSE-GPL2 && LICENSE-MIT
 */
 
 
@@ -23,13 +23,8 @@ READ ME!!!
 This is a required file for all WordPress themes, so you can't just delete it.
 
 USE OLD FASIONED CSS:
-If you don't want to use SASS (or don't know what SASS is) - then you can go ahead
-and just work in good, old-fashioned CSS within this very file.
+If you don't want to use SASS (or don't know what SASS is) - then you can go ahead and just work in good, old-fashioned CSS within this very file.
 
-TO USE SASS/COMPASS:
-The _compass folder is a pre-configured Zurb Foundation Compass project.
-
-Keep in mind that if you DO want to use SASS/Compass, you will still need to install 
-the gems for Compass *and* the Zurb Foundation framework (even if you want to use 
-a compiler like CodeKit). More info here: http://foundation.zurb.com/docs/gem-install.php
+TO USE SASS:
+Keep in mind that if you DO want to use SASS, you will still need to setup a compiler (e.g. libsass, CodeKit, Gulp, etc) *and* the Zurb Foundation framework (even if you want to use a compiler like CodeKit).
 */

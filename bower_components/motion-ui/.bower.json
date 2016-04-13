@@ -32,7 +32,7 @@
     "tag": "v1.2.2",
     "commit": "7f1591d629501f6ec2af3e29368299776ac87e60"
   },
-  "_source": "git://github.com/zurb/motion-ui.git",
+  "_source": "https://github.com/zurb/motion-ui.git",
   "_target": "~1.2.2",
   "_originalSource": "motion-ui"
 }

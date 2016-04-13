@@ -15,6 +15,7 @@ class Theme {
 	 * 
 	 * Will display Foundation-native pagination for archives.
 	 * 
+	 * @todo Implement Foundation-friendly markup
 	 * @param array $args
 	 */
 	public static function archive_nav( $args = array() ) {
@@ -26,6 +27,7 @@ class Theme {
 	 * 
 	 * Will display Foundation-native pagination for a paginated post/article.
 	 *
+	 * @todo Implement Foundation-friendly markup
 	 * @param array $args
 	 */
 	public static function article_page_nav( $args = array() ) {
@@ -36,6 +38,8 @@ class Theme {
 	/**
 	 * Can be used to output breadcrumbs. Implements Foundation's breadcrumb structure.
 	 *
+	 * @todo Evaluate to determine if this can be done in a more clean way
+	 * 
 	 * @global \WP_Query $wp_query
 	 * @global object    $post
 	 *
@@ -234,6 +238,8 @@ class Theme {
 	 *
 	 * Note that template parts are loaded by include, NOT by get_template_part(). This is because get_template_part()
 	 * blocks access to the custom query variable unless a global statement pulls it into the template.
+	 * 
+	 * @todo Ensure there's a way to use pagination inside the custom loop
 	 *
 	 * @param mixed  $custom_query Required. Either a WP_Query object or an array of arguments to perform a new query.
 	 * @param string $part         Required. The theme-relative template part to load.

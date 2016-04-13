@@ -3,15 +3,15 @@
 **Donate link:** http://nouveauframework.org/  
 **Author URI:** http://nouveauframework.org/  
 **Tags:** framework, php5.3  
-**Version:** 0.11.2  
+**Version:** 0.11.3  
 **Foundation version:** 6.2  
 **Requires at least:** 4.4  
-**Tested up to:** 4.5  
-**Stable tag:** 0.11.2  
+**Tested up to:** 4.6  
+**Stable tag:** 0.11.3  
 **Text Domain:** nvLangScope  
 **License:** MIT & GPL2+  
 
-NOUVEAU is an open-source, rapid-development theme & plugin framework for WordPress, built on Zurb Foundation 6 and PHP 5.3. Work fast. Be awesome.
+NOUVEAU is an open-source, rapid-development theme & plugin framework for WordPress, built on Zurb Foundation 6 and PHP 5.3+. Work fast. Be awesome.
 
 ## Description ##
 
@@ -91,6 +91,9 @@ These plugins were created by developers, for developers. We hope they make your
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
 # Changelog #
+
+## 0.11.3 (2016-04-13) ##
+* Updated Foundation for Sites to 6.2.1
 
 ## 0.11.2 (2016-03-15) ##
 * Fixed a default callback
