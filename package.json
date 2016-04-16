@@ -1,13 +1,17 @@
 {
-  "name": "foundation-sites-template",
+  "name": "nouveau-wordpress-theme-framework",
   "version": "1.0.0",
-  "description": "Basic template for a new Foundation for Sites project.",
+  "description": "Basic template for a new WordPress theme using Foundation for Sites.",
+  "author": "Matt van Andel <matt@mattvanandel.com>",
   "main": "gulpfile.js",
   "devDependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-load-plugins": "^1.1.0",
-    "gulp-sass": "^2.1.0"
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-sourcemaps": "^1.5.2"
   },
   "scripts": {
     "start": "gulp",
@@ -15,14 +19,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zurb/foundation-sites-template.git"
+    "url": "https://github.com/Veraxus/nouveau.git"
   },
   "bugs": {
-    "url": "https://github.com/zurb/foundation-sites/issues",
-    "email": "foundation@zurb.com"
+    "url": "https://github.com/Veraxus/nouveau/issues",
+    "email": "matt@mattvanandel.com"
   },
-  "author": "ZURB <foundation@zurb.com>",
-  "license": "MIT",
+  "license": "MIT & GPL-2.0",
   "private": true,
   "dependencies": {
     "gulp-autoprefixer": "^3.1.0"
