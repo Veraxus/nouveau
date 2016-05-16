@@ -7,5 +7,5 @@
 */
 
 @function image-url( $url ) {
-    @return url('../images/#{$url}');
+    @return url('../img/#{$url}');
 }
