@@ -92,7 +92,7 @@ NOUVEAU comes with all text strings properly scoped for internationalization. To
 
 # Changelog #
 
-## 0.11.5 ##
+## 0.11.5 (2016-09-14) ##
 * Updated Foundation to 6.2.3
 
 ## 0.11.4 (2016-04-16) ##
