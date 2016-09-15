@@ -3,11 +3,11 @@
 **Donate link:** http://nouveauframework.org/  
 **Author URI:** http://nouveauframework.org/  
 **Tags:** framework, php5.3  
-**Version:** 0.11.4  
-**Foundation version:** 6.2.1  
+**Version:** 0.11.5  
+**Foundation version:** 6.2.3  
 **Requires at least:** 4.4  
-**Tested up to:** 4.6  
-**Stable tag:** 0.11.4  
+**Tested up to:** 4.7  
+**Stable tag:** 0.11.5  
 **Text Domain:** nvLangScope  
 **License:** MIT & GPL2+  
 
@@ -91,6 +91,9 @@ These plugins were created by developers, for developers. We hope they make your
 NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly to a global search and replace for the string `nvLangScope` and you'll be up and running in no time.
 
 # Changelog #
+
+## 0.11.5 ##
+* Updated Foundation to 6.2.3
 
 ## 0.11.4 (2016-04-16) ##
 * Added Gulp support (although if you're not using CodeKit, you really are doing it wrong). To use Gulp with NOUVEAU, switch to the theme directory and run `npm install`, then `npm start`

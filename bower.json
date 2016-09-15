@@ -8,8 +8,9 @@
   "license": "MIT & GPL-2.0",
   "homepage": "http://nouveauframework.org",
   "dependencies": {
-    "foundation-sites": "~6.2.1",
-    "motion-ui": "~1.2.2"
+    "foundation-sites": "^6.2.3",
+    "motion-ui": "~1.2.2",
+    "what-input": "^3.0.0"
   },
   "ignore": [
     "**/.*",
@@ -19,5 +20,8 @@
     "test",
     "tests"
   ],
-  "private": true
+  "private": true,
+  "resolutions": {
+    "what-input": "^3.0.0"
+  }
 }
