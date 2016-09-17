@@ -156,7 +156,7 @@ class Theme {
 	 * @param string $name The name of the specialised footer.
 	 * @param string $path
 	 */
-	public static function get_footer( $name = null, $path = 'layout/' ) {
+	public static function get_footer( $name = null, $path = 'parts/layout/' ) {
 		do_action( 'get_footer', $name );
 
 		//Ensure path has closing slash
@@ -190,7 +190,7 @@ class Theme {
 	 * @param mixed  $name The name of the specialised header (note: will be prepended with "header-")
 	 * @param string $path The theme-relative path to the header file.
 	 */
-	public static function get_header( $name = null, $path = 'layout/' ) {
+	public static function get_header( $name = null, $path = 'parts/layout/' ) {
 		do_action( 'get_header', $name );
 
 		//Ensure path has closing slash
