@@ -35,9 +35,9 @@ if ( have_comments() ) { ?>
     <?php include( NV_PARTS . '/comments/pagination.php' ); ?>
 
     <section class="comments-list">
-        <?php wp_list_comments(array(
+        <?php wp_list_comments( [
             'walker' => new \NV\Custom\WalkerComments()
-        )); ?>
+        ] ); ?>
     </section>
 
     <?php include( NV_PARTS . '/comments/pagination.php' ); ?>

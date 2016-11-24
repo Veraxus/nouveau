@@ -71,9 +71,9 @@ class Editor {
 	 */
 	public static function settings_simple( $settings ) {
 		//First, we define the styles we want to add in format 'Style Name' => 'css classes'
-		$classes = array(
+		$classes = [
 			__( 'Test', 'nvLangScope' ) => 'warnme',
-		);
+		];
 
 		//Delimit styles by semicolon in format 'Title=classes;' so TinyMCE can use it
 		if ( ! empty( $settings['theme_advanced_styles'] ) ) {
@@ -149,7 +149,7 @@ class Editor {
 		 * @link http://www.tinymce.com/wiki.php/Configuration:formats
 		 * @var array
 		 */
-		$styles = array(
+		$styles = [
 
 			/*
 			//Example: An inline style format
@@ -193,50 +193,50 @@ class Editor {
 			),
 			*/
 
-			array(
+			[
 				'title'   => __( 'Section', 'nvLangScope' ),
 				'block'   => 'section',
 				'wrapper' => true,
 				'exact'   => true,
-			),
-			array(
+			],
+			[
 				'title'   => __( 'Foundation Row', 'nvLangScope' ),
 				'block'   => 'div',
 				'classes' => 'row',
 				'wrapper' => true,
 				'exact'   => true,
-			),
-			array(
+			],
+			[
 				'title'   => __( 'Column (Small 12)', 'nvLangScope' ),
 				'block'   => 'div',
 				'classes' => 'small-12 columns',
 				'wrapper' => true,
 				'exact'   => true,
-			),
-			array(
+			],
+			[
 				'title'   => __( 'Column (Small 6)', 'nvLangScope' ),
 				'block'   => 'div',
 				'classes' => 'small-6 columns',
 				'wrapper' => true,
 				'exact'   => true,
-			),
-			array(
+			],
+			[
 				'title'    => __( 'Medium 2 (Edit Column)', 'nvLangScope' ),
 				'selector' => '.columns',
 				'classes'  => 'medium-2',
-			),
-			array(
+			],
+			[
 				'title'    => __( 'Medium 4 (Edit Column)', 'nvLangScope' ),
 				'selector' => '.columns',
 				'classes'  => 'medium-4',
-			),
-			array(
+			],
+			[
 				'title'    => __( 'Medium 6 (Edit Column)', 'nvLangScope' ),
 				'selector' => '.columns',
 				'classes'  => 'medium-6',
-			),
+			],
 
-		);
+		];
 
 		//Encode our array as JSON, which automagically makes it TinyMCE compatible
 		$settings['style_formats'] = json_encode( $styles );

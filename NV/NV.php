@@ -13,13 +13,13 @@ class NV {
 
 	/** @var object An object containing important theme directory paths */
 	public $path;
-	
+
 	/** @var object An object containing important theme urls */
 	public $url;
-	
+
 	/** @var int The max width to pass to WordPress' content editor */
 	public $content_width = 1200;
-	
+
 	/**
 	 * Initialize the NV class.
 	 */
@@ -33,48 +33,48 @@ class NV {
 	 * Initializes default hooks
 	 */
 	protected function hooks() {
-		
+
 		// Setup general theme options
-		add_action( 'after_setup_theme', array( '\NV\Theme\Hooks\Config', 'after_setup_theme' ) );
+		add_action( 'after_setup_theme', [ '\NV\Theme\Hooks\Config', 'after_setup_theme' ] );
 
 		// Load styles and scripts
-		add_action( 'wp_enqueue_scripts', array( '\NV\Theme\Hooks\Config', 'enqueue_assets' ) );
+		add_action( 'wp_enqueue_scripts', [ '\NV\Theme\Hooks\Config', 'enqueue_assets' ] );
 
 		// Load styles and scripts
-		add_action( 'admin_enqueue_scripts', array( '\NV\Theme\Hooks\Config', 'enqueue_admin_assets' ) );
+		add_action( 'admin_enqueue_scripts', [ '\NV\Theme\Hooks\Config', 'enqueue_admin_assets' ] );
 
 		// Register sidebars
-		add_action( 'widgets_init', array( '\NV\Theme\Hooks\Config', 'sidebars' ) );
+		add_action( 'widgets_init', [ '\NV\Theme\Hooks\Config', 'sidebars' ] );
 
 		// Any customizations to the body_class() function
-		add_filter( 'body_class', array( '\NV\Theme\Hooks\Config', 'body_class' ) );
+		add_filter( 'body_class', [ '\NV\Theme\Hooks\Config', 'body_class' ] );
 
 		// Change WordPress' .sticky css class to .stickied to prevent conflict with Foundation
-		add_filter( 'post_class', array( '\NV\Theme\Hooks\Config', 'sticky_post_class' ) );
+		add_filter( 'post_class', [ '\NV\Theme\Hooks\Config', 'sticky_post_class' ] );
 
 
 		/** THEME CUSTOMIZATION *******************************************************/
 
 		// Setup the theme customizer options
-		add_action( 'customize_register', array( '\NV\Theme\Hooks\ThemeCustomize', 'register' ) );
+		add_action( 'customize_register', [ '\NV\Theme\Hooks\ThemeCustomize', 'register' ] );
 
 		// Load the customized style data on the frontend
-		add_action( 'wp_head', array( '\NV\Theme\Hooks\ThemeCustomize', 'header_output' ) );
+		add_action( 'wp_head', [ '\NV\Theme\Hooks\ThemeCustomize', 'header_output' ] );
 
 		// Load any javascript needed for live preview updates
-		add_action( 'customize_preview_init', array( '\NV\Theme\Hooks\ThemeCustomize', 'live_preview' ) );
+		add_action( 'customize_preview_init', [ '\NV\Theme\Hooks\ThemeCustomize', 'live_preview' ] );
 
 
 		/** INTEGRATE THEME WITH TINYMCE EDITOR **************************************/
 
 		// Adds custom stylesheet to the editor window so styling preview is accurate ( can also use add_editor_style() )
-		add_filter( 'mce_css', array( '\NV\Theme\Hooks\Editor', 'style' ) );
+		add_filter( 'mce_css', [ '\NV\Theme\Hooks\Editor', 'style' ] );
 
 		// Add a new "Styles" dropdown to the TinyMCE editor toolbar
-		add_filter( 'mce_buttons_2', array( '\NV\Theme\Hooks\Editor', 'buttons' ) );
+		add_filter( 'mce_buttons_2', [ '\NV\Theme\Hooks\Editor', 'buttons' ] );
 
 		// Populate our new "Styles" dropdown with options/content
-		add_filter( 'tiny_mce_before_init', array( '\NV\Theme\Hooks\Editor', 'settings_advanced' ) );
+		add_filter( 'tiny_mce_before_init', [ '\NV\Theme\Hooks\Editor', 'settings_advanced' ] );
 	}
 
 	/**
@@ -94,17 +94,39 @@ class NV {
 		$this->path->img    = $this->path->assets . 'img/';
 		$this->path->langs  = $this->path->assets . 'languages/';
 
-		$this->url          = new \stdClass;
-		$this->url->theme   = trailingslashit( get_template_directory_uri() );
-		$this->url->bower   = $this->url->theme . 'bower_components/';
-		$this->url->assets  = $this->url->theme . 'assets/';
-		$this->url->img     = $this->url->assets . 'images/';
-		$this->url->css     = $this->url->assets . 'css/';
-		$this->url->js      = $this->url->assets . 'js/';
+		$this->url         = new \stdClass;
+		$this->url->theme  = trailingslashit( get_template_directory_uri() );
+		$this->url->bower  = $this->url->theme . 'bower_components/';
+		$this->url->assets = $this->url->theme . 'assets/';
+		$this->url->img    = $this->url->assets . 'images/';
+		$this->url->css    = $this->url->assets . 'css/';
+		$this->url->js     = $this->url->assets . 'js/';
 
 		if ( ! isset( $GLOBALS['content_width'] ) ) {
 			$GLOBALS['content_width'] = $this->content_width;
 		}
+	}
+
+	/**
+	 * Returns JS enqueue path based on WP_DEBUG setting. If WP_DEBUG is true, the src version will be used, otherwise
+	 * the minified version will be used. Assumes src files are in /assets/js/src/ and min files are in /assets/js/
+	 *
+	 * @param string $filename The minified filename to process
+	 * @param string $path     The url path to pass to get_url(), defaults to 'js'
+	 *
+	 * @return string Returns
+	 */
+	public function get_js_url( $filename, $path = 'js' ) {
+
+		// Use theme's src js if debug is true
+		if ( WP_DEBUG && 'js' === $path ) {
+			// Strip the .min
+			$filename = str_replace( '.min.js', '.js', $filename );
+			// Add the src directory
+			$filename = preg_replace( '|([^/]+).js$|', 'src/$1.js', $filename );
+		}
+
+		return $this->get_url( $path, $filename );
 	}
 
 	/**
@@ -157,7 +179,7 @@ class NV {
 
 	/**
 	 * Returns the plugin's root namespace path, or prepends the plugin namespace(s) to the provided classname string.
-	 * 
+	 *
 	 * @param string $class The fully qualified class name
 	 *
 	 * @return string

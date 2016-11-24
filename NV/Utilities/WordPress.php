@@ -170,10 +170,10 @@ class WordPress {
 	 *
 	 * @return bool
 	 */
-	public static function update_dashboard_widget_options( $widget_id, $args = array() ) {
+	public static function update_dashboard_widget_options( $widget_id, $args = [] ) {
 		$opts = get_option( 'dashboard_widget_options' ); //Fetch ALL dashboard widget options from the db...
 
-		$w_opts = $opts[$widget_id] ?: array(); //Get just our widget's options, or set empty array
+		$w_opts = $opts[$widget_id] ?: []; //Get just our widget's options, or set empty array
 
 		$opts[$widget_id] = array_merge( $w_opts, $args ); //Merge new options with existing ones, and add it back to the widgets array
 

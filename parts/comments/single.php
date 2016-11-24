@@ -4,7 +4,7 @@
  *
  * This is used by the NV comment walker to output a single comment.
  */
-$classes = array('comment');
+$classes = [ 'comment' ];
 if ( $args['has_children'] ) {
     $classes[] = 'parent';
 }
@@ -37,6 +37,6 @@ if ( $args['has_children'] ) {
     </div>
 
     <div class="reply">
-        <?php comment_reply_link( array_merge( $args, array( 'add_below' => 'div-comment', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+        <?php comment_reply_link( array_merge( $args, [ 'add_below' => 'div-comment', 'depth' => $depth, 'max_depth' => $args['max_depth'] ] ) ); ?>
     </div>
 </article>

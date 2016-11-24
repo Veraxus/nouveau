@@ -1,12 +1,14 @@
 {
   "name": "what-input",
-  "version": "3.0.0",
+  "version": "4.0.3",
   "homepage": "https://github.com/ten1seven/what-input",
-  "authors": [
-    "Jeremy Fields <jeremy.fields@viget.com>"
-  ],
+  "repository": {
+    "url": "https://github.com/ten1seven/what-input.git",
+    "type": "git"
+  },
+  "author": "Jeremy Fields <jeremy.fields@viget.com>",
   "description": "A global utility for tracking the current input method (mouse, keyboard or touch).",
-  "main": "what-input.js",
+  "main": "dist/what-input.js",
   "keywords": [
     "accessibility",
     "a11y",
@@ -20,9 +22,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/ten1seven/what-input.git"
-  }
+  ]
 }

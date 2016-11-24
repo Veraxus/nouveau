@@ -4,13 +4,13 @@ Author: Veraxus
 Contributors: Veraxus  
 Donate link: http://nouveauframework.com/  
 Author URI: http://nouveauframework.com/  
-Tags: framework, php5.3  
-Description: A rapid-development theme framework built specifically for WordPress and PHP 5.3+ (Developers Only)  
-Version: 0.11.4  
-Foundation version: 6.2.1  
-Requires at least: 4.4  
-Tested up to: 4.6  
-Stable tag: 0.11.4  
+Tags: framework, php5.6  
+Description: A rapid-development theme framework built specifically for WordPress and PHP 5.6+ (Developers Only)  
+Version: 0.12  
+Foundation version: 6.2.4  
+Requires at least: 4.6  
+Tested up to: 4.7  
+Stable tag: 0.12  
 License: GNU MIT & GPL2+  
 License URI: LICENSE-GPL2 && LICENSE-MIT
 */
@@ -26,5 +26,6 @@ USE OLD FASIONED CSS:
 If you don't want to use SASS (or don't know what SASS is) - then you can go ahead and just work in good, old-fashioned CSS within this very file.
 
 TO USE SASS:
-Keep in mind that if you DO want to use SASS, you will still need to setup a compiler (e.g. libsass, CodeKit, Gulp, etc) *and* the Zurb Foundation framework (even if you want to use a compiler like CodeKit).
+Keep in mind that if you DO want to use SASS, you will still need to setup a compiler (e.g. libsass, CodeKit, Gulp, etc) *and* the Zurb Foundation framework (even if you want to use a compiler like CodeKit). To use with Gulp, cd to your NOUVEAU theme directory and run
+`npm install` then `npm start`.
 */

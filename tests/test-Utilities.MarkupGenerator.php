@@ -3,12 +3,12 @@
 class MarkupGenTest extends WP_UnitTestCase {
 	
 	function test_markupgen_div() {
-		$arr1 = array(
+		$arr1 = [
 			'tag'     => 'div',
 			'content' => 'This is content',
-			'atts'    => array( 'class' => array( 'class1', 'class2' ) ),
+			'atts'    => [ 'class' => [ 'class1', 'class2' ] ],
 			'solo'    => false,
-		);
+		];
 		
 		$str1 = '<div class="class1 class2">This is content</div>';
 		
@@ -19,12 +19,12 @@ class MarkupGenTest extends WP_UnitTestCase {
 	}
 
 	function test_markupgen_img() {
-		$arr2 = array(
+		$arr2 = [
 			'tag'     => 'img',
 			'content' => null,
-			'atts'    => array( 'src' => 'img.png', 'alt' => 'Description' ),
+			'atts'    => [ 'src' => 'img.png', 'alt' => 'Description' ],
 			'solo'    => true,
-		);
+		];
 
 		$str2 = '<img src="img.png" alt="Description" />';
 
@@ -34,18 +34,18 @@ class MarkupGenTest extends WP_UnitTestCase {
 	}
 
 	function test_markupgen_recurse() {
-		$arr2 = array(
+		$arr2 = [
 			'tag'     => 'img',
 			'content' => null,
-			'atts'    => array( 'src' => 'img.png', 'alt' => 'Description' ),
+			'atts'    => [ 'src' => 'img.png', 'alt' => 'Description' ],
 			'solo'    => true,
-		);
-		$arr3 = array(
+		];
+		$arr3 = [
 			'tag'     => 'div',
 			'content' => $arr2,
-			'atts'    => array( 'class' => array( 'class1', 'class2' ) ),
+			'atts'    => [ 'class' => [ 'class1', 'class2' ] ],
 			'solo'    => false,
-		);
+		];
 
 		$str2 = '<img src="img.png" alt="Description" />';
 		$str3 = '<div class="class1 class2">' . $str2 . '</div>';

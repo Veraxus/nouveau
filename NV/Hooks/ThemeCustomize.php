@@ -40,12 +40,12 @@ class ThemeCustomize {
 		// 2) Register new settings to the WP database...
 		$wp_customize->add_setting(
 			'nouveau_theme_options[link_textcolor]',    // Give it a SERIALIZED name (so all theme settings can live under one db record)
-			array(                                      // Pass an args array...
+			[                                      // Pass an args array...
 				'default'    => '#2BA6CB',              // Default setting/value to save
 				'type'       => 'option',               // Is this an 'option' or a 'theme_mod'?
 				'capability' => 'edit_theme_options',   // Optional. Special permissions for accessing this setting.
 				'transport'  => 'postMessage',          // What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
-			)
+			]
 		);
 
 
@@ -54,12 +54,12 @@ class ThemeCustomize {
 			new \WP_Customize_Color_Control(                                // Instantiate the color control class
 				$wp_customize,                                              // Pass the $wp_customize object (required)
 				'nouveau_link_textcolor',                                   // Set a unique ID for the control
-				array(                                                      // Pass an args array....
+				[                                                      // Pass an args array....
 					'label'    => __( 'Link Color', 'nvLangScope' ),        // Admin-visible name of the control
 					'section'  => 'colors',                                 // ID of the section this control should render in (can be one of yours, or a WordPress default section)
 					'settings' => 'nouveau_theme_options[link_textcolor]',  // Which setting to load and manipulate (serialized is okay)
 					'priority' => 10,                                       // Determines the order this control appears in for the specified section
-				)
+				]
 			)
 		);
 
@@ -123,7 +123,7 @@ class ThemeCustomize {
 		wp_enqueue_script(
 			'nouveau-themecustomizer', //Give the script an ID
 			NV::i()->get_url( 'js', 'theme-customizer' . $min . '.js' ), //Define its JS file
-			array( 'jquery', 'customize-preview' ), //Define dependencies
+			[ 'jquery', 'customize-preview' ], //Define dependencies
 			null, //Define a version (optional)
 			true //Specify whether to put in footer (leave this true)
 		);

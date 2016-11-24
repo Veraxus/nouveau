@@ -39,7 +39,7 @@ class MarkupGenerator {
 	 *
 	 * @return array Returns an array where the defaults are overwritten with the new values
 	 */
-	protected static function default_atts( $defaults = array(), $atts = array() ) {
+	protected static function default_atts( $defaults = [], $atts = [] ) {
 		return array_merge( $defaults, $atts );
 	}
 
@@ -54,14 +54,14 @@ class MarkupGenerator {
 	 *
 	 * @return string Returns the assembled element html.
 	 */
-	public static function gen( $tag, $content = '', $atts = array(), $is_solo = false ) {
+	public static function gen( $tag, $content = '', $atts = [], $is_solo = false ) {
 		return self::gen_array(
-			array(
+			[
 				'tag'     => $tag,
 				'content' => $content,
 				'atts'    => $atts,
 				'solo'    => $is_solo,
-			)
+			]
 		);
 	}
 
@@ -76,12 +76,12 @@ class MarkupGenerator {
 	public static function gen_array( $args ) {
 
 		$args = self::default_atts(
-			array(
+			[
 				'tag'     => '',
 				'content' => '',
-				'atts'    => array(),
+				'atts'    => [],
 				'solo'    => false,
-			),
+			],
 			$args
 		);
 
@@ -134,7 +134,7 @@ class MarkupGenerator {
 	 * @return string The full HTML string with closing tag.
 	 */
 	public static function wrap( $tag, $content = '' ) {
-		$match = array();
+		$match = [];
 
 		preg_match( '/^\<([a-zA-Z]+)/', $tag, $match );
 

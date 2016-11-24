@@ -15,6 +15,8 @@ class Config {
 	 * Sets up basic theme features.
 	 *
 	 * Used by action hook: 'after_setup_theme'
+	 * 
+	 * @see https://developer.wordpress.org/reference/hooks/after_setup_theme/
 	 *
 	 * @uses self::languages();
 	 */
@@ -31,19 +33,19 @@ class Config {
 
 		// Enable HTML5 support
 		add_theme_support( 'html5', 
-			array( 
+			[ 
 				'comment-list', 
 				'comment-form', 
 				'search-form', 
 				'gallery', 
 				'caption',
-			) 
+			] 
 		);
 
 		// Add custom header support
 		add_theme_support(
 			'custom-header', 
-			array(
+			[
 				'width'         		 => 1200,
 				'height'                 => 250,
 				'flex-height'            => true,
@@ -56,13 +58,13 @@ class Config {
 				'wp-head-callback'       => null,
 				'admin-head-callback'    => null,
 				'admin-preview-callback' => null,
-			)
+			]
 		);
 
 		// Customize your background
 		add_theme_support(
 			'custom-background', 
-			array(
+			[
 				'default-image'          => '',
 				'default-repeat'         => 'repeat',
 				'default-position-x'     => 'left',
@@ -71,7 +73,7 @@ class Config {
 				'wp-head-callback'       => '_custom_background_cb',
 				'admin-head-callback'    => '',
 				'admin-preview-callback' => '',
-			)
+			]
 		);
 
 		// Enable support for blog post thumbnails
@@ -80,7 +82,7 @@ class Config {
 		// Enable support for post formats
 		add_theme_support(
 			'post-formats', 
-			array(
+			[
 				'aside',
 				'audio',
 				'chat',
@@ -90,7 +92,7 @@ class Config {
 				'quote',
 				'status',
 				'video',
-			)
+			]
 		);
 
 		// Enable support for WooCommerce
@@ -118,6 +120,8 @@ class Config {
 	 * This is current set up for the majority of use-cases, and you can uncomment additional lines if you want to
 	 *
 	 * Used by action hook: 'wp_enqueue_scripts'
+	 * 
+	 * @see https://developer.wordpress.org/reference/hooks/wp_enqueue_scripts/
 	 */
 	public static function enqueue_assets() {
 
@@ -129,27 +133,24 @@ class Config {
 		wp_enqueue_style( 'app', NV::i()->get_url( 'css', 'app.css' ) );
 
 		// WordPress's required styles.css
-		wp_enqueue_style( 'styles', get_bloginfo( 'stylesheet_url' ), array( 'app' ) );
+		wp_enqueue_style( 'styles', get_bloginfo( 'stylesheet_url' ), [ 'app' ] );
 
 		/******************
 		 * SCRIPTS / JS
 		 ******************/
 
-		// Toggle .min on js suffixes if debug
-		$js_min = ( WP_DEBUG ) ? '' : '.min';
-
 		// Remove WordPress's jQuery and use our own
 		wp_deregister_script( 'jquery' );
-		wp_enqueue_script( 'jquery', NV::i()->get_url( 'bower', 'jquery/dist/jquery' . $js_min . '.js' ), array(), false, true );
+		wp_enqueue_script( 'jquery', NV::i()->get_js_url( 'jquery/dist/jquery.min.js', 'bower' ), [], false, true );
 
 		// Foundation what-input dependency
-		wp_enqueue_script( 'what-input', NV::i()->get_url( 'bower', 'what-input/what-input' . $js_min . '.js' ), array(), false, true );
+		wp_enqueue_script( 'what-input', NV::i()->get_js_url( 'what-input/dist/what-input.min.js', 'bower' ), [], false, true );
 
 		// Load the complete version of Foundation
-		wp_enqueue_script( 'foundation', NV::i()->get_url( 'bower', 'foundation-sites/dist/foundation' . $js_min . '.js' ), array( 'jquery', 'what-input' ), false, true );
+		wp_enqueue_script( 'foundation', NV::i()->get_js_url( 'foundation-sites/dist/foundation.min.js', 'bower' ), [ 'jquery', 'what-input' ], false, true );
 
 		// Load any custom javascript (remember to update dependencies if you changed the above)...
-		wp_enqueue_script( 'nv-theme', NV::i()->get_url( 'js', 'app' . $js_min . '.js' ), array( 'foundation' ), false, true );
+		wp_enqueue_script( 'nv-theme', NV::i()->get_js_url( 'app.min.js' ), [ 'foundation' ], false, true );
 
 	}
 
@@ -158,27 +159,30 @@ class Config {
 	 * Enqueues styles and scripts for the admin section
 	 *
 	 * Used by action hook: 'admin_enqueue_scripts'
+	 * 
+	 * @see https://developer.wordpress.org/reference/hooks/admin_enqueue_scripts/
 	 */
 	public static function enqueue_admin_assets() {
-
-		// Toggle .min on js suffixes if debug
-		$js_min = ( WP_DEBUG ) ? '' : '.min';
 
 		// Base admin styles
 		wp_enqueue_style( 'nv-admin', NV::i()->get_url( 'css', 'admin.css' ) );
 
 		// Base admin scripts
-		wp_enqueue_script( 'nv-admin', NV::i()->get_url( 'js', 'admin' . $js_min . '.js' ), array( 'jquery' ), false, false );
+		wp_enqueue_script( 'nv-admin', NV::i()->get_js_url( 'admin.min.js' ), [ 'jquery' ], false, false );
 	}
 
 
 	/**
-	 * Allows further customizations of the body_class() function.
+	 * Allows customization of classes output to the <body> element via WordPress' body_class() function.
+	 * 
+	 * Used by filter hook: 'body_class'
+	 * 
+	 * @see https://codex.wordpress.org/Plugin_API/Filter_Reference/body_class
 	 *
-	 * @param $classes
-	 * @param $args
+	 * @param array $classes
+	 * @return array The proccesses classes array
 	 */
-	public static function body_class( $classes, $args = '' ) {
+	public static function body_class( $classes ) {
 		//Do stuff!
 		return $classes;
 	}
@@ -187,12 +191,14 @@ class Config {
 	/**
 	 * Registers any sidebars that need to be used with the theme.
 	 *
-	 * Used by action hook: 'widget_init'
+	 * Used by action hook: 'widgets_init'
+	 * 
+	 * @see https://developer.wordpress.org/reference/hooks/widgets_init/
 	 */
 	public static function sidebars() {
 
 		register_sidebar(
-			array(
+			[
 				'name'          => __( 'Blog Sidebar', 'nvLangScope' ),
 				'id'            => 'sidebar-1',
 				'description'   => __( 'Drag widgets for Blog sidebar here. These widgets will only appear on the blog portion of your site.', 'nvLangScope' ),
@@ -200,10 +206,10 @@ class Config {
 				'after_widget'  => "</aside>",
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
-			)
+			]
 		);
 		register_sidebar(
-			array(
+			[
 				'name'          => __( 'Site Sidebar', 'nvLangScope' ),
 				'id'            => 'sidebar-2',
 				'description'   => __( 'Drag widgets for the Site sidebar here. These widgets will only appear on non-blog pages.', 'nvLangScope' ),
@@ -211,10 +217,10 @@ class Config {
 				'after_widget'  => "</aside>",
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
-			)
+			]
 		);
 		register_sidebar(
-			array(
+			[
 				'name'          => __( 'Footer', 'nvLangScope' ),
 				'id'            => 'sidebar-3',
 				'description'   => __( 'Drag footer widgets here.', 'nvLangScope' ),
@@ -222,7 +228,7 @@ class Config {
 				'after_widget'  => "</aside>",
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
-			)
+			]
 		);
 	}
 
@@ -233,15 +239,17 @@ class Config {
 	 * By default, Foundation uses the .sticky class to "stick" content to the top of the screen when scrolling below
 	 * the top of the window.
 	 * 
-	 * @used-by add_filter( 'post_class', $func )
+	 * Used by action hook: post_class
 	 * 
-	 * @param $classes
+	 * @see https://developer.wordpress.org/reference/hooks/post_class/
+	 * 
+	 * @param array $classes An array of classes for each post
 	 *
 	 * @return array
 	 */
 	public static function sticky_post_class( $classes ) {
 		if( in_array( 'sticky', $classes ) ) {
-			$classes = array_diff( $classes, array( 'sticky' ) );
+			$classes = array_diff( $classes, [ 'sticky' ] );
 			$classes[] = 'status-sticky';
 		}
 		return $classes;

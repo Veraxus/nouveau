@@ -18,11 +18,11 @@ class HtmlGen extends MarkupGenerator {
 	 *
 	 * @return string
 	 */
-	public static function a( $href = '#', $atts = array(), $content = '', $echo = false ) {
+	public static function a( $href = '#', $atts = [], $content = '', $echo = false ) {
 		$atts = parent::default_atts(
-			array(
+			[
 				'href' => $href,
-			),
+			],
 			$atts
 		);
 
@@ -43,7 +43,7 @@ class HtmlGen extends MarkupGenerator {
 	 *
 	 * @return string
 	 */
-	public static function div( $atts = array(), $content = '', $echo = false ) {
+	public static function div( $atts = [], $content = '', $echo = false ) {
 		$return = parent::gen( 'div', $atts, $content );
 		if ( $echo ) {
 			echo $return;
@@ -61,7 +61,7 @@ class HtmlGen extends MarkupGenerator {
 	 *
 	 * @return string
 	 */
-	public static function ul( $content = '', $atts = array(), $echo = false ) {
+	public static function ul( $content = '', $atts = [], $echo = false ) {
 		$return = parent::gen( 'ul', $atts, $content );
 		if ( $echo ) {
 			echo $return;
@@ -79,7 +79,7 @@ class HtmlGen extends MarkupGenerator {
 	 *
 	 * @return string
 	 */
-	public static function li( $content = '', $atts = array(), $echo = false ) {
+	public static function li( $content = '', $atts = [], $echo = false ) {
 		$return = parent::gen( 'li', $atts, $content );
 		if ( $echo ) {
 			echo $return;
@@ -97,12 +97,12 @@ class HtmlGen extends MarkupGenerator {
 	 *
 	 * @return string
 	 */
-	public static function img( $src = '', $atts = array(), $echo = false ) {
+	public static function img( $src = '', $atts = [], $echo = false ) {
 		$atts = parent::default_atts(
-			array(
+			[
 				'src' => ( ! empty( $src ) ) ? $src : '',
 				'alt' => '',
-			),
+			],
 			$atts
 		);
 
@@ -123,13 +123,13 @@ class HtmlGen extends MarkupGenerator {
 	 *
 	 * @return string
 	 */
-	public static function input( $name = '', $atts = array(), $echo = false ) {
+	public static function input( $name = '', $atts = [], $echo = false ) {
 		$atts = parent::default_atts(
-			array(
+			[
 				'id'   => ( ! empty( $name ) ) ? $name : parent::random_id(),
 				'name' => ( ! empty( $name ) ) ? $name : parent::random_id(),
 				'type' => 'text',
-			),
+			],
 			$atts
 		);
 
@@ -150,7 +150,7 @@ class HtmlGen extends MarkupGenerator {
 	 *
 	 * @return string
 	 */
-	public static function input_text( $name = '', $atts = array(), $echo = false ) {
+	public static function input_text( $name = '', $atts = [], $echo = false ) {
 		return self::input( $name, $atts, $echo );
 	}
 
@@ -163,13 +163,13 @@ class HtmlGen extends MarkupGenerator {
 	 *
 	 * @return string
 	 */
-	public static function input_checkbox( $name = '', $atts = array(), $echo = false ) {
+	public static function input_checkbox( $name = '', $atts = [], $echo = false ) {
 		$atts = parent::default_atts(
-			array(
+			[
 				'id'   => ( ! empty( $name ) ) ? $name : parent::random_id(),
 				'name' => ( ! empty( $name ) ) ? $name : parent::random_id(),
 				'type' => 'checkbox',
-			),
+			],
 			$atts
 		);
 
@@ -190,13 +190,13 @@ class HtmlGen extends MarkupGenerator {
 	 *
 	 * @return string
 	 */
-	public static function input_radio( $name = '', $atts = array(), $echo = false ) {
+	public static function input_radio( $name = '', $atts = [], $echo = false ) {
 		$atts = parent::default_atts(
-			array(
+			[
 				'id'   => ( ! empty( $name ) ) ? $name : parent::random_id(),
 				'name' => ( ! empty( $name ) ) ? $name : parent::random_id(),
 				'type' => 'radio',
-			),
+			],
 			$atts
 		);
 
@@ -217,11 +217,11 @@ class HtmlGen extends MarkupGenerator {
 	 *
 	 * @return string
 	 */
-	public static function label( $for = '', $atts = array(), $echo = false ) {
+	public static function label( $for = '', $atts = [], $echo = false ) {
 		$atts = parent::default_atts(
-			array(
+			[
 				'for' => ( ! empty( $for ) ) ? $for : '',
-			),
+			],
 			$atts
 		);
 

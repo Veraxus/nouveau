@@ -18,7 +18,7 @@ class Theme {
 	 * @todo Implement Foundation-friendly markup
 	 * @param array $args
 	 */
-	public static function archive_nav( $args = array() ) {
+	public static function archive_nav( $args = [] ) {
 		echo paginate_links( $args );
 	}
 
@@ -30,7 +30,7 @@ class Theme {
 	 * @todo Implement Foundation-friendly markup
 	 * @param array $args
 	 */
-	public static function article_page_nav( $args = array() ) {
+	public static function article_page_nav( $args = [] ) {
 		echo wp_link_pages( $args );
 	}
 
@@ -47,10 +47,10 @@ class Theme {
 	 *
 	 * @return string
 	 */
-	public static function breadcrumbs( $args = array() ) {
+	public static function breadcrumbs( $args = [] ) {
 		global $post, $wp_query;
 
-		$defaults = array(
+		$defaults = [
 			'use_prefix'   => true,
 			'blog_title'   => __( 'Blog', 'nvLangScope' ), 'before' => '<ul class="breadcrumbs">',
 			'after'        => '</ul>',
@@ -58,7 +58,7 @@ class Theme {
 			//% represents replacement character for current/active page
 			'crumb_after'  => '</li>',
 			'echo'         => true,
-		);
+		];
 
 		$r = wp_parse_args( $args, $defaults );
 		$r = apply_filters( 'wp_link_pages_args', $r );
@@ -138,7 +138,7 @@ class Theme {
 	 * @param array $args
 	 * @param int   $depth
 	 */
-	public static function comments( $comment, $args = array(), $depth = 1 ) {
+	public static function comments( $comment, $args = [], $depth = 1 ) {
 		require NV::i()->get_path( 'parts', 'comments/comments.php' );
 	}
 
@@ -162,7 +162,7 @@ class Theme {
 		//Ensure path has closing slash
 		$path = trailingslashit( $path );
 
-		$templates = array();
+		$templates = [];
 		if ( isset( $name ) ) {
 			$templates[] = "{$path}footer-{$name}.php";
 		} else {
@@ -196,7 +196,7 @@ class Theme {
 		//Ensure path has closing slash
 		$path = trailingslashit( $path );
 
-		$templates = array();
+		$templates = [];
 		if ( isset( $name ) ) {
 			$templates[] = "{$path}header-{$name}.php";
 		} else {

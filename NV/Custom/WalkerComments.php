@@ -30,10 +30,10 @@ class WalkerComments extends \Walker {
 	 * Required by the Walker to track items in the tree
 	 * @var array
 	 */
-	var $db_fields = array(
+	var $db_fields = [
 		'parent' => 'comment_parent',
 		'id'     => 'comment_ID'
-	);
+	];
 
 
 	/**
@@ -43,7 +43,7 @@ class WalkerComments extends \Walker {
 	 * @param int    $depth  Depth of comment.
 	 * @param array  $args   Uses 'style' argument for type of HTML list.
 	 */
-	function start_lvl( &$output, $depth = 0, $args = array() ) {
+	function start_lvl( &$output, $depth = 0, $args = [] ) {
 
 		// Increment the current comment_depth count
 		$GLOBALS['comment_depth'] = $depth + 1;
@@ -60,7 +60,7 @@ class WalkerComments extends \Walker {
 	 * @param int    $depth  Depth of comment.
 	 * @param array  $args   Will only append content if style argument value is 'ol' or 'ul'.
 	 */
-	function end_lvl( &$output, $depth = 0, $args = array() ) {
+	function end_lvl( &$output, $depth = 0, $args = [] ) {
 
 		// Increment the current comment_depth count
 		$GLOBALS['comment_depth'] = $depth + 1;
@@ -122,7 +122,7 @@ class WalkerComments extends \Walker {
 	 * @param array  $args    An array of arguments. @see wp_list_comments()
 	 * @param int    $id
 	 */
-	function start_el( &$output, $comment, $depth = 0, $args = array(), $id = 0 ) {
+	function start_el( &$output, $comment, $depth = 0, $args = [], $id = 0 ) {
 
 		// Keep track of current depth and comment
 		$depth ++;
@@ -155,7 +155,7 @@ class WalkerComments extends \Walker {
 	 * @param int    $depth   Depth of comment.
 	 * @param array  $args    An array of arguments. @see wp_list_comments()
 	 */
-	function end_el( &$output, $comment, $depth = 0, $args = array() ) {
+	function end_el( &$output, $comment, $depth = 0, $args = [] ) {
 
 		// If a callback is provided in the arguments, we need to run it...
 		if ( ! empty( $args['end-callback'] ) ) {

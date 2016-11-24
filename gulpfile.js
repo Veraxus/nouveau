@@ -1,37 +1,38 @@
-var gulp = require('gulp');
-var $    = require('gulp-load-plugins')();
+var gulp = require('gulp'),
+	plugins = require('gulp-load-plugins')(),
+	sassPaths = [
+		'bower_components/foundation-sites/scss',
+		'bower_components/motion-ui/src'
+	];
 
-var sassPaths = [
-	'bower_components/foundation-sites/scss',
-	'bower_components/motion-ui/src'
-];
-
-gulp.task('sass', function() {
-	return gulp.src([ 'assets/scss/*.scss', "!assets/scss/_*.scss" ])
-		.pipe($.sourcemaps.init())
-		.pipe($.sass({
-				includePaths: sassPaths,
-				outputStyle: 'compressed' //options; expanded, nested, compact, compressed
-			})
-			.on('error', $.sass.logError))
-		.pipe($.autoprefixer({
+// Compile SASS → CSS
+gulp.task('sass', function () {
+	return gulp.src(['assets/scss/*.scss', "!assets/scss/_*.scss"])
+		.pipe(plugins.sourcemaps.init())
+		.pipe(plugins.sass({
+			includePaths: sassPaths,
+			outputStyle : 'compressed' //options; expanded, nested, compact, compressed
+		})
+			.on('error', plugins.sass.logError))
+		.pipe(plugins.autoprefixer({
 			browsers: ['last 2 versions', 'ie >= 9']
 		}))
-		.pipe($.sourcemaps.write('./'))
+		.pipe(plugins.sourcemaps.write('./'))
 		.pipe(gulp.dest('assets/css'));
 });
 
-gulp.task('js', function(){
-	return gulp.src([ 'assets/js/*.js', "!assets/js/*.min.js" ])
-		.pipe($.uglify())
-		.pipe($.rename({
+// Process and minify JS
+gulp.task('js', function () {
+	return gulp.src(['assets/js/src/*.js', "!*.min.js"])
+		.pipe(plugins.uglify())
+		.pipe(plugins.rename({
 			suffix: ".min"
 		}))
 		.pipe(gulp.dest('assets/js'));
 });
 
 // Automatically set up watchers when gulp is run
-gulp.task('default', ['sass', 'js'], function() {
+gulp.task('default', ['sass', 'js'], function () {
 	gulp.watch(['assets/scss/**/*.scss'], ['sass']);
 	gulp.watch(['assets/js/**/*.js'], ['js']);
 });

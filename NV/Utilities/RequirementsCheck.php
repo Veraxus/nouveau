@@ -49,7 +49,7 @@ class RequirementsCheck {
 			//Check front end
 			$this->display_frontend_error();
 			// Perform check on admin
-			add_action( 'admin_notices', array( &$this, 'check_for_admin' ) );
+			add_action( 'admin_notices', [ &$this, 'check_for_admin' ] );
 		}
 
 	}
@@ -146,7 +146,7 @@ class RequirementsCheck {
 	 * @return boolean True if this is the login page
 	 */
 	protected function is_login() {
-		return in_array( $GLOBALS['pagenow'], array( 'wp-login.php', 'wp-register.php' ) );
+		return in_array( $GLOBALS['pagenow'], [ 'wp-login.php', 'wp-register.php' ] );
 	}
 
 }
