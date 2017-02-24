@@ -9,7 +9,7 @@
 **Tested up to:** 4.7  
 **Stable tag:** 0.12  
 **Text Domain:** nvLangScope  
-**License:** MIT & GPL2+  
+**License:** GPL2+ & MIT  
 
 NOUVEAU is an open-source, rapid-development theme & plugin framework for WordPress, built on Zurb Foundation 6 and PHP 5.6+. Work fast. Be awesome.
 
@@ -62,7 +62,7 @@ That's all there is to it!
 ### General Installation
 To install, simply the copy the NOUVEAU theme folder to your `wp-content\themes` directory. Before activating, be sure you rename the theme folder and perform a global find-replace for the strings (case sensitive) `NOUVEAU`, `Nouveau`, and `nouveau`, as well as the language scope (`nvLangScope`).
 
-You can find exhaustive documentation for NOUVEAU at [NOUVEAUFramework.org](http://nouveauframework.org/documentation/getting-started/), and documentation for Zurb Foundation at [foundation.zurb.com](http://foundation.zurb.com/docs/sass.html)
+You can find detailed documentation for NOUVEAU at [NOUVEAUFramework.org](http://nouveauframework.org/documentation/getting-started/), and documentation for Zurb Foundation at [foundation.zurb.com](http://foundation.zurb.com/docs/sass.html)
 
 Also remember that you can test your own NOUVEAU derivatives by using the WordPress [Theme Unit Test]( http://codex.wordpress.org/Theme_Unit_Test ).
 
