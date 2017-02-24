@@ -3,7 +3,7 @@
 
 namespace NV\Theme\Hooks;
 
-use NV\Theme\NV;
+use NV\Theme\Core;
 
 /**
  * This allows customization of the WordPress TinyMCE editor. This will add custom
@@ -31,7 +31,7 @@ class Editor {
 		}
 
 		//Add our new style
-		$url .= NV::i()->get_url( 'css', 'editor.css' );
+		$url .= Core::i()->urls->css . 'editor.css';
 
 		return $url;
 	}

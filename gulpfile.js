@@ -23,7 +23,7 @@ gulp.task('sass', function () {
 
 // Process and minify JS
 gulp.task('js', function () {
-	return gulp.src(['assets/js/src/*.js', "!*.min.js"])
+	return gulp.src(['assets/js/*.js', "!*.min.js"])
 		.pipe(plugins.uglify())
 		.pipe(plugins.rename({
 			suffix: ".min"

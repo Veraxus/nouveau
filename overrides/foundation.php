@@ -3,13 +3,11 @@
  * Template Name: Foundation Test Page
  * 
  * This is an example override template. This can be selected from WordPress's "Edit Page" screens.
- * 
- * @package WordPress
- * @subpackage Nouveau
- * @since Nouveau 1.0
  */
-\Nv\Utilities\Theme::get_header();
-\Nv\Utilities\Theme::output_file_marker( __FILE__ );
+use NV\Theme\Utilities\Theme;
+
+Theme::get_header();
+Theme::output_file_marker( __FILE__ );
 ?>
 <div class="row">
     <div class="large-12 columns">

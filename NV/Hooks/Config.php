@@ -3,7 +3,7 @@
 
 namespace NV\Theme\Hooks;
 
-use NV\Theme\NV;
+use NV\Theme\Core;
 
 /**
  * Contains functions for reconfiguring the admin back-end. Generally, method names should match the hook name for
@@ -23,7 +23,7 @@ class Config {
 	public static function after_setup_theme() {
 		
 		// Load available language pack
-		load_theme_textdomain( 'nvLangScope', NV::i()->get_path( 'langs' ) );
+		load_theme_textdomain( 'nvLangScope', Core::i()->paths->langs );
 
 		// Let WordPress generate the <title> tag for you
 		add_theme_support( 'title-tag' );
@@ -50,7 +50,7 @@ class Config {
 				'height'                 => 250,
 				'flex-height'            => true,
 				'flex-width'             => true,
-				'default-image'          => NV::i()->get_url( 'img', 'header.gif' ),
+				'default-image'          => Core::i()->urls->img . 'header.gif',
 				'random-default'         => false,
 				'header-text'            => true,
 				'default-text-color'     => '',
@@ -130,7 +130,7 @@ class Config {
 		 ******************/
 
 		// Base stylesheet (compiled Foundation SASS)
-		wp_enqueue_style( 'app', NV::i()->get_url( 'css', 'app.css' ) );
+		wp_enqueue_style( 'app', Core::i()->urls->css . 'app.css' );
 
 		// WordPress's required styles.css
 		wp_enqueue_style( 'styles', get_bloginfo( 'stylesheet_url' ), [ 'app' ] );
@@ -141,16 +141,16 @@ class Config {
 
 		// Remove WordPress's jQuery and use our own
 		wp_deregister_script( 'jquery' );
-		wp_enqueue_script( 'jquery', NV::i()->get_js_url( 'jquery/dist/jquery.min.js', 'bower' ), [], false, true );
+		wp_enqueue_script( 'jquery', Core::i()->get_js_url( 'jquery/dist/jquery.min.js', 'bower' ), [], false, true );
 
 		// Foundation what-input dependency
-		wp_enqueue_script( 'what-input', NV::i()->get_js_url( 'what-input/dist/what-input.min.js', 'bower' ), [], false, true );
+		wp_enqueue_script( 'what-input', Core::i()->get_js_url( 'what-input/dist/what-input.min.js', 'bower' ), [], false, true );
 
 		// Load the complete version of Foundation
-		wp_enqueue_script( 'foundation', NV::i()->get_js_url( 'foundation-sites/dist/foundation.min.js', 'bower' ), [ 'jquery', 'what-input' ], false, true );
+		wp_enqueue_script( 'foundation', Core::i()->get_js_url( 'foundation-sites/dist/foundation.min.js', 'bower' ), [ 'jquery', 'what-input' ], false, true );
 
 		// Load any custom javascript (remember to update dependencies if you changed the above)...
-		wp_enqueue_script( 'nv-theme', NV::i()->get_js_url( 'app.min.js' ), [ 'foundation' ], false, true );
+		wp_enqueue_script( 'nv-theme', Core::i()->get_js_url( 'app.min.js' ), [ 'foundation' ], false, true );
 
 	}
 
@@ -165,10 +165,10 @@ class Config {
 	public static function enqueue_admin_assets() {
 
 		// Base admin styles
-		wp_enqueue_style( 'nv-admin', NV::i()->get_url( 'css', 'admin.css' ) );
+		wp_enqueue_style( 'nv-admin', Core::i()->urls->css . 'admin.css' );
 
 		// Base admin scripts
-		wp_enqueue_script( 'nv-admin', NV::i()->get_js_url( 'admin.min.js' ), [ 'jquery' ], false, false );
+		wp_enqueue_script( 'nv-admin', Core::i()->get_js_url( 'admin.min.js' ), [ 'jquery' ], false, false );
 	}
 
 

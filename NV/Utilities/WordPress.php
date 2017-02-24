@@ -4,7 +4,7 @@
 namespace NV\Theme\Utilities;
 
 /**
- * This class provides WordPress-oriented methods that are not included in WordPress core by default (or weren't at
+ * This class provides WordPress-oriented methods that are not included in WordPress core by default (or were not at
  * the time of this writing).
  */
 class WordPress {

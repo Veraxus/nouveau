@@ -1,7 +1,7 @@
 {
   "name": "nouveau-wordpress-theme-framework",
   "version": "1.0.0",
-  "description": "Basic template for a new WordPress theme using Foundation for Sites.",
+  "description": "Basic starting point for a new WordPress theme using Foundation for Sites.",
   "author": "Matt van Andel <matt@mattvanandel.com>",
   "main": "gulpfile.js",
   "devDependencies": {
@@ -25,7 +25,7 @@
     "url": "https://github.com/Veraxus/nouveau/issues",
     "email": "matt@mattvanandel.com"
   },
-  "license": "MIT & GPL-2.0",
+  "license": "GPL-2.0 & MIT",
   "private": true,
   "dependencies": {
     "gulp-autoprefixer": "^3.1.0"

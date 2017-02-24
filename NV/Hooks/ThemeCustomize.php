@@ -3,7 +3,7 @@
 
 namespace NV\Theme\Hooks;
 
-use NV\Theme\NV;
+use NV\Theme\Core;
 
 /**
  * Contains methods for customizing the theme customization screen.
@@ -118,11 +118,9 @@ class ThemeCustomize {
 	 * @used-by add_action( 'customize_preview_init', $func )
 	 */
 	public static function live_preview() {
-		$min = ( WP_DEBUG ) ? '.min' : '';
-
 		wp_enqueue_script(
 			'nouveau-themecustomizer', //Give the script an ID
-			NV::i()->get_url( 'js', 'theme-customizer' . $min . '.js' ), //Define its JS file
+			Core::i()->get_js_url( 'theme-customizer.min.js' ), //Define its JS file
 			[ 'jquery', 'customize-preview' ], //Define dependencies
 			null, //Define a version (optional)
 			true //Specify whether to put in footer (leave this true)

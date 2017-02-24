@@ -3,7 +3,7 @@
 
 namespace NV\Theme\Custom;
 
-use NV\Theme\NV;
+use NV\Theme\Core;
 
 /**
  * This is our custom comment walker. Since comments can have complex parent-child relationships, we utilize Walker to
@@ -138,9 +138,9 @@ class WalkerComments extends \Walker {
 
 		// If this is a pingback (of any kind), load pingback template, otherwise use the standard comment template...
 		if ( ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) && $args['short_ping'] ) {
-			require NV::i()->get_path( 'parts', 'comments/pingback.php' );
+			require Core::i()->paths->parts . 'comments/pingback.php';
 		} else {
-			require NV::i()->get_path( 'parts', 'comments/single.php' );
+			require Core::i()->paths->parts . 'comments/single.php';
 		}
 	}
 

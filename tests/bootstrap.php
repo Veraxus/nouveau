@@ -2,6 +2,7 @@
 
 $_tests_dir = getenv( 'WP_TESTS_DIR' );
 if ( ! $_tests_dir ) {
+	// You can change this to wherever your WP unit test library is located.
 	$_tests_dir = '/tmp/wordpress-tests-lib';
 }
 

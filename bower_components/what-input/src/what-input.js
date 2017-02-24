@@ -130,9 +130,11 @@ module.exports = (function() {
         currentIntent !== value
       ) {
 
+        var activeElem = document.activeElement;
         var activeInput = (
-          document.activeElement &&
-          formInputs.indexOf(document.activeElement.nodeName.toLowerCase()) === -1
+          activeElem &&
+          activeElem.nodeName &&
+          formInputs.indexOf(activeElem.nodeName.toLowerCase()) === -1
         ) ? true : false;
 
         if (
@@ -161,7 +163,7 @@ module.exports = (function() {
 
     if (inputTypes.indexOf(currentInput) === -1) {
       inputTypes.push(currentInput);
-      docElem.classList.add('whatinput-types-' + currentInput);
+      docElem.className += ' whatinput-types-' + currentInput;
     }
   };
 
