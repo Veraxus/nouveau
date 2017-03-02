@@ -1,6 +1,6 @@
 <?php
 
-namespace NV\Theme\Bootstrapping;
+namespace NV\Theme\Bootstrap;
 
 /**
  * Registers theme uris with the Core class.

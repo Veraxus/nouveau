@@ -1,5 +1,5 @@
 <?php
-/** The \NV\Theme\Hooks\NV class */
+/** The \NV\Theme\Customize\NV class */
 
 namespace NV\Theme;
 
@@ -17,24 +17,9 @@ class Core {
 	/** @var object An object containing important theme urls */
 	public $urls;
 
-	/** @var int The max width to pass to WordPress' content editor */
+	/** @var int The max width of content */
 	public $content_width = 1200;
-
-	/**
-	 * Initialize the class.
-	 */
-	protected function __construct() {
-		$this->autoload();
-		
-		$this->paths = new Bootstrapping\Paths( __FILE__ );
-		$this->urls  = new Bootstrapping\Urls();
-
-		if ( ! isset( $GLOBALS['content_width'] ) ) {
-			$GLOBALS['content_width'] = $this->content_width;
-		}
-
-		$this->hooks();
-	}
+	
 
 	/**
 	 * Initializes default hooks
@@ -42,47 +27,48 @@ class Core {
 	protected function hooks() {
 
 		// Setup general theme options
-		add_action( 'after_setup_theme', [ '\NV\Theme\Hooks\Config', 'after_setup_theme' ] );
+		add_action( 'after_setup_theme', [ '\NV\Theme\Customize\Config', 'after_setup_theme' ] );
 
 		// Load styles and scripts
-		add_action( 'wp_enqueue_scripts', [ '\NV\Theme\Hooks\Config', 'enqueue_assets' ] );
+		add_action( 'wp_enqueue_scripts', [ '\NV\Theme\Customize\Config', 'enqueue_assets' ] );
 
 		// Load styles and scripts
-		add_action( 'admin_enqueue_scripts', [ '\NV\Theme\Hooks\Config', 'enqueue_admin_assets' ] );
+		add_action( 'admin_enqueue_scripts', [ '\NV\Theme\Customize\Config', 'enqueue_admin_assets' ] );
 
 		// Register sidebars
-		add_action( 'widgets_init', [ '\NV\Theme\Hooks\Config', 'sidebars' ] );
+		add_action( 'widgets_init', [ '\NV\Theme\Customize\Config', 'sidebars' ] );
 
 		// Any customizations to the body_class() function
-		add_filter( 'body_class', [ '\NV\Theme\Hooks\Config', 'body_class' ] );
+		add_filter( 'body_class', [ '\NV\Theme\Customize\Config', 'body_class' ] );
 
 		// Change WordPress' .sticky css class to .stickied to prevent conflict with Foundation
-		add_filter( 'post_class', [ '\NV\Theme\Hooks\Config', 'sticky_post_class' ] );
+		add_filter( 'post_class', [ '\NV\Theme\Customize\Config', 'sticky_post_class' ] );
 
 
 		/** THEME CUSTOMIZATION *******************************************************/
 
 		// Setup the theme customizer options
-		add_action( 'customize_register', [ '\NV\Theme\Hooks\ThemeCustomize', 'register' ] );
+		add_action( 'customize_register', [ '\NV\Theme\Customize\ThemeCustomizer', 'register' ] );
 
 		// Load the customized style data on the frontend
-		add_action( 'wp_head', [ '\NV\Theme\Hooks\ThemeCustomize', 'header_output' ] );
+		add_action( 'wp_head', [ '\NV\Theme\Customize\ThemeCustomizer', 'header_output' ] );
 
 		// Load any javascript needed for live preview updates
-		add_action( 'customize_preview_init', [ '\NV\Theme\Hooks\ThemeCustomize', 'live_preview' ] );
+		add_action( 'customize_preview_init', [ '\NV\Theme\Customize\ThemeCustomizer', 'live_preview' ] );
 
 
 		/** INTEGRATE THEME WITH TINYMCE EDITOR **************************************/
 
 		// Adds custom stylesheet to the editor window so styling preview is accurate ( can also use add_editor_style() )
-		add_filter( 'mce_css', [ '\NV\Theme\Hooks\Editor', 'style' ] );
+		add_filter( 'mce_css', [ '\NV\Theme\Customize\Editor', 'style' ] );
 
 		// Add a new "Styles" dropdown to the TinyMCE editor toolbar
-		add_filter( 'mce_buttons_2', [ '\NV\Theme\Hooks\Editor', 'buttons' ] );
+		add_filter( 'mce_buttons_2', [ '\NV\Theme\Customize\Editor', 'buttons' ] );
 
 		// Populate our new "Styles" dropdown with options/content
-		add_filter( 'tiny_mce_before_init', [ '\NV\Theme\Hooks\Editor', 'settings_advanced' ] );
+		add_filter( 'tiny_mce_before_init', [ '\NV\Theme\Customize\Editor', 'settings_advanced' ] );
 	}
+	
 
 	/**
 	 * Returns JS enqueue path based on WP_DEBUG setting. If WP_DEBUG is true, the src version will be used, otherwise
@@ -117,6 +103,7 @@ class Core {
 	public function get_ns( $class = '' ) {
 		return '\\' . __NAMESPACE__ . '\\' . $class;
 	}
+	
 
 	/**
 	 * Registers a PSR-4 compliant class autoloader.
@@ -153,6 +140,33 @@ class Core {
 		);
 
 	}
+	
+
+	/**
+	 * Initialize the class.
+	 * 
+	 * This is lower in the class since it's unlikely you'll need to customize it.
+	 */
+	protected function __construct() {
+
+		// Initialize the autoloader
+		$this->autoload();
+
+		// Get important system paths for theme
+		$this->paths = new Bootstrap\Paths( __FILE__ );
+
+		// Get important urls for theme
+		$this->urls  = new Bootstrap\Urls();
+
+		// Set WP content width global
+		if ( ! isset( $GLOBALS['content_width'] ) ) {
+			$GLOBALS['content_width'] = $this->content_width;
+		}
+
+		// Register all theme hooks
+		$this->hooks();
+	}
+	
 
 	/**
 	 * Singleton for accessing the Nv instance.

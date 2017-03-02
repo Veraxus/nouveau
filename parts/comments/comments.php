@@ -8,6 +8,8 @@
  * comments_template( '/parts/comments/comments.php' );
  */
 
+use NV\Theme\Customize\WalkerComments;
+
 if ( post_password_required() ) {
     echo '<p>'.__( 'This post is password protected. Enter the password to view comments.', 'nvLangScope' ).'</p>';
     return;
@@ -32,15 +34,15 @@ if ( have_comments() ) { ?>
     </p>
 
 
-    <?php include( NV_PARTS . '/comments/pagination.php' ); ?>
+    <?php include 'pagination.php'; ?>
 
     <section class="comments-list">
         <?php wp_list_comments( [
-            'walker' => new \NV\Custom\WalkerComments()
+            'walker' => new WalkerComments()
         ] ); ?>
     </section>
 
-    <?php include( NV_PARTS . '/comments/pagination.php' ); ?>
+    <?php include 'pagination.php'; ?>
 
 
 <?php
@@ -58,5 +60,5 @@ else
 
 
 if ( comments_open() ) {
-    include( NV_PARTS . '/comments/respond.php' );
+    include 'respond.php';
 }

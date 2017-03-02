@@ -1,6 +1,6 @@
 <?php
 
-namespace NV\Theme\Bootstrapping;
+namespace NV\Theme\Bootstrap;
 
 /**
  * Registers absolute system paths with the Core class.

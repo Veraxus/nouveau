@@ -95,6 +95,8 @@ NOUVEAU comes with all text strings properly scoped for internationalization. To
 * Moved theme Paths and Urls into their own classes to clean up Core and improve code hinting in IDEs.
 * Removed the Core::get_path(), Core::get_url(), and Core::get_property() methods in favor of OO property access.
 * Completely removed the unused RequirementsCheck class.
+* Removed constant references from comment templates.
+* Simplified NV namespace/folder structure.
 * The `_docs` directory is no longer included in the distribution, but you can still use PhpDoc to generate your own.
 * js files are now all kept in one place since IntelliJ/PhpStorm aggregates them automatically (if you're not using PhpStorm, you are doing WordPress wrong)
 * Removed codekit configs. CodeKit is easy enough to set up on your own, it's unneccessary.

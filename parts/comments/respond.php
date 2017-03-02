@@ -15,6 +15,7 @@
     </div>
 
     <?php
+	// Not authenticated: Prompt login
     if( get_option( 'comment_registration' ) && !is_user_logged_in() ) {
 
         printf( '<p>%s</p>',
@@ -24,8 +25,10 @@
         );
 
     }
+    
+    // Authenticated: Show form
     else {
-        include( NV_PARTS . '/comments/response-form.php');
+        include 'response-form.php';
     }
     ?>
 </div>

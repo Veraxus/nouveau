@@ -1,7 +1,7 @@
 <?php
-/** The \NV\Theme\Custom\WalkerComments class */
+/** The \NV\Theme\Customize\WalkerComments class */
 
-namespace NV\Theme\Custom;
+namespace NV\Theme\Customize;
 
 use NV\Theme\Core;
 

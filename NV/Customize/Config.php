@@ -1,7 +1,7 @@
 <?php
-/** The \NV\Theme\Hooks\Config class */
+/** The \NV\Theme\Customize\Config class */
 
-namespace NV\Theme\Hooks;
+namespace NV\Theme\Customize;
 
 use NV\Theme\Core;
 

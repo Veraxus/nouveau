@@ -1,7 +1,7 @@
 <?php
-/** The \NV\Theme\Hooks\Editor class */
+/** The \NV\Theme\Customize\Editor class */
 
-namespace NV\Theme\Hooks;
+namespace NV\Theme\Customize;
 
 use NV\Theme\Core;
 
