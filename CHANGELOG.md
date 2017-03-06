@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.14 (Work in Progress)
+## 0.14 (2017-03-05)
 * Renamed the theme framework's core class from `NV` to `Core`
 * Removed the Core::get_path(), Core::get_url(), and Core::get_property() methods in favor of unobfuscated property access.
 * Completely removed the unused RequirementsCheck class.

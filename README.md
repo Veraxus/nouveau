@@ -3,11 +3,11 @@
 **Donate link:** http://nouveauframework.org/  
 **Author URI:** http://nouveauframework.org/  
 **Tags:** framework, php5.6  
-**Version:** 0.12  
-**Foundation version:** 6.2.4  
+**Version:** 0.14  
+**Foundation version:** 6.3.1  
 **Requires at least:** 4.6  
 **Tested up to:** 4.7  
-**Stable tag:** 0.12  
+**Stable tag:** 0.14  
 **Text Domain:** nvLangScope  
 **License:** GPL2+ & MIT  
 
