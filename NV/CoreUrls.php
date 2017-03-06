@@ -1,11 +1,11 @@
 <?php
 
-namespace NV\Theme\Bootstrap;
+namespace NV\Theme;
 
 /**
  * Registers theme uris with the Core class.
  */
-class Urls {
+class CoreUrls {
 	
 	/** @var string Uri for the theme directory */
 	public $theme;

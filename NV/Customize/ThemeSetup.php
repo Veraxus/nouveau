@@ -1,5 +1,5 @@
 <?php
-/** The \NV\Theme\Customize\Config class */
+/** The \NV\Theme\Customize\ThemeSetup class */
 
 namespace NV\Theme\Customize;
 
@@ -9,7 +9,7 @@ use NV\Theme\Core;
  * Contains functions for reconfiguring the admin back-end. Generally, method names should match the hook name for
  * easy identification. In cases where a generic hook is utilized, a more logical method name should be used.
  */
-class Config {
+class ThemeSetup {
 
 	/**
 	 * Sets up basic theme features.
@@ -70,7 +70,7 @@ class Config {
 				'default-position-x'     => 'left',
 				'default-attachment'     => 'scroll',
 				'default-color'          => '',
-				'wp-head-callback'       => '_custom_background_cb',
+				//'wp-head-callback'       => '_custom_background_cb',
 				'admin-head-callback'    => '',
 				'admin-preview-callback' => '',
 			]
@@ -147,7 +147,7 @@ class Config {
 		wp_enqueue_script( 'what-input', Core::i()->get_js_url( 'what-input/dist/what-input.min.js', 'bower' ), [], false, true );
 
 		// Load the complete version of Foundation
-		wp_enqueue_script( 'foundation', Core::i()->get_js_url( 'foundation-sites/dist/foundation.min.js', 'bower' ), [ 'jquery', 'what-input' ], false, true );
+		wp_enqueue_script( 'foundation', Core::i()->get_js_url( 'foundation-sites/dist/js/foundation.min.js', 'bower' ), [ 'jquery', 'what-input' ], false, true );
 
 		// Load any custom javascript (remember to update dependencies if you changed the above)...
 		wp_enqueue_script( 'nv-theme', Core::i()->get_js_url( 'app.min.js' ), [ 'foundation' ], false, true );

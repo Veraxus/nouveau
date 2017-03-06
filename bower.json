@@ -1,16 +1,17 @@
 {
-  "name": "nouveau-wordpress-theme-framework",
-  "version": "1.0.0",
+  "name": "nouveau-wordpress-starter-theme",
+  "version": "0.14.0",
   "authors": [
     "Matt van Andel <matt@mattvanandel.com>"
   ],
-  "description": "Basic template for a new WordPress theme using Foundation for Sites.",
+  "description": "A Foundation-based starter theme for WordPress.",
   "license": "MIT & GPL-2.0",
   "homepage": "http://nouveauframework.org",
   "dependencies": {
-    "foundation-sites": "^6.2.4",
+    "jquery": "^3.1.1",
+    "foundation-sites": "^6.3.1",
     "motion-ui": "~1.2.2",
-    "what-input": "^3.0.0"
+    "what-input": "^4.1.1"
   },
   "ignore": [
     "**/.*",
@@ -20,9 +21,21 @@
     "test",
     "tests"
   ],
-  "private": true,
-  "resolutions": {
-    "what-input": "^4.0.6",
-    "jquery": "^3.1.1"
-  }
+  "resolutions": {},
+  "main": [
+    "./assets/scss/app.css",
+    "./assets/scss/admin.css",
+    "./assets/scss/editor.css",
+    "./assets/js/app.js",
+    "./assets/js/admin.js",
+    "./assets/js/theme-customizer.js"
+  ],
+  "keywords": [
+    "wordpress",
+    "theme",
+    "framework",
+    "nouveau",
+    "zurb",
+    "foundation"
+  ]
 }

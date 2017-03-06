@@ -1,11 +1,11 @@
 <?php
 
-namespace NV\Theme\Bootstrap;
+namespace NV\Theme;
 
 /**
  * Registers absolute system paths with the Core class.
  */
-class Paths {
+class CorePaths {
 	
 	/** @var string Absolute path to the theme directory */
 	public $theme;

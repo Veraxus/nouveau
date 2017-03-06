@@ -27,22 +27,22 @@ class Core {
 	protected function hooks() {
 
 		// Setup general theme options
-		add_action( 'after_setup_theme', [ '\NV\Theme\Customize\Config', 'after_setup_theme' ] );
+		add_action( 'after_setup_theme', [ '\NV\Theme\Customize\ThemeSetup', 'after_setup_theme' ] );
 
 		// Load styles and scripts
-		add_action( 'wp_enqueue_scripts', [ '\NV\Theme\Customize\Config', 'enqueue_assets' ] );
+		add_action( 'wp_enqueue_scripts', [ '\NV\Theme\Customize\ThemeSetup', 'enqueue_assets' ] );
 
 		// Load styles and scripts
-		add_action( 'admin_enqueue_scripts', [ '\NV\Theme\Customize\Config', 'enqueue_admin_assets' ] );
+		add_action( 'admin_enqueue_scripts', [ '\NV\Theme\Customize\ThemeSetup', 'enqueue_admin_assets' ] );
 
 		// Register sidebars
-		add_action( 'widgets_init', [ '\NV\Theme\Customize\Config', 'sidebars' ] );
+		add_action( 'widgets_init', [ '\NV\Theme\Customize\ThemeSetup', 'sidebars' ] );
 
 		// Any customizations to the body_class() function
-		add_filter( 'body_class', [ '\NV\Theme\Customize\Config', 'body_class' ] );
+		add_filter( 'body_class', [ '\NV\Theme\Customize\ThemeSetup', 'body_class' ] );
 
 		// Change WordPress' .sticky css class to .stickied to prevent conflict with Foundation
-		add_filter( 'post_class', [ '\NV\Theme\Customize\Config', 'sticky_post_class' ] );
+		add_filter( 'post_class', [ '\NV\Theme\Customize\ThemeSetup', 'sticky_post_class' ] );
 
 
 		/** THEME CUSTOMIZATION *******************************************************/
@@ -153,10 +153,10 @@ class Core {
 		$this->autoload();
 
 		// Get important system paths for theme
-		$this->paths = new Bootstrap\Paths( __FILE__ );
+		$this->paths = new CorePaths( __FILE__ );
 
 		// Get important urls for theme
-		$this->urls  = new Bootstrap\Urls();
+		$this->urls  = new CoreUrls();
 
 		// Set WP content width global
 		if ( ! isset( $GLOBALS['content_width'] ) ) {
