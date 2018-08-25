@@ -54,17 +54,28 @@ For full prerequisites, see: http://foundation.zurb.com/docs/sass.html).
 
 To get started, make sure you have npm installed, switch to your NOUVEAU theme directory and run...
 
-1. `npm install` to install all dependencies
+1. `npm install` to install node dependencies (needed for Foundation and the build pipeline)
+1. `composer install` to install PHP packages like Monolog and Codeception
 1. `npm start` or `gulp` to begin watching and compiling sass & js
 
 That's all there is to it!
 
-### General Installation
-To install, simply the copy the NOUVEAU theme folder to your `wp-content\themes` directory. Before activating, be sure you rename the theme folder and perform a global find-replace for the strings (case sensitive) `NOUVEAU`, `Nouveau`, and `nouveau`, as well as the language scope (`nvLangScope`).
+### General Setup
+To install, simply the copy the NOUVEAU theme folder to your `wp-content\themes` directory. Before activating, you may want to make it your own: 
 
-You can find detailed documentation for NOUVEAU at [NOUVEAUFramework.org](http://nouveauframework.org/documentation/getting-started/), and documentation for Zurb Foundation at [foundation.zurb.com](http://foundation.zurb.com/docs/sass.html)
+1. Rename the theme folder 
+1. Perform a global find-replace for the strings (case sensitive) `NOUVEAU`, `Nouveau`, and `nouveau`, and the language scope: `nvLangScope`.
 
-Also remember that you can test your own NOUVEAU derivatives by using the WordPress [Theme Unit Test]( http://codex.wordpress.org/Theme_Unit_Test ).
+You can also find detailed documentation for NOUVEAU at [NOUVEAUFramework.org](http://nouveauframework.org/documentation/getting-started/), and documentation for Zurb Foundation at [foundation.zurb.com](http://foundation.zurb.com/docs/sass.html)
+
+You can also test design and use-case coverage by using the WordPress [Theme Unit Test]( http://codex.wordpress.org/Theme_Unit_Test ).
+
+### Installing Tests
+NOUVEAU now uses and encourages Codeception for testing of your themes. After you've installed the Composer dependencies, you can begin configuring your testing suite with:
+
+`codecept init wpbrowser`
+
+You can find more detailed directions at [codeception.com/for/wordpress](https://codeception.com/for/wordpress#Install)
 
 # File Structure
 
@@ -72,11 +83,13 @@ NOUVEAU has an file structure that encourages better organization of your theme.
 
 General page templates (`index.php`, `archive.php`, `page.php`, `single.php`, etc) as well as critical files like `functions.php` still go in the theme's root folder. This allows WordPress's core template system to continue working as-is. As a rule, you should keep your PAGE templates here, and organize any fragment/part templates under the parts directory. This keeps the root clean and helps encourage use of clean, organized, reusable template parts.
 
-You find a complete (yet concise) overview of file and folder structure at [NOUVEAUFramework.org](http://nouveauframework.org/documentation/getting-started/)
+You can find a complete (yet concise) overview of file and folder structure at [NOUVEAUFramework.org](http://nouveauframework.org/documentation/getting-started/)
 
 # Using Without SASS
 
-If you don't want to use SASS, then everything is already compiled for you. Just write your plain CSS in the main `style.css` file (in the theme root) as you would normally do. Note that you will still need to run `npm install` to get all the Foundation packages, however.
+If you don't want to use SASS, then you can just write your plain CSS in the main `style.css` file (in the theme root) as you would normally do.
+
+Note that you will still need to run `npm install` to get all the Foundation packages, however.
 
 # Companion Plugins
 

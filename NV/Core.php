@@ -3,6 +3,8 @@
 
 namespace NV\Theme;
 
+use NV\Theme\Core\Setup;
+
 /**
  * This class initializes the NOUVEAU framework via singleton. To fetch the instance, use Nv::get();
  */
@@ -12,11 +14,14 @@ class Core
     /** @var Core Stores the singleton instance */
     private static $instance;
 
-    /** @var object An object containing important theme directory paths */
+    /** @var Paths An object containing important theme directory paths */
     public $paths;
 
-    /** @var object An object containing important theme urls */
+    /** @var Urls An object containing important theme urls */
     public $urls;
+
+    /** @var \Monolog\Logger A log object */
+    public $log;
 
     /** @var int The max width of content */
     public $content_width = 1200;
@@ -29,22 +34,22 @@ class Core
     {
 
         // Setup general theme options
-        add_action('after_setup_theme', ['\NV\Theme\Core\ThemeSetup', 'after_setup_theme']);
+        add_action('after_setup_theme', ['\NV\Theme\Core\Setup', 'after_setup_theme']);
 
         // Load styles and scripts
-        add_action('wp_enqueue_scripts', ['\NV\Theme\Core\ThemeSetup', 'enqueue_assets']);
+        add_action('wp_enqueue_scripts', ['\NV\Theme\Core\Setup', 'enqueue_assets']);
 
         // Load styles and scripts
-        add_action('admin_enqueue_scripts', ['\NV\Theme\Core\ThemeSetup', 'enqueue_admin_assets']);
+        add_action('admin_enqueue_scripts', ['\NV\Theme\Core\Setup', 'enqueue_admin_assets']);
 
         // Register sidebars
-        add_action('widgets_init', ['\NV\Theme\Core\ThemeSetup', 'sidebars']);
+        add_action('widgets_init', ['\NV\Theme\Core\Setup', 'sidebars']);
 
         // Any customizations to the body_class() function
-        add_filter('body_class', ['\NV\Theme\Core\ThemeSetup', 'body_class']);
+        add_filter('body_class', ['\NV\Theme\Core\Setup', 'body_class']);
 
         // Change WordPress' .sticky css class to .stickied to prevent conflict with Foundation
-        add_filter('post_class', ['\NV\Theme\Core\ThemeSetup', 'sticky_post_class']);
+        add_filter('post_class', ['\NV\Theme\Core\Setup', 'sticky_post_class']);
 
 
         /** THEME CUSTOMIZATION *******************************************************/
@@ -69,30 +74,6 @@ class Core
 
         // Populate our new "Styles" dropdown with options/content
         add_filter('tiny_mce_before_init', ['\NV\Theme\Core\Editor', 'settings_advanced']);
-    }
-
-
-    /**
-     * Returns JS enqueue path based on WP_DEBUG setting. If WP_DEBUG is true, the src version will be used, otherwise
-     * the minified version will be used. Assumes src files are in /assets/js/src/ and min files are in /assets/js/
-     *
-     * @param string $filename The minified filename to process
-     * @param string $path The url path to pass to get_url(), defaults to 'js'
-     *
-     * @return string Returns
-     */
-    public function get_js_url($filename, $path = 'js')
-    {
-
-        // Use theme's src js if debug is true
-        if (WP_DEBUG && 'js' === $path) {
-            // Strip the .min
-            $filename = str_replace('.min.js', '.js', $filename);
-            // Add the src directory
-            //$filename = preg_replace( '|([^/]+).js$|', 'src/$1.js', $filename );
-        }
-
-        return $this->urls->$path . $filename;
     }
 
 
@@ -146,6 +127,18 @@ class Core
 
     }
 
+    /**
+     * Initialize the log property with monolog, if it's available.
+     */
+    protected function log_init()
+    {
+        // Setup the logger, if available
+        if (file_exists($this->paths->vendor . 'autoload.php')) {
+            require $this->paths->vendor . 'autoload.php';
+            $this->log = new \Monolog\Logger('nouveau');
+        }
+    }
+
 
     /**
      * Initialize the class.
@@ -154,28 +147,17 @@ class Core
      */
     protected function __construct()
     {
-
-        // Initialize the autoloader
         $this->autoload();
-
-        // Get important system paths for theme
-        $this->paths = new CorePaths(__FILE__);
-
-        // Get important urls for theme
-        $this->urls = new CoreUrls();
-
-        // Set WP content width global
-        if (!isset($GLOBALS['content_width'])) {
-            $GLOBALS['content_width'] = $this->content_width;
-        }
-
-        // Register all theme hooks
+        $this->paths = new Paths(__FILE__);
+        $this->urls  = new Urls();
+        $this->log_init();
         $this->hooks();
+        Setup::content_width($this->content_width);
     }
 
 
     /**
-     * Singleton for accessing the Nv instance.
+     * Singleton for accessing the Core instance.
      *
      * @return Core
      */

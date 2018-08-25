@@ -146,7 +146,7 @@ class Theme
      *
      * <code>
      * <?php
-     *    wp_list_comments( array( 'callback' => array( '\Nv\Utilities\Theme', 'comments' ) ) );
+     *    wp_list_comments( array( 'callback' => array( '\Nv\Utils\Theme', 'comments' ) ) );
      * ?>
      * </code>
      *

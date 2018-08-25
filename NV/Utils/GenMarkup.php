@@ -1,7 +1,7 @@
 <?php
-/** The \NV\Theme\Utilities\MarkupGenerator class */
+/** The \NV\Theme\Utils\MarkupGenerator class */
 
-namespace NV\Theme\Utilities;
+namespace NV\Theme\Utils;
 
 /**
  * A utility class that can be used for dynamic/programmatic generation of markup.

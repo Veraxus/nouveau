@@ -21,7 +21,7 @@
 //  16. Drilldown
 //  17. Dropdown
 //  18. Dropdown Menu
-//  19. Flexbox Utilities
+//  19. Flexbox Utils
 //  20. Forms
 //  21. Label
 //  22. Media Object
@@ -47,7 +47,7 @@
 //  42. Prototype Spacing
 //  43. Prototype Text-Decoration
 //  44. Prototype Text-Transformation
-//  45. Prototype Text-Utilities
+//  45. Prototype Text-Utils
 //  46. Responsive Embed
 //  47. Reveal
 //  48. Slider
@@ -400,7 +400,7 @@ $dropdownmenu-border: 1px solid $medium-gray;
 $dropdown-menu-item-color-active: get-color(primary);
 $dropdown-menu-item-background-active: transparent;
 
-// 19. Flexbox Utilities
+// 19. Flexbox Utils
 // ---------------------
 
 $flex-source-ordering-count: 6;
@@ -710,7 +710,7 @@ $prototype-text-transformation: (
         capitalize
 );
 
-// 45. Prototype Text-Utilities
+// 45. Prototype Text-Utils
 // ----------------------------
 
 $prototype-utilities-breakpoints: $global-prototype-breakpoints;

@@ -135,7 +135,7 @@ class Customizer
     {
         wp_enqueue_script(
             'nouveau-themecustomizer', //Give the script an ID
-            Core::i()->get_js_url('theme-customizer.min.js'), //Define its JS file
+            Core::i()->urls->get_js('theme-customizer.min.js'), //Define its JS file
             ['jquery', 'customize-preview'], //Define dependencies
             null, //Define a version (optional)
             true //Specify whether to put in footer (leave this true)

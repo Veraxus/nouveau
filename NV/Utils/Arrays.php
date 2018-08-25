@@ -1,6 +1,6 @@
 <?php
 
-namespace NV\Theme\Utilities;
+namespace NV\Theme\Utils;
 
 /**
  * This class contains general PHP helper methods for dealing with arrays.

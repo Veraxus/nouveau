@@ -1,7 +1,7 @@
 <?php
-/** The \NV\Theme\Core\WalkerComments class */
+/** The \NV\Theme\Core\Walkers\Comments class */
 
-namespace NV\Theme\Core;
+namespace NV\Theme\Core\Walkers;
 
 use NV\Theme\Core;
 
@@ -11,7 +11,7 @@ use NV\Theme\Core;
  *
  * @package NV\Core
  */
-class WalkerComments extends \Walker
+class Comments extends \Walker
 {
 
     /**

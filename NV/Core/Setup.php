@@ -9,7 +9,7 @@ use NV\Theme\Core;
  * Contains functions for reconfiguring the admin back-end. Generally, method names should match the hook name for
  * easy identification. In cases where a generic hook is utilized, a more logical method name should be used.
  */
-class ThemeSetup
+class Setup
 {
 
     /**
@@ -149,7 +149,7 @@ class ThemeSetup
         // Add our own jQuery
         wp_enqueue_script(
             'jquery',
-            Core::i()->get_js_url('jquery/dist/jquery.min.js', 'node'),
+            Core::i()->urls->get_js('jquery/dist/jquery.min.js', 'node'),
             [],
             false,
             true
@@ -158,7 +158,7 @@ class ThemeSetup
         // Foundation what-input dependency
         wp_enqueue_script(
             'what-input',
-            Core::i()->get_js_url('what-input/dist/what-input.min.js', 'node'),
+            Core::i()->urls->get_js('what-input/dist/what-input.min.js', 'node'),
             [],
             false,
             true
@@ -167,7 +167,7 @@ class ThemeSetup
         // Load the complete version of Foundation
         wp_enqueue_script(
             'foundation',
-            Core::i()->get_js_url('foundation-sites/dist/js/foundation.min.js', 'node'),
+            Core::i()->urls->get_js('foundation-sites/dist/js/foundation.min.js', 'node'),
             ['jquery', 'what-input'],
             false,
             true
@@ -176,7 +176,7 @@ class ThemeSetup
         // Load any custom javascript (remember to update dependencies if you changed the above)...
         wp_enqueue_script(
             'nv-theme',
-            Core::i()->get_js_url('app.min.js'),
+            Core::i()->urls->get_js('app.min.js'),
             ['foundation'],
             false,
             true
@@ -199,7 +199,7 @@ class ThemeSetup
         wp_enqueue_style('nv-admin', Core::i()->urls->css . 'admin.css');
 
         // Base admin scripts
-        wp_enqueue_script('nv-admin', Core::i()->get_js_url('admin.min.js'), ['jquery'], false, false);
+        wp_enqueue_script('nv-admin', Core::i()->urls->get_js('admin.min.js'), ['jquery'], false, false);
     }
 
 
@@ -289,6 +289,18 @@ class ThemeSetup
             $classes[] = 'status-sticky';
         }
         return $classes;
+    }
+
+    /**
+     * Tells WordPress what the global content width should be.
+     *
+     * @param int $width The width, in px, of the content
+     */
+    public static function content_width( $width ) {
+        // Set WP content width global
+        if (!isset($GLOBALS['content_width'])) {
+            $GLOBALS['content_width'] = $width;
+        }
     }
 
 

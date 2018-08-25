@@ -1,0 +1,8 @@
+{
+    "require-dev": {
+        "lucatume/wp-browser": "^2.1"
+    },
+    "require": {
+        "monolog/monolog": "^1.23"
+    }
+}

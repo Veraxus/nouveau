@@ -1,6 +1,6 @@
 <?php
 
-namespace NV\Theme\Utilities;
+namespace NV\Theme\Utils;
 
 /**
  * Shortcuts to speed up the easy generation of dynamic HTML, extending the MarkupGenerator utility class.

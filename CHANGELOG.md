@@ -1,8 +1,12 @@
 # Changelog
 
 ## 1.0 (2018-08-24)
-* Removed bower - all packages are managed via npm now (thanks, Zurb)!
+* Removed bower. Foundation is now included via Node.
 * Refactored PHP to follow PSR-2 coding standards.
+* Refactored namespaces. Yes, again.
+* Replaced stock PhpUnit configuration with Codeception, which is much more robust and easy to set up.
+* Divided assets into build and dist directories. Precompiled assets now live in build.
+* Gulp 4 is now the preferred way to compile NOUVEAU assets.
 * Updated to the latest version of Foundation: 6.5
 
 ## 0.14 (2017-03-05)

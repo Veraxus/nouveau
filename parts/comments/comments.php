@@ -8,7 +8,7 @@
  * comments_template( '/parts/comments/comments.php' );
  */
 
-use NV\Theme\Core\WalkerComments;
+use NV\Theme\Core\Walkers\Comments;
 
 if (post_password_required()) {
     echo '<p>' . __('This post is password protected. Enter the password to view comments.', 'nvLangScope') . '</p>';
@@ -38,7 +38,7 @@ if (have_comments()) { ?>
 
     <section class="comments-list">
         <?php wp_list_comments([
-            'walker' => new WalkerComments()
+            'walker' => new Comments()
         ]); ?>
     </section>
 

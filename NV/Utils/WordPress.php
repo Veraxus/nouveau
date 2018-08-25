@@ -1,6 +1,6 @@
 <?php
 
-namespace NV\Theme\Utilities;
+namespace NV\Theme\Utils;
 
 /**
  * This class provides WordPress-oriented methods that are not included in WordPress core by default (or were not at
