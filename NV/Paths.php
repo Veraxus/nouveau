@@ -34,7 +34,7 @@ class Paths
      *
      * @param string $file The output of __FILE__
      */
-    function __construct($file)
+    public function __construct($file)
     {
         $this->theme  = trailingslashit(get_template_directory());
         $this->nv     = trailingslashit(dirname($file));
@@ -42,8 +42,21 @@ class Paths
         $this->vendor = $this->theme . 'vendor/';
         $this->parts  = $this->theme . 'parts/';
         $this->assets = $this->theme . 'assets/dist/';
+        $this->build  = $this->theme . 'assets/build/';
         $this->img    = $this->assets . 'img/';
         $this->langs  = $this->assets . 'languages/';
+    }
+
+    /**
+     * Gets an absolute system path to the specified file, relative to the theme
+     *
+     * @param string $file The name/path of the file you want to get
+     * @param string $path The property you want to use as the base path to the file
+     * @return string
+     */
+    public function get($file, $path = 'theme')
+    {
+        return $this->$$path . $file;
     }
 
 }

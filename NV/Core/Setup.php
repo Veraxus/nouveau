@@ -118,7 +118,8 @@ class Setup
     /**
      * Enqueues styles and scripts.
      *
-     * This is current set up for the majority of use-cases, and you can uncomment additional lines if you want to
+     * The copies of foundation, jquery, and what-input that included are moved into assets/dist/js by the Gulp task
+     * build:scripts to ensure those scripts are available even if node_modules is not present.
      *
      * @hook action 'wp_enqueue_scripts'
      *
@@ -148,7 +149,7 @@ class Setup
         // Add our own jQuery
         wp_enqueue_script(
             'jquery',
-            Core::i()->urls->get_js('jquery/dist/jquery.min.js', 'node'),
+            Core::i()->urls->get_js('jquery.min.js'),
             [],
             false,
             true
@@ -157,7 +158,7 @@ class Setup
         // Foundation what-input dependency
         wp_enqueue_script(
             'what-input',
-            Core::i()->urls->get_js('what-input/dist/what-input.min.js', 'node'),
+            Core::i()->urls->get_js('what-input.min.js'),
             [],
             false,
             true
@@ -166,7 +167,7 @@ class Setup
         // Load the complete version of Foundation
         wp_enqueue_script(
             'foundation',
-            Core::i()->urls->get_js('foundation-sites/dist/js/foundation.min.js', 'node'),
+            Core::i()->urls->get_js('foundation.min.js'),
             ['jquery', 'what-input'],
             false,
             true

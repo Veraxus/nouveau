@@ -2,6 +2,8 @@
 
 namespace NV\Theme;
 
+use DDMPlugin\Plugin;
+
 /**
  * Generates convenient URLs for key theme locations.
  */
@@ -26,7 +28,7 @@ class Urls
     /** @var string Uri for the theme's css directory */
     public $css;
 
-    /** @var string Uri for the theme's javascript directory */
+    /** @var string Uri for the theme's distributable javascript directory */
     public $js;
 
     /**
@@ -47,35 +49,38 @@ class Urls
      * Returns a Uri for the specified file.
      *
      * @param string $filename
-     * @param string $path The name of the Urls class property path. Defaults to theme.
+     * @param string $loc The name of the Urls class property path. Defaults to theme.
      *
      * @return string
      */
-    public function get( $filename, $path = 'theme' )
+    public function get( $filename, $loc = 'theme' )
     {
-        return $this->$path . $filename;
+        return $this->$loc . $filename;
     }
 
     /**
-     * Returns JS enqueue path based on WP_DEBUG setting. If WP_DEBUG is true, the src version will be used, otherwise
-     * the minified version will be used. Assumes src files are in /assets/js/src/ and min files are in /assets/js/
+     * Returns JS enqueue uri based on WP_DEBUG setting.
      *
-     * @param string $filename The minified filename to process
-     * @param string $path The url path to pass to get_url(), defaults to 'js'
+     * If WP_DEBUG is on, this will attempt to fetch a non-minified JS file from assets/build/js, if available. If there
+     * is no corresponding .js file in assets/build, then this will simply serve the dist path instead.
+     *
+     * @param string $file The .min.js file that you want to load from assets/dist/js
+     * @param string $loc The url path to pass to get_url(), defaults to 'js'
      *
      * @return string Uri for the javascript asset
      */
-    public function get_js($filename, $path = 'js')
+    public function get_js($file, $loc = 'js')
     {
-
-        // Use theme's src js if debug is true
-        if (WP_DEBUG && 'js' === $path) {
-            // Strip the .min
-            $filename = str_replace('.min.js', '.js', $filename);
-            return $this->build . 'js/' . $filename;
+        // Get debug version, if available.
+        if (WP_DEBUG && 'js' === $loc) {
+            $buildfile = str_replace('.min.js', '.js', $file);
+            $srcpath = Core::i()->paths->get( $buildfile, 'build' );
+            if ( file_exists( $srcpath ) ) {
+                return $this->build . 'js/' . $buildfile;
+            }
         }
 
-        return $this->$path . $filename;
+        return $this->$loc . $file;
     }
 
 }

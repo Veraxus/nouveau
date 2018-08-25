@@ -7,7 +7,9 @@ const paths = {
             'assets/build/scss/**/*.scss',
             '!assets/build/scss/**/_*.scss'
         ],
-        scripts: ['assets/build/js/**/*.js'],
+        scripts: [
+            'assets/build/js/**/*.js'
+        ],
         images: ['assets/build/img/**/*']
     },
     out: {
@@ -18,7 +20,12 @@ const paths = {
     includes: {
         styles: [
             'node_modules/foundation-sites/scss',
-            'node_modules/motion-ui/src',
+            'node_modules/motion-ui/src'
+        ],
+        scripts: [
+            'node_modules/jquery/dist/jquery.min.js',
+            'node_modules/what-input/dist/what-input.min.js',
+            'node_modules/foundation-sites/dist/js/foundation.min.js'
         ]
     }
 };
@@ -45,12 +52,18 @@ gulp.task('build:styles', () => {
 // BUILD SCRIPTS
 // ===============
 gulp.task('build:scripts', () => {
+
+    // Ensure that includes get added to theme dist (no add'l processing)
+    gulp.src(paths.includes.scripts)
+        .pipe(gulp.dest(paths.out.scripts));
+
+    // Process our own files
     return gulp.src(paths.in.scripts)
         .pipe(plugins.sourcemaps.init())
         .pipe(plugins.babel())
         .pipe(plugins.uglify())
         .pipe(plugins.rename({
-            suffix: '.min',
+            extname: '.min.js'
         }))
         .pipe(plugins.sourcemaps.write())
         .pipe(gulp.dest(paths.out.scripts));
