@@ -6,13 +6,17 @@
   "main": "gulpfile-3.js",
   "devDependencies": {
     "npm": "^6.4.0",
-    "gulp": "^4.0.0",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^3.0.1",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-autoprefixer": "^5.0.0"
+    "babel-core": "~6.26.3",
+    "gulp": "~4.0.0",
+    "gulp-plumber": "~1.2.0",
+    "gulp-babel": "~7.0.1",
+    "gulp-autoprefixer": "~5.0.0",
+    "gulp-imagemin": "~4.1.0",
+    "gulp-load-plugins": "~1.5.0",
+    "gulp-rename": "~1.4.0",
+    "gulp-sass": "~4.0.1",
+    "gulp-sourcemaps": "~2.6.4",
+    "gulp-uglify": "~3.0.1"
   },
   "scripts": {
     "start": "gulp",
@@ -30,8 +34,8 @@
   "private": true,
   "dependencies": {
     "foundation-sites": "^6.5.0-rc.2",
-    "jquery": "^3.3.1",
-    "motion-ui": "^2.0.3",
-    "what-input": "^5.1.1"
+    "jquery": "~3.3.1",
+    "motion-ui": "~2.0.3",
+    "what-input": "~5.1.1"
   }
 }
