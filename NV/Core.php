@@ -5,7 +5,7 @@ namespace NV\Theme;
 use NV\Theme\Core\Setup;
 
 /**
- * This class initializes the NOUVEAU framework via singleton. To fetch the instance, use Nv::get();
+ * The heart and soul of your theme. Can be accessed via a convenient singleton: Core::i()
  */
 class Core
 {
@@ -27,7 +27,10 @@ class Core
 
 
     /**
-     * Initializes default hooks
+     * Initializes all the theme's hooks
+     *
+     * To the best of your ability, always try to place your hooks here. This keeps all your hooks in one convenient
+     * location for ease of debugging and providing a quick overview of everything your theme is doing.
      */
     protected function hooks()
     {
@@ -140,7 +143,7 @@ class Core
 
 
     /**
-     * Initialize the class.
+     * Initializes the class.
      *
      * This is lower in the class since it's unlikely you'll need to customize it.
      */
@@ -156,7 +159,7 @@ class Core
 
 
     /**
-     * Singleton for accessing the Core instance.
+     * Singleton method for accessing this classe's instance.
      *
      * @return Core
      */

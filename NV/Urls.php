@@ -3,7 +3,7 @@
 namespace NV\Theme;
 
 /**
- * Registers theme uris with the Core class.
+ * Generates convenient URLs for key theme locations.
  */
 class Urls
 {
@@ -29,7 +29,10 @@ class Urls
     /** @var string Uri for the theme's javascript directory */
     public $js;
 
-    function __construct()
+    /**
+     * Urls constructor.
+     */
+    public function __construct()
     {
         $this->theme  = trailingslashit(get_template_directory_uri());
         $this->node   = $this->theme . 'node_modules/';

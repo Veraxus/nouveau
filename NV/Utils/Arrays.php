@@ -3,13 +3,13 @@
 namespace NV\Theme\Utils;
 
 /**
- * This class contains general PHP helper methods for dealing with arrays.
+ * This class contains general helper methods for dealing with arrays.
  */
 class Arrays
 {
 
     /**
-     * Detaches a specified item from an array and returns that item.
+     * Removes a specified item from an array and returns it's value.
      *
      * @param array $array The array from which you want to detach an item (by reference).
      * @param mixed $key The key to detach and return.

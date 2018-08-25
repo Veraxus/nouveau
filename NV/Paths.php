@@ -3,7 +3,7 @@
 namespace NV\Theme;
 
 /**
- * Registers absolute system paths with the Core class.
+ * Generates convenient absolute system paths for key theme locations.
  */
 class Paths
 {
