@@ -17,11 +17,17 @@ class Paths
     /** @var string Absolute path to the theme's bower_components directory */
     public $node;
 
+    /** @var string Absolute path to the theme's vendor directory */
+    public $vendor;
+
     /** @var string Absolute path to the theme's parts directory */
     public $parts;
 
     /** @var string Absolute path to the theme's assets directory */
     public $assets;
+
+    /** @var string Absolute path to the theme's assets/build directory */
+    public $build;
 
     /** @var string Absolute path to the theme's image directory */
     public $img;
@@ -56,7 +62,7 @@ class Paths
      */
     public function get($file, $path = 'theme')
     {
-        return $this->$$path . $file;
+        return $this->$path . $file;
     }
 
 }
