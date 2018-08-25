@@ -4,19 +4,22 @@
  *
  * This is the template for single, full-page blog posts.
  */
-use \NV\Theme\Utilities\Theme;
+
+use \NV\Theme\Core\Theme;
 
 Theme::get_header();
-Theme::output_file_marker( __FILE__ );
+Theme::output_file_marker(__FILE__);
 the_post();
 ?>
-	<div id="container" class="row">
-		<div id="content" class="small-12 large-8 columns">
-			<?php get_template_part( 'parts/article-with-comments' ) ?>
-		</div>
-		<div id="sidebar" class="small-12 large-4 columns">
-			<?php dynamic_sidebar( 'sidebar-1' ) ?>
-		</div>
-	</div>
+    <div id="container" class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div id="content" class="cell small-12 large-8">
+                <?php get_template_part('parts/article-with-comments') ?>
+            </div>
+            <div id="sidebar" class="cell small-12 large-4">
+                <?php dynamic_sidebar('sidebar-1') ?>
+            </div>
+        </div>
+    </div>
 <?php
 Theme::get_footer();

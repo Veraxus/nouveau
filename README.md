@@ -2,16 +2,16 @@
 **Contributors:** Veraxus  
 **Donate link:** http://nouveauframework.org/  
 **Author URI:** http://nouveauframework.org/  
-**Tags:** framework, php5.6  
-**Version:** 0.14  
-**Foundation version:** 6.3.1  
-**Requires at least:** 4.6  
-**Tested up to:** 4.7  
-**Stable tag:** 0.14  
+**Tags:** framework, php7.2  
+**Version:** 1.0  
+**Foundation version:** 6.5  
+**Requires at least:** 4.9  
+**Tested up to:** 4.9  
+**Stable tag:** 1.0  
 **Text Domain:** nvLangScope  
 **License:** GPL2+ & MIT  
 
-NOUVEAU is an open-source, rapid-development theme & plugin framework for WordPress, built on Zurb Foundation 6 and PHP 5.6+. Work fast. Be awesome.
+NOUVEAU is an open-source, rapid-development theme & plugin framework for WordPress, built on Zurb Foundation 6 and PHP 7.1+. Work fast. Be awesome.
 
 ## Description
 
@@ -29,8 +29,8 @@ NOUVEAU isn’t a theme or a plugin, it’s a framework. Anything you need to qu
 * **Modular**
 Everything is available a-la-carte. By keeping the theme and features separate, you can easily use or customize only what you need (as plugins), and none of what you don’t.
 
-* **PHP 5.6+**
-**PHP 5.6 provides numerous benefits:** namespaces, closures, anonymous functions... and NOUVEAU takes advantage of that. Try it with PHP 7 for an even bigger performance boost.
+* **PHP 7.1+**
+**Newer versions of PHP provides numerous benefits:** namespaces, closures, anonymous functions... and NOUVEAU takes advantage of that.
 
 * **Zurb Foundation**
 NOUVEAUs theme framework component is built on the latest version of Zurb Foundation, an open-source front-end framework that blows Bootstrap out of the water. Create responsive websites with incredible speed and flexibility.
@@ -55,7 +55,7 @@ For full prerequisites, see: http://foundation.zurb.com/docs/sass.html).
 To get started, make sure you have npm installed, switch to your NOUVEAU theme directory and run...
 
 1. `npm install` to install all dependencies
-1. `npm start` to begin watching and compiling sass & js
+1. `npm start` or `gulp` to begin watching and compiling sass & js
 
 That's all there is to it!
 
@@ -76,7 +76,7 @@ You find a complete (yet concise) overview of file and folder structure at [NOUV
 
 # Using Without SASS
 
-If you don't want to use SASS, then everything is already compiled for you. Just write your plain CSS in the main `style.css` file (in the theme root) as you would normally do.
+If you don't want to use SASS, then everything is already compiled for you. Just write your plain CSS in the main `style.css` file (in the theme root) as you would normally do. Note that you will still need to run `npm install` to get all the Foundation packages, however.
 
 # Companion Plugins
 

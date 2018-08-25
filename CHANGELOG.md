@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0 (2018-08-24)
+* Removed bower - all packages are managed via npm now (thanks, Zurb)!
+* Refactored PHP to follow PSR-2 coding standards.
+* Updated to the latest version of Foundation: 6.5
+
 ## 0.14 (2017-03-05)
 * Renamed the theme framework's core class from `NV` to `Core`
 * Removed the Core::get_path(), Core::get_url(), and Core::get_property() methods in favor of unobfuscated property access.

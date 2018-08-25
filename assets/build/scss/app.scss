@@ -1,0 +1,24 @@
+/* =====================================================================================================================
+// GLOBAL SITE FRONTEND STYLING
+//
+// This file loads all the SCSS components for Foundation & NOUVEAU. You should place your own styles into one or more
+// separate .scss files and import your own styles at the bottom of this file.
+//
+// If you would like to adjust what Foundation components and features are output, see the following documentation:
+//   https://foundation.zurb.com/sites/docs/sass.html#adjusting-css-output
+// ===================================================================================================================*/
+
+
+// Load Foundation
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+// Use everything by default
+@include foundation-everything();
+
+// NOUVEAU mixins, including image-url() fix
+@import "nv-mixins";
+
+// Load NOUVEAU compatibility styles
+@import "nv-wordpress";

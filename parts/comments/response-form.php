@@ -42,7 +42,7 @@
 
     <?php } ?>
 
-    <p><textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea></p>
+    <p><textarea title="Leave your comment" name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea></p>
 
     <p><small><?php printf(__( 'You can use these tags: <code>%s</code>', 'nvLangScope' ), allowed_tags()); ?></small></p>
 

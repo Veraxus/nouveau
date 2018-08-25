@@ -1,2 +1,2 @@
 <?php
-// TODO: What to display for pingbacks
+// What do you want to display for pingbacks?

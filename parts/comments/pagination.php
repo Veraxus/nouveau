@@ -6,5 +6,6 @@
  */
 ?>
 <div class="comments-nav">
-    <span class="prev-comments"><?php previous_comments_link() ?></span> <span class="next-comments"><?php next_comments_link() ?></span>
+    <span class="prev-comments"><?php previous_comments_link() ?></span>
+    <span class="next-comments"><?php next_comments_link() ?></span>
 </div>
