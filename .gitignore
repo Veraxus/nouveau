@@ -1,3 +1,4 @@
 .idea
-node_modules
-vendor
+/docs
+/node_modules
+/vendor

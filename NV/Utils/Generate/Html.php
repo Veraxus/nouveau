@@ -1,11 +1,11 @@
 <?php
 
-namespace NV\Theme\Utils;
+namespace NV\Theme\Utils\Generate;
 
 /**
  * Shortcuts to speed up the easy generation of dynamic HTML, extending the MarkupGenerator utility class.
  */
-class GenHtml extends GenMarkup
+class Html extends Markup
 {
 
     /**
@@ -27,7 +27,7 @@ class GenHtml extends GenMarkup
             $atts
         );
 
-        $return = parent::gen('a', $atts, $content);
+        $return = parent::make('a', $atts, $content);
         if ($echo) {
             echo $return;
         }
@@ -46,7 +46,7 @@ class GenHtml extends GenMarkup
      */
     public static function div($atts = [], $content = '', $echo = false)
     {
-        $return = parent::gen('div', $atts, $content);
+        $return = parent::make('div', $atts, $content);
         if ($echo) {
             echo $return;
         }
@@ -65,7 +65,7 @@ class GenHtml extends GenMarkup
      */
     public static function ul($content = '', $atts = [], $echo = false)
     {
-        $return = parent::gen('ul', $atts, $content);
+        $return = parent::make('ul', $atts, $content);
         if ($echo) {
             echo $return;
         }
@@ -84,7 +84,7 @@ class GenHtml extends GenMarkup
      */
     public static function li($content = '', $atts = [], $echo = false)
     {
-        $return = parent::gen('li', $atts, $content);
+        $return = parent::make('li', $atts, $content);
         if ($echo) {
             echo $return;
         }
@@ -111,7 +111,7 @@ class GenHtml extends GenMarkup
             $atts
         );
 
-        $return = parent::gen('img', $atts, '', true);
+        $return = parent::make('img', $atts, '', true);
         if ($echo) {
             echo $return;
         }
@@ -132,14 +132,14 @@ class GenHtml extends GenMarkup
     {
         $atts = parent::default_atts(
             [
-                'id' => (!empty($name)) ? $name : parent::random_id(),
-                'name' => (!empty($name)) ? $name : parent::random_id(),
+                'id' => (!empty($name)) ? $name : parent::rand_int(),
+                'name' => (!empty($name)) ? $name : parent::rand_int(),
                 'type' => 'text',
             ],
             $atts
         );
 
-        $return = parent::gen('input', $atts);
+        $return = parent::make('input', $atts);
         if ($echo) {
             echo $return;
         }
@@ -174,14 +174,14 @@ class GenHtml extends GenMarkup
     {
         $atts = parent::default_atts(
             [
-                'id' => (!empty($name)) ? $name : parent::random_id(),
-                'name' => (!empty($name)) ? $name : parent::random_id(),
+                'id' => (!empty($name)) ? $name : parent::rand_int(),
+                'name' => (!empty($name)) ? $name : parent::rand_int(),
                 'type' => 'checkbox',
             ],
             $atts
         );
 
-        $return = parent::gen('input', $atts);
+        $return = parent::make('input', $atts);
         if ($echo) {
             echo $return;
         }
@@ -202,14 +202,14 @@ class GenHtml extends GenMarkup
     {
         $atts = parent::default_atts(
             [
-                'id' => (!empty($name)) ? $name : parent::random_id(),
-                'name' => (!empty($name)) ? $name : parent::random_id(),
+                'id' => (!empty($name)) ? $name : parent::rand_int(),
+                'name' => (!empty($name)) ? $name : parent::rand_int(),
                 'type' => 'radio',
             ],
             $atts
         );
 
-        $return = parent::gen('input', $atts);
+        $return = parent::make('input', $atts);
         if ($echo) {
             echo $return;
         }
@@ -235,7 +235,7 @@ class GenHtml extends GenMarkup
             $atts
         );
 
-        $return = parent::gen('label', $atts);
+        $return = parent::make('label', $atts);
         if ($echo) {
             echo $return;
         }

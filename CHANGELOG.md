@@ -1,13 +1,19 @@
 # Changelog
 
 ## 1.0 (2018-08-24)
-* Removed bower. Foundation is now included via Node.
+* Removed Bower.
+* Packages now managed with NPM + Composer.
+* Added Monolog, PhpDoc, and Codeception support.
+* Removed stock PhpUnit since NOUVEAU now supports Codeception - which is much more robust and easy to set up.
 * Refactored PHP to follow PSR-2 coding standards.
-* Refactored namespaces. Yes, again.
-* Replaced stock PhpUnit configuration with Codeception, which is much more robust and easy to set up.
-* Divided assets into build and dist directories. Precompiled assets now live in build.
-* Gulp 4 is now the preferred way to compile NOUVEAU assets.
-* Updated to the latest version of Foundation: 6.5
+* Refactored namespaces for sanity and code hygiene.
+* Divided assets into `assets/build` and `assets/dist` directories. Script source and SASS now live in `assets/build`.
+* Updated to Gulp 4, with all it's spiffy new chaining features.
+* Updated Foundation to 6.5
+
+## 0.15 (2018-03-02)
+* Updated Foundation
+* Added CorePath and CoreUrl classes to make path and uri selections more IDE-friendly
 
 ## 0.14 (2017-03-05)
 * Renamed the theme framework's core class from `NV` to `Core`

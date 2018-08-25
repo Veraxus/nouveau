@@ -29,6 +29,11 @@ class Paths
     /** @var string Absolute path to the theme's languages directory */
     public $langs;
 
+    /**
+     * Paths constructor.
+     *
+     * @param string $file The output of __FILE__
+     */
     function __construct($file)
     {
         $this->theme  = trailingslashit(get_template_directory());

@@ -77,6 +77,13 @@ NOUVEAU now uses and encourages Codeception for testing of your themes. After yo
 
 You can find more detailed directions at [codeception.com/for/wordpress](https://codeception.com/for/wordpress#Install)
 
+### Generate Documentation
+To generate documentation using PhpDocumentor, simply run the following command after you've installed Composer dependencies:
+
+`php vendor/bin/phpdoc`
+
+This will create a docs/ directory within your theme containing documentation for your theme.
+
 # File Structure
 
 NOUVEAU has an file structure that encourages better organization of your theme.

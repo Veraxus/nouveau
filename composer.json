@@ -1,6 +1,7 @@
 {
     "require-dev": {
-        "lucatume/wp-browser": "^2.1"
+        "lucatume/wp-browser": "^2.1",
+        "phpdocumentor/phpdocumentor": "dev-master"
     },
     "require": {
         "monolog/monolog": "^1.23"

@@ -1,5 +1,4 @@
 <?php
-/** The \NV\Theme\Core\Editor class */
 
 namespace NV\Theme\Core;
 

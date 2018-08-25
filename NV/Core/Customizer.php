@@ -1,5 +1,4 @@
 <?php
-/** The \NV\Theme\Core\Customizer class */
 
 namespace NV\Theme\Core;
 

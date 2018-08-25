@@ -1,5 +1,4 @@
 <?php
-/** The \NV\Theme\Core\NV class */
 
 namespace NV\Theme;
 

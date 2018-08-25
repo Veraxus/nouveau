@@ -26,7 +26,7 @@
     "url": "https://github.com/Veraxus/nouveau/issues",
     "email": "matt@mattvanandel.com"
   },
-  "license": "GPL-2.0 & MIT",
+  "license": "GPL-2.0+",
   "private": true,
   "dependencies": {
     "foundation-sites": "^6.5.0-rc.2",

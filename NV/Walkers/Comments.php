@@ -1,5 +1,4 @@
 <?php
-/** The \NV\Theme\Core\Walkers\Comments class */
 
 namespace NV\Theme\Core\Walkers;
 

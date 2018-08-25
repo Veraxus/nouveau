@@ -1,5 +1,4 @@
 <?php
-/** The \NV\Theme\Core\ThemeSetup class */
 
 namespace NV\Theme\Core;
 
@@ -296,7 +295,8 @@ class Setup
      *
      * @param int $width The width, in px, of the content
      */
-    public static function content_width( $width ) {
+    public static function content_width($width)
+    {
         // Set WP content width global
         if (!isset($GLOBALS['content_width'])) {
             $GLOBALS['content_width'] = $width;
