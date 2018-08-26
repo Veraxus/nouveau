@@ -1,11 +1,11 @@
 <?php
 
-namespace NV\Theme\Utils\Generate;
+namespace NV\Theme\Utils\Markup;
 
 /**
  * Shortcuts to speed up the easy generation of dynamic HTML, extending the MarkupGenerator utility class.
  */
-class Html extends Markup
+class Html extends Generator
 {
 
     /**

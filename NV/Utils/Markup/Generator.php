@@ -1,11 +1,11 @@
 <?php
 
-namespace NV\Theme\Utils\Generate;
+namespace NV\Theme\Utils\Markup;
 
 /**
  * A utility class that can be used for dynamic/programmatic generation of markup.
  */
-class Markup
+class Generator
 {
 
     /**
