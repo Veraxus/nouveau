@@ -1,9 +1,11 @@
-// =====================================================================================================================
+/* =====================================================================================================================
 // Gutenberg Block: NOUVEAU Editable
 //
 // This file is loaded into your WordPress admin's Gutenberg editor. For more information on how to create custom
 // Gutenberg blocks, see: https://wordpress.org/gutenberg/handbook/blocks/writing-your-first-block-type/
-// =====================================================================================================================
+//
+// TODO: Implement an example editable block
+// ===================================================================================================================*/
 
 const {registerBlockType} = wp.blocks;
 

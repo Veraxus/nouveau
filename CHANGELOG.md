@@ -10,6 +10,7 @@
 * Divided assets into `assets/build` and `assets/dist` directories. Script source and SASS now live in `assets/build`.
 * Updated to Gulp 4, with all it's spiffy new chaining features.
 * Added Babel, image optimization, etc to the gulp build process
+* Consolidated Paths and Urls into a single streamlined Locations class.
 * Updated Foundation to 6.5
 
 ## 0.15 (2018-03-02)

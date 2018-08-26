@@ -79,9 +79,9 @@ class Core
 
 
         /** CUSTOM GUTENBERG CATEGORIES & BLOCKS ************************************/
-        add_action('enqueue_block_editor_assets', ['NV\Theme\Core\Gutenberg', 'styles']);
-        add_filter('block_categories', ['NV\Theme\Core\Gutenberg', 'categories'], 10, 2);
-        add_action('init', ['NV\Theme\Core\Gutenberg', 'register_blocks']);
+        add_action('enqueue_block_editor_assets', ['\NV\Theme\Core\Gutenberg', 'styles']);
+        add_filter('block_categories', ['\NV\Theme\Core\Gutenberg', 'categories'], 10, 2);
+        add_action('init', ['\NV\Theme\Core\Gutenberg', 'register_blocks']);
     }
 
 
@@ -156,8 +156,8 @@ class Core
     protected function __construct()
     {
         $this->autoload();
-        $this->paths = new Paths(__FILE__);
-        $this->urls  = new Urls();
+        $this->paths = new Core\Locations('paths');
+        $this->urls  = new Core\Locations('urls');
         $this->log_init();
         $this->hooks();
         Setup::content_width($this->content_width);

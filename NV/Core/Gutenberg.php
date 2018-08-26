@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * The Gutenberg class
+ */
 namespace NV\Theme\Core;
 
 use NV\Theme\Core;

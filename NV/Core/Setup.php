@@ -149,7 +149,7 @@ class Setup
         // Add our own jQuery
         wp_enqueue_script(
             'jquery',
-            Core::i()->urls->get_js('jquery.min.js'),
+            Core::i()->urls->debug_asset('jquery.min.js'),
             [],
             false,
             true
@@ -158,7 +158,7 @@ class Setup
         // Foundation what-input dependency
         wp_enqueue_script(
             'what-input',
-            Core::i()->urls->get_js('what-input.min.js'),
+            Core::i()->urls->debug_asset('what-input.min.js'),
             [],
             false,
             true
@@ -167,7 +167,7 @@ class Setup
         // Load the complete version of Foundation
         wp_enqueue_script(
             'foundation',
-            Core::i()->urls->get_js('foundation.min.js'),
+            Core::i()->urls->debug_asset('foundation.min.js'),
             ['jquery', 'what-input'],
             false,
             true
@@ -176,7 +176,7 @@ class Setup
         // Load any custom javascript (remember to update dependencies if you changed the above)...
         wp_enqueue_script(
             'nv-theme',
-            Core::i()->urls->get_js('app.min.js'),
+            Core::i()->urls->debug_asset('app.min.js'),
             ['foundation'],
             false,
             true
@@ -199,7 +199,7 @@ class Setup
         wp_enqueue_style('nv-admin', Core::i()->urls->css('admin.css'));
 
         // Base admin scripts
-        wp_enqueue_script('nv-admin', Core::i()->urls->get_js('admin.min.js'), ['jquery'], false, false);
+        wp_enqueue_script('nv-admin', Core::i()->urls->debug_asset('admin.min.js'), ['jquery'], false, false);
     }
 
 
