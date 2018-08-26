@@ -189,5 +189,19 @@ class WordPress
         return update_option('dashboard_widget_options', $opts); //Save the entire widgets array back to the db
     }
 
+    /**
+     * Converts kebab or snake case to camelCase
+     *
+     * @param string $str The string to convert
+     * @return string
+     */
+    public static function to_camelCase($str)
+    {
+        $str = ucwords($str, '-_');
+        $str = str_replace('-', '', $str);
+        $str = str_replace('_', '', $str);
+        return lcfirst($str);
+    }
+
 
 }

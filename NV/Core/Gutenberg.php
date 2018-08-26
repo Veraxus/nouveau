@@ -3,6 +3,7 @@
 namespace NV\Theme\Core;
 
 use NV\Theme\Core;
+use NV\Theme\Utils\WordPress;
 
 /**
  * Adds Foundation components to WordPress's modular Gutenberg editor
@@ -10,41 +11,84 @@ use NV\Theme\Core;
  * There's not much to see here because Gutenberg is 99.9% Javascript. To get up to speed on how to create Gutenberg
  * blocks, read: https://wordpress.org/gutenberg/handbook/blocks/writing-your-first-block-type/
  *
- * You can find gutenberg.js and gutenberg.scss in assets/build/js/ and assets/build/sass/, respectively.
+ * There are just 5 steps to creating a Gutenberg block in PHP. The rest of the work happens in Javascript.
  *
- * @const string NS The namespace slug to use for new Gutenberg block types
+ * STEP 1
+ * Decide on a unique slug to identify your block.
+ *
+ * STEP 2
+ * Register (but don't enqueue) your javascript
+ *
+ * STEP 3
+ * Register (but don't enqueue) your styles
+ *
+ * STEP 4
+ * Register your content block with WordPress
+ *
+ * STEP 5
+ * Pass translations to JS. Note that the "before" position is required.
+ *
+ * NOTE: We don't use get_js() in here because React syntax is not natively browser friendly. The JS MUST be compiled.
  */
 class Gutenberg
 {
 
-    const NAMESPACE = 'nv-gutenberg';
+    /** @var string A theme-wide namespace to prefix your Gutenberg blocks */
+    const NAMESPACE = 'nouveau-theme';
 
     /**
-     * Enqueues assets needed by Gutenberg and registers the block
-     *
-     * @hook action 'init'
+     * Registers all our custom blocks
      */
-    public static function block_example()
+    public static function register_blocks()
     {
-        /*
-         * STEP 1
-         * Decide on a unique slug to
-         */
-        $block_slug = 'block-example';
-
         // Abort if Gutenberg isn't active
         if (!self::is_active()) {
             return;
         }
 
-        // Register the javascript
+        self::block_hello();
+        self::block_editable();
+    }
+
+    /**
+     * Manipulates the list of block categories that group together block types.
+     *
+     * By default, creates a new category named "NOUVEAU"
+     *
+     * @hook filter 'block_categories'
+     *
+     * @param array $categories The existing categories array
+     * @param \WP_Post $post The current post object
+     * @return array The filtered categories array
+     */
+    public static function categories($categories, \WP_Post $post)
+    {
+        return array_merge(
+            $categories,
+            [
+                [
+                    'slug'  => self::NAMESPACE,
+                    'title' => __('NOUVEAU', 'nv_lang_scope'),
+                ],
+            ]
+        );
+    }
+
+    /**
+     * Enqueues assets needed by Gutenberg and registers the block.
+     *
+     * @hook action 'init'
+     */
+    public static function block_hello()
+    {
+        $block_slug = 'example-hello';
+
         wp_register_script(
             $block_slug,
-            Core::i()->urls->get_js('gutenberg.min.js'),
+            Core::i()->urls->js('gutenberg/block.hello.min.js'),
             ['wp-blocks', 'wp-i18n', 'wp-element']
         );
 
-        // Register the block type with WordPress
         register_block_type(
             Gutenberg::NAMESPACE . '/' . $block_slug,
             [
@@ -52,16 +96,45 @@ class Gutenberg
             ]
         );
 
-        /*
-         * Pass already loaded translations to our JavaScript.
-         *
-         * This happens _before_ our JavaScript runs, afterwards it's too late.
-         */
         wp_add_inline_script(
-            'gutenberg-examples-01-esnext',
+            $block_slug,
             sprintf(
-                'var gutenberg_examples_01_esnext = { localeData: %s };',
-                json_encode(gutenberg_get_jed_locale_data('gutenberg-examples'))
+                'var %s = { localeData: %s };',
+                WordPress::to_camelCase($block_slug),
+                json_encode(gutenberg_get_jed_locale_data('nv_lang_scope'))
+            ),
+            'before'
+        );
+    }
+
+    /**
+     * Enqueues assets needed by Gutenberg and registers the block.
+     *
+     * @hook action 'init'
+     */
+    public static function block_editable()
+    {
+        $block_slug = 'example-editable';
+
+        wp_register_script(
+            $block_slug,
+            Core::i()->urls->js('gutenberg/block.editable.min.js'),
+            ['wp-blocks', 'wp-i18n', 'wp-element']
+        );
+
+        register_block_type(
+            Gutenberg::NAMESPACE . '/' . $block_slug,
+            [
+                'editor_script' => $block_slug,
+            ]
+        );
+
+        wp_add_inline_script(
+            $block_slug,
+            sprintf(
+                'var %s = { localeData: %s };',
+                WordPress::to_camelCase($block_slug),
+                json_encode(gutenberg_get_jed_locale_data('nv_lang_scope'))
             ),
             'before'
         );
@@ -69,6 +142,7 @@ class Gutenberg
 
     /**
      * Is Gutenberg active?
+     *
      * @return bool
      */
     public static function is_active()
@@ -77,23 +151,18 @@ class Gutenberg
     }
 
     /**
-     * Enqueues assets needed by Gutenberg
+     * Registers Gutenberg stylesheet so we don't need to apply isolated styles to every block
      *
      * @hook action 'enqueue_block_editor_assets'
      */
-    public static function enqueue_assets()
+    public static function styles()
     {
-//        wp_enqueue_script(
-//            'nv-example-gutes-js',
-//            Core::i()->urls->get_js('gutenberg.min.js'),
-//            ['wp-blocks', 'wp-i18n', 'wp-element']
-//        );
-//
-//        wp_enqueue_style(
-//            'nv-example-gutes-css',
-//            Core::i()->urls->get('gutenberg.css', 'css'),
-//            ['wp-edit-blocks']
-//        );
+        wp_enqueue_style(
+            self::NAMESPACE,
+            Core::i()->urls->css('gutenberg.css'),
+            ['wp-edit-blocks'],
+            filemtime(Core::i()->paths->dist('css/gutenberg.css'))
+        );
     }
 
 

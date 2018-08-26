@@ -3,7 +3,7 @@
 		<div id="copyright">
 			<?php
 			printf(
-				__( 'Copyright &copy; %s %s. All Rights Reserved.', 'nvLangScope' ),
+				__( 'Copyright &copy; %s %s. All Rights Reserved.', 'nv_lang_scope' ),
 				date( 'Y' ),
 				get_bloginfo( 'name' )
 			);

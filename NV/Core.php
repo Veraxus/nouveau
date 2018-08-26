@@ -78,9 +78,10 @@ class Core
         add_filter('tiny_mce_before_init', ['\NV\Theme\Core\Editor', 'settings_advanced']);
 
 
-        /** INTEGRATE THEME WITH GUTENBERG EDITOR ************************************/
-        //add_action('enqueue_block_editor_assets', ['NV\Theme\Core\Gutenberg', 'enqueue_assets']);
-        add_action('init', ['NV\Theme\Core\Gutenberg', 'block_example']);
+        /** CUSTOM GUTENBERG CATEGORIES & BLOCKS ************************************/
+        add_action('enqueue_block_editor_assets', ['NV\Theme\Core\Gutenberg', 'styles']);
+        add_filter('block_categories', ['NV\Theme\Core\Gutenberg', 'categories'], 10, 2);
+        add_action('init', ['NV\Theme\Core\Gutenberg', 'register_blocks']);
     }
 
 
@@ -140,8 +141,8 @@ class Core
     protected function log_init()
     {
         // Setup the logger, if available
-        if (file_exists($this->paths->vendor . 'autoload.php')) {
-            require $this->paths->vendor . 'autoload.php';
+        if (file_exists($this->paths->vendor('autoload.php'))) {
+            require $this->paths->vendor('autoload.php');
             $this->log = new \Monolog\Logger('nouveau');
         }
     }

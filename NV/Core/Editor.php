@@ -18,7 +18,7 @@ class Editor
     /**
      * Add stylesheet to the editor window so that previews are accurate.
      *
-     * @used-by add_action( 'mce_css', $func )
+     * @hook action 'mce_css'
      *
      * @param $url
      *
@@ -32,7 +32,7 @@ class Editor
         }
 
         //Add our new style
-        $url .= Core::i()->urls->css . 'editor.css';
+        $url .= Core::i()->urls->css('editor.css');
 
         return $url;
     }
@@ -42,9 +42,7 @@ class Editor
      * TinyMCE - so we simply need to add it back to the button array. In this case, we're adding it to the
      * mce_buttons_2 bar.
      *
-     * Used by hook: 'mce_buttons_2'
-     *
-     * @see   add_action('mce_buttons_2',$func)
+     * @hook action 'mce_buttons_2'
      *
      * @param $buttons
      *
@@ -65,7 +63,7 @@ class Editor
      * defined this way. For more control, or to allow manipulation of existing elements, see the settings_advanced()
      * method instead.
      *
-     * @used-by add_action( 'tiny_mce_before_init', $func )
+     * @hook action 'tiny_mce_before_init'
      *
      * @param array $settings The TinyMCE settings array.
      *
@@ -75,7 +73,7 @@ class Editor
     {
         //First, we define the styles we want to add in format 'Style Name' => 'css classes'
         $classes = [
-            __('Test', 'nvLangScope') => 'warnme',
+            __('Test', 'nv_lang_scope') => 'warnme',
         ];
 
         //Delimit styles by semicolon in format 'Title=classes;' so TinyMCE can use it
@@ -105,7 +103,7 @@ class Editor
      * Unlike the previous example, this one uses a multidimensional array to build a TinyMCE-compatible JSON object
      * with advanced styling rules.
      *
-     * @used-by add_action( 'tiny_mce_before_init', $func )
+     * @hook action 'tiny_mce_before_init'
      *
      * @param array $settings The TinyMCE settings array.
      *
@@ -158,7 +156,7 @@ class Editor
             /*
             //Example: An inline style format
             array(
-                'title'     => __('Text: Cross out','nvLangScope'),
+                'title'     => __('Text: Cross out','nv_lang_scope'),
                 'inline'    => 'span',
                 'classes'   => 'strike-through',
             ),
@@ -167,7 +165,7 @@ class Editor
             /*
             //Example: An element-smart selector (target only images)
             array(
-                'title'     => __('Image: 50% Width','nvLangScope'),
+                'title'     => __('Image: 50% Width','nv_lang_scope'),
                 'selector'  => 'img',
                 'classes'   => 'half-width',
             ),
@@ -176,7 +174,7 @@ class Editor
             /*
             //Example: A div that wraps around any current selection
             array(
-                'title'     => __('Warning Box','nvLangScope'),
+                'title'     => __('Warning Box','nv_lang_scope'),
                 'block'     => 'div',
                 'classes'   => 'warning box',
                 'exact'     => true,
@@ -187,7 +185,7 @@ class Editor
             /*
             //Example: A span with inline styles
             array(
-                'title'     => __('Red Uppercase Text','nvLangScope'),
+                'title'     => __('Red Uppercase Text','nv_lang_scope'),
                 'inline'    => 'span',
                 'styles'    => array(
                     'color'         => '#ff0000',
@@ -198,51 +196,51 @@ class Editor
             */
 
             [
-                'title'   => __('Section', 'nvLangScope'),
+                'title'   => __('Section', 'nv_lang_scope'),
                 'block'   => 'section',
                 'wrapper' => true,
                 'exact'   => true,
             ],
             [
-                'title'   => __('Foundation Container', 'nvLangScope'),
+                'title'   => __('Foundation Container', 'nv_lang_scope'),
                 'block'   => 'div',
                 'classes' => 'grid-container',
                 'wrapper' => true,
                 'exact'   => true,
             ],
             [
-                'title'   => __('Foundation Row', 'nvLangScope'),
+                'title'   => __('Foundation Row', 'nv_lang_scope'),
                 'block'   => 'div',
                 'classes' => 'grid-x grid-padding-x',
                 'wrapper' => true,
                 'exact'   => true,
             ],
             [
-                'title'   => __('Column (Small 12)', 'nvLangScope'),
+                'title'   => __('Column (Small 12)', 'nv_lang_scope'),
                 'block'   => 'div',
                 'classes' => 'small-12 cell',
                 'wrapper' => true,
                 'exact'   => true,
             ],
             [
-                'title'   => __('Column (Small 6)', 'nvLangScope'),
+                'title'   => __('Column (Small 6)', 'nv_lang_scope'),
                 'block'   => 'div',
                 'classes' => 'small-6 cell',
                 'wrapper' => true,
                 'exact'   => true,
             ],
             [
-                'title'    => __('Medium 2 (Edit Column)', 'nvLangScope'),
+                'title'    => __('Medium 2 (Edit Column)', 'nv_lang_scope'),
                 'selector' => '.cell',
                 'classes'  => 'medium-2',
             ],
             [
-                'title'    => __('Medium 4 (Edit Column)', 'nvLangScope'),
+                'title'    => __('Medium 4 (Edit Column)', 'nv_lang_scope'),
                 'selector' => '.cell',
                 'classes'  => 'medium-4',
             ],
             [
-                'title'    => __('Medium 6 (Edit Column)', 'nvLangScope'),
+                'title'    => __('Medium 6 (Edit Column)', 'nv_lang_scope'),
                 'selector' => '.cell',
                 'classes'  => 'medium-6',
             ],

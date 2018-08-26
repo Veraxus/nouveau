@@ -18,7 +18,7 @@
                 echo "aria-required='true'";
             } ?> />
             <label for="author">
-                <small><?php _e( 'Name', 'nvLangScope' ); ?> <?php if( $req ) {
+                <small><?php _e( 'Name', 'nv_lang_scope' ); ?> <?php if( $req ) {
                         _e( '(required)' );
                     } ?></small>
             </label></p>
@@ -29,24 +29,24 @@
                 echo "aria-required='true'";
             } ?> />
             <label for="email">
-                <small><?php _e( 'Mail (will not be published)', 'nvLangScope' ); ?> <?php if( $req ) {
-                        _e( '(required)', 'nvLangScope' );
+                <small><?php _e( 'Mail (will not be published)', 'nv_lang_scope' ); ?> <?php if( $req ) {
+                        _e( '(required)', 'nv_lang_scope' );
                     } ?></small>
             </label></p>
 
         <p><input type="text" name="url" id="url" value="<?php echo esc_attr( $comment_author_url ); ?>"
                   size="22" tabindex="3"/>
             <label for="url">
-                <small><?php _e( 'Website', 'nvLangScope' ); ?></small>
+                <small><?php _e( 'Website', 'nv_lang_scope' ); ?></small>
             </label></p>
 
     <?php } ?>
 
     <p><textarea title="Leave your comment" name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea></p>
 
-    <p><small><?php printf(__( 'You can use these tags: <code>%s</code>', 'nvLangScope' ), allowed_tags()); ?></small></p>
+    <p><small><?php printf(__( 'You can use these tags: <code>%s</code>', 'nv_lang_scope' ), allowed_tags()); ?></small></p>
 
-    <p><input name="submit" type="submit" id="submit" tabindex="5" class="button" value="<?php esc_attr_e( 'Submit Comment', 'nvLangScope' ); ?>"/>
+    <p><input name="submit" type="submit" id="submit" tabindex="5" class="button" value="<?php esc_attr_e( 'Submit Comment', 'nv_lang_scope' ); ?>"/>
         <?php comment_id_fields(); ?>
     </p>
 

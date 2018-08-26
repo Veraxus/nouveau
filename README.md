@@ -8,7 +8,7 @@
 **Requires at least:** 4.9  
 **Tested up to:** 4.9  
 **Stable tag:** 1.0  
-**Text Domain:** nvLangScope  
+**Text Domain:** nv_lang_scope  
 **License:** GPL2+ & MIT  
 
 NOUVEAU is an open-source, rapid-development theme & plugin framework for WordPress, built on Zurb Foundation 6 and PHP 7.1+. Work fast. Be awesome.
@@ -64,7 +64,7 @@ That's all there is to it!
 To install, simply the copy the NOUVEAU theme folder to your `wp-content\themes` directory. Before activating, you may want to make it your own: 
 
 1. Rename the theme folder 
-1. Perform a global find-replace for the strings (case sensitive) `NOUVEAU`, `Nouveau`, and `nouveau`, and the language scope: `nvLangScope`.
+1. Perform a global find-replace for the strings (case sensitive) `NOUVEAU`, `Nouveau`, and `nouveau`, and the language scope: `nv_lang_scope`.
 
 You can also find detailed documentation for NOUVEAU at [NOUVEAUFramework.org](http://nouveauframework.org/documentation/getting-started/), and documentation for Zurb Foundation at [foundation.zurb.com](http://foundation.zurb.com/docs/sass.html)
 
@@ -106,4 +106,4 @@ Browse NOUUVEAU starter plugins at [NOUVEAUFramework.org](https://nouveauframewo
 
 # Internationalization (I18n)
 
-NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly run a project-wide search and replace for the string `nvLangScope` and you'll be up and running in no time.
+NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly run a project-wide search and replace for the string `nv_lang_scope` and you'll be up and running in no time.

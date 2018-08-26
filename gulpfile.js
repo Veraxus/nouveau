@@ -32,6 +32,7 @@
 
 const gulp = require('gulp');
 const plugins = require('gulp-load-plugins')();
+const sassGlob = require('node-sass-glob-importer');
 
 const paths = {
     in: {
@@ -70,6 +71,7 @@ gulp.task('build:styles', () => {
     return gulp.src(paths.in.styles)
         .pipe(plugins.sourcemaps.init())
         .pipe(plugins.sass({
+            importer: sassGlob(),
             includePaths: paths.includes.styles,
             outputStyle: 'compressed', //options: expanded, nested, compact, compressed
         }).on('error', plugins.sass.logError))

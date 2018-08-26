@@ -1,7 +1,13 @@
-// =====================================================================================================================
+/* =====================================================================================================================
 // Gutenberg Styles
 //
 // Styles in this file are loaded into your WordPress admin's Gutenberg editor. For more information on how to create
 // custom Gutenberg blocks, see: https://wordpress.org/gutenberg/handbook/blocks/writing-your-first-block-type/
-// =====================================================================================================================
+//
+// BE WARNED: Do not just import Foundation or app.scss into this file. Styles you define here will affect the ENTIRE
+// WordPress admin dashboard while Gutenberg is visible... not just Gutenberg itself.
+//
+// Note that our Gulp configuration includes a Sass glob tool. The below import syntax is not standard Sass. ;-)
+// ===================================================================================================================*/
 
+@import 'gutenberg/*.scss';

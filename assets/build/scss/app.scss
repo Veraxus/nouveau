@@ -6,6 +6,8 @@
 //
 // If you would like to adjust what Foundation components and features are output, see the following documentation:
 //   https://foundation.zurb.com/sites/docs/sass.html#adjusting-css-output
+//
+// Note that our Gulp configuration includes a Sass glob tool. The below import * syntax is not standard Sass. ;-)
 // ===================================================================================================================*/
 
 
@@ -17,8 +19,5 @@
 // Use everything by default
 @include foundation-everything();
 
-// NOUVEAU mixins, including image-url() fix
-@import "nv-mixins";
-
-// Load NOUVEAU compatibility styles
-@import "nv-wordpress";
+// NOUVEAU mixins & compatibility styles
+@import "nv/*.scss";

@@ -24,7 +24,7 @@ class Setup
     {
 
         // Load available language pack
-        load_theme_textdomain('nvLangScope', Core::i()->paths->langs);
+        load_theme_textdomain('nv_lang_scope', Core::i()->paths->langs);
 
         // Let WordPress generate the <title> tag for you
         add_theme_support('title-tag');
@@ -47,17 +47,17 @@ class Setup
         add_theme_support(
             'custom-header',
             [
-                'width' => 1200,
-                'height' => 250,
-                'flex-height' => true,
-                'flex-width' => true,
-                'default-image' => Core::i()->urls->img . 'header.gif',
-                'random-default' => false,
-                'header-text' => true,
-                'default-text-color' => '',
-                'uploads' => true,
-                'wp-head-callback' => null,
-                'admin-head-callback' => null,
+                'width'                  => 1200,
+                'height'                 => 250,
+                'flex-height'            => true,
+                'flex-width'             => true,
+                'default-image'          => Core::i()->urls->img('header.gif'),
+                'random-default'         => false,
+                'header-text'            => true,
+                'default-text-color'     => '',
+                'uploads'                => true,
+                'wp-head-callback'       => null,
+                'admin-head-callback'    => null,
                 'admin-preview-callback' => null,
             ]
         );
@@ -66,13 +66,13 @@ class Setup
         add_theme_support(
             'custom-background',
             [
-                'default-image' => '',
-                'default-repeat' => 'repeat',
-                'default-position-x' => 'left',
-                'default-attachment' => 'scroll',
-                'default-color' => '',
+                'default-image'          => '',
+                'default-repeat'         => 'repeat',
+                'default-position-x'     => 'left',
+                'default-attachment'     => 'scroll',
+                'default-color'          => '',
                 //'wp-head-callback'       => '_custom_background_cb',
-                'admin-head-callback' => '',
+                'admin-head-callback'    => '',
                 'admin-preview-callback' => '',
             ]
         );
@@ -100,8 +100,8 @@ class Setup
         add_theme_support('woocommerce');
 
         // Register your default navigation
-        register_nav_menu('primary', __('Primary Menu', 'nvLangScope'));
-        register_nav_menu('footer', __('Footer Menu', 'nvLangScope'));
+        register_nav_menu('primary', __('Primary Menu', 'nv_lang_scope'));
+        register_nav_menu('footer', __('Footer Menu', 'nv_lang_scope'));
 
         /*
          * Set up any default values needed for theme options. If a default value is needed, it can be provided as a
@@ -133,7 +133,7 @@ class Setup
         // =================================
 
         // Base stylesheet (compiled Foundation SASS)
-        wp_enqueue_style('app', Core::i()->urls->css . 'app.css');
+        wp_enqueue_style('app', Core::i()->urls->css('app.css'));
 
         // WordPress's required styles.css
         wp_enqueue_style('styles', get_bloginfo('stylesheet_url'), ['app']);
@@ -196,7 +196,7 @@ class Setup
     {
 
         // Base admin styles
-        wp_enqueue_style('nv-admin', Core::i()->urls->css . 'admin.css');
+        wp_enqueue_style('nv-admin', Core::i()->urls->css('admin.css'));
 
         // Base admin scripts
         wp_enqueue_script('nv-admin', Core::i()->urls->get_js('admin.min.js'), ['jquery'], false, false);
@@ -232,37 +232,37 @@ class Setup
 
         register_sidebar(
             [
-                'name' => __('Blog Sidebar', 'nvLangScope'),
-                'id' => 'sidebar-1',
-                'description' => __('Drag widgets for Blog sidebar here. These widgets will only appear on the blog portion of your site.',
-                    'nvLangScope'),
+                'name'          => __('Blog Sidebar', 'nv_lang_scope'),
+                'id'            => 'sidebar-1',
+                'description'   => __('Drag widgets for Blog sidebar here. These widgets will only appear on the blog portion of your site.',
+                    'nv_lang_scope'),
                 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-                'after_widget' => "</aside>",
-                'before_title' => '<h3 class="widget-title">',
-                'after_title' => '</h3>',
+                'after_widget'  => "</aside>",
+                'before_title'  => '<h3 class="widget-title">',
+                'after_title'   => '</h3>',
             ]
         );
         register_sidebar(
             [
-                'name' => __('Site Sidebar', 'nvLangScope'),
-                'id' => 'sidebar-2',
-                'description' => __('Drag widgets for the Site sidebar here. These widgets will only appear on non-blog pages.',
-                    'nvLangScope'),
+                'name'          => __('Site Sidebar', 'nv_lang_scope'),
+                'id'            => 'sidebar-2',
+                'description'   => __('Drag widgets for the Site sidebar here. These widgets will only appear on non-blog pages.',
+                    'nv_lang_scope'),
                 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-                'after_widget' => "</aside>",
-                'before_title' => '<h3 class="widget-title">',
-                'after_title' => '</h3>',
+                'after_widget'  => "</aside>",
+                'before_title'  => '<h3 class="widget-title">',
+                'after_title'   => '</h3>',
             ]
         );
         register_sidebar(
             [
-                'name' => __('Footer', 'nvLangScope'),
-                'id' => 'sidebar-3',
-                'description' => __('Drag footer widgets here.', 'nvLangScope'),
+                'name'          => __('Footer', 'nv_lang_scope'),
+                'id'            => 'sidebar-3',
+                'description'   => __('Drag footer widgets here.', 'nv_lang_scope'),
                 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-                'after_widget' => "</aside>",
-                'before_title' => '<h3 class="widget-title">',
-                'after_title' => '</h3>',
+                'after_widget'  => "</aside>",
+                'before_title'  => '<h3 class="widget-title">',
+                'after_title'   => '</h3>',
             ]
         );
     }

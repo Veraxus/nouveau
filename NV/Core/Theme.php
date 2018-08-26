@@ -50,14 +50,14 @@ class Theme
         global $post, $wp_query;
 
         $defaults = [
-            'use_prefix' => true,
-            'blog_title' => __('Blog', 'nvLangScope'),
-            'before' => '<ul class="breadcrumbs">',
-            'after' => '</ul>',
+            'use_prefix'   => true,
+            'blog_title'   => __('Blog', 'nv_lang_scope'),
+            'before'       => '<ul class="breadcrumbs">',
+            'after'        => '</ul>',
             'crumb_before' => '<li%>',
             //% represents replacement character for current/active page
-            'crumb_after' => '</li>',
-            'echo' => true,
+            'crumb_after'  => '</li>',
+            'echo'         => true,
         ];
 
         $r = wp_parse_args($args, $defaults);
@@ -76,7 +76,7 @@ class Theme
 
         //Open tag...
         $output = $before;
-        $output .= '<li><a href="' . get_home_url() . '">' . __('Home', 'nvLangScope') . '</a></li>';
+        $output .= '<li><a href="' . get_home_url() . '">' . __('Home', 'nv_lang_scope') . '</a></li>';
 
         //Determine content of breadcrumb...
         if (is_singular()) {
@@ -108,19 +108,19 @@ class Theme
                 } else {
                     if (is_search()) {
                         $output .= '<li class="current"><a href="/?s=' . $_REQUEST['s'] . '">' . __('Search: ',
-                                'nvLangScope') . urldecode($_REQUEST['s']) . '</a></li>';
+                                'nv_lang_scope') . urldecode($_REQUEST['s']) . '</a></li>';
                     } else {
                         if (is_year()) {
                             $output .= '<li class="current"><a href="/?m=' . $_REQUEST['m'] . '">' . __('Year: ',
-                                    'nvLangScope') . get_the_date('Y') . '</a></li>';
+                                    'nv_lang_scope') . get_the_date('Y') . '</a></li>';
                         } else {
                             if (is_month()) {
                                 $output .= '<li class="current"><a href="/?m=' . $_REQUEST['m'] . '">' . __('Month: ',
-                                        'nvLangScope') . get_the_date('F Y') . '</a></li>';
+                                        'nv_lang_scope') . get_the_date('F Y') . '</a></li>';
                             } else {
                                 if (is_date()) {
                                     $output .= '<li class="current"><a href="/?m=' . $_REQUEST['m'] . '">' . __('Date: ',
-                                            'nvLangScope') . get_the_date('F d, Y') . '</a></li>';
+                                            'nv_lang_scope') . get_the_date('F d, Y') . '</a></li>';
                                 }
                             }
                         }
@@ -156,7 +156,7 @@ class Theme
      */
     public static function comments($comment, $args = [], $depth = 1)
     {
-        require Core::i()->paths->parts . 'comments/comments.php';
+        require Core::i()->paths->parts('comments/comments.php');
     }
 
 
@@ -302,13 +302,13 @@ class Theme
             while ($$var_name->have_posts()) {
                 $$var_name->the_post();
                 do_action("get_template_part_{$part}", $part, null);
-                $file = Core::i()->paths->theme . $part . '.php';
+                $file = Core::i()->paths->theme($part . '.php');
                 include $file;
             }
         } else {
             if (!empty($part_noresults)) {
                 do_action("get_template_part_{$part}", $part, null);
-                $file = Core::i()->paths->theme . $part_noresults . '.php';
+                $file = Core::i()->paths->theme($part_noresults . '.php');
                 include $file;
             }
         }
@@ -349,7 +349,7 @@ class Theme
         $file = preg_replace('|' . preg_quote(ABSPATH) . '|', '', $file);
 
         // Output an HTML comment with the current template path
-        printf("\n\n<!-- " . __('Template file: %s', 'nvLangScope') . " -->\n\n", '/' . $file);
+        printf("\n\n<!-- " . __('Template file: %s', 'nv_lang_scope') . " -->\n\n", '/' . $file);
     }
 
     /**
@@ -369,14 +369,14 @@ class Theme
         $author_url = esc_url(get_author_posts_url(get_the_author_meta('ID')));
 
         //Author title attribute
-        $author_tooltip = esc_attr(sprintf(__('View all posts by %s', 'nvLangScope'), get_the_author()));
+        $author_tooltip = esc_attr(sprintf(__('View all posts by %s', 'nv_lang_scope'), get_the_author()));
 
         // Author name
         $author_name = get_the_author();
 
         // OUTPUT THE HTML
         printf(
-            '<span class="posted-on">' . __('Posted on %s by %s', 'nvLangScope') . '</span>',
+            '<span class="posted-on">' . __('Posted on %s by %s', 'nv_lang_scope') . '</span>',
             // Date and time...
             "<time datetime='{$dt_html}' pubdate>{$dt_text}</time>",
             // Author vcard and link...

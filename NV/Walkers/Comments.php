@@ -32,7 +32,7 @@ class Comments extends \Walker
      */
     var $db_fields = [
         'parent' => 'comment_parent',
-        'id' => 'comment_ID'
+        'id'     => 'comment_ID'
     ];
 
 
@@ -142,9 +142,9 @@ class Comments extends \Walker
 
         // If this is a pingback (of any kind), load pingback template, otherwise use the standard comment template...
         if (('pingback' == $comment->comment_type || 'trackback' == $comment->comment_type) && $args['short_ping']) {
-            require Core::i()->paths->parts . 'comments/pingback.php';
+            require Core::i()->paths->parts('comments/pingback.php');
         } else {
-            require Core::i()->paths->parts . 'comments/single.php';
+            require Core::i()->paths->parts('comments/single.php');
         }
     }
 

@@ -30,10 +30,10 @@ class Customizer
         /*
         $wp_customize->add_section( 'nouveau_theme_options',
           array(
-              'title'         => __( 'Nouveau Options', 'nvLangScope' ),
+              'title'         => __( 'Nouveau Options', 'nv_lang_scope' ),
               'priority'      => 35,
               'capability'    => 'edit_theme_options',
-              'description'   => __('Allows you to customize some example settings for Nouveau.', 'nvLangScope'),
+              'description'   => __('Allows you to customize some example settings for Nouveau.', 'nv_lang_scope'),
           )
         );
         */
@@ -63,7 +63,7 @@ class Customizer
                 'nouveau_link_textcolor',                                   // Set a unique ID for the control
                 [
                     // Pass an args array....
-                    'label' => __('Link Color', 'nvLangScope'),
+                    'label' => __('Link Color', 'nv_lang_scope'),
                     // Admin-visible name of the control
                     'section' => 'colors',
                     // ID of the section this control should render in (can be one of yours, or a WordPress default section)
@@ -80,7 +80,7 @@ class Customizer
         // Radio button list...
         /*
         $wp_customize->add_control( 'nouveau_example_radio_list', array(  // Unique id for the control
-            'label'     => __( 'Example Radio List', 'nvLangScope' ),     // Admin-visible name of the control
+            'label'     => __( 'Example Radio List', 'nv_lang_scope' ),     // Admin-visible name of the control
             'section'   => 'nouveau_theme_options',                       // Which pre-defined section does this control go in?
             'settings'  => 'nouveau_theme_options[container_bg_color]',   // What is the serialized name of this option?
             'type'      => 'radio',                                       // What type of control is this? Radio? Checkbox? Select?
