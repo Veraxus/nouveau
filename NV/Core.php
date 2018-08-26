@@ -80,7 +80,7 @@ class Core
 
         /** INTEGRATE THEME WITH GUTENBERG EDITOR ************************************/
         //add_action('enqueue_block_editor_assets', ['NV\Theme\Core\Gutenberg', 'enqueue_assets']);
-        add_action('init', ['NV\Theme\Core\Gutenberg', 'example_block']);
+        add_action('init', ['NV\Theme\Core\Gutenberg', 'block_example']);
     }
 
 
