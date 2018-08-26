@@ -76,6 +76,11 @@ class Core
 
         // Populate our new "Styles" dropdown with options/content
         add_filter('tiny_mce_before_init', ['\NV\Theme\Core\Editor', 'settings_advanced']);
+
+
+        /** INTEGRATE THEME WITH GUTENBERG EDITOR ************************************/
+        //add_action('enqueue_block_editor_assets', ['NV\Theme\Core\Gutenberg', 'enqueue_assets']);
+        add_action('init', ['NV\Theme\Core\Gutenberg', 'example_block']);
     }
 
 

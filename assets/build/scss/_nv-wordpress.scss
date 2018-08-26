@@ -14,7 +14,7 @@
 =============================
 */
 #frame {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /*
@@ -23,20 +23,21 @@
 =============================
 */
 .wp-caption {
-    max-width: 100%;
+  max-width: 100%;
 }
+
 .gallery {
-    @include clearfix;
-    @include grid-layout( 3, ".gallery-item" );
-    .gallery-item {
-        margin: 0;
-        & > * {
-            padding: .5rem;
-        }
-        .gallery-icon {
-            text-align: center;
-        }
+  @include clearfix;
+  @include grid-layout(3, ".gallery-item");
+  .gallery-item {
+    margin: 0;
+    & > * {
+      padding: .5rem;
     }
+    .gallery-icon {
+      text-align: center;
+    }
+  }
 }
 
 /*
@@ -45,20 +46,22 @@
 =============================
 */
 .aligncenter {
-    clear: both;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .alignleft {
-    display: inline;
-    float: left;
-    margin-right: 1em;
+  display: inline;
+  float: left;
+  margin-right: 1em;
 }
+
 .alignright {
-    display: inline;
-    float: right; 
-    margin-left: 1em;
+  display: inline;
+  float: right;
+  margin-left: 1em;
 }
 
 /*
@@ -69,5 +72,5 @@
 
 //This helps ensure that Foundation's special ".sticky" class will not interfere with the WP admin bar.
 .admin-bar .snap-to-top.fixed {
-    top: 28px;
+  top: 28px;
 }

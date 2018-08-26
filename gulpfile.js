@@ -1,3 +1,35 @@
+/**
+ * This gulp file is pre-configured to support Gutenberg's React architecture using ESNext & JSX.
+ *
+ * Available gulp commands:
+ *
+ * > gulp
+ *
+ *   |---> Runs a build then starts watching js, scss, and images.
+ *
+ * > gulp build
+ *
+ *   |---> Builds js, scss, and images, then terminates.
+ *
+ * > gulp watch
+ *
+ *   |---> Begins watching js, scss, and images for changes. Does not build first.
+ *
+ * > gulp build:styles
+ * > gulp build:scripts
+ * > gulp build:images
+ *
+ *   |---> Builds only the specific thing that you specify (styles, scripts, or images).
+ *
+ * > gulp watch:styles
+ * > gulp watch:scripts
+ * > gulp watch:images
+ *
+ *   |---> Begins watching only the specific thing you specify (styles, scripts, or images) then terminates.
+ *
+ * @type {Gulp}
+ */
+
 const gulp = require('gulp');
 const plugins = require('gulp-load-plugins')();
 
@@ -48,6 +80,7 @@ gulp.task('build:styles', () => {
         .pipe(gulp.dest(paths.out.styles));
 });
 
+
 // ===============
 // BUILD SCRIPTS
 // ===============
@@ -60,8 +93,20 @@ gulp.task('build:scripts', () => {
     // Process our own files
     return gulp.src(paths.in.scripts)
         .pipe(plugins.sourcemaps.init())
-        .pipe(plugins.babel())
-        .pipe(plugins.uglify())
+        .pipe(plugins.babel({
+            "presets": [
+                [
+                    "env",
+                    {
+                        "targets": {
+                            "browsers": [">0.25%", "ie 11", "not op_mini all"]
+                        }
+                    }
+                ],
+                "react"
+            ]
+        }))
+        .pipe(plugins.uglifyEs.default())
         .pipe(plugins.rename({
             extname: '.min.js'
         }))

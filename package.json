@@ -1,41 +1,44 @@
 {
-  "name": "nouveau-wordpress-theme-framework",
-  "version": "1.0.0",
-  "description": "Basic starting point for a new WordPress theme using Foundation for Sites.",
-  "author": "Matt van Andel <matt@mattvanandel.com>",
-  "main": "gulpfile-3.js",
-  "devDependencies": {
-    "npm": "^6.4.0",
-    "babel-core": "~6.26.3",
-    "gulp": "~4.0.0",
-    "gulp-plumber": "~1.2.0",
-    "gulp-babel": "~7.0.1",
-    "gulp-autoprefixer": "~5.0.0",
-    "gulp-imagemin": "~4.1.0",
-    "gulp-load-plugins": "~1.5.0",
-    "gulp-rename": "~1.4.0",
-    "gulp-sass": "~4.0.1",
-    "gulp-sourcemaps": "~2.6.4",
-    "gulp-uglify": "~3.0.1"
-  },
-  "scripts": {
-    "start": "gulp",
-    "build": "gulp build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Veraxus/nouveau.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Veraxus/nouveau/issues",
-    "email": "matt@mattvanandel.com"
-  },
-  "license": "GPL-2.0+",
-  "private": true,
-  "dependencies": {
-    "foundation-sites": "^6.5.0-rc.2",
-    "jquery": "~3.3.1",
-    "motion-ui": "~2.0.3",
-    "what-input": "~5.1.1"
-  }
+    "name": "nouveau-wordpress-theme-framework",
+    "version": "1.0.0",
+    "description": "Basic starting point for a new WordPress theme using Foundation for Sites.",
+    "author": "Matt van Andel <matt@mattvanandel.com>",
+    "main": "gulpfile-3.js",
+    "devDependencies": {
+        "babel-core": "~6.26.3",
+        "babel-preset-env": "~1.7.0",
+        "babel-preset-react": "~6.24.1",
+        "gulp": "~4.0.0",
+        "gulp-autoprefixer": "~5.0.0",
+        "gulp-babel": "~7.0.1",
+        "gulp-imagemin": "~4.1.0",
+        "gulp-load-plugins": "~1.5.0",
+        "gulp-plumber": "~1.2.0",
+        "gulp-rename": "~1.4.0",
+        "gulp-sass": "~4.0.1",
+        "gulp-sourcemaps": "~2.6.4",
+        "gulp-task-listing": "^1.1.0",
+        "gulp-uglify-es": "~1.0.4",
+        "npm": "^6.4.0"
+    },
+    "scripts": {
+        "start": "gulp",
+        "build": "gulp build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Veraxus/nouveau.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Veraxus/nouveau/issues",
+        "email": "matt@mattvanandel.com"
+    },
+    "license": "GPL-2.0+",
+    "private": true,
+    "dependencies": {
+        "foundation-sites": "^6.5.0-rc.2",
+        "jquery": "~3.3.1",
+        "motion-ui": "~2.0.3",
+        "what-input": "~5.1.1"
+    }
 }
