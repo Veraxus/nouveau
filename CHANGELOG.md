@@ -1,7 +1,7 @@
 # Changelog
 
 ## 1.0 (2018-TBD)
-* Removed Bower.
+* Removed Bower - NOUVEAU will no longer include external dependencies by default.
 * Packages now managed with NPM + Composer.
 * Added Monolog, PhpDoc, and Codeception support.
 * Removed stock PhpUnit since NOUVEAU now supports Codeception - which is much more robust and easy to set up.
