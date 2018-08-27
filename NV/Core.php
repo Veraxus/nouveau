@@ -2,28 +2,26 @@
 
 namespace NV\Theme;
 
-use NV\Theme\Core\Setup;
-
 /**
  * The heart and soul of your theme. Can be accessed via a convenient singleton: Core::i()
  */
 class Core
 {
 
-    /** @var Core Stores the singleton instance */
+    /** @var self Stores the singleton instance */
     private static $instance;
 
-    /** @var Paths An object containing important theme directory paths */
+    /** @var Core\Locations An object containing important theme directory paths */
     public $paths;
 
-    /** @var Urls An object containing important theme urls */
+    /** @var Core\Locations An object containing important theme urls */
     public $urls;
 
     /** @var \Monolog\Logger A log object */
     public $log;
 
-    /** @var int The max width of content */
-    public $content_width = 1200;
+    /** @var int The max width of content to register with WordPress */
+    const CONTENT_WIDTH = 1200;
 
 
     /**
@@ -56,32 +54,32 @@ class Core
 
         /** THEME CUSTOMIZATION *******************************************************/
 
-        // Setup the theme \NV\Theme\Core\Customizer options
-        add_action('customize_register', ['\NV\Theme\Core\Customizer', 'register']);
+        // Setup the theme \NV\Theme\Admin\Customizer
+        add_action('customize_register', ['\NV\Theme\Admin\Customizer', 'register']);
 
         // Load the customized style data on the frontend
-        add_action('wp_head', ['\NV\Theme\Core\Customizer', 'header_output']);
+        add_action('wp_head', ['\NV\Theme\Admin\Customizer', 'header_output']);
 
         // Load any javascript needed for live preview updates
-        add_action('customize_preview_init', ['\NV\Theme\Core\Customizer', 'live_preview']);
+        add_action('customize_preview_init', ['\NV\Theme\Admin\Customizer', 'live_preview']);
 
 
         /** INTEGRATE THEME WITH TINYMCE EDITOR **************************************/
 
         // Adds custom stylesheet to the editor window so styling preview is accurate ( can also use add_editor_style() )
-        add_filter('mce_css', ['\NV\Theme\Core\Editor', 'style']);
+        add_filter('mce_css', ['\NV\Theme\Admin\Editor', 'style']);
 
         // Add a new "Styles" dropdown to the TinyMCE editor toolbar
-        add_filter('mce_buttons_2', ['\NV\Theme\Core\Editor', 'buttons']);
+        add_filter('mce_buttons_2', ['\NV\Theme\Admin\Editor', 'buttons']);
 
         // Populate our new "Styles" dropdown with options/content
-        add_filter('tiny_mce_before_init', ['\NV\Theme\Core\Editor', 'settings_advanced']);
+        add_filter('tiny_mce_before_init', ['\NV\Theme\Admin\Editor', 'settings_advanced']);
 
 
         /** CUSTOM GUTENBERG CATEGORIES & BLOCKS ************************************/
-        add_action('enqueue_block_editor_assets', ['\NV\Theme\Core\Gutenberg', 'styles']);
-        add_filter('block_categories', ['\NV\Theme\Core\Gutenberg', 'categories'], 10, 2);
-        add_action('init', ['\NV\Theme\Core\Gutenberg', 'register_blocks']);
+        add_action('enqueue_block_editor_assets', ['\NV\Theme\Admin\Gutenberg', 'styles']);
+        add_filter('block_categories', ['\NV\Theme\Admin\Gutenberg', 'categories'], 10, 2);
+        add_action('init', ['\NV\Theme\Admin\Gutenberg', 'register_blocks']);
     }
 
 
@@ -136,15 +134,22 @@ class Core
     }
 
     /**
-     * Initialize the log property with monolog, if it's available.
+     * Initialize the Composer autoloader
      */
-    protected function log_init()
+    protected function vendors_init()
     {
-        // Setup the logger, if available
-        if (file_exists($this->paths->vendor('autoload.php'))) {
-            require $this->paths->vendor('autoload.php');
-            $this->log = new \Monolog\Logger('nouveau');
+        $vendor_path = $this->paths->vendor('autoload.php');
+
+        // If the vendor path doesn't exist, stop
+        if (!file_exists($vendor_path)) {
+            return;
         }
+
+        // Load the Composer autoloader
+        require $vendor_path;
+
+        // Initalizde the logger
+        $this->log = new \Monolog\Logger('nouveau');
     }
 
 
@@ -158,9 +163,9 @@ class Core
         $this->autoload();
         $this->paths = new Core\Locations('paths');
         $this->urls  = new Core\Locations('urls');
-        $this->log_init();
+        $this->vendors_init();
         $this->hooks();
-        Setup::content_width($this->content_width);
+        Core\Setup::content_width();
     }
 
 

@@ -148,8 +148,6 @@ class Locations
      * @param string $loc The url path to pass to get_url(), defaults to 'js'
      *
      * @return string Uri for the javascript asset
-     *
-     * @throws \Exception *No it won't. Don't believe IntelliJ. It lies.
      */
     public function debug_asset($file, $loc = 'js')
     {

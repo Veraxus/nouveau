@@ -37,8 +37,7 @@ const sassGlob = require('node-sass-glob-importer');
 const paths = {
     in: {
         styles: [
-            'assets/build/scss/**/*.scss',
-            '!assets/build/scss/**/_*.scss'
+            'assets/build/scss/**/*.scss'
         ],
         scripts: [
             'assets/build/js/**/*.js'
@@ -68,7 +67,7 @@ const paths = {
 // BUILD STYLES
 // ===============
 gulp.task('build:styles', () => {
-    return gulp.src(paths.in.styles)
+    return gulp.src(paths.in.styles.concat('!_*.scss'))
         .pipe(plugins.sourcemaps.init())
         .pipe(plugins.sass({
             importer: sassGlob(),
@@ -161,4 +160,4 @@ gulp.task('watch', gulp.parallel('watch:styles', 'watch:scripts', 'watch:images'
 // =============
 // DEFAULT TASK
 // =============
-gulp.task('default', gulp.series('build', 'watch'));
+gulp.task('default', gulp.parallel('build', 'watch'));

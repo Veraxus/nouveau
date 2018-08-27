@@ -293,14 +293,12 @@ class Setup
 
     /**
      * Tells WordPress what the global content width should be.
-     *
-     * @param int $width The width, in px, of the content
      */
-    public static function content_width($width)
+    public static function content_width()
     {
         // Set WP content width global
         if (!isset($GLOBALS['content_width'])) {
-            $GLOBALS['content_width'] = $width;
+            $GLOBALS['content_width'] = Core::CONTENT_WIDTH;
         }
     }
 

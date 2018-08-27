@@ -1,3 +1,13 @@
+/* =====================================================================================================================
+// Gutenberg Block: Hello World
+//
+// Styling for the example Hello World Gutenberg block. This is only enqueued on the admin. Also be sure your frontend
+// styles are handled elsewhere.
+//
+// Since the namespace of this block is nouveau-theme/example-hello, Gutenberg prefixes .wp-block- and then converts the
+// slash into a dash. This gives our block a predictable class name of: .wp-block-nouveau-theme-example-hello
+// ===================================================================================================================*/
+
 .wp-block-nouveau-theme-example-hello {
-    border: 5px solid #530000;
+    border: 5px solid #266185;
 }

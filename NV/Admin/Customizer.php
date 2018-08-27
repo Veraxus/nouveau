@@ -1,6 +1,6 @@
 <?php
 
-namespace NV\Theme\Core;
+namespace NV\Theme\Admin;
 
 use NV\Theme\Core;
 

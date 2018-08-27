@@ -1,16 +1,15 @@
 <?php
 
-namespace NV\Theme\Core;
+namespace NV\Theme\Admin;
 
 use NV\Theme\Core;
 
 /**
- * This allows customization of the WordPress TinyMCE editor. This will add custom
- * styles to the editor allowing non-technical admins to more easily add advanced
- * styling to pages/posts.
+ * This allows customization of the WordPress "Classic" TinyMCE editor. This will add custom styles to the editor
+ * allowing non-technical admins to more easily add advanced styling to pages/posts.
  *
- * In addition to the following class methods, you should also ensure that classes
- * are enqueued on the front end as well.
+ * In addition to the following class methods, you should also ensure that complementary classes are enqueued on the
+ * front end as well.
  */
 class Editor
 {
