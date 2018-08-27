@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0 (2018-08-24)
+## 1.0 (2018-TBD)
 * Removed Bower.
 * Packages now managed with NPM + Composer.
 * Added Monolog, PhpDoc, and Codeception support.
@@ -9,10 +9,11 @@
 * Refactored namespaces for sanity and code hygiene.
 * Divided assets into `assets/build` and `assets/dist` directories. Script source and SASS now live in `assets/build`.
 * Updated to Gulp 4, with all it's spiffy new chaining features.
-* Added Babel, image optimization, etc to the gulp build process
+* Added Babel, image optimization, etc to the gulp build process.
 * Consolidated Paths and Urls into a single streamlined Locations class.
-* Page templates can now be found in the `templates/` directory
+* Page templates can now be found in the `templates/` directory.
 * Updated Foundation to 6.5
+* Uses Foundation XY grid by default and loads all Foundation components.
 
 ## 0.15 (2018-03-02)
 * Updated Foundation
