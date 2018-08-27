@@ -34,6 +34,9 @@
     "url": "https://github.com/Veraxus/nouveau/issues",
     "email": "matt@mattvanandel.com"
   },
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "license": "GPL-2.0+",
   "private": true,
   "dependencies": {
