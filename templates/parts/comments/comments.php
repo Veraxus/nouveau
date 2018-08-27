@@ -5,7 +5,7 @@
  * This file loads NOUVEAU's customizable comment system. This should be used including the following code in your page
  * or article templates:
  *
- * comments_template( '/parts/comments/comments.php' );
+ * Theme::comments();
  */
 
 use NV\Theme\Core\Walkers\Comments;

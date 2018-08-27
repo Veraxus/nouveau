@@ -11,6 +11,7 @@
 * Updated to Gulp 4, with all it's spiffy new chaining features.
 * Added Babel, image optimization, etc to the gulp build process
 * Consolidated Paths and Urls into a single streamlined Locations class.
+* Page templates can now be found in the `templates/` directory
 * Updated Foundation to 6.5
 
 ## 0.15 (2018-03-02)

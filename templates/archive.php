@@ -14,7 +14,7 @@ Theme::output_file_marker(__FILE__);
         <div class="archive grid-x grid-padding-x">
             <div id="content" class="cell small-12 large-8">
                 <?php Theme::archive_nav(['id' => 'nav-top']) ?>
-                <?php Theme::loop('parts/article', 'parts/article-empty') ?>
+                <?php Theme::loop('article', 'article-empty') ?>
                 <?php Theme::archive_nav(['id' => 'nav-bottom']) ?>
             </div>
             <div id="sidebar" class="cell small-12 large-4">

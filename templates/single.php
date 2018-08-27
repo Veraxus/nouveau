@@ -14,7 +14,7 @@ the_post();
     <div id="container" class="grid-container">
         <div class="grid-x grid-padding-x">
             <div id="content" class="cell small-12 large-8">
-                <?php get_template_part('parts/article-with-comments') ?>
+                <?php Theme::get_part('article-with-comments') ?>
             </div>
             <div id="sidebar" class="cell small-12 large-4">
                 <?php dynamic_sidebar('sidebar-1') ?>

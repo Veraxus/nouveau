@@ -4,6 +4,9 @@
  *
  * This part can be used IN THE LOOP to output a single article with comments.
  */
+
+use NV\Theme\Core\Theme;
+
 ?>
 <article id="article-<?php the_ID() ?>" class="<?php echo implode(get_post_class(), ' ') ?>">
 
@@ -18,7 +21,7 @@
 
     <footer>
         <div id="comments">
-            <?php comments_template('/parts/comments/comments.php'); ?>
+            <?php Theme::comments() ?>
         </div>
     </footer>
 

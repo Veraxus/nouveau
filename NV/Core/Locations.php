@@ -7,18 +7,19 @@ namespace NV\Theme\Core;
  *
  * @used-by \NV\Theme\Core
  *
- * @method string|\Exception theme(string $location)
- * @method string|\Exception node(string $location)
- * @method string|\Exception nv(string $location)
- * @method string|\Exception vendor(string $location)
- * @method string|\Exception parts(string $location)
- * @method string|\Exception assets(string $location)
- * @method string|\Exception build(string $location)
- * @method string|\Exception dist(string $location)
- * @method string|\Exception css(string $location)
- * @method string|\Exception img(string $location)
- * @method string|\Exception js(string $location)
- * @method string|\Exception langs(string $location)
+ * @method string|\Exception theme(string $location, bool $relative)
+ * @method string|\Exception node(string $location, bool $relative)
+ * @method string|\Exception nv(string $location, bool $relative)
+ * @method string|\Exception vendor(string $location, bool $relative)
+ * @method string|\Exception templates(string $location, bool $relative)
+ * @method string|\Exception parts(string $location, bool $relative)
+ * @method string|\Exception assets(string $location, bool $relative)
+ * @method string|\Exception build(string $location, bool $relative)
+ * @method string|\Exception dist(string $location, bool $relative)
+ * @method string|\Exception css(string $location, bool $relative)
+ * @method string|\Exception img(string $location, bool $relative)
+ * @method string|\Exception js(string $location, bool $relative)
+ * @method string|\Exception langs(string $location, bool $relative)
  */
 class Locations
 {
@@ -39,6 +40,9 @@ class Locations
 
     /** @var string Full location of the theme's parts directory */
     public $parts;
+
+    /** @var string Full location of the theme's templates directory */
+    public $templates;
 
     /** @var string Full location of the theme's assets directory */
     public $assets;
@@ -106,17 +110,17 @@ class Locations
 
         $this->nv = $this->theme . 'NV/';
 
-        $this->node   = $this->theme . 'node_modules/';
-        $this->vendor = $this->theme . 'vendor/';
-        $this->parts  = $this->theme . 'parts/';
-
-        $this->assets = $this->theme . 'assets/';
-        $this->dist   = $this->assets . 'dist/';
-        $this->build  = $this->assets . 'build/';
-        $this->css    = $this->dist . 'css/';
-        $this->img    = $this->dist . 'img/';
-        $this->js     = $this->dist . 'js/';
-        $this->langs  = $this->assets . 'languages/';
+        $this->node      = $this->theme . 'node_modules/';
+        $this->vendor    = $this->theme . 'vendor/';
+        $this->templates = $this->theme . 'templates/';
+        $this->parts     = $this->templates . 'parts/';
+        $this->assets    = $this->theme . 'assets/';
+        $this->dist      = $this->assets . 'dist/';
+        $this->build     = $this->assets . 'build/';
+        $this->css       = $this->dist . 'css/';
+        $this->img       = $this->dist . 'img/';
+        $this->js        = $this->dist . 'js/';
+        $this->langs     = $this->assets . 'languages/';
     }
 
     /**
@@ -129,11 +133,20 @@ class Locations
      */
     public function __call($name, $args)
     {
-        if (isset($this->$name)) {
-            return $this->$name . $args[0];
+        // If the property exists, return the location
+        if (!isset($this->$name)) {
+            throw new \Exception('Called a magic method for a property that doesn\'t exist: ' . __CLASS__ . '->' . $name ?: 'NULL');
         }
 
-        throw new \Exception('Called a magic method for a property that doesn\'t exist: ' . __CLASS__ . '->' . $name ?: 'NULL');
+        // Put together the path
+        $location = $this->$name . $args[0];
+
+        // Requesting a theme-relative location? Strip out theme location.
+        if (isset($args[1]) && $args[1]) {
+            $location = str_replace( $this->theme, '', $location );
+        }
+
+        return $location;
     }
 
     /**

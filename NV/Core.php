@@ -33,6 +33,8 @@ class Core
     protected function hooks()
     {
 
+        /** PRIMARY THEME FUNCTIONALITY ************************************************/
+
         // Setup general theme options
         add_action('after_setup_theme', ['\NV\Theme\Core\Setup', 'after_setup_theme']);
 
@@ -77,11 +79,12 @@ class Core
 
 
         /** CUSTOM GUTENBERG CATEGORIES & BLOCKS ************************************/
+
         add_action('enqueue_block_editor_assets', ['\NV\Theme\Admin\Gutenberg', 'styles']);
         add_filter('block_categories', ['\NV\Theme\Admin\Gutenberg', 'categories'], 10, 2);
         add_action('init', ['\NV\Theme\Admin\Gutenberg', 'register_blocks']);
-    }
 
+    }
 
     /**
      * Returns the plugin's root namespace path, or prepends the plugin namespace(s) to the provided classname string.
@@ -90,9 +93,41 @@ class Core
      *
      * @return string
      */
-    public function get_ns($class = '')
+    public function namespace($class = '')
     {
         return '\\' . __NAMESPACE__ . '\\' . $class;
+    }
+
+    /**
+     * Tells WordPress to look for core template types in the templates directory.
+     *
+     * This helps keep the theme's primary directory a lot less messy without dramatically changing the way WordPress
+     * templating system works. Note that there is no single hook that can do this because the {}_template_hierarchy
+     * hook is dynamic. This means we need to keep an array of all the core template types and loop over them,
+     * registering the hook for each type/group.
+     */
+    public function set_template_dir()
+    {
+        // Every template type checked in get_query_template()
+        $core_templates = [ 'index', '404', 'archive', 'author', 'category', 'tag', 'taxonomy', 'date',
+            'embed', 'home', 'frontpage', 'page', 'paged', 'search', 'single', 'singular', 'attachment' ];
+
+        foreach ($core_templates as $templates) {
+            // Add a filter for each of the template groups/types
+            add_filter($templates . '_template_hierarchy', function ($templates) {
+
+                // Make a copy of the array with NOUVEAU's template dir prepended
+                $nv_templates = array_map(function ($val) {
+                    return 'templates/' . $val;
+                }, $templates);
+
+                // Merge our array with the original
+                $templates = array_merge($nv_templates, $templates);
+
+                // Return it so WordPress can find our templates
+                return $templates;
+            });
+        }
     }
 
 
@@ -164,6 +199,7 @@ class Core
         $this->paths = new Core\Locations('paths');
         $this->urls  = new Core\Locations('urls');
         $this->vendors_init();
+        $this->set_template_dir();
         $this->hooks();
         Core\Setup::content_width();
     }
@@ -184,5 +220,3 @@ class Core
     }
 
 }
-
-Core::i();

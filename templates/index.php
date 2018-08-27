@@ -17,11 +17,11 @@ Theme::output_file_marker(__FILE__);
                 <?php //Theme::archive_nav( array( 'id' => 'nav-top' ) ) ?>
                 <?php wp_link_pages(); ?>
 
-                <?php Theme::loop('parts/article', 'parts/article-empty') ?>
+                <?php Theme::loop('article', 'article-empty') ?>
 
                 <?php paginate_links(); ?>
 
-                <?php get_template_part('parts/archive-nav') ?>
+                <?php Theme::get_part('archive-nav') ?>
             </div>
 
             <div id="sidebar" class="cell small-12 large-4">

@@ -139,26 +139,15 @@ class Theme
         return $output;
     }
 
-
     /**
-     * This loads the template for individual comments. It is called from within the comments template
-     * ( parts/comments.php ) file like so:
+     * Loads NOUVEAU comments templates from their special place in templates/parts
      *
-     * <code>
-     * <?php
-     *    wp_list_comments( array( 'callback' => array( '\Nv\Utils\Theme', 'comments' ) ) );
-     * ?>
-     * </code>
-     *
-     * @param       $comment
-     * @param array $args
-     * @param int $depth
+     * @param $file
      */
-    public static function comments($comment, $args = [], $depth = 1)
+    public static function comments($file = 'comments.php')
     {
-        require Core::i()->paths->parts('comments/comments.php');
+        comments_template('/' . Core::i()->paths->parts('comments/' . $file, true));
     }
-
 
     /**
      * Load footer template.
@@ -173,7 +162,7 @@ class Theme
      * @param string $name The name of the specialised footer.
      * @param string $path
      */
-    public static function get_footer($name = null, $path = 'parts/layout/')
+    public static function get_footer($name = null, $path = 'templates/parts/layout/')
     {
         do_action('get_footer', $name);
 
@@ -208,7 +197,7 @@ class Theme
      * @param mixed $name The name of the specialised header (note: will be prepended with "header-")
      * @param string $path The theme-relative path to the header file.
      */
-    public static function get_header($name = null, $path = 'parts/layout/')
+    public static function get_header($name = null, $path = 'templates/parts/layout/')
     {
         do_action('get_header', $name);
 
@@ -241,11 +230,11 @@ class Theme
         if (have_posts()) {
             while (have_posts()) {
                 the_post();
-                get_template_part($part, get_post_format());
+                self::get_part($part, get_post_format());
             }
         } else {
             if (!empty($no_part)) {
-                get_template_part($no_part);
+                self::get_part($no_part);
             }
         }
         // END the loop
@@ -331,6 +320,48 @@ class Theme
         wp_reset_query();
     }
 
+    /**
+     * Loads a template part into a template.
+     *
+     * Provides a simple mechanism for child themes to overload reusable sections of code
+     * in the theme.
+     *
+     * Includes the named template part for a theme or if a name is specified then a
+     * specialised part will be included. If the theme contains no {slug}.php file
+     * then no template will be included.
+     *
+     * The template is included using require, not require_once, so you may include the
+     * same template part multiple times.
+     *
+     * For the $name parameter, if the file is called "{slug}-special.php" then specify
+     * "special".
+     *
+     * @param string $slug The slug name for the generic template.
+     * @param string $name The name of the specialised template.
+     */
+    public static function get_part($slug, $name = null, $path = 'templates/parts/')
+    {
+        /**
+         * Fires before the specified template part file is loaded.
+         *
+         * The dynamic portion of the hook name, `$slug`, refers to the slug name
+         * for the generic template part.
+         *
+         * @param string $slug The slug name for the generic template.
+         * @param string|null $name The name of the specialized template.
+         */
+        do_action("get_template_part_{$slug}", $slug, $name);
+
+        $templates = array();
+        $name      = (string)$name;
+        if ('' !== $name) {
+            $templates[] = "{$path}{$slug}-{$name}.php";
+        }
+
+        $templates[] = "{$path}{$slug}.php";
+
+        locate_template($templates, true, false);
+    }
 
     /**
      * Outputs the name of the file as an HTML comment for easy-peesy troubleshooting.
