@@ -1,5 +1,5 @@
 # NOUVEAU Starter Theme
-**Contributors:** Veraxus  
+**Contributors:** Matt van Andel  
 **Donate link:** http://nouveauframework.org/  
 **Author URI:** http://nouveauframework.org/  
 **Tags:** framework, php7.2  
@@ -11,64 +11,72 @@
 **Text Domain:** nv_lang_scope  
 **License:** GPL2+ & MIT  
 
-NOUVEAU is an open-source, rapid-development theme & plugin framework for WordPress, built on Zurb Foundation 6 and PHP 7.1+. Work fast. Be awesome.
+NOUVEAU is an open-source, rapid-development theme & plugin framework for WordPress, built on Zurb Foundation and PHP 7.1+. Work fast. Be awesome.
 
 ## Description
 
-**NOUVEAU is NOT a ready-made theme; it is meant as a starting point for developers.**
+**NOUVEAU is NOT a ready-made theme - it is a convenient starting point for theme development.**
 
-NOUVEAU is a rapid-development framework for WordPress. Unlike other "theme frameworks" NOUVEAU doesn't try to cram everything into a single, overreaching, monolithic theme - instead, the theme is dedicated to presentation work, keeping things clean and easy.
+NOUVEAU is a rapid-development framework for WordPress. Unlike other "theme frameworks" NOUVEAU doesn't try to cram everything into a single, overreaching, monolithic theme - instead, NOUVEAU's starter theme is dedicated to presentation work, keeping things clean and easy.
 
-If you want even more features, don't clutter your theme with them... that's what plugins are for! Download NOUVEAU's starter plugins for any features you really need in your project, and customize them quickly and easily. Everything is standardized, simple, clean, and well commented - so you can work fast.
+If you want even more features, don't clutter your theme with them; that's what plugins are for! For any features you really need in your project there's a separate collection of starter and example plugins for you to quickly customize. 
+
+From the theme to the plugins, everything is consistent, simple, clean, and well commented - so you can work fast.
+
+### A Really, Really, Important Notice:
+NOUVEAU is NOT a ready-made theme and should only be used by developers. It is specifically built to facilitate rapid development and easy maintenance. NOUVEAU is all about the code: which is clean, simple, and fully commented and documented.
 
 ## Features
 
-* **Built for WordPress**
-NOUVEAU isn’t a theme or a plugin, it’s a framework. Anything you need to quickly get started on a new theme or plugin is already there, letting you get right to the meat of your WordPress project.
+* **Built for WordPress**  
+NOUVEAU isn’t just a theme or a plugin, it’s a _framework_. Whether you are working on a theme OR plugin, anything you need to quickly get started is readily available, so you can get right to the meat of your project.
 
-* **Modular**
-Everything is available a-la-carte. By keeping the theme and features separate, you can easily use or customize only what you need (as plugins), and none of what you don’t.
+* **Modular**  
+Everything is available a-la-carte. By keeping the theme and features separate, you can easily use or customize only what you need, where you need it, and none of what you don’t.
 
-* **PHP 7.1+**
+* **PHP 7**  
 **Newer versions of PHP provides numerous benefits:** namespaces, closures, anonymous functions... and NOUVEAU takes advantage of that.
 
-* **Zurb Foundation**
-NOUVEAUs theme framework component is built on the latest version of Zurb Foundation, an open-source front-end framework that blows Bootstrap out of the water. Create responsive websites with incredible speed and flexibility.
+* **Zurb Foundation**  
+NOUVEAUs theme framework comes prepackaged with the latest version of Zurb Foundation, an open-source front-end framework that blows Bootstrap out of the water. Create responsive websites with incredible speed and flexibility. Don't want to use Foundation? No problem, replacing it is easy.
 
-* **Clean Code. No Assumptions**
-No child themes, no file soup, no styles, no assumptions. Just clean, tidy, well-documented code and clean, tidy file structures.
+* **Clean Code. No Assumptions**  
+No child themes, no file soup, no styles, no additional templating systems, and no strong opinions. Just clean, tidy, well-documented code.
 
-* **Free. Open Source. Always. Forever.**
+* **Free. Open Source. Always. Forever.**  
 No purchases, no memberships, no freemiums, no strings. NOUVEAU is free as in speech, and it’s going to stay that way. Forever.
 
 In addition to having very well documented code, you can find a complete **Getting Started** tutorial at [NouveauFramework.org](http://nouveauframework.org/documentation/getting-started/)
 
-## Installation Instructions
+## Setup
 
-**NOTE:** NOUVEAU is NOT a ready-made theme and should only be used by developers. it is specifically built to facilitate rapid development and easy maintenance. The code is clean, simple, and very well commented and documented.  
+### Prerequisites
+Sure you could just start writing CSS in style.css but... what is this, 2007? NOUVEAU is really meant to be used with SASS. As such, you'll need a few things installed on your computer to start building projects:
 
-### Prerequisites for SASS developers
-**If you want to use the SASS workflow, ensure that you have all of Foundations prerequisites met first.** Note that NOUVEAU uses the non-Compass version of Foundation, and is therefore compatible with compilers like libsass.
+* node > = 10.0.0
+* npm
+* composer
 
-For full prerequisites, see: http://foundation.zurb.com/docs/sass.html).
+### First Steps
+NOUVEAU includes a bunch of namespaced strings and whatnot. Chances are you'll  want to make those your own, so your first steps should be: 
 
-To get started, make sure you have npm installed, switch to your NOUVEAU theme directory and run...
+1. Rename the theme folder
+1. Using your IDE of choice, run a case-sensitive find-replace for the following strings:
+  * `nouveau-` & `nouveau_`  
+    _Used in strings, css class names, functions, etc_ 
+  * `nv_lang_scope`  
+    _Theme i18n translation scope._
+
+You can also find detailed documentation for NOUVEAU at [NOUVEAUFramework.org](https://nouveauframework.org/documentation/getting-started/), and documentation for Zurb Foundation at [foundation.zurb.com](https://foundation.zurb.com/sites/docs/)
+
+### Installing & Building
+To install all the various dependencies, just switch to your NOUVEAU theme directory and run the following commands...
 
 1. `npm install` to install node dependencies (needed for Foundation and the build pipeline)
 1. `composer install` to install PHP packages like Monolog and Codeception
-1. `npm start` or `gulp` to begin watching and compiling sass & js
+1. `npm start` or `gulp` to begin watching and compiling assets
 
 That's all there is to it!
-
-### General Setup
-To install, simply the copy the NOUVEAU theme folder to your `wp-content\themes` directory. Before activating, you may want to make it your own: 
-
-1. Rename the theme folder 
-1. Perform a global find-replace for the strings (case sensitive) `NOUVEAU`, `Nouveau`, and `nouveau`, and the language scope: `nv_lang_scope`.
-
-You can also find detailed documentation for NOUVEAU at [NOUVEAUFramework.org](http://nouveauframework.org/documentation/getting-started/), and documentation for Zurb Foundation at [foundation.zurb.com](http://foundation.zurb.com/docs/sass.html)
-
-You can also test design and use-case coverage by using the WordPress [Theme Unit Test]( http://codex.wordpress.org/Theme_Unit_Test ).
 
 ### Installing Tests
 NOUVEAU now uses and encourages Codeception for testing of your themes. After you've installed the Composer dependencies, you can begin configuring your testing suite with:
@@ -77,30 +85,18 @@ NOUVEAU now uses and encourages Codeception for testing of your themes. After yo
 
 You can find more detailed directions at [codeception.com/for/wordpress](https://codeception.com/for/wordpress#Install)
 
-### Generate Documentation
-To generate documentation using PhpDocumentor, simply run the following command after you've installed Composer dependencies:
+You can also test design and use-case coverage by using the WordPress [Theme Unit Test]( http://codex.wordpress.org/Theme_Unit_Test ).
+
+### Generating Documentation
+To generate documentation using PhpDocumentor, simply run the following command (after you've installed Composer dependencies, that is):
 
 `php vendor/bin/phpdoc`
 
-This will create a docs/ directory within your theme containing documentation for your theme.
+This will create a docs/ directory within your theme containing all the theme's PhpDoc documentation.
 
-# File Structure
+# Got Plugins?
 
-NOUVEAU has an file structure that encourages better organization of your theme.
-
-General page templates (`index.php`, `archive.php`, `page.php`, `single.php`, etc) as well as critical files like `functions.php` still go in the theme's root folder. This allows WordPress's core template system to continue working as-is. As a rule, you should keep your PAGE templates here, and organize any fragment/part templates under the parts directory. This keeps the root clean and helps encourage use of clean, organized, reusable template parts.
-
-You can find a complete (yet concise) overview of file and folder structure at [NOUVEAUFramework.org](http://nouveauframework.org/documentation/getting-started/)
-
-# Using Without SASS
-
-If you don't want to use SASS, then you can just write your plain CSS in the main `style.css` file (in the theme root) as you would normally do.
-
-Note that you will still need to run `npm install` to get all the Foundation packages, however.
-
-# Companion Plugins
-
-WordPress themes (and theme frameworks) should never be monolithic monstrosities. As a result, all the added functionality you could ever want are available separately as neatly packaged "starter" plugins.
+WordPress themes (or theme frameworks) should never be monolithic monstrosities. As such, all the added functionality you could ever want is available as separate, neatly packaged "starter" plugins.
 
 Browse NOUUVEAU starter plugins at [NOUVEAUFramework.org](https://nouveauframework.org/download-nouveau/#plugin-downloads)
 
