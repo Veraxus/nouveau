@@ -19,6 +19,7 @@
     "gulp-sourcemaps": "~2.6.4",
     "gulp-task-listing": "~1.1.0",
     "gulp-uglify-es": "~1.0.4",
+    "gulp-wp-pot": "^2.3.2",
     "node-sass-glob-importer": "~5.2.0",
     "npm": "~6.4.0"
   },

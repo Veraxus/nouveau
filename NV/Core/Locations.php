@@ -7,19 +7,19 @@ namespace NV\Theme\Core;
  *
  * @used-by \NV\Theme\Core
  *
- * @method string|\Exception theme(string $location, bool $relative)
- * @method string|\Exception node(string $location, bool $relative)
- * @method string|\Exception nv(string $location, bool $relative)
- * @method string|\Exception vendor(string $location, bool $relative)
- * @method string|\Exception templates(string $location, bool $relative)
- * @method string|\Exception parts(string $location, bool $relative)
- * @method string|\Exception assets(string $location, bool $relative)
- * @method string|\Exception build(string $location, bool $relative)
- * @method string|\Exception dist(string $location, bool $relative)
- * @method string|\Exception css(string $location, bool $relative)
- * @method string|\Exception img(string $location, bool $relative)
- * @method string|\Exception js(string $location, bool $relative)
- * @method string|\Exception langs(string $location, bool $relative)
+ * @method string|\Exception theme(string $location, bool $relative = false)
+ * @method string|\Exception node(string $location, bool $relative = false)
+ * @method string|\Exception nv(string $location, bool $relative = false)
+ * @method string|\Exception vendor(string $location, bool $relative = false)
+ * @method string|\Exception templates(string $location, bool $relative = false)
+ * @method string|\Exception parts(string $location, bool $relative = false)
+ * @method string|\Exception assets(string $location, bool $relative = false)
+ * @method string|\Exception build(string $location, bool $relative = false)
+ * @method string|\Exception dist(string $location, bool $relative = false)
+ * @method string|\Exception css(string $location, bool $relative = false)
+ * @method string|\Exception img(string $location, bool $relative = false)
+ * @method string|\Exception js(string $location, bool $relative = false)
+ * @method string|\Exception langs(string $location, bool $relative = false)
  */
 class Locations
 {
@@ -110,6 +110,7 @@ class Locations
 
         $this->nv = $this->theme . 'NV/';
 
+        $this->langs     = $this->theme . 'languages/';
         $this->node      = $this->theme . 'node_modules/';
         $this->vendor    = $this->theme . 'vendor/';
         $this->templates = $this->theme . 'templates/';
@@ -120,7 +121,6 @@ class Locations
         $this->css       = $this->dist . 'css/';
         $this->img       = $this->dist . 'img/';
         $this->js        = $this->dist . 'js/';
-        $this->langs     = $this->assets . 'languages/';
     }
 
     /**
@@ -143,7 +143,7 @@ class Locations
 
         // Requesting a theme-relative location? Strip out theme location.
         if (isset($args[1]) && $args[1]) {
-            $location = str_replace( $this->theme, '', $location );
+            $location = str_replace($this->theme, '', $location);
         }
 
         return $location;

@@ -291,6 +291,7 @@ class Setup
         return $classes;
     }
 
+
     /**
      * Tells WordPress what the global content width should be.
      */

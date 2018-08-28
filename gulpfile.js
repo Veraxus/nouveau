@@ -5,27 +5,31 @@
  *
  * > gulp
  *
- *   |---> Runs a build then starts watching js, scss, and images.
+ *    |---> Runs a build then starts watching js, scss, and images.
  *
  * > gulp build
  *
- *   |---> Builds js, scss, and images, then terminates.
+ *    |---> Builds js, scss, images, and languages then terminates.
  *
  * > gulp watch
  *
- *   |---> Begins watching js, scss, and images for changes. Does not build first.
+ *    |---> Begins watching js, scss, and images for changes. Does not build first and does not watch or build languages.
  *
  * > gulp build:styles
  * > gulp build:scripts
  * > gulp build:images
  *
- *   |---> Builds only the specific thing that you specify (styles, scripts, or images).
+ *    |---> Builds only the specific thing that you specify (styles, scripts, images).
+ *
+ * > gulp build:pot
+ *
+ *    |---> Builds language translation file (theme.pot). This will not run automatically, it has to be run explicitly.
  *
  * > gulp watch:styles
  * > gulp watch:scripts
  * > gulp watch:images
  *
- *   |---> Begins watching only the specific thing you specify (styles, scripts, or images) then terminates.
+ *    |---> Begins watching only the specific thing you specify (styles, scripts, or images) then terminates.
  *
  * @type {Gulp}
  */
@@ -36,18 +40,21 @@ const sassGlob = require('node-sass-glob-importer');
 
 const paths = {
     in: {
-        styles: [
-            'assets/build/scss/**/*.scss'
-        ],
-        scripts: [
-            'assets/build/js/**/*.js'
-        ],
-        images: ['assets/build/img/**/*']
+        styles: ['assets/build/scss/**/*.scss'],
+        scripts: ['assets/build/js/**/*.js'],
+        images: ['assets/build/img/**/*'],
+        langs: [
+            '*.php',
+            'NV/**/*.php',
+            'overrides/**/*.php',
+            'templates/**/*.php'
+        ]
     },
     out: {
         styles: 'assets/dist/css',
         scripts: 'assets/dist/js',
-        images: 'assets/dist/img'
+        images: 'assets/dist/img',
+        langs: 'languages/theme.pot'
     },
     includes: {
         styles: [
@@ -125,9 +132,21 @@ gulp.task('build:images', () => {
 });
 
 // ===============
+// GENERATE POT FILE
+// ===============
+gulp.task('build:pot', () => {
+    return gulp.src(paths.in.langs)
+        .pipe(plugins.wpPot({
+            domain: 'nv_lang_scope',
+            package: 'NOUVEAU Theme'
+        }))
+        .pipe(gulp.dest(paths.out.langs));
+});
+
+// ===============
 // BUILD EVERYTHING
 // ===============
-gulp.task('build', gulp.parallel('build:styles', 'build:scripts', 'build:images'));
+gulp.task('build', gulp.parallel('build:styles', 'build:scripts', 'build:images', 'build:pot'));
 
 
 // ===============
