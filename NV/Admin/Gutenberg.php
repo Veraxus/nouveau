@@ -15,14 +15,14 @@ use NV\Theme\Utils\WordPress;
  * blocks, read: https://wordpress.org/gutenberg/handbook/blocks/writing-your-first-block-type/
  *
  *
- * NOTE: We don't use debug_asset() in here because React syntax is not natively browser friendly. The js MUST for
+ * NOTE: We don't use debug_asset() in here because React syntax is not natively browser friendly. The js for
  * Gutenberg blocks is ES2016+ and MUST be compiled.
  */
 class Gutenberg
 {
 
     /** @var string A theme-wide namespace to prefix your Gutenberg blocks */
-    const NAMESPACE = 'nouveau-theme';
+    const GUTES_NS = 'nouveau-theme';
 
     /**
      * Registers all our custom blocks
@@ -52,13 +52,13 @@ class Gutenberg
      * @param \WP_Post $post The current post object (useful for creating categories only certain post types)
      * @return array The filtered categories array
      */
-    public static function categories($categories, \WP_Post $post)
+    public static function categories($categories, $post)
     {
         return array_merge(
             $categories,
             [
                 [
-                    'slug'  => self::NAMESPACE,
+                    'slug'  => self::GUTES_NS,
                     'title' => __('NOUVEAU', 'nv_lang_scope'),
                 ],
             ]
@@ -81,7 +81,7 @@ class Gutenberg
         );
 
         register_block_type(
-            self::NAMESPACE . '/' . $slug,
+            self::GUTES_NS . '/' . $slug,
             [
                 'editor_script' => $slug,
             ]
@@ -116,7 +116,7 @@ class Gutenberg
     public static function styles()
     {
         wp_enqueue_style(
-            self::NAMESPACE,
+            self::GUTES_NS,
             Core::i()->urls->css('gutenberg.css'),
             ['wp-edit-blocks'],
             filemtime(Core::i()->paths->dist('css/gutenberg.css'))

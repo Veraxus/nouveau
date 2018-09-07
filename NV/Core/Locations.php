@@ -48,7 +48,7 @@ class Locations
     public $assets;
 
     /** @var string Full location of the theme's assets/build directory */
-    public $build;
+    public $src;
 
     /** @var string Full location of the theme's assets/dist directory */
     public $dist;
@@ -117,7 +117,7 @@ class Locations
         $this->parts     = $this->templates . 'parts/';
         $this->assets    = $this->theme . 'assets/';
         $this->dist      = $this->assets . 'dist/';
-        $this->build     = $this->assets . 'build/';
+        $this->src     = $this->assets . 'build/';
         $this->css       = $this->dist . 'css/';
         $this->img       = $this->dist . 'img/';
         $this->js        = $this->dist . 'js/';
@@ -160,6 +160,8 @@ class Locations
      * @param string $file The file that you want to load from assets/dist/js
      * @param string $loc The url path to pass to get_url(), defaults to 'js'
      *
+     * @throws \Exception If the specified location is not a valid property
+     *
      * @return string Uri for the javascript asset
      */
     public function debug_asset($file, $loc = 'js')
@@ -173,11 +175,11 @@ class Locations
 
             // Find the system path for this file
             $paths     = new self('paths');
-            $buildpath = $paths->build($loc . '/' . $buildfile);
+            $buildpath = $paths->src($loc . '/' . $buildfile);
 
             // Confirm the file exists before trying to serve it
             if (file_exists($buildpath)) {
-                return $this->build($loc . '/' . $buildfile);
+                return $this->src($loc . '/' . $buildfile);
             }
         }
 

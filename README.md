@@ -2,11 +2,11 @@
 **Contributors:** Matt van Andel  
 **Donate link:** http://nouveauframework.org/  
 **Author URI:** http://nouveauframework.org/  
-**Tags:** framework, php7.2  
+**Tags:** framework, php7.1  
 **Version:** 1.0  
 **Foundation version:** 6.5  
 **Requires at least:** 4.9  
-**Tested up to:** 4.9  
+**Tested up to:** 5.0  
 **Stable tag:** 1.0  
 **Text Domain:** nv_lang_scope  
 **License:** GPL2+ & MIT  
@@ -39,6 +39,9 @@ Everything is available a-la-carte. By keeping the theme and features separate, 
 
 * **Zurb Foundation**  
 NOUVEAUs theme framework comes prepackaged with the latest version of Zurb Foundation, an open-source front-end framework that blows Bootstrap out of the water. Create responsive websites with incredible speed and flexibility. Don't want to use Foundation? No problem, replacing it is easy.
+
+* **Gutenberg Support**
+Want to get a head start on WordPress's awesome new modular editor, Gutenberg? NOUVEAU has built-in Gutenberg support, so you can quickly and easily create your own blocks using ESNext.
 
 * **Clean Code. No Assumptions**  
 No child themes, no file soup, no styles, no additional templating systems, and no strong opinions. Just clean, tidy, well-documented code.
@@ -98,8 +101,8 @@ This will create a docs/ directory within your theme containing all the theme's 
 
 WordPress themes (or theme frameworks) should never be monolithic monstrosities. As such, all the added functionality you could ever want is available as separate, neatly packaged "starter" plugins.
 
-Browse NOUUVEAU starter plugins at [NOUVEAUFramework.org](https://nouveauframework.org/download-nouveau/#plugin-downloads)
+Browse NOUVEAU starter plugins at [NOUVEAUFramework.org](https://nouveauframework.org/download-nouveau/#plugin-downloads)
 
 # Internationalization (I18n)
 
-NOUVEAU comes with all text strings properly scoped for internationalization. To set a custom scope string, you can quickly run a project-wide search and replace for the string `nv_lang_scope` and you'll be up and running in no time.
+NOUVEAU comes with all text strings properly scoped for internationalization. Once you've updated your language scope string, you can run the CLI command `gulp build:pot` to update your `theme.pot` language file. It's that easy.

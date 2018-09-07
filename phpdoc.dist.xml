@@ -8,5 +8,6 @@
     </transformer>
     <files>
         <directory>NV</directory>
+        <directory>templates</directory>
     </files>
 </phpdoc>
