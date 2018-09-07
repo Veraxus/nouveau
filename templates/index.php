@@ -14,12 +14,11 @@ Theme::output_file_marker(__FILE__);
     <div id="container" class="grid-container">
         <div class="grid-x grid-padding-x">
             <div id="content" class="cell small-12 large-8">
-                <?php //Theme::archive_nav( array( 'id' => 'nav-top' ) ) ?>
-                <?php wp_link_pages(); ?>
+                <?php Theme::page_pagination() ?>
 
                 <?php Theme::loop('article', 'article-empty') ?>
 
-                <?php paginate_links(); ?>
+                <?php Theme::archive_pagination(); ?>
 
                 <?php Theme::get_part('archive-nav') ?>
             </div>

@@ -11,25 +11,35 @@ class Theme
 {
 
     /**
-     * Not yet implemented.
+     * Next/Prev navigation for archives.
      *
-     * Will display Foundation-native pagination for archives.
+     * Simply loads /templates/parts/archive-nav.php
+     */
+    public static function archive_nav()
+    {
+        self::get_part('archive-nav');
+    }
+
+    /**
+     * Pagination for archives.
+     *
+     * By default, this uses WordPress's built-in paginate_links() function, but it can be replaced with your own logic.
      *
      * @param array $args
      */
-    public static function archive_nav($args = [])
+    public static function archive_pagination($args = [])
     {
         echo paginate_links($args);
     }
 
     /**
-     * Not yet implemented.
+     * Displays pagination for a paginated post/page/article.
      *
-     * Will display Foundation-native pagination for a paginated post/article.
+     * By default, this uses WordPress' built-in wp_link_pages() function, but it can replaced with your own logic.
      *
      * @param array $args
      */
-    public static function article_page_nav($args = [])
+    public static function page_pagination($args = [])
     {
         echo wp_link_pages($args);
     }
@@ -352,8 +362,8 @@ class Theme
          */
         do_action("get_template_part_{$slug}", $slug, $name);
 
-        $templates = array();
-        $name      = (string)$name;
+        $templates = [];
+        $name = (string)$name;
         if ('' !== $name) {
             $templates[] = "{$path}{$slug}-{$name}.php";
         }
