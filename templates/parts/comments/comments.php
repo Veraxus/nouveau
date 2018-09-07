@@ -8,8 +8,6 @@
  * Theme::comments();
  */
 
-use NV\Theme\Core\Walkers\Comments;
-
 if (post_password_required()) {
     echo '<p>' . __('This post is password protected. Enter the password to view comments.', 'nv_lang_scope') . '</p>';
     return;
@@ -22,27 +20,27 @@ if (have_comments()) { ?>
         <?php
         printf(
             _n(
-                'One Response to %2$s',     // Single comment text
-                '%1$s Responses to %2$s',   // Multiple comment text
-                get_comments_number(),      // The number of comments to determine which string to use
+                'One Response to %2$s',   // Single comment text
+                '%1$s Responses to %2$s', // Multiple comment text
+                get_comments_number(),           // The number of comments to determine which string to use
                 'nv_lang_scope'
             ),
             number_format_i18n(get_comments_number()),    // %1$s
-            '&#8220;' . get_the_title() . '&#8221;'             // %2$s
-        );
+            '&#8220;' . get_the_title() . '&#8221;'    // %2$s
+        )
         ?>
     </p>
 
 
-    <?php include 'pagination.php'; ?>
+    <?php include 'pagination.php' ?>
 
     <section class="comments-list">
         <?php wp_list_comments([
-            'walker' => new Comments()
-        ]); ?>
+            'walker' => new \NV\Theme\Walkers\Comments()
+        ]) ?>
     </section>
 
-    <?php include 'pagination.php'; ?>
+    <?php include 'pagination.php' ?>
 
 
     <?php

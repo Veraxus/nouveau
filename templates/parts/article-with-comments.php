@@ -8,7 +8,7 @@
 use NV\Theme\Core\Theme;
 
 ?>
-<article id="article-<?php the_ID() ?>" class="<?php echo implode(get_post_class(), ' ') ?>">
+<article id="article-<?php the_ID() ?>" class="<?= implode(get_post_class(), ' ') ?>">
 
     <h1 class="article-head"><?php the_title() ?></h1>
 

@@ -1,14 +1,12 @@
 <?php
 
-namespace NV\Theme\Core\Walkers;
+namespace NV\Theme\Walkers;
 
 use NV\Theme\Core;
 
 /**
  * This is our custom comment walker. Since comments can have complex parent-child relationships, we utilize Walker to
  * handle output instead of a more traditional loop.
- *
- * @package NV\Core
  */
 class Comments extends \Walker
 {

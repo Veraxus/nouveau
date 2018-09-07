@@ -8,7 +8,7 @@
 ?>
 <div id="respond">
 
-    <h3><?php comment_form_title( __( 'Leave a Reply', 'nv_lang_scope' ), __( 'Leave a Reply to %s', 'nv_lang_scope' ) ); ?></h3>
+    <h3><?php comment_form_title( __( 'Leave a Reply', 'nv_lang_scope' ), __( 'Leave a Reply to %s', 'nv_lang_scope' ) ) ?></h3>
 
     <div id="cancel-comment-reply">
         <small><?php cancel_comment_reply_link() ?></small>

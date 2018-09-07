@@ -18,7 +18,7 @@ Theme::output_file_marker(__FILE__);
 
                 <?php Theme::loop('article', 'article-empty') ?>
 
-                <?php Theme::archive_pagination(); ?>
+                <?php Theme::archive_pagination() ?>
 
                 <?php Theme::get_part('archive-nav') ?>
             </div>
