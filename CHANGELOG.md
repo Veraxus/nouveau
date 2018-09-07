@@ -5,7 +5,7 @@
 * Packages now managed with NPM + Composer.
 * Added Monolog, PhpDoc, and Codeception support.
 * Removed stock PhpUnit since NOUVEAU now supports Codeception - which is much more robust and easy to set up.
-* Refactored PHP to follow PSR-2 coding standards.
+* Refactored PHP to follow PSR-2 coding standards instead of WordPress outdated standards.
 * Refactored namespaces for sanity and code hygiene.
 * Divided assets into `assets/src` and `assets/dist` directories.
 * Updated to Gulp 4, with all it's spiffy new chaining features.
@@ -13,10 +13,10 @@
 * Added POT file generation (i18n) to gulp build process
 * Switched all instances of `<?php echo` to php 5.4+ default shorthand output syntax `<?=`
 * Removed extraneous semicolons before closing php tags (this is the new NOUVEAU convention)
-* Consolidated Paths and Urls into a single streamlined Locations class.
-* Page templates can now be found in the `templates/` directory.
+* Consolidated Paths and Urls into a single streamlined `Locations` class (which also helps IDEs with code hinting).
+* All templates can now be found in the `templates/` directory.
 * Updated Foundation to 6.5
-* Uses Foundation XY grid by default and loads all Foundation components.
+* Uses Foundation XY grid by default and minimal components (see `assets/src/scss/app.scss` for the default config).
 
 ## 0.15 (2018-03-02)
 * Updated Foundation
