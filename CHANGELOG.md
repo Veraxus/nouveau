@@ -7,9 +7,12 @@
 * Removed stock PhpUnit since NOUVEAU now supports Codeception - which is much more robust and easy to set up.
 * Refactored PHP to follow PSR-2 coding standards.
 * Refactored namespaces for sanity and code hygiene.
-* Divided assets into `assets/build` and `assets/dist` directories. Script source and SASS now live in `assets/build`.
+* Divided assets into `assets/src` and `assets/dist` directories.
 * Updated to Gulp 4, with all it's spiffy new chaining features.
 * Added Babel, image optimization, etc to the gulp build process.
+* Added POT file generation (i18n) to gulp build process
+* Switched all instances of `<?php echo` to php 5.4+ default shorthand output syntax `<?=`
+* Removed extraneous semicolons before closing php tags (this is the new NOUVEAU convention)
 * Consolidated Paths and Urls into a single streamlined Locations class.
 * Page templates can now be found in the `templates/` directory.
 * Updated Foundation to 6.5
