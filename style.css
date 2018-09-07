@@ -15,17 +15,13 @@ License: GPL2+ (NOUVEAU) & MIT (Foundation)
 License URI: LICENSE-GPL2 && LICENSE-MIT
 */
 
-
 /*
 ===================================
 READ ME!!!
 ===================================
-This is a required file for all WordPress themes, so you can't just delete it.
+Like index.php, this is a required file for all WordPress themes, so you can't just delete it. But who wants to write
+raw CSS in 2018? Instead, you can find the theme's SCSS in assets/src/scss - then use gulp to transpile those into the
+assets/dist/css directory.
 
-USE OLD FASIONED CSS:
-If you don't want to use SASS (or don't know what SASS is) - then you can go ahead and just work in good, old-fashioned CSS within this very file.
-
-TO USE SASS:
-Keep in mind that if you DO want to use SASS, you will still need to setup a compiler (e.g. libsass, CodeKit, Gulp, etc) *and* the Zurb Foundation framework (even if you want to use a compiler like CodeKit). To use with Gulp, cd to your NOUVEAU theme directory and run
-`npm install` then `npm start`.
+As for this file... just leave it alone. ;-)
 */
